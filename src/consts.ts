@@ -6,7 +6,7 @@ export const SITE_DESCRIPTION = "Enterprise-grade encrypted communications and c
 export const SITE_URL = "https://hermetrix.nz";
 export const COMPANY_NAME = "Hermetrix Technologies APAC Limited";
 
-// Contact Information - ADD THESE LINES:
+// Contact Information
 export const CONTACT_EMAIL = "hello@hermetrix.nz";
 export const SECURITY_EMAIL = "security@hermetrix.nz";
 export const SUPPORT_EMAIL = "support@hermetrix.nz";
