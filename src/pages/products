@@ -1,0 +1,204 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<BaseHead title={`Product Solutions - ${SITE_TITLE}`} description="We specialize in certified secure hardware and communication solutions for enterprise and government requirements." />
+
+<Header />
+<main>
+	<section class="hero">
+		<div class="container">
+			<h1>Product Solutions</h1>
+			<p class="tagline">Certified Security Hardware & Communications</p>
+		</div>
+	</section>
+
+	<section class="products-content">
+		<div class="container">
+			<div class="intro">
+				<p>We specialize in identifying and providing certified security products that meet stringent government and enterprise requirements. Our focus is on solutions that align with international standards and New Zealand security frameworks.</p>
+			</div>
+
+			<div class="product-categories">
+				<div class="category">
+					<h2>Encrypted Storage Solutions</h2>
+					<p>Hardware-encrypted storage devices that protect data at rest with certified encryption standards.</p>
+					<ul>
+						<li>FIPS 140-2 validated encryption</li>
+						<li>Hardware-based AES-256 bit encryption</li>
+						<li>PIN-authenticated access controls</li>
+						<li>Cross-platform compatibility</li>
+					</ul>
+					<div class="status-note">
+						<strong>Product Evaluation Phase:</strong> We are currently evaluating certified encrypted USB and storage solutions for our portfolio.
+					</div>
+				</div>
+
+				<div class="category">
+					<h2>Secure Communication Devices</h2>
+					<p>Certified encrypted communication platforms for enterprise and specialized environments.</p>
+					<ul>
+						<li>End-to-end encrypted messaging</li>
+						<li>Secure voice and video communication</li>
+						<li>Commercial-grade encryption solutions</li>
+						<li>Compliance with data protection standards</li>
+					</ul>
+					<div class="status-note">
+						<strong>Market Research:</strong> Researching certified communication solutions that meet our security standards.
+					</div>
+				</div>
+
+				<div class="category">
+					<h2>Access Control & Authentication</h2>
+					<p>Multi-factor authentication and secure access solutions for sensitive environments.</p>
+					<ul>
+						<li>Hardware security tokens</li>
+						<li>Multi-factor authentication devices</li>
+						<li>Biometric authentication solutions</li>
+						<li>Physical access control systems</li>
+					</ul>
+					<div class="status-note">
+						<strong>Vendor Selection:</strong> Assessing authentication solutions for enterprise deployment.
+					</div>
+				</div>
+			</div>
+
+			<div class="partner-cta">
+				<h2>For Product Manufacturers & Distributors</h2>
+				<p>Are you a manufacturer of certified security products? We are seeking partnership opportunities with companies offering:</p>
+				<ul>
+					<li>FIPS 140-2 certified encryption products</li>
+					<li>NLNCSA DEP-V & NATO Restricted certified solutions</li>
+					<li>NZISM-aligned security hardware</li>
+					<li>Enterprise-grade secure communication devices</li>
+				</ul>
+				<p>We are building our product portfolio and welcome discussions with qualified manufacturers and distributors.</p>
+				<a href="mailto:hello@hermetrix.nz?subject=Product Partnership Inquiry" class="btn primary">Discuss Partnership</a>
+			</div>
+		</div>
+	</section>
+</main>
+<Footer />
+
+<style>
+	.hero {
+		padding: 3rem 1rem;
+		text-align: center;
+		background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+	}
+
+	.hero h1 {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+		color: #1a365d;
+	}
+
+	.tagline {
+		font-size: 1.25rem;
+		color: #4a5568;
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	.products-content {
+		padding: 4rem 1rem;
+		background: white;
+	}
+
+	.intro {
+		text-align: center;
+		max-width: 800px;
+		margin: 0 auto 3rem;
+		font-size: 1.1rem;
+		line-height: 1.7;
+	}
+
+	.product-categories {
+		max-width: 800px;
+		margin: 0 auto 4rem;
+	}
+
+	.category {
+		background: #f8fafc;
+		padding: 2rem;
+		margin-bottom: 2rem;
+		border-radius: 0.5rem;
+		border-left: 4px solid #1a365d;
+	}
+
+	.category h2 {
+		color: #1a365d;
+		margin-bottom: 1rem;
+		font-size: 1.3rem;
+	}
+
+	.category ul {
+		margin: 1rem 0;
+		padding-left: 1.5rem;
+	}
+
+	.category li {
+		margin-bottom: 0.5rem;
+		line-height: 1.6;
+	}
+
+	.status-note {
+		background: #e6fffa;
+		border: 1px solid #81e6d9;
+		border-left: 4px solid #38b2ac;
+		padding: 1rem;
+		border-radius: 0.25rem;
+		margin-top: 1.5rem;
+		font-size: 0.9rem;
+	}
+
+	.partner-cta {
+		background: #1a365d;
+		color: white;
+		padding: 3rem;
+		border-radius: 0.5rem;
+		max-width: 800px;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.partner-cta h2 {
+		margin-bottom: 1.5rem;
+		color: #90cdf4;
+	}
+
+	.partner-cta ul {
+		text-align: left;
+		max-width: 600px;
+		margin: 1.5rem auto;
+	}
+
+	.partner-cta li {
+		margin-bottom: 0.5rem;
+		line-height: 1.6;
+	}
+
+	.btn {
+		display: inline-block;
+		padding: 0.75rem 2rem;
+		margin-top: 1rem;
+		text-decoration: none;
+		border-radius: 0.375rem;
+		font-weight: 600;
+		transition: all 0.2s;
+		background-color: #90cdf4;
+		color: #1a365d;
+	}
+
+	.btn:hover {
+		background-color: #63b3ed;
+	}
+
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+</style>
