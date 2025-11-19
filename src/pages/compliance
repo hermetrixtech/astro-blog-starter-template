@@ -1,0 +1,274 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<BaseHead title={`Security Compliance - ${SITE_TITLE}`} description="Understanding New Zealand security frameworks including NZISM and Protective Security Requirements for organizational security planning." />
+
+<Header />
+<main>
+	<section class="hero">
+		<div class="container">
+			<h1>Security Compliance Guidance</h1>
+			<p class="tagline">Understanding New Zealand's Security Framework Requirements</p>
+		</div>
+	</section>
+
+	<section class="compliance-content">
+		<div class="container">
+			<div class="intro">
+				<p>Navigating New Zealand's security compliance landscape requires understanding key government frameworks. We help organizations comprehend these requirements and identify appropriate security solutions.</p>
+			</div>
+
+			<div class="framework-overview">
+				<h2>Understanding Key Security Frameworks</h2>
+				
+				<div class="framework-item">
+					<h3>NZISM (New Zealand Information Security Manual)</h3>
+					<p>The government's comprehensive manual for protecting official information. It outlines security controls, risk management approaches, and technical requirements for government agencies and their partners.</p>
+					<div class="our-role">
+						<strong>Our Approach:</strong> We help interpret NZISM requirements and identify commercial solutions that align with its security objectives.
+					</div>
+				</div>
+
+				<div class="framework-item">
+					<h3>Protective Security Requirements (PSR)</h3>
+					<p>An all-of-government framework covering personnel, physical, and information security measures for protecting sensitive government information.</p>
+					<div class="our-role">
+						<strong>Our Approach:</strong> We provide guidance on PSR alignment and recommend security practices that support compliance objectives.
+					</div>
+				</div>
+
+				<div class="framework-item">
+					<h3>International Security Standards</h3>
+					<p>Various international standards and certifications recognized within New Zealand security frameworks, including FIPS 140-2, Common Criteria, and other validation programs.</p>
+					<div class="our-role">
+						<strong>Our Approach:</strong> We help identify products with relevant certifications that may support your security and compliance goals.
+					</div>
+				</div>
+			</div>
+
+			<div class="capabilities">
+				<h2>How We Can Assist</h2>
+				<div class="capability-grid">
+					<div class="capability">
+						<h3>Framework Education</h3>
+						<p>Helping your team understand NZISM, PSR, and other relevant security requirements and how they apply to your organization.</p>
+					</div>
+					<div class="capability">
+						<h3>Solution Identification</h3>
+						<p>Recommending commercially available security products and solutions that align with framework requirements.</p>
+					</div>
+					<div class="capability">
+						<h3>Implementation Support</h3>
+						<p>Assisting with the deployment and configuration of security solutions in your environment.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="disclaimer-box">
+				<h3>Important Information</h3>
+				<p><strong>Hermetrix Technologies provides advisory services and implementation support for security solutions.</strong> We are not a government agency and cannot provide official compliance certifications or security clearances.</p>
+				<p>Formal compliance status, security accreditations, and government approvals must be obtained through the appropriate official channels. We support your journey toward compliance through education and appropriate solution implementation.</p>
+			</div>
+
+			<div class="cta-section">
+				<h2>Need to Understand Compliance Requirements?</h2>
+				<p>Contact us to discuss how we can help your organization navigate security framework requirements.</p>
+				<div class="contact-methods">
+					<a href="mailto:hello@hermetrix.nz" class="btn primary">General Inquiry</a>
+					<a href="mailto:security@hermetrix.nz" class="btn secondary">Framework Consultation</a>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+<Footer />
+
+<style>
+	.hero {
+		padding: 3rem 1rem;
+		text-align: center;
+		background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+	}
+
+	.hero h1 {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+		color: #1a365d;
+	}
+
+	.tagline {
+		font-size: 1.25rem;
+		color: #4a5568;
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	.compliance-content {
+		padding: 4rem 1rem;
+		background: white;
+	}
+
+	.intro {
+		text-align: center;
+		max-width: 800px;
+		margin: 0 auto 3rem;
+		font-size: 1.1rem;
+		line-height: 1.7;
+	}
+
+	.framework-overview {
+		max-width: 800px;
+		margin: 0 auto 4rem;
+	}
+
+	.framework-overview h2 {
+		color: #1a365d;
+		margin-bottom: 2rem;
+		text-align: center;
+		font-size: 2rem;
+	}
+
+	.framework-item {
+		background: #f8fafc;
+		padding: 2rem;
+		margin-bottom: 2rem;
+		border-radius: 0.5rem;
+		border-left: 4px solid #1a365d;
+	}
+
+	.framework-item h3 {
+		color: #1a365d;
+		margin-bottom: 1rem;
+		font-size: 1.3rem;
+	}
+
+	.our-role {
+		background: #e6fffa;
+		border-left: 4px solid #38b2ac;
+		padding: 1rem;
+		margin-top: 1.5rem;
+		border-radius: 0.25rem;
+		font-size: 0.9rem;
+	}
+
+	.capabilities {
+		max-width: 800px;
+		margin: 0 auto 3rem;
+	}
+
+	.capabilities h2 {
+		color: #1a365d;
+		margin-bottom: 2rem;
+		text-align: center;
+	}
+
+	.capability-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+	}
+
+	.capability {
+		background: white;
+		padding: 1.5rem;
+		border: 1px solid #e2e8f0;
+		border-radius: 0.5rem;
+		text-align: center;
+	}
+
+	.capability h3 {
+		color: #1a365d;
+		margin-bottom: 1rem;
+		font-size: 1.1rem;
+	}
+
+	.disclaimer-box {
+		background: #fffaf0;
+		border: 1px solid #fed7aa;
+		border-left: 4px solid #ed8936;
+		padding: 2rem;
+		border-radius: 0.5rem;
+		margin: 3rem auto;
+		max-width: 800px;
+	}
+
+	.disclaimer-box h3 {
+		color: #c05621;
+		margin-bottom: 1rem;
+	}
+
+	.disclaimer-box p {
+		margin-bottom: 1rem;
+		line-height: 1.6;
+	}
+
+	.cta-section {
+		text-align: center;
+		padding: 3rem 2rem;
+		background: #1a365d;
+		color: white;
+		border-radius: 0.5rem;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.cta-section h2 {
+		margin-bottom: 1rem;
+	}
+
+	.contact-methods {
+		margin-top: 2rem;
+	}
+
+	.btn {
+		display: inline-block;
+		padding: 0.75rem 2rem;
+		margin: 0 0.5rem;
+		text-decoration: none;
+		border-radius: 0.375rem;
+		font-weight: 600;
+		transition: all 0.2s;
+	}
+
+	.btn.primary {
+		background-color: #90cdf4;
+		color: #1a365d;
+	}
+
+	.btn.primary:hover {
+		background-color: #63b3ed;
+	}
+
+	.btn.secondary {
+		background-color: transparent;
+		color: #90cdf4;
+		border: 2px solid #90cdf4;
+	}
+
+	.btn.secondary:hover {
+		background-color: #90cdf4;
+		color: #1a365d;
+	}
+
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	/* Mobile responsiveness */
+	@media (max-width: 768px) {
+		.contact-methods {
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+		}
+		
+		.btn {
+			margin: 0;
+		}
+	}
+</style>
