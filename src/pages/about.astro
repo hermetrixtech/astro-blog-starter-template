@@ -1,62 +1,316 @@
 ---
-import Layout from '../layouts/BlogPost.astro';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, COMPANY_NAME } from '../consts';
 ---
 
-<Layout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('August 08 2021')}
-	heroImage="/blog-placeholder-about.jpg"
->
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
-		viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-		adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus
-		et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-		vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque
-		sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
-	</p>
+<BaseHead title={`About Us - ${SITE_TITLE}`} description="Hermetrix Technologies is a New Zealand-based cybersecurity company specializing in secure communications and compliance guidance for the Asia-Pacific region." />
 
-	<p>
-		Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non
-		tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non
-		blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna
-		porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis
-		massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-		Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis
-		bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra
-		massa massa ultricies mi.
-	</p>
+<Header />
+<main>
+	<section class="hero">
+		<div class="container">
+			<h1>About Hermetrix Technologies</h1>
+			<p class="tagline">Building Trust Through Security Expertise</p>
+		</div>
+	</section>
 
-	<p>
-		Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl
-		suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet
-		nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae
-		turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem
-		dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat
-		semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-		vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum
-		facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam
-		vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla
-		urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
-	</p>
+	<section class="about-content">
+		<div class="container">
+			<div class="mission">
+				<h2>Our Mission</h2>
+				<p>Hermetrix Technologies exists to provide organizations across the Asia-Pacific region with access to certified security solutions and expert guidance. We bridge the gap between complex security requirements and practical, implementable solutions.</p>
+			</div>
 
-	<p>
-		Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper
-		viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc
-		scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur
-		gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus
-		pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-		blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id
-		cursus metus aliquam eleifend mi.
-	</p>
+			<div class="story">
+				<h2>Our Focus</h2>
+				<p>Founded in New Zealand, Hermetrix Technologies recognizes the unique security challenges faced by organizations in the APAC region. We specialize in understanding both international security standards and local compliance frameworks to provide relevant, effective security guidance.</p>
+				
+				<p>Our approach is built on three core principles:</p>
+				
+				<div class="principles">
+					<div class="principle">
+						<h3>Security-First Mindset</h3>
+						<p>Every solution we recommend or implement is evaluated against its security merits and certification status first.</p>
+					</div>
+					<div class="principle">
+						<h3>Practical Guidance</h3>
+						<p>We focus on helping organizations understand and work toward security goals through achievable steps and appropriate solutions.</p>
+					</div>
+					<div class="principle">
+						<h3>Continuous Learning</h3>
+						<p>The security landscape evolves constantly. We maintain our expertise to provide current, relevant advice.</p>
+					</div>
+				</div>
+			</div>
 
-	<p>
-		Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta
-		nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam
-		tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci
-		ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar
-		proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
-	</p>
-</Layout>
+			<div class="values">
+				<h2>Our Values</h2>
+				<div class="values-grid">
+					<div class="value">
+						<h3>Integrity</h3>
+						<p>We provide honest assessments and recommendations based on security needs, not sales targets.</p>
+					</div>
+					<div class="value">
+						<h3>Expertise</h3>
+						<p>We maintain deep knowledge of security frameworks, standards, and certified technologies.</p>
+					</div>
+					<div class="value">
+						<h3>Discretion</h3>
+						<p>We understand the sensitive nature of security work and maintain strict confidentiality.</p>
+					</div>
+					<div class="value">
+						<h3>Excellence</h3>
+						<p>We strive to deliver exceptional service and support in everything we do.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="approach">
+				<h2>Our Approach to Security</h2>
+				<p>At Hermetrix Technologies, we believe effective security requires understanding both the technical requirements and the operational context. We help organizations:</p>
+				<ul>
+					<li>Understand complex security frameworks like NZISM and PSR</li>
+					<li>Identify appropriate certified security products</li>
+					<li>Implement solutions that balance security and usability</li>
+					<li>Develop sustainable security practices</li>
+				</ul>
+			</div>
+
+			<div class="disclaimer">
+				<h3>Our Commitment to Transparency</h3>
+				<p><strong>Hermetrix Technologies is a registered New Zealand company providing security consulting and implementation services.</strong> We are not a government agency and cannot provide official security clearances or compliance certifications.</p>
+				<p>We work with commercially available, certified security products and provide guidance to help organizations navigate security requirements. Official certifications and formal compliance status must be obtained through appropriate government channels.</p>
+			</div>
+
+			<div class="cta-section">
+				<h2>Ready to Enhance Your Security?</h2>
+				<p>Contact us to discuss how we can help your organization achieve its security objectives.</p>
+				<div class="contact-methods">
+					<a href="mailto:hello@hermetrix.nz" class="btn primary">Get in Touch</a>
+					<a href="/services" class="btn secondary">Our Services</a>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+<Footer />
+
+<style>
+	.hero {
+		padding: 3rem 1rem;
+		text-align: center;
+		background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+	}
+
+	.hero h1 {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+		color: #1a365d;
+	}
+
+	.tagline {
+		font-size: 1.25rem;
+		color: #4a5568;
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	.about-content {
+		padding: 4rem 1rem;
+		background: white;
+	}
+
+	.mission {
+		text-align: center;
+		max-width: 800px;
+		margin: 0 auto 4rem;
+	}
+
+	.mission h2 {
+		color: #1a365d;
+		margin-bottom: 1.5rem;
+		font-size: 2rem;
+	}
+
+	.mission p {
+		font-size: 1.2rem;
+		line-height: 1.7;
+		color: #4a5568;
+	}
+
+	.story {
+		max-width: 800px;
+		margin: 0 auto 4rem;
+	}
+
+	.story h2 {
+		color: #1a365d;
+		margin-bottom: 1.5rem;
+	}
+
+	.story p {
+		margin-bottom: 1.5rem;
+		line-height: 1.7;
+	}
+
+	.principles {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+
+	.principle {
+		background: #f8fafc;
+		padding: 2rem;
+		border-radius: 0.5rem;
+		border-left: 4px solid #1a365d;
+	}
+
+	.principle h3 {
+		color: #1a365d;
+		margin-bottom: 1rem;
+		font-size: 1.2rem;
+	}
+
+	.values {
+		max-width: 800px;
+		margin: 0 auto 4rem;
+	}
+
+	.values h2 {
+		color: #1a365d;
+		margin-bottom: 2rem;
+		text-align: center;
+	}
+
+	.values-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+	}
+
+	.value {
+		text-align: center;
+		padding: 2rem 1rem;
+	}
+
+	.value h3 {
+		color: #1a365d;
+		margin-bottom: 1rem;
+		font-size: 1.2rem;
+	}
+
+	.approach {
+		max-width: 800px;
+		margin: 0 auto 4rem;
+	}
+
+	.approach h2 {
+		color: #1a365d;
+		margin-bottom: 1.5rem;
+	}
+
+	.approach ul {
+		margin: 1.5rem 0;
+		padding-left: 1.5rem;
+	}
+
+	.approach li {
+		margin-bottom: 0.75rem;
+		line-height: 1.6;
+	}
+
+	.disclaimer {
+		background: #fffaf0;
+		border: 1px solid #fed7aa;
+		border-left: 4px solid #ed8936;
+		padding: 2rem;
+		border-radius: 0.5rem;
+		margin: 3rem auto;
+		max-width: 800px;
+	}
+
+	.disclaimer h3 {
+		color: #c05621;
+		margin-bottom: 1rem;
+	}
+
+	.disclaimer p {
+		margin-bottom: 1rem;
+		line-height: 1.6;
+	}
+
+	.cta-section {
+		text-align: center;
+		padding: 3rem 2rem;
+		background: #1a365d;
+		color: white;
+		border-radius: 0.5rem;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.cta-section h2 {
+		margin-bottom: 1rem;
+	}
+
+	.contact-methods {
+		margin-top: 2rem;
+	}
+
+	.btn {
+		display: inline-block;
+		padding: 0.75rem 2rem;
+		margin: 0 0.5rem;
+		text-decoration: none;
+		border-radius: 0.375rem;
+		font-weight: 600;
+		transition: all 0.2s;
+	}
+
+	.btn.primary {
+		background-color: #90cdf4;
+		color: #1a365d;
+	}
+
+	.btn.primary:hover {
+		background-color: #63b3ed;
+	}
+
+	.btn.secondary {
+		background-color: transparent;
+		color: #90cdf4;
+		border: 2px solid #90cdf4;
+	}
+
+	.btn.secondary:hover {
+		background-color: #90cdf4;
+		color: #1a365d;
+	}
+
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	/* Mobile responsiveness */
+	@media (max-width: 768px) {
+		.contact-methods {
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+		}
+		
+		.btn {
+			margin: 0;
+		}
+
+		.principles,
+		.values-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
