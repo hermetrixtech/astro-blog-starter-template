@@ -1,0 +1,192 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<BaseHead title={`Our Services - ${SITE_TITLE}`} description="Expert implementation and support for certified secure communications and data protection solutions." />
+
+<Header />
+<main>
+	<section class="hero">
+		<div class="container">
+			<h1>Our Services</h1>
+			<p class="tagline">Expert implementation and support for certified secure communications and data protection solutions.</p>
+		</div>
+	</section>
+
+	<section class="services">
+		<div class="container">
+			<!-- Service 1: Secure Communications -->
+			<div class="service-card">
+				<h2>Secure Communications Solutions</h2>
+				<p>We provide and support enterprise-grade encrypted communication devices designed to protect sensitive information.</p>
+				<ul>
+					<li>Assessment of communication security needs</li>
+					<li>Implementation of certified encrypted devices</li>
+					<li>Ongoing technical support and maintenance</li>
+					<li>User training on secure operational procedures</li>
+				</ul>
+				<div class="disclaimer">
+					<small>Note: We provide commercial-grade solutions. For information classified as RESTRICTED or above, specific government-approved systems are required.</small>
+				</div>
+			</div>
+
+			<!-- Service 2: Data Protection -->
+			<div class="service-card">
+				<h2>Data Protection & Storage</h2>
+				<p>Implementation of hardware-encrypted storage solutions to secure data at rest against unauthorized access.</p>
+				<ul>
+					<li>FIPS 140-2 certified encrypted USB drives</li>
+					<li>Secure data transfer and storage solutions</li>
+					<li>Device management and policy configuration</li>
+					<li>Data recovery planning and support</li>
+				</ul>
+				<div class="disclaimer">
+					<small>Note: We resell and support commercially available, certified encryption products.</small>
+				</div>
+			</div>
+
+			<!-- Service 3: Security Consulting -->
+			<div class="service-card">
+				<h2>Security Compliance Consulting</h2>
+				<p>Guidance on implementing security frameworks and preparing for compliance requirements.</p>
+				<ul>
+					<li>NZISM and PSR framework guidance</li>
+					<li>Security policy development support</li>
+					<li>Risk assessment methodology</li>
+					<li>Vendor security evaluation</li>
+				</ul>
+				<div class="disclaimer">
+					<small>Note: We provide consulting services only. Formal compliance certifications must be obtained through official government channels.</small>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="cta">
+		<div class="container">
+			<h2>Ready to Secure Your Operations?</h2>
+			<p>Contact us to discuss your specific security requirements and how we can help.</p>
+			<div class="contact-methods">
+				<a href="mailto:hello@hermetrix.nz" class="btn primary">Email Hello</a>
+				<a href="mailto:security@hermetrix.nz" class="btn secondary">Security Inquiries</a>
+			</div>
+		</div>
+	</section>
+</main>
+<Footer />
+
+<style>
+	.hero {
+		padding: 3rem 1rem;
+		text-align: center;
+		background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+	}
+
+	.hero h1 {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+		color: #1a365d;
+	}
+
+	.tagline {
+		font-size: 1.25rem;
+		color: #4a5568;
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	.services {
+		padding: 4rem 1rem;
+		background: white;
+	}
+
+	.service-card {
+		background: #f8fafc;
+		padding: 2.5rem;
+		margin-bottom: 2rem;
+		border-radius: 0.5rem;
+		border-left: 4px solid #1a365d;
+	}
+
+	.service-card h2 {
+		color: #1a365d;
+		margin-bottom: 1rem;
+		font-size: 1.5rem;
+	}
+
+	.service-card ul {
+		margin: 1.5rem 0;
+		padding-left: 1.5rem;
+	}
+
+	.service-card li {
+		margin-bottom: 0.5rem;
+		line-height: 1.6;
+	}
+
+	.disclaimer {
+		margin-top: 1.5rem;
+		padding: 1rem;
+		background: #fed7d7;
+		border-radius: 0.25rem;
+		border-left: 4px solid #c53030;
+	}
+
+	.disclaimer small {
+		color: #742a2a;
+		font-style: italic;
+	}
+
+	.cta {
+		padding: 4rem 1rem;
+		background: #1a365d;
+		color: white;
+		text-align: center;
+	}
+
+	.cta h2 {
+		margin-bottom: 1rem;
+	}
+
+	.contact-methods {
+		margin-top: 2rem;
+	}
+
+	.btn {
+		display: inline-block;
+		padding: 0.75rem 2rem;
+		margin: 0 0.5rem;
+		text-decoration: none;
+		border-radius: 0.375rem;
+		font-weight: 600;
+		transition: all 0.2s;
+	}
+
+	.btn.primary {
+		background-color: #90cdf4;
+		color: #1a365d;
+	}
+
+	.btn.primary:hover {
+		background-color: #63b3ed;
+	}
+
+	.btn.secondary {
+		background-color: transparent;
+		color: #90cdf4;
+		border: 2px solid #90cdf4;
+	}
+
+	.btn.secondary:hover {
+		background-color: #90cdf4;
+		color: #1a365d;
+	}
+
+	.container {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+</style>
