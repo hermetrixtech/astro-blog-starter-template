@@ -60,26 +60,18 @@ import { SITE_TITLE, SITE_DESCRIPTION, CONTACT_EMAIL, SECURITY_EMAIL } from '../
 					<h2>Why Hermetrix Technologies</h2>
 					<div class="features-grid">
 						<div class="feature">
-							<div class="icon-circle" aria-hidden="true">🛡️</div>
-							<div class="icon-circle" role="img" aria-label="Security-First Approach icon">🛡️</div>
 							<h3>Security-First Approach</h3>
 							<p>Every solution is evaluated against certified security standards and framework requirements.</p>
 						</div>
 						<div class="feature">
-							<div class="icon-circle" aria-hidden="true">🌏</div>
-							<div class="icon-circle" role="img" aria-label="APAC Regional Focus icon">🌏</div>
 							<h3>APAC Regional Focus</h3>
 							<p>Deep understanding of New Zealand and Asia-Pacific security requirements and regulations.</p>
 						</div>
 						<div class="feature">
-							<div class="icon-circle" aria-hidden="true">🏢</div>
-							<div class="icon-circle" role="img" aria-label="Enterprise Expertise icon">🏢</div>
 							<h3>Enterprise Expertise</h3>
 							<p>Solutions designed for business and government environments with complex security needs.</p>
 						</div>
 						<div class="feature">
-							<div class="icon-circle" aria-hidden="true">✔️</div>
-							<div class="icon-circle" role="img" aria-label="Practical Guidance icon">✔️</div>
 							<h3>Practical Guidance</h3>
 							<p>Helping organizations understand and work toward security compliance through appropriate solutions.</p>
 						</div>
@@ -243,7 +235,7 @@ import { SITE_TITLE, SITE_DESCRIPTION, CONTACT_EMAIL, SECURITY_EMAIL } from '../
 
 			.service-card {
 				padding: 2.5rem 2rem;
-				background: white;
+				background: linear-gradient(135deg, #ffffff 0%, #f0f4f8 100%);
 				border-radius: 0.75rem;
 				box-shadow: 0 8px 32px rgba(26,54,93,0.12), 0 1.5px 4px rgba(26,54,93,0.07);
 				border-top: 4px solid #1a365d;
@@ -422,16 +414,19 @@ import { SITE_TITLE, SITE_DESCRIPTION, CONTACT_EMAIL, SECURITY_EMAIL } from '../
 
 			/* Mobile Responsiveness */
 			@media (max-width: 768px) {
+				.hero {
+					padding: 4rem 1.5rem;
+				}
 				.hero h1 {
-					font-size: 2.5rem;
+					font-size: 3rem;
 				}
 
 				.tagline {
-					font-size: 1.3rem;
+					font-size: 1.5rem;
 				}
 
 				.subtitle {
-					font-size: 1.1rem;
+					font-size: 1.2rem;
 				}
 
 				.cta-buttons {
@@ -454,6 +449,37 @@ import { SITE_TITLE, SITE_DESCRIPTION, CONTACT_EMAIL, SECURITY_EMAIL } from '../
 				.services-grid,
 				.features-grid {
 					grid-template-columns: 1fr;
+				}
+			}
+
+			@media (max-width: 480px) {
+				.hero {
+					padding: 3rem 1rem;
+				}
+				.hero h1 {
+					font-size: 2.5rem;
+				}
+				.tagline {
+					font-size: 1.3rem;
+				}
+				.subtitle {
+					font-size: 1.1rem;
+				}
+				.services-overview h2 {
+					font-size: 2.5rem;
+				}
+				.why-us h2 {
+					font-size: 2.5rem;
+				}
+				.contact-cta h2 {
+					font-size: 2rem;
+				}
+				.contact-cta p {
+					font-size: 1.1rem;
+				}
+				.btn {
+					padding: 0.6rem 1.5rem;
+					font-size: 0.9rem;
 				}
 			}
 		</style>
