@@ -46,42 +46,195 @@ import { SITE_TITLE } from '../consts';
 						<li>Commercial-grade encryption solutions</li>
 						<li>Compliance with data protection standards</li>
 					</ul>
-					<div class="status-note">
-						<style>
-						.hero {
-		color: #90cdf4;
-	}
+					<style>
+					body {
+						margin: 0;
+						min-height: 100vh;
+						font-family: system-ui, sans-serif;
+						line-height: 1.6;
+						background: #f8fafc;
+					}
 
-	.partner-cta ul {
-		text-align: left;
-		max-width: 600px;
-		margin: 1.5rem auto;
-	}
+					main {
+						flex: 1;
+					}
 
-	.partner-cta li {
-		margin-bottom: 0.5rem;
-		line-height: 1.6;
-	}
+					/* Hero Section */
+					.hero {
+						padding: 5rem 1rem;
+						text-align: center;
+						background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+						color: white;
+						position: relative;
+						overflow: hidden;
+					}
+					.hero::before {
+						content: "";
+						position: absolute;
+						top: 0; left: 0; right: 0; bottom: 0;
+						background: url('data:image/svg+xml;utf8,<svg width="100%25" height="100%25" xmlns="http://www.w3.org/2000/svg"><circle fill="%2390cdf4" fill-opacity="0.07" cx="80" cy="80" r="60"/><circle fill="%2390cdf4" fill-opacity="0.05" cx="300" cy="200" r="100"/><circle fill="%2390cdf4" fill-opacity="0.09" cx="90%25" cy="60" r="80"/></svg>');
+						z-index: 0;
+					}
+					.hero > .container {
+						position: relative;
+						z-index: 1;
+					}
+					.hero h1 {
+						font-size: 3.4rem;
+						margin-bottom: 1rem;
+						font-family: 'Montserrat', 'Segoe UI', 'Arial Black', Arial, sans-serif;
+						font-weight: 900;
+						color: #f7fafc;
+						text-shadow: 0 2px 12px rgba(26,54,93,0.25), 0 1px 0 #2d3748;
+						letter-spacing: 0.04em;
+					}
+					.tagline {
+						font-size: 1.5rem;
+						font-weight: 300;
+						margin-bottom: 1rem;
+						color: #90cdf4;
+					}
 
-	.btn {
-		display: inline-block;
-		padding: 0.75rem 2rem;
-		margin-top: 1rem;
-		text-decoration: none;
-		border-radius: 0.375rem;
-		font-weight: 600;
-		transition: all 0.2s;
-		background-color: #90cdf4;
-		color: #1a365d;
-	}
+					/* Products Content */
+					.products-content {
+						padding: 5rem 1rem;
+						background: #f8fafc;
+					}
+					.intro {
+						text-align: center;
+						max-width: 900px;
+						margin: 0 auto 3rem;
+						font-size: 1.15rem;
+						line-height: 1.7;
+					}
+					.product-categories {
+						display: grid;
+						grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+						gap: 2rem;
+						max-width: 1200px;
+						margin: 0 auto 4rem;
+					}
+					.category {
+						background: #fff;
+						padding: 2.5rem 2rem;
+						border-radius: 0.75rem;
+						border: 1px solid #e2e8f0;
+						box-shadow: 0 8px 32px rgba(26,54,93,0.12), 0 1.5px 4px rgba(26,54,93,0.07);
+						transition: box-shadow 0.2s, transform 0.2s;
+						display: flex;
+						flex-direction: column;
+						align-items: flex-start;
+					}
+					.category:hover {
+						box-shadow: 0 12px 36px rgba(26,54,93,0.16);
+						transform: translateY(-2px) scale(1.01);
+					}
+					.category-icon {
+						font-size: 2rem;
+						margin-right: 0.5rem;
+						vertical-align: middle;
+						display: inline-block;
+						color: #3182ce;
+					}
+					.category h2 {
+						color: #1a365d;
+						margin-bottom: 1rem;
+						font-size: 1.5rem;
+						font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+						letter-spacing: 0.04em;
+						display: inline-block;
+						vertical-align: middle;
+					}
+					.category ul {
+						margin: 1rem 0;
+						padding-left: 1.5rem;
+					}
+					.category li {
+						margin-bottom: 0.5rem;
+						line-height: 1.6;
+					}
+					.status-note {
+						background: #f0f4f8;
+						border: 1px solid #cbd5e0;
+						border-left: 4px solid #3182ce;
+						padding: 1rem;
+						border-radius: 0.5rem;
+						margin-top: 1.5rem;
+						font-size: 0.95rem;
+						color: #2d3748;
+					}
 
-	.btn:hover {
-		background-color: #63b3ed;
-	}
-
-	.container {
-	width: 90vw;
-	max-width: 1400px;
-	margin: 0 auto;
-	}
-</style>
+					/* Partner CTA */
+					.partner-cta {
+						background: #2d3748;
+						color: white;
+						padding: 3rem;
+						border-radius: 0.75rem;
+						max-width: 900px;
+						margin: 0 auto;
+						text-align: center;
+						box-shadow: 0 4px 16px rgba(26,54,93,0.13);
+						border: 1px solid #e2e8f0;
+						transition: box-shadow 0.2s, transform 0.2s;
+					}
+					.partner-cta:hover {
+						box-shadow: 0 8px 32px rgba(26,54,93,0.18);
+						transform: translateY(-2px) scale(1.01);
+					}
+					.partner-cta h2 {
+						margin-bottom: 1.5rem;
+						color: #90cdf4;
+						font-size: 1.7rem;
+						font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+						letter-spacing: 0.04em;
+						display: inline-block;
+						vertical-align: middle;
+					}
+					.partner-cta ul {
+						text-align: left;
+						max-width: 600px;
+						margin: 1.5rem auto;
+					}
+					.partner-cta li {
+						margin-bottom: 0.5rem;
+						line-height: 1.6;
+					}
+					.btn {
+						display: inline-block;
+						padding: 0.75rem 2rem;
+						margin-top: 1rem;
+						text-decoration: none;
+						border-radius: 0.75rem;
+						font-weight: 700;
+						transition: all 0.2s;
+						background-color: #90cdf4;
+						color: #1a365d;
+						box-shadow: 0 2px 8px rgba(26,54,93,0.07);
+						font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+						letter-spacing: 0.02em;
+					}
+					.btn:active {
+						transform: scale(0.98);
+					}
+					.btn:hover {
+						background-color: #63b3ed;
+					}
+					.container {
+						width: 95vw;
+						max-width: 1400px;
+						margin: 0 auto;
+					}
+					@media (max-width: 900px) {
+						.product-categories {
+							grid-template-columns: 1fr;
+							gap: 1.5rem;
+							max-width: 98vw;
+						}
+						.category {
+							max-width: 100%;
+						}
+						.partner-cta {
+							padding: 2rem 1rem;
+						}
+					}
+					</style>
