@@ -18,7 +18,7 @@ import { SITE_TITLE, SITE_DESCRIPTION, CONTACT_EMAIL, SECURITY_EMAIL } from '../
 			<!-- Hero Section -->
 			<section class="hero">
 				<div class="container">
-					<h1>🛡️ Hermetrix Technologies</h1>
+					<h1>Hermetrix Technologies</h1>
 					<p class="tagline">Secure Communications & Cybersecurity Solutions</p>
 					<p class="subtitle">
 						Specializing in certified security solutions and compliance guidance for the Asia-Pacific region.
@@ -36,19 +36,16 @@ import { SITE_TITLE, SITE_DESCRIPTION, CONTACT_EMAIL, SECURITY_EMAIL } from '../
 					<h2>Our Expertise</h2>
 					<div class="services-grid">
 						<div class="service-card">
-							<div class="icon-circle" role="img" aria-label="Secure Communications icon">🔒</div>
 							<h3>Secure Communications</h3>
 							<p>Implementation and support of enterprise-grade encrypted communication devices and systems for sensitive environments.</p>
 							<a href="/services#communications" class="learn-more">Learn more →</a>
 						</div>
 						<div class="service-card">
-							<div class="icon-circle" role="img" aria-label="Data Protection icon">💾</div>
 							<h3>Data Protection</h3>
 							<p>Certified encrypted storage solutions and data protection strategies aligned with security framework requirements.</p>
 							<a href="/products" class="learn-more">Learn more →</a>
 						</div>
 						<div class="service-card">
-							<div class="icon-circle" role="img" aria-label="Compliance Guidance icon">📜</div>
 							<h3>Compliance Guidance</h3>
 							<p>Expert guidance on NZISM, PSR, and international security standards to help navigate compliance requirements.</p>
 							<a href="/compliance" class="learn-more">Learn more →</a>
@@ -130,9 +127,9 @@ import { SITE_TITLE, SITE_DESCRIPTION, CONTACT_EMAIL, SECURITY_EMAIL } from '../
 
 			/* Hero Section */
 			.hero {
-	padding: 5rem 1rem;
+	padding: 6rem 2rem;
 	text-align: center;
-	background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+	background: linear-gradient(135deg, #0f1419 0%, #1a365d 50%, #2d3748 100%);
 	color: white;
 	position: relative;
 	overflow: hidden;
@@ -141,7 +138,7 @@ import { SITE_TITLE, SITE_DESCRIPTION, CONTACT_EMAIL, SECURITY_EMAIL } from '../
 	content: "";
 	position: absolute;
 	top: 0; left: 0; right: 0; bottom: 0;
-	background: url('data:image/svg+xml;utf8,<svg width="100%25" height="100%25" xmlns="http://www.w3.org/2000/svg"><circle fill="%2390cdf4" fill-opacity="0.07" cx="80" cy="80" r="60"/><circle fill="%2390cdf4" fill-opacity="0.05" cx="300" cy="200" r="100"/><circle fill="%2390cdf4" fill-opacity="0.09" cx="90%25" cy="60" r="80"/></svg>');
+	background: url('data:image/svg+xml;utf8,<svg width="100%25" height="100%25" xmlns="http://www.w3.org/2000/svg"><circle fill="%2363b3ed" fill-opacity="0.05" cx="10%25" cy="20%25" r="80"/><circle fill="%2363b3ed" fill-opacity="0.03" cx="80%25" cy="70%25" r="120"/><circle fill="%2390cdf4" fill-opacity="0.04" cx="50%25" cy="50%25" r="100"/></svg>');
 	z-index: 0;
 }
 .hero > .container {
@@ -150,28 +147,29 @@ import { SITE_TITLE, SITE_DESCRIPTION, CONTACT_EMAIL, SECURITY_EMAIL } from '../
 			}
 
 			.hero h1 {
-					font-size: 3.4rem;
-					margin-bottom: 1rem;
+					font-size: 4rem;
+					margin-bottom: 1.5rem;
 					font-family: 'Montserrat', 'Segoe UI', 'Arial Black', Arial, sans-serif;
 					font-weight: 900;
-					color: #f7fafc;
-					text-shadow: 0 2px 12px rgba(26,54,93,0.25), 0 1px 0 #2d3748;
-					letter-spacing: 0.04em;
+					color: #ffffff;
+					text-shadow: 0 4px 20px rgba(0,0,0,0.3), 0 2px 0 #1a365d;
+					letter-spacing: 0.02em;
 			}
 
 			.tagline {
-				font-size: 1.5rem;
-				font-weight: 300;
-				margin-bottom: 1rem;
+				font-size: 1.8rem;
+				font-weight: 400;
+				margin-bottom: 1.5rem;
 				color: #90cdf4;
 			}
 
 			.subtitle {
-				font-size: 1.2rem;
-				max-width: 600px;
-				margin: 0 auto 2.5rem;
-				color: #cbd5e0;
-				opacity: 0.9;
+				font-size: 1.3rem;
+				max-width: 700px;
+				margin: 0 auto 3rem;
+				color: #e2e8f0;
+				opacity: 0.95;
+				line-height: 1.7;
 			}
 
 			.cta-buttons {
@@ -274,65 +272,89 @@ import { SITE_TITLE, SITE_DESCRIPTION, CONTACT_EMAIL, SECURITY_EMAIL } from '../
 
 			/* Why Us Section */
 			.why-us {
-				padding: 5rem 1rem;
-				background: white;
+				padding: 6rem 2rem;
+				background: #f8fafc;
 			}
 
 			.why-us h2 {
 					text-align: center;
-					margin-bottom: 3rem;
-					font-size: 2.7rem;
-					color: #1a365d;
+					margin-bottom: 4rem;
+					font-size: 3rem;
+					color: #0f1419;
 					font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
-					letter-spacing: 0.06em;
+					font-weight: 700;
+					letter-spacing: 0.04em;
 			}
 
 			.features-grid {
 				display: grid;
-				grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-				gap: 2rem;
-				max-width: 1200px;
+				grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+				gap: 2.5rem;
+				max-width: 1400px;
 				margin: 0 auto;
 			}
 
 			.feature {
 				text-align: center;
-				padding: 2rem 1rem;
-				border-radius: 0.75rem;
-				background: #f8fafc;
-				box-shadow: 0 4px 16px rgba(26,54,93,0.09);
+				padding: 3rem 2rem;
+				border-radius: 1rem;
+				background: white;
+				box-shadow: 0 8px 32px rgba(15,20,25,0.1), 0 1px 4px rgba(15,20,25,0.08);
 				border: 1px solid #e2e8f0;
-				transition: box-shadow 0.2s, transform 0.2s;
+				transition: all 0.3s ease;
+				position: relative;
+			}
+
+			.feature:hover {
+				transform: translateY(-3px);
+				box-shadow: 0 16px 48px rgba(15,20,25,0.15), 0 2px 8px rgba(15,20,25,0.12);
 			}
 
 			.feature h3 {
-	color: #1a365d;
-	margin-bottom: 1rem;
-	font-size: 1.3rem;
+	color: #0f1419;
+	margin-bottom: 1.5rem;
+	font-size: 1.4rem;
 	font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
-	letter-spacing: 0.03em;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+			}
+
+			.feature p {
+				color: #4a5568;
+				line-height: 1.7;
 			}
 
 			/* Contact CTA */
 			.contact-cta {
-				padding: 5rem 1rem;
-				background: #2d3748;
+				padding: 6rem 2rem;
+				background: #0f1419;
 				color: white;
 				text-align: center;
 			}
 
 			.contact-cta h2 {
-				margin-bottom: 1rem;
+				margin-bottom: 1.5rem;
 				color: #90cdf4;
-				font-size: 2.3rem;
+				font-size: 2.5rem;
 				font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
-				letter-spacing: 0.06em;
+				font-weight: 700;
+				letter-spacing: 0.04em;
+			}
+
+			.contact-cta p {
+				font-size: 1.2rem;
+				color: #e2e8f0;
+				margin-bottom: 3rem;
+				max-width: 600px;
+				margin-left: auto;
+				margin-right: auto;
+				line-height: 1.7;
 			}
 
 			.contact-info {
 				display: flex;
 				justify-content: center;
-				gap: 3rem;
+				gap: 4rem;
 				margin: 2rem 0;
 				flex-wrap: wrap;
 			}
@@ -345,11 +367,13 @@ import { SITE_TITLE, SITE_DESCRIPTION, CONTACT_EMAIL, SECURITY_EMAIL } from '../
 				display: block;
 				margin-bottom: 0.5rem;
 				color: #90cdf4;
+				font-size: 1.1rem;
 			}
 
 			.contact-cta a {
 				color: #90cdf4;
 				text-decoration: none;
+				font-weight: 500;
 			}
 
 			.contact-cta a:hover {
