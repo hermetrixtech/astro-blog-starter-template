@@ -45,27 +45,7 @@ import { SITE_TITLE, COMPANY_NAME } from '../consts';
 				</div>
 			</div>
 
-			<div class="values">
-				<h2>Our Values</h2>
-				<div class="values-grid">
-					<div class="value">
-						<h3>Integrity</h3>
-						<p>We provide honest assessments and recommendations based on security needs, not sales targets.</p>
-					</div>
-					<div class="value">
-						<h3>Expertise</h3>
-						<p>We maintain deep knowledge of security frameworks, standards, and certified technologies.</p>
-					</div>
-					<div class="value">
-						<h3>Discretion</h3>
-						<p>We understand the sensitive nature of security work and maintain strict confidentiality.</p>
-					</div>
-					<div class="value">
-						<h3>Excellence</h3>
-						<p>We strive to deliver exceptional service and support in everything we do.</p>
-					</div>
-				</div>
-			</div>
+
 
 			<div class="approach">
 				<h2>Our Approach to Security</h2>
@@ -180,8 +160,10 @@ import { SITE_TITLE, COMPANY_NAME } from '../consts';
 	.mission h2 {
 		color: #1a365d;
 		margin-bottom: 2rem;
-		font-size: 2.5rem;
-		font-weight: 600;
+		font-size: 2.8rem;
+		font-weight: 700;
+		letter-spacing: 0.02em;
+		line-height: 1.2;
 	}
 
 	.mission p {
@@ -198,8 +180,10 @@ import { SITE_TITLE, COMPANY_NAME } from '../consts';
 	.story h2 {
 		color: #1a365d;
 		margin-bottom: 2rem;
-		font-size: 2rem;
-		font-weight: 600;
+		font-size: 2.5rem;
+		font-weight: 700;
+		letter-spacing: 0.02em;
+		line-height: 1.2;
 	}
 
 	.story p {
@@ -217,12 +201,12 @@ import { SITE_TITLE, COMPANY_NAME } from '../consts';
 	}
 
 	.principle {
-		background: rgba(26, 26, 26, 0.8);
+		background: rgba(255, 255, 255, 0.05);
 		backdrop-filter: blur(10px);
 		padding: 3rem 2rem;
 		border-radius: 1rem;
-		border: 1px solid rgba(0, 212, 255, 0.3);
-		box-shadow: var(--box-shadow);
+		border: 1px solid rgba(0, 212, 255, 0.1);
+		box-shadow: 0 8px 32px rgba(0, 212, 255, 0.1);
 		transition: all 0.3s ease;
 		position: relative;
 		overflow: hidden;
@@ -384,8 +368,10 @@ import { SITE_TITLE, COMPANY_NAME } from '../consts';
 	.cta-section h2 {
 		margin-bottom: 2rem;
 		color: #90cdf4;
-		font-size: 2.5rem;
-		font-weight: 600;
+		font-size: 2.8rem;
+		font-weight: 700;
+		letter-spacing: 0.02em;
+		line-height: 1.2;
 	}
 
 	.cta-section p {
@@ -457,7 +443,8 @@ import { SITE_TITLE, COMPANY_NAME } from '../consts';
 			font-size: 2rem;
 		}
 		.mission h2,
-		.values h2 {
+		.story h2,
+		.approach h2 {
 			font-size: 2.5rem;
 		}
 		.cta-section h2 {
@@ -489,7 +476,7 @@ import { SITE_TITLE, COMPANY_NAME } from '../consts';
 		.story h2 {
 			font-size: 2rem;
 		}
-		.values h2 {
+		.approach h2 {
 			font-size: 2rem;
 		}
 		.contact-methods {
