@@ -24,7 +24,6 @@ import { SITE_TITLE } from '../consts';
 
 			<div class="product-categories">
 				<section class="category">
-					<span class="category-icon" role="img" aria-label="Encrypted Storage">💾</span>
 					<h2>Encrypted Storage Solutions</h2>
 					<p>Hardware-encrypted storage devices that protect data at rest with certified encryption standards.</p>
 					<ul>
@@ -54,7 +53,6 @@ import { SITE_TITLE } from '../consts';
 				</section>
 
 				<section class="category">
-					<span class="category-icon" role="img" aria-label="Access Control">🔑</span>
 					<h2>Access Control & Authentication</h2>
 					<p>Multi-factor authentication and secure access solutions for sensitive environments.</p>
 					<ul>
@@ -70,7 +68,6 @@ import { SITE_TITLE } from '../consts';
 			</div>
 
 			<section class="partner-cta">
-				<span class="category-icon" role="img" aria-label="Partnership">🤝</span>
 				<h2>For Product Manufacturers & Distributors</h2>
 				<p>Are you a manufacturer of certified security products? We are seeking partnership opportunities with companies offering:</p>
 				<ul>
@@ -103,9 +100,9 @@ main {
 
 /* Hero Section */
 .hero {
-	padding: 5rem 1rem;
+	padding: 6rem 2rem;
 	text-align: center;
-	background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+	background: linear-gradient(135deg, #0f1419 0%, #1a365d 50%, #2d3748 100%);
 	color: white;
 	position: relative;
 	overflow: hidden;
@@ -114,7 +111,7 @@ main {
 	content: "";
 	position: absolute;
 	top: 0; left: 0; right: 0; bottom: 0;
-	background: url('data:image/svg+xml;utf8,<svg width="100%25" height="100%25" xmlns="http://www.w3.org/2000/svg"><circle fill="%2390cdf4" fill-opacity="0.07" cx="80" cy="80" r="60"/><circle fill="%2390cdf4" fill-opacity="0.05" cx="300" cy="200" r="100"/><circle fill="%2390cdf4" fill-opacity="0.09" cx="90%25" cy="60" r="80"/></svg>');
+	background: url('data:image/svg+xml;utf8,<svg width="100%25" height="100%25" xmlns="http://www.w3.org/2000/svg"><circle fill="%2363b3ed" fill-opacity="0.05" cx="10%25" cy="20%25" r="80"/><circle fill="%2363b3ed" fill-opacity="0.03" cx="80%25" cy="70%25" r="120"/><circle fill="%2390cdf4" fill-opacity="0.04" cx="50%25" cy="50%25" r="100"/></svg>');
 	z-index: 0;
 }
 .hero > .container {
@@ -122,18 +119,18 @@ main {
 	z-index: 1;
 }
 .hero h1 {
-	font-size: 3.4rem;
-	margin-bottom: 1rem;
+	font-size: 4rem;
+	margin-bottom: 1.5rem;
 	font-family: 'Montserrat', 'Segoe UI', 'Arial Black', Arial, sans-serif;
 	font-weight: 900;
-	color: #f7fafc;
-	text-shadow: 0 2px 12px rgba(26,54,93,0.25), 0 1px 0 #2d3748;
-	letter-spacing: 0.04em;
+	color: #ffffff;
+	text-shadow: 0 4px 20px rgba(0,0,0,0.3), 0 2px 0 #1a365d;
+	letter-spacing: 0.02em;
 }
 .tagline {
-	font-size: 1.5rem;
-	font-weight: 300;
-	margin-bottom: 1rem;
+	font-size: 1.8rem;
+	font-weight: 400;
+	margin-bottom: 1.5rem;
 	color: #90cdf4;
 }
 
@@ -171,21 +168,13 @@ main {
 	box-shadow: 0 12px 36px rgba(26,54,93,0.16);
 	transform: translateY(-2px) scale(1.01);
 }
-.category-icon {
-	font-size: 2rem;
-	margin-right: 0.5rem;
-	vertical-align: middle;
-	display: inline-block;
-	color: #3182ce;
-}
 .category h2 {
-	color: #1a365d;
-	margin-bottom: 1rem;
-	font-size: 1.5rem;
+	color: #0f1419;
+	margin-bottom: 1.5rem;
+	font-size: 1.6rem;
 	font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
-	letter-spacing: 0.04em;
-	display: inline-block;
-	vertical-align: middle;
+	font-weight: 600;
+	letter-spacing: 0.02em;
 }
 .category ul {
 	margin: 1rem 0;
@@ -208,29 +197,29 @@ main {
 
 /* Partner CTA */
 .partner-cta {
-	background: #2d3748;
+	background: #0f1419;
 	color: white;
-	padding: 3rem;
+	padding: 4rem 3rem;
 	border-radius: 0.75rem;
 	max-width: 900px;
 	margin: 0 auto;
 	text-align: center;
-	box-shadow: 0 4px 16px rgba(26,54,93,0.13);
+	box-shadow: 0 8px 32px rgba(26,54,93,0.12), 0 1.5px 4px rgba(26,54,93,0.07);
 	border: 1px solid #e2e8f0;
-	transition: box-shadow 0.2s, transform 0.2s;
+	transition: all 0.3s ease;
+	position: relative;
 }
 .partner-cta:hover {
-	box-shadow: 0 8px 32px rgba(26,54,93,0.18);
-	transform: translateY(-2px) scale(1.01);
+	transform: translateY(-5px);
+	box-shadow: 0 16px 48px rgba(26,54,93,0.18), 0 4px 12px rgba(26,54,93,0.15);
 }
 .partner-cta h2 {
 	margin-bottom: 1.5rem;
 	color: #90cdf4;
-	font-size: 1.7rem;
+	font-size: 2.2rem;
 	font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+	font-weight: 700;
 	letter-spacing: 0.04em;
-	display: inline-block;
-	vertical-align: middle;
 }
 .partner-cta ul {
 	text-align: left;
