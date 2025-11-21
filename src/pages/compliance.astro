@@ -24,28 +24,26 @@ import { SITE_TITLE } from '../consts';
 
 			<div class="framework-overview">
 				<h2>Understanding Key Security Frameworks</h2>
-				
-				<div class="framework-item">
-					<h3>NZISM (New Zealand Information Security Manual)</h3>
-					<p>The government's comprehensive manual for protecting official information. It outlines security controls, risk management approaches, and technical requirements for government agencies and their partners.</p>
-					<div class="our-role">
-						<strong>Our Approach:</strong> We help interpret NZISM requirements and identify commercial solutions that align with its security objectives.
-					</div>
-				</div>
 
 				<div class="framework-item">
-					<h3>Protective Security Requirements (PSR)</h3>
-					<p>An all-of-government framework covering personnel, physical, and information security measures for protecting sensitive government information.</p>
-					<div class="our-role">
-						<strong>Our Approach:</strong> We provide guidance on PSR alignment and recommend security practices that support compliance objectives.
-					</div>
-				</div>
+					<div class="framework-grid">
+						<div class="framework-section">
+							<h3>NZISM (New Zealand Information Security Manual)</h3>
+							<p>The government's comprehensive manual for protecting official information. It outlines security controls, risk management approaches, and technical requirements for government agencies and their partners.</p>
+							<p><strong>Our Approach:</strong> We help interpret NZISM requirements and identify commercial solutions that align with its security objectives.</p>
+						</div>
 
-				<div class="framework-item">
-					<h3>International Security Standards</h3>
-					<p>Various international standards and certifications recognized within New Zealand security frameworks, including FIPS 140-2, Common Criteria, and other validation programs.</p>
-					<div class="our-role">
-						<strong>Our Approach:</strong> We help identify products with relevant certifications that may support your security and compliance goals.
+						<div class="framework-section">
+							<h3>Protective Security Requirements (PSR)</h3>
+							<p>An all-of-government framework covering personnel, physical, and information security measures for protecting sensitive government information.</p>
+							<p><strong>Our Approach:</strong> We provide guidance on PSR alignment and recommend security practices that support compliance objectives.</p>
+						</div>
+
+						<div class="framework-section">
+							<h3>International Security Standards</h3>
+							<p>Various international standards and certifications recognized within New Zealand security frameworks, including FIPS 140-2, Common Criteria, and other validation programs.</p>
+							<p><strong>Our Approach:</strong> We help identify products with relevant certifications that may support your security and compliance goals.</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -165,9 +163,11 @@ import { SITE_TITLE } from '../consts';
 		text-align: center;
 		max-width: 1000px;
 		margin: 0 auto 4rem;
-		font-size: 1.3rem;
-		line-height: 1.7;
-		color: var(--text-secondary);
+		font-size: 1.5rem;
+		line-height: 1.8;
+		color: #2d3748;
+		font-weight: 500;
+		letter-spacing: 0.01em;
 	}
 
 	.framework-overview {
@@ -179,8 +179,10 @@ import { SITE_TITLE } from '../consts';
 		color: #1a365d;
 		margin-bottom: 3rem;
 		text-align: center;
-		font-size: 2.5rem;
-		font-weight: 600;
+		font-size: 3rem;
+		font-weight: 700;
+		letter-spacing: 0.02em;
+		line-height: 1.2;
 	}
 
 	.framework-item {
@@ -251,9 +253,11 @@ import { SITE_TITLE } from '../consts';
 	.capabilities h2 {
 		text-align: center;
 		margin-bottom: 4rem;
-		font-size: 2.5rem;
+		font-size: 2.8rem;
 		color: #1a365d;
-		font-weight: 600;
+		font-weight: 700;
+		letter-spacing: 0.02em;
+		line-height: 1.2;
 	}
 
 	.capability-grid {
@@ -263,13 +267,13 @@ import { SITE_TITLE } from '../consts';
 	}
 
 	.capability {
-		background: rgba(26, 26, 26, 0.8);
+		background: rgba(255, 255, 255, 0.05);
 		backdrop-filter: blur(10px);
 		padding: 3rem 2rem;
-		border: 1px solid rgba(0, 212, 255, 0.2);
+		border: 1px solid rgba(0, 212, 255, 0.1);
 		border-radius: 1rem;
 		text-align: center;
-		box-shadow: var(--box-shadow);
+		box-shadow: 0 8px 32px rgba(0, 212, 255, 0.1);
 		transition: all 0.3s ease;
 	}
 
