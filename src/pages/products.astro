@@ -241,50 +241,43 @@ main {
 	margin-bottom: 0.5rem;
 	line-height: 1.6;
 }
-.btn {
-	display: inline-block;
-	padding: 0.75rem 2rem;
-	margin-top: 1rem;
-	text-decoration: none;
-	border-radius: 0.75rem;
-	font-weight: 700;
-	transition: all 0.2s;
-	background-color: #90cdf4;
-	color: #1a365d;
-	box-shadow: 0 2px 8px rgba(26,54,93,0.07);
-	font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
-	letter-spacing: 0.02em;
+.btn, .btn.primary {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  margin-top: 1rem;
+  text-decoration: none;
+  border-radius: 0.75rem;
+  font-weight: 700;
+  transition: all 0.2s;
+  background-color: #90cdf4;
+  color: #1a365d;
+  box-shadow: 0 2px 8px rgba(26,54,93,0.07);
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  letter-spacing: 0.02em;
 }
-.btn.primary {
-	background-color: #90cdf4;
-	color: #1a365d;
-}
-.btn.primary:hover {
-	background-color: #63b3ed;
-	color: #1a365d;
+.btn:hover, .btn.primary:hover {
+  background-color: #63b3ed;
+  color: #1a365d;
 }
 .btn:active {
-	transform: scale(0.98);
-}
-.btn:hover {
-	background-color: #63b3ed;
+  transform: scale(0.98);
 }
 .container {
-	width: 100%;
-	max-width: 1400px;
+	max-width: 1200px;
 	margin: 0 auto;
+	text-align: center;
 }
 @media (max-width: 900px) {
-	.product-categories {
-		grid-template-columns: 1fr;
-		gap: 1.5rem;
-		max-width: 98vw;
-	}
-	.category {
-		max-width: 100%;
-	}
-	.partner-cta {
-		padding: 2rem 1rem;
-	}
+  .product-categories {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 98vw;
+  }
+  .category {
+    max-width: 100%;
+  }
+  .partner-cta {
+    padding: 2rem 1rem;
+  }
 }
 </style>
