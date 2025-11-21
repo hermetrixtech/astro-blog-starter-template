@@ -124,45 +124,112 @@ import { SITE_TITLE } from '../consts';
 	.category {
 		background: #f8fafc;
 		padding: 2rem;
-		margin-bottom: 2rem;
+		<header>
+		  <Header />
+		</header>
 		border-radius: 0.5rem;
-		border-left: 4px solid #1a365d;
+		<footer>
+		  <Footer />
+		</footer>
 	}
-
+				<div class="category">
+					<!-- Example icon: -->
+					<span class="category-icon" role="img" aria-label="Encrypted Storage">💾</span>
 	.category h2 {
 		color: #1a365d;
-		margin-bottom: 1rem;
+				<div class="category">
+					<span class="category-icon" role="img" aria-label="Secure Communication">🔒</span>
 		font-size: 1.3rem;
 	}
-
+				<div class="category">
+					<span class="category-icon" role="img" aria-label="Access Control">🔑</span>
 	.category ul {
 		margin: 1rem 0;
-		padding-left: 1.5rem;
+				<div class="partner-cta">
+					<span class="category-icon" role="img" aria-label="Partnership">🤝</span>
 	}
 
-	.category li {
+				<h2>Encrypted Storage Solutions</h2>
 		margin-bottom: 0.5rem;
-		line-height: 1.6;
+				<h2>Secure Communication Devices</h2>
 	}
-
+				<h2>Access Control & Authentication</h2>
 	.status-note {
-		background: #e6fffa;
+				<h2>For Product Manufacturers & Distributors</h2>
 		border: 1px solid #81e6d9;
-		border-left: 4px solid #38b2ac;
+				<a href="mailto:hello@hermetrix.nz?subject=Product Partnership Inquiry" class="btn primary">Discuss Partnership</a>
 		padding: 1rem;
-		border-radius: 0.25rem;
+			.category {
+				background: #f8fafc;
+				padding: 2rem;
+				margin-bottom: 2rem;
+				border-radius: 0.75rem;
+				border-left: 4px solid #1a365d;
+				box-shadow: 0 4px 16px rgba(26,54,93,0.09);
+				transition: box-shadow 0.2s, transform 0.2s;
+			}
+			.category:hover {
+				box-shadow: 0 8px 32px rgba(26,54,93,0.13);
+				transform: translateY(-2px) scale(1.01);
+			}
+			.category-icon {
+				font-size: 2rem;
+				margin-right: 0.5rem;
+				vertical-align: middle;
+				display: inline-block;
+			}
 		margin-top: 1.5rem;
-		font-size: 0.9rem;
+			.category h2 {
+				color: #1a365d;
+				margin-bottom: 1rem;
+				font-size: 1.5rem;
+				font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+				letter-spacing: 0.04em;
+				display: inline-block;
+				vertical-align: middle;
 	}
-
+			.partner-cta {
+				background: #1a365d;
+				color: white;
+				padding: 3rem;
+				border-radius: 0.75rem;
+				max-width: 800px;
+				margin: 0 auto;
+				text-align: center;
+				box-shadow: 0 4px 16px rgba(26,54,93,0.13);
+				transition: box-shadow 0.2s, transform 0.2s;
 	.partner-cta {
 		background: #1a365d;
+			.partner-cta:hover {
+				box-shadow: 0 8px 32px rgba(26,54,93,0.18);
+				transform: translateY(-2px) scale(1.01);
 		color: white;
-		padding: 3rem;
+			.partner-cta h2 {
+				margin-bottom: 1.5rem;
+				color: #90cdf4;
+				font-size: 1.7rem;
+				font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+				letter-spacing: 0.04em;
+				display: inline-block;
+				vertical-align: middle;
 		border-radius: 0.5rem;
-		max-width: 800px;
+			.btn {
+				display: inline-block;
+				padding: 0.75rem 2rem;
+				margin-top: 1rem;
+				text-decoration: none;
+				border-radius: 0.75rem;
+				font-weight: 700;
+				transition: all 0.2s;
+				background-color: #90cdf4;
+				color: #1a365d;
+				box-shadow: 0 2px 8px rgba(26,54,93,0.07);
+				font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+				letter-spacing: 0.02em;
 		margin: 0 auto;
 		text-align: center;
+			.btn:active {
+				transform: scale(0.98);
 	}
 
 	.partner-cta h2 {
