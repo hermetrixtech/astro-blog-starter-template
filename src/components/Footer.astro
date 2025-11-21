@@ -10,9 +10,16 @@ const currentYear = new Date().getFullYear();
 
 <style>
   footer {
-    background: #2d3748;
-    color: white;
+    background: var(--bg-primary);
+    color: var(--text-secondary);
     padding: 2rem 0;
     text-align: center;
+    border-top: 1px solid rgba(0, 212, 255, 0.3);
+    box-shadow: 0 -2px 20px rgba(0, 212, 255, 0.1);
+  }
+
+  .footer-container p {
+    margin: 0;
+    font-size: 0.9rem;
   }
 </style>
