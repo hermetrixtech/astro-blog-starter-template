@@ -1,6 +1,0 @@
-{
-    "extensions.supportNodeGlobalNavigator": true,
-    "debug.console.acceptSuggestionOnEnter": "on",
-    "debug.console.closeOnEnd": true,
-    "debug.openExplorerOnEnd": true
-}
