@@ -1,4 +1,4 @@
----
+O---
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -94,12 +94,14 @@ main {
 
 	/* Hero Section */
 	.hero {
-	padding: 4rem 2rem;
+	padding: 4rem 0;
 	text-align: center;
 	background: linear-gradient(135deg, #0f1419 0%, #1a365d 50%, #2d3748 100%);
 	color: white;
 	position: relative;
 	overflow: hidden;
+	width: 100vw;
+	margin-left: calc(50% - 50vw);
 }
 .hero::before {
 	content: "";
@@ -111,6 +113,7 @@ main {
 .hero > .container {
 	position: relative;
 	z-index: 1;
+	padding: 0 2rem;
 	}
 
 	.hero h1 {

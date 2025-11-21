@@ -117,14 +117,16 @@ import { SITE_TITLE, SITE_DESCRIPTION, CONTACT_EMAIL, SECURITY_EMAIL } from '../
 				flex: 1;
 			}
 
-			/* Hero Section */
-			.hero {
-	padding: 4rem 2rem;
+	/* Hero Section */
+	.hero {
+	padding: 4rem 0;
 	text-align: center;
 	background: linear-gradient(135deg, #0f1419 0%, #1a365d 50%, #2d3748 100%);
 	color: white;
 	position: relative;
 	overflow: hidden;
+	width: 100vw;
+	margin-left: calc(50% - 50vw);
 }
 .hero::before {
 	content: "";
@@ -136,6 +138,7 @@ import { SITE_TITLE, SITE_DESCRIPTION, CONTACT_EMAIL, SECURITY_EMAIL } from '../
 .hero > .container {
 	position: relative;
 	z-index: 1;
+	padding: 0 2rem;
 			}
 
 			.hero h1 {
@@ -381,14 +384,11 @@ import { SITE_TITLE, SITE_DESCRIPTION, CONTACT_EMAIL, SECURITY_EMAIL } from '../
 			}
 
 			.container {
-				max-width: 1200px;
+				max-width: 1600px;
 				margin: 0 auto;
 			}
 
 			@media (min-width: 1400px) {
-				.container {
-					max-width: 1600px;
-				}
 				.services-grid {
 					grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 					gap: 1.5rem;
