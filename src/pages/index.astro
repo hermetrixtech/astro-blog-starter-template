@@ -11,7 +11,9 @@ import { SITE_TITLE, SITE_DESCRIPTION, CONTACT_EMAIL, SECURITY_EMAIL } from '../
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
-		<Header />
+		<header>
+			<Header />
+		</header>
 		<main>
 			<!-- Hero Section -->
 			<section class="hero">
@@ -35,18 +37,21 @@ import { SITE_TITLE, SITE_DESCRIPTION, CONTACT_EMAIL, SECURITY_EMAIL } from '../
 					<div class="services-grid">
 						<div class="service-card">
 							<div class="icon-circle" aria-hidden="true">🔒</div>
+							<div class="icon-circle" role="img" aria-label="Secure Communications icon">🔒</div>
 							<h3>Secure Communications</h3>
 							<p>Implementation and support of enterprise-grade encrypted communication devices and systems for sensitive environments.</p>
 							<a href="/services#communications" class="learn-more">Learn more →</a>
 						</div>
 						<div class="service-card">
 							<div class="icon-circle" aria-hidden="true">💾</div>
+							<div class="icon-circle" role="img" aria-label="Data Protection icon">💾</div>
 							<h3>Data Protection</h3>
 							<p>Certified encrypted storage solutions and data protection strategies aligned with security framework requirements.</p>
 							<a href="/products" class="learn-more">Learn more →</a>
 						</div>
 						<div class="service-card">
 							<div class="icon-circle" aria-hidden="true">📜</div>
+							<div class="icon-circle" role="img" aria-label="Compliance Guidance icon">📜</div>
 							<h3>Compliance Guidance</h3>
 							<p>Expert guidance on NZISM, PSR, and international security standards to help navigate compliance requirements.</p>
 							<a href="/compliance" class="learn-more">Learn more →</a>
@@ -62,21 +67,25 @@ import { SITE_TITLE, SITE_DESCRIPTION, CONTACT_EMAIL, SECURITY_EMAIL } from '../
 					<div class="features-grid">
 						<div class="feature">
 							<div class="icon-circle" aria-hidden="true">🛡️</div>
+							<div class="icon-circle" role="img" aria-label="Security-First Approach icon">🛡️</div>
 							<h3>Security-First Approach</h3>
 							<p>Every solution is evaluated against certified security standards and framework requirements.</p>
 						</div>
 						<div class="feature">
 							<div class="icon-circle" aria-hidden="true">🌏</div>
+							<div class="icon-circle" role="img" aria-label="APAC Regional Focus icon">🌏</div>
 							<h3>APAC Regional Focus</h3>
 							<p>Deep understanding of New Zealand and Asia-Pacific security requirements and regulations.</p>
 						</div>
 						<div class="feature">
 							<div class="icon-circle" aria-hidden="true">🏢</div>
+							<div class="icon-circle" role="img" aria-label="Enterprise Expertise icon">🏢</div>
 							<h3>Enterprise Expertise</h3>
 							<p>Solutions designed for business and government environments with complex security needs.</p>
 						</div>
 						<div class="feature">
 							<div class="icon-circle" aria-hidden="true">✔️</div>
+							<div class="icon-circle" role="img" aria-label="Practical Guidance icon">✔️</div>
 							<h3>Practical Guidance</h3>
 							<p>Helping organizations understand and work toward security compliance through appropriate solutions.</p>
 						</div>
@@ -104,7 +113,9 @@ import { SITE_TITLE, SITE_DESCRIPTION, CONTACT_EMAIL, SECURITY_EMAIL } from '../
 				</div>
 			</section>
 		</main>
-		<Footer />
+		<footer>
+			<Footer />
+		</footer>
 
 		<style>
 			body {
