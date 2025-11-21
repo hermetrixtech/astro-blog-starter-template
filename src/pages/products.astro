@@ -23,7 +23,8 @@ import { SITE_TITLE } from '../consts';
 			</div>
 
 			<div class="product-categories">
-				<div class="category">
+				<section class="category">
+					<span class="category-icon" role="img" aria-label="Encrypted Storage">💾</span>
 					<h2>Encrypted Storage Solutions</h2>
 					<p>Hardware-encrypted storage devices that protect data at rest with certified encryption standards.</p>
 					<ul>
@@ -35,17 +36,55 @@ import { SITE_TITLE } from '../consts';
 					<div class="status-note">
 						<strong>Product Evaluation Phase:</strong> We are currently evaluating certified encrypted USB and storage solutions for our portfolio.
 					</div>
-				</div>
+				</section>
 
-				   <div class="category">
-					   <h2>Secure Communication Devices</h2>
-					   <p>Certified encrypted communication platforms for enterprise and specialized environments.</p>
-					   <ul>
-						   <li>End-to-end encrypted messaging</li>
-						   <li>Secure voice and video communication</li>
-						   <li>Commercial-grade encryption solutions</li>
-						   <li>Compliance with data protection standards</li>
-					   </ul>
+				<section class="category">
+					<span class="category-icon" role="img" aria-label="Secure Communication">🔒</span>
+					<h2>Secure Communication Devices</h2>
+					<p>Certified encrypted communication platforms for enterprise and specialized environments.</p>
+					<ul>
+						<li>End-to-end encrypted messaging</li>
+						<li>Secure voice and video communication</li>
+						<li>Commercial-grade encryption solutions</li>
+						<li>Compliance with data protection standards</li>
+					</ul>
+					<div class="status-note">
+						<strong>Market Research:</strong> Researching certified communication solutions that meet our security standards.
+					</div>
+				</section>
+
+				<section class="category">
+					<span class="category-icon" role="img" aria-label="Access Control">🔑</span>
+					<h2>Access Control & Authentication</h2>
+					<p>Multi-factor authentication and secure access solutions for sensitive environments.</p>
+					<ul>
+						<li>Hardware security tokens</li>
+						<li>Multi-factor authentication devices</li>
+						<li>Biometric authentication solutions</li>
+						<li>Physical access control systems</li>
+					</ul>
+					<div class="status-note">
+						<strong>Vendor Selection:</strong> Assessing authentication solutions for enterprise deployment.
+					</div>
+				</section>
+			</div>
+
+			<section class="partner-cta">
+				<span class="category-icon" role="img" aria-label="Partnership">🤝</span>
+				<h2>For Product Manufacturers & Distributors</h2>
+				<p>Are you a manufacturer of certified security products? We are seeking partnership opportunities with companies offering:</p>
+				<ul>
+					<li>FIPS 140-2 certified encryption products</li>
+					<li>NLNCSA DEP-V & NATO Restricted certified solutions</li>
+					<li>NZISM-aligned security hardware</li>
+					<li>Enterprise-grade secure communication devices</li>
+				</ul>
+				<p>We are building our product portfolio and welcome discussions with qualified manufacturers and distributors.</p>
+				<a href="mailto:hello@hermetrix.nz?subject=Product Partnership Inquiry" class="btn primary">Discuss Partnership</a>
+			</section>
+		</div>
+	</section>
+
 </main>
 <Footer />
 
@@ -216,6 +255,14 @@ main {
 	font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
 	letter-spacing: 0.02em;
 }
+.btn.primary {
+	background-color: #90cdf4;
+	color: #1a365d;
+}
+.btn.primary:hover {
+	background-color: #63b3ed;
+	color: #1a365d;
+}
 .btn:active {
 	transform: scale(0.98);
 }
@@ -223,7 +270,7 @@ main {
 	background-color: #63b3ed;
 }
 .container {
-	width: 95vw;
+	width: 100%;
 	max-width: 1400px;
 	margin: 0 auto;
 }
