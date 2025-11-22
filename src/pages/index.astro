@@ -1,111 +1,101 @@
----
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION, CONTACT_EMAIL, SECURITY_EMAIL } from '../consts';
----
+--- 
+import BaseHead from '../components/BaseHead.astro'; 
+import Header from '../components/Header.astro'; 
+import Footer from '../components/Footer.astro'; 
+import { SITE_TITLE, SITE_DESCRIPTION, CONTACT_EMAIL, SECURITY_EMAIL } from '../consts'; 
+--- 
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<header>
-			<Header />
-		</header>
-		<main>
-			<!-- Hero Section -->
-			<section class="hero">
-				<div class="container">
-					<h1>Strategic Operational Security Consulting</h1>
-					<p class="tagline">For Businesses That Take Protection Seriously</p>
-					<p class="subtitle">
-						We provide strategic OPSEC analysis and implementation for businesses who understand that security is more than just technology. We help identify and fix the human, process, and strategic vulnerabilities that traditional IT security misses.
-					</p>
-					<div class="cta-buttons">
-						<a href="/services" class="btn primary">Schedule OPSEC Assessment</a>
-						<a href="/about" class="btn secondary">Our Approach</a>
-					</div>
-				</div>
-			</section>
+<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} /> 
 
-			<!-- Services Overview -->
-			<section class="services-overview">
-				<div class="container">
-					<h2>Our OPSEC Consulting Framework</h2>
-					<div class="services-grid">
-						<div class="service-card">
-							<h3>Operational Security Analysis</h3>
-							<p>Understanding what you're truly protecting beyond data—identifying who would target you and why, finding overlooked vulnerabilities in people, processes, and technology, and mapping your complete digital footprint.</p>
-							<a href="/services#analysis" class="learn-more">Learn more →</a>
-						</div>
-						<div class="service-card">
-							<h3>Layered Security Solutions</h3>
-							<p>Immediate risk mitigation (0-30 days), strategic security roadmap (90 days - 12 months), ongoing security operations, and seamless integration of our products with partner solutions.</p>
-							<a href="/services#solutions" class="learn-more">Learn more →</a>
-						</div>
-						<div class="service-card">
-							<h3>Implementation & Enablement</h3>
-							<p>Hands-on deployment support, security protocol development, employee training and awareness programs, and continuous improvement initiatives to ensure sustainable protection.</p>
-							<a href="/services#implementation" class="learn-more">Learn more →</a>
-						</div>
-					</div>
-				</div>
-			</section>
+<Header /> 
+<main> 
+	<section class="hero"> 
+		<div class="container"> 
+			<h1>Strategic Operational Security Consulting</h1> 
+			<p class="tagline">For Businesses That Take Protection Seriously</p> 
+			<p class="subtitle"> 
+				We provide strategic OPSEC analysis and implementation for businesses who understand that security is more than just technology. We help identify and fix the human, process, and strategic vulnerabilities that traditional IT security misses. 
+			</p> 
+			<div class="cta-buttons"> 
+				<a href="/services" class="btn primary">Schedule OPSEC Assessment</a> 
+				<a href="/about" class="btn secondary">Our Approach</a> 
+			</div> 
+		</div> 
+	</section> 
 
-			<!-- Why Choose Us -->
-			<section class="why-us">
-				<div class="container">
-					<h2>Why Hermetrix Technologies</h2>
-					<div class="features-grid">
-						<div class="feature">
-							<h3>Security-First Approach</h3>
-							<p>Every solution is evaluated against certified security standards and framework requirements.</p>
-						</div>
-						<div class="feature">
-							<h3>APAC Regional Focus</h3>
-							<p>Deep understanding of New Zealand and Asia-Pacific security requirements and regulations.</p>
-						</div>
-						<div class="feature">
-							<h3>Enterprise Expertise</h3>
-							<p>Solutions designed for business and government environments with complex security needs.</p>
-						</div>
-						<div class="feature">
-							<h3>Practical Guidance</h3>
-							<p>Helping organizations understand and work toward security compliance through appropriate solutions.</p>
-						</div>
-					</div>
-				</div>
-			</section>
+	<section class="services-overview"> 
+		<div class="container"> 
+			<h2>Our OPSEC Consulting Framework</h2> 
+			<div class="services-grid"> 
+				<div class="service-card"> 
+					<h3>Operational Security Analysis</h3> 
+					<p>Understanding what you're truly protecting beyond data—identifying who would target you and why, finding overlooked vulnerabilities in people, processes, and technology, and mapping your complete digital footprint.</p> 
+					<a href="/services#analysis" class="learn-more">Learn more →</a> 
+				</div> 
+				<div class="service-card"> 
+					<h3>Layered Security Solutions</h3> 
+					<p>Immediate risk mitigation (0-30 days), strategic security roadmap (90 days - 12 months), ongoing security operations, and seamless integration of our products with partner solutions.</p> 
+					<a href="/services#solutions" class="learn-more">Learn more →</a> 
+				</div> 
+				<div class="service-card"> 
+					<h3>Implementation & Enablement</h3> 
+					<p>Hands-on deployment support, security protocol development, employee training and awareness programs, and continuous improvement initiatives to ensure sustainable protection.</p> 
+					<a href="/services#implementation" class="learn-more">Learn more →</a> 
+				</div> 
+			</div> 
+		</div> 
+	</section> 
 
-			<!-- Contact CTA -->
-			<section class="contact-cta">
-				<div class="container">
-					<h2>Ready for Strategic OPSEC Assessment?</h2>
-					<p>Security-conscious leaders trust us to identify and address the vulnerabilities that matter most to their business. Let's discuss how we can protect your operations.</p>
-					<div class="contact-info">
-						<div class="contact-method">
-							<strong>Schedule Assessment</strong>
-							<a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
-						</div>
-						<div class="contact-method">
-							<strong>Security Consultations</strong>
-							<a href={`mailto:${SECURITY_EMAIL}`}>{SECURITY_EMAIL}</a>
-						</div>
-					</div>
-					<div class="cta-buttons">
-						<a href="/services" class="btn primary">View Our Services</a>
-						<a href="/about" class="btn secondary">Learn Our Approach</a>
-					</div>
-				</div>
-			</section>
-		</main>
-		<footer>
-			<Footer />
-		</footer>
+	<section class="why-us"> 
+		<div class="container"> 
+			<h2>Why Hermetrix Technologies</h2> 
+			<div class="features-grid"> 
+				<div class="feature"> 
+					<h3>Security-First Approach</h3> 
+					<p>Every solution is evaluated against certified security standards and framework requirements.</p> 
+				</div> 
+				<div class="feature"> 
+					<h3>APAC Regional Focus</h3> 
+					<p>Deep understanding of New Zealand and Asia-Pacific security requirements and regulations.</p> 
+				</div> 
+				<div class="feature"> 
+					<h3>Enterprise Expertise</h3> 
+					<p>Solutions designed for business and government environments with complex security needs.</p> 
+				</div> 
+				<div class="feature"> 
+					<h3>Practical Guidance</h3> 
+					<p>Helping organizations understand and work toward security compliance through appropriate solutions.</p> 
+				</div> 
+			</div> 
+		</div> 
+	</section> 
 
-		<style>
+	<section class="contact-cta"> 
+		<div class="container"> 
+			<h2>Ready for Strategic OPSEC Assessment?</h2> 
+			<p>Security-conscious leaders trust us to identify and address the vulnerabilities that matter most to their business. Let's discuss how we can protect your operations.</p> 
+			<div class="contact-info"> 
+				<div class="contact-method"> 
+					<strong>Schedule Assessment</strong> 
+					<a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> 
+				</div> 
+				<div class="contact-method"> 
+					<strong>Security Consultations</strong> 
+					<a href={`mailto:${SECURITY_EMAIL}`}>{SECURITY_EMAIL}</a> 
+				</div> 
+			</div> 
+			<div class="cta-buttons"> 
+				<a href="/services" class="btn primary">View Our Services</a> 
+				<a href="/about" class="btn secondary">Learn Our Approach</a> 
+			</div> 
+		</div> 
+	</section> 
+</main> 
+<footer> 
+	<Footer /> 
+</footer> 
+
+<style>
 			/* Full-screen layout */
 			body {
 				margin: 0;

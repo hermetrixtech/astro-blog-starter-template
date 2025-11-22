@@ -1,0 +1,27 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<BaseHead title={`OPSEC Principles - ${SITE_TITLE}`} description="Key principles and best practices in operational security consulting." />
+
+<Header />
+<main>
+  <section>
+    <h1>Operational Security (OPSEC) Principles</h1>
+    <p>At Hermetrix Technologies, our OPSEC consulting is guided by core principles that reinforce security at every level beyond technology.</p>
+    <ul>
+      <li><strong>Know What You’re Protecting:</strong> Understand the critical assets including human, informational, and physical elements.</li>
+      <li><strong>Know Your Adversaries:</strong> Analyze potential threat actors – their motivations, capabilities, and intent.</li>
+      <li><strong>Identify Vulnerabilities:</strong> Evaluate weaknesses across people, processes, and technology.</li>
+      <li><strong>Control Your Digital Footprint:</strong> Map and limit the attack surface created by digital exposures.</li>
+      <li><strong>Layer Security Defenses:</strong> Employ a “Mosaic Effect” approach ensuring no single failure compromises overall security.</li>
+      <li><strong>Enable and Empower People:</strong> Establish training, protocols and continuous improvement programs.</li>
+      <li><strong>Continuous Adaptation:</strong> Maintain vigilance and evolve defenses as threats and environments change.</li>
+    </ul>
+    <p>Our methodology ensures strategic risk mitigation through intelligence-driven and practical OPSEC measures.</p>
+  </section>
+</main>
+<Footer />
