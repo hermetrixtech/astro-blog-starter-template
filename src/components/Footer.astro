@@ -9,6 +9,9 @@ const currentYear = new Date().getFullYear();
       <div class="footer-info">
         <div class="footer-logo">HERMETRIX</div>
         <p class="footer-tagline">Strategic Operational Security Consulting</p>
+        <a href="https://app.companiesoffice.govt.nz/companies/app/ui/pages/companies/companyBadgeSnippet/9387037?utm_campaign=companiesdirectlinks&utm_medium=webpage&utm_source=thecompany" target="_blank" rel="noopener noreferrer" class="company-badge-link">
+          <img src="https://app.companiesoffice.govt.nz/companies/app/ui/themes/companies/images/CO_Details_dark_optimal_WEB.png" alt="New Zealand Companies Office Badge" style="border-style:none" />
+        </a>
       </div>
       <div class="footer-links">
         <div class="footer-nav">
@@ -60,7 +63,13 @@ const currentYear = new Date().getFullYear();
   .footer-tagline {
     font-size: 0.875rem;
     color: var(--text-muted);
-    margin: 0;
+    margin: 0 0 var(--space-sm) 0;
+  }
+
+  .company-badge-link img {
+    max-width: 160px;
+    display: block;
+    margin-top: var(--space-sm);
   }
 
   .footer-links {
