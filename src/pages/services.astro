@@ -1,236 +1,130 @@
-O---
+---
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
-<BaseHead title={`Our Services - ${SITE_TITLE}`} description="Expert implementation and support for certified secure communications and data protection solutions." />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<BaseHead title={`Our Services - ${SITE_TITLE}`} description="Expert implementation and support for certified secure communications and data protection solutions." />
+</head>
+<body>
+	<Header />
+	<main>
+		<section class="hero">
+			<div class="container">
+				<h1>Strategic OPSEC Consulting Services</h1>
+				<span class="tagline">Comprehensive operational security analysis and implementation</span>
+				<p>We help you address the human, process, and strategic vulnerabilities that traditional IT security misses.</p>
+			</div>
+		</section>
 
-<Header />
-<main>
-	<section class="hero">
-		<div class="container">
-			<h1>Strategic OPSEC Consulting Services</h1>
-			<p class="tagline">Comprehensive operational security analysis and implementation for businesses that understand protection goes beyond technology.</p>
-			<p>We help you address the human, process, and strategic vulnerabilities that traditional IT security misses.</p>
-		</div>
-	</section>
-
-	<section class="services">
-		<div class="container">
-			<!-- Service 1: Operational Security Analysis -->
-			<div id="analysis" class="service-card">
-				<h2>Operational Security Analysis</h2>
-				<p>Understanding what you're truly protecting beyond data—identifying who would target you and why, finding overlooked vulnerabilities in people, processes, and technology, and mapping your complete digital footprint.</p>
-				<ul>
-					<li>Comprehensive threat actor profiling and motivation analysis</li>
-					<li>Human vulnerability assessment (insider threats, social engineering risks)</li>
-					<li>Process and procedural security gap analysis</li>
-					<li>Digital footprint mapping and exposure evaluation</li>
-					<li>Strategic intelligence gathering on competitive threats</li>
-				</ul>
-				<div class="disclaimer">
-					<small>Note: Our analysis applies intelligence methodologies to identify operational security risks that traditional IT assessments miss.</small>
+		<section class="section">
+			<div class="container">
+				<div id="analysis" class="service-item">
+					<h2>Operational Security Analysis</h2>
+					<p>Understanding what you're truly protecting beyond data—identifying who would target you and why, finding overlooked vulnerabilities in people, processes, and technology, and mapping your complete digital footprint.</p>
+					<ul>
+						<li>Comprehensive threat actor profiling and motivation analysis</li>
+						<li>Human vulnerability assessment (insider threats, social engineering risks)</li>
+						<li>Process and procedural security gap analysis</li>
+						<li>Digital footprint mapping and exposure evaluation</li>
+						<li>Strategic intelligence gathering on competitive threats</li>
+					</ul>
+					<div class="note">
+						<p>Our analysis applies intelligence methodologies to identify operational security risks that traditional IT assessments miss.</p>
+					</div>
 				</div>
 			</div>
+		</section>
 
-			<!-- Service 2: Layered Security Solutions -->
-			<div id="solutions" class="service-card">
-				<h2>Layered Security Solutions</h2>
-				<p>Immediate risk mitigation (0-30 days), strategic security roadmap (90 days - 12 months), ongoing security operations, and seamless integration of our products with partner solutions.</p>
-				<ul>
-					<li>Immediate mitigation of critical vulnerabilities (0-30 days)</li>
-					<li>Strategic security roadmap development (90 days - 12 months)</li>
-					<li>Ongoing security operations and monitoring</li>
-					<li>Product integration with existing security infrastructure</li>
-					<li>Partner solution compatibility and optimization</li>
-				</ul>
-				<div class="disclaimer">
-					<small>Note: We implement the "Mosaic Effect" approach, ensuring no single security layer becomes the weakest link.</small>
+		<section class="section">
+			<div class="container">
+				<div id="solutions" class="service-item">
+					<h2>Layered Security Solutions</h2>
+					<p>Immediate risk mitigation (0-30 days), strategic security roadmap (90 days - 12 months), ongoing security operations, and seamless integration of our products with partner solutions.</p>
+					<ul>
+						<li>Immediate mitigation of critical vulnerabilities (0-30 days)</li>
+						<li>Strategic security roadmap development (90 days - 12 months)</li>
+						<li>Ongoing security operations and monitoring</li>
+						<li>Product integration with existing security infrastructure</li>
+						<li>Partner solution compatibility and optimization</li>
+					</ul>
+					<div class="note">
+						<p>We implement the "Mosaic Effect" approach, ensuring no single security layer becomes the weakest link.</p>
+					</div>
 				</div>
 			</div>
+		</section>
 
-			<!-- Service 3: Implementation & Enablement -->
-			<div id="implementation" class="service-card">
-				<h2>Implementation & Enablement</h2>
-				<p>Hands-on deployment support, security protocol development, employee training and awareness programs, and continuous improvement initiatives to ensure sustainable protection.</p>
-				<ul>
-					<li>Hands-on deployment and configuration support</li>
-					<li>Custom security protocol and procedure development</li>
-					<li>Employee training and security awareness programs</li>
-					<li>Continuous improvement and adaptation initiatives</li>
-					<li>Performance monitoring and optimization</li>
-				</ul>
-				<div class="disclaimer">
-					<small>Note: We focus on sustainable security practices that become part of your organizational culture.</small>
+		<section class="section">
+			<div class="container">
+				<div id="implementation" class="service-item">
+					<h2>Implementation & Enablement</h2>
+					<p>Hands-on deployment support, security protocol development, employee training and awareness programs, and continuous improvement initiatives to ensure sustainable protection.</p>
+					<ul>
+						<li>Hands-on deployment and configuration support</li>
+						<li>Custom security protocol and procedure development</li>
+						<li>Employee training and security awareness programs</li>
+						<li>Continuous improvement and adaptation initiatives</li>
+						<li>Performance monitoring and optimization</li>
+					</ul>
+					<div class="note">
+						<p>We focus on sustainable security practices that become part of your organizational culture.</p>
+					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 
-	<section class="cta">
-		<div class="container">
-			<h2>Ready to Secure Your Operations?</h2>
-			<p>Contact us to discuss your specific security requirements and how we can help.</p>
-			<div class="contact-methods">
-				<a href="mailto:hello@hermetrix.nz" class="btn primary">Email Hello</a>
-				<a href="mailto:security@hermetrix.nz" class="btn secondary">Security Inquiries</a>
+		<section class="section">
+			<div class="container text-center">
+				<h2>Ready to Secure Your Operations?</h2>
+				<p>Contact us to discuss your specific security requirements and how we can help.</p>
+				<div class="cta-buttons">
+					<a href="mailto:hello@hermetrix.nz" class="btn primary">Email Hello</a>
+					<a href="mailto:security@hermetrix.nz" class="btn secondary">Security Inquiries</a>
+				</div>
 			</div>
-		</div>
-	</section>
-</main>
-<Footer />
+		</section>
+	</main>
+	<Footer />
 
-<style>
-body {
-	margin: 0;
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	font-family: system-ui, sans-serif;
-	line-height: 1.6;
-}
+	<style>
+		.service-item {
+			margin-bottom: var(--space-3xl);
+		}
 
-main {
-	flex: 1;
-}
+		.service-item h2 {
+			margin-bottom: var(--space-md);
+		}
 
-	/* Hero Section */
-	.hero {
-	padding: 4rem 0;
-	text-align: center;
-	background: linear-gradient(135deg, #0f1419 0%, #1a365d 50%, #2d3748 100%);
-	color: white;
-	position: relative;
-	overflow: hidden;
-	width: 100vw;
-	margin-left: calc(50% - 50vw);
-}
-.hero::before {
-	content: "";
-	position: absolute;
-	top: 0; left: 0; right: 0; bottom: 0;
-	background: url('data:image/svg+xml;utf8,<svg width="100%25" height="100%25" xmlns="http://www.w3.org/2000/svg"><circle fill="%2363b3ed" fill-opacity="0.05" cx="10%25" cy="20%25" r="80"/><circle fill="%2363b3ed" fill-opacity="0.03" cx="80%25" cy="70%25" r="120"/><circle fill="%2390cdf4" fill-opacity="0.04" cx="50%25" cy="50%25" r="100"/></svg>');
-	z-index: 0;
-}
-.hero > .container {
-	position: relative;
-	z-index: 1;
-	padding: 0 2rem;
-	}
+		.note {
+			border-left: 1px solid var(--white);
+			padding: var(--space-md) var(--space-lg);
+			margin-top: var(--space-lg);
+		}
 
-	.hero h1 {
-					font-size: 4rem;
-					margin-bottom: 1.5rem;
-					font-family: 'Montserrat', 'Segoe UI', 'Arial Black', Arial, sans-serif;
-					font-weight: 900;
-					color: #ffffff;
-					text-shadow: 0 4px 20px rgba(0,0,0,0.3), 0 2px 0 #1a365d;
-					letter-spacing: 0.02em;
-	}
+		.note p {
+			font-size: 0.875rem;
+			margin-bottom: 0;
+			font-family: var(--font-family-mono);
+		}
 
-	.tagline {
-		font-size: 1.8rem;
-		font-weight: 400;
-		margin-bottom: 1.5rem;
-		color: #90cdf4;
-	}
+		.cta-buttons {
+			display: flex;
+			gap: var(--space-md);
+			justify-content: center;
+			margin-top: var(--space-xl);
+		}
 
-	.services {
-		padding: 4rem 1rem;
-		background: white;
-	}
-
-	.service-card {
-		background: #f8fafc;
-		padding: 2.5rem;
-		margin-bottom: 2rem;
-		border-radius: 0.5rem;
-		border-left: 4px solid #1a365d;
-	}
-
-	.service-card h2 {
-		color: #1a365d;
-		margin-bottom: 1rem;
-		font-size: 1.5rem;
-	}
-
-	.service-card ul {
-		margin: 1.5rem 0;
-		padding-left: 1.5rem;
-	}
-
-	.service-card li {
-		margin-bottom: 0.5rem;
-		line-height: 1.6;
-	}
-
-	.disclaimer {
-		margin-top: 1.5rem;
-		padding: 1rem;
-		background: #fed7d7;
-		border-radius: 0.25rem;
-		border-left: 4px solid #c53030;
-	}
-
-	.disclaimer small {
-		color: #742a2a;
-		font-style: italic;
-	}
-
-	.cta {
-		padding: 4rem 1rem;
-		background: #1a365d;
-		color: white;
-		text-align: center;
-	}
-
-	.cta h2 {
-		margin-bottom: 1.5rem;
-		color: #90cdf4;
-		font-size: 2.2rem;
-		font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
-		font-weight: 700;
-		letter-spacing: 0.04em;
-	}
-
-	.contact-methods {
-		margin-top: 2rem;
-	}
-
-	.btn {
-		display: inline-block;
-		padding: 0.75rem 2rem;
-		margin: 0 0.5rem;
-		text-decoration: none;
-		border-radius: 0.375rem;
-		font-weight: 600;
-		transition: all 0.2s;
-	}
-
-	.btn.primary {
-		background-color: #90cdf4;
-		color: #1a365d;
-	}
-
-	.btn.primary:hover {
-		background-color: #63b3ed;
-	}
-
-	.btn.secondary {
-		background-color: transparent;
-		color: #90cdf4;
-		border: 2px solid #90cdf4;
-	}
-
-	.btn.secondary:hover {
-		background-color: #90cdf4;
-		color: #1a365d;
-	}
-
-	.container {
-		max-width: 800px;
-		margin: 0 auto;
-	}
-</style>
+		@media (max-width: 768px) {
+			.cta-buttons {
+				flex-direction: column;
+				align-items: center;
+			}
+		}
+	</style>
+</body>
+</html>

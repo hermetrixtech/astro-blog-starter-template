@@ -5,23 +5,111 @@ import Footer from '../components/Footer.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
-<BaseHead title={`OPSEC Principles - ${SITE_TITLE}`} description="Key principles and best practices in operational security consulting." />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<BaseHead title={`OPSEC Principles - ${SITE_TITLE}`} description="Key principles and best practices in operational security consulting." />
+</head>
+<body>
+	<Header />
+	<main>
+		<section class="hero">
+			<div class="container">
+				<h1>Operational Security (OPSEC) Principles</h1>
+				<span class="tagline">Core foundations of our security methodology</span>
+			</div>
+		</section>
 
-<Header />
-<main>
-  <section>
-    <h1>Operational Security (OPSEC) Principles</h1>
-    <p>At Hermetrix Technologies, our OPSEC consulting is guided by core principles that reinforce security at every level beyond technology.</p>
-    <ul>
-      <li><strong>Know What You’re Protecting:</strong> Understand the critical assets including human, informational, and physical elements.</li>
-      <li><strong>Know Your Adversaries:</strong> Analyze potential threat actors – their motivations, capabilities, and intent.</li>
-      <li><strong>Identify Vulnerabilities:</strong> Evaluate weaknesses across people, processes, and technology.</li>
-      <li><strong>Control Your Digital Footprint:</strong> Map and limit the attack surface created by digital exposures.</li>
-      <li><strong>Layer Security Defenses:</strong> Employ a “Mosaic Effect” approach ensuring no single failure compromises overall security.</li>
-      <li><strong>Enable and Empower People:</strong> Establish training, protocols and continuous improvement programs.</li>
-      <li><strong>Continuous Adaptation:</strong> Maintain vigilance and evolve defenses as threats and environments change.</li>
-    </ul>
-    <p>Our methodology ensures strategic risk mitigation through intelligence-driven and practical OPSEC measures.</p>
-  </section>
-</main>
-<Footer />
+		<section class="section">
+			<div class="container">
+				<p>At Hermetrix Technologies, our OPSEC consulting is guided by core principles that reinforce security at every level beyond technology. These principles form the foundation of our approach to protecting your organization's most valuable assets.</p>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container">
+				<div class="grid grid-2">
+					<div class="principle-card">
+						<h3>Know What You're Protecting</h3>
+						<p>Understand the critical assets including human, informational, and physical elements. Identify what truly matters to your organization's operations and success.</p>
+					</div>
+					
+					<div class="principle-card">
+						<h3>Know Your Adversaries</h3>
+						<p>Analyze potential threat actors – their motivations, capabilities, and intent. Understanding who might target you and why is essential to effective defense.</p>
+					</div>
+					
+					<div class="principle-card">
+						<h3>Identify Vulnerabilities</h3>
+						<p>Evaluate weaknesses across people, processes, and technology. Look beyond technical vulnerabilities to find the full spectrum of potential security gaps.</p>
+					</div>
+					
+					<div class="principle-card">
+						<h3>Control Your Digital Footprint</h3>
+						<p>Map and limit the attack surface created by digital exposures. Understand what information about your organization is publicly available and how it could be exploited.</p>
+					</div>
+					
+					<div class="principle-card">
+						<h3>Layer Security Defenses</h3>
+						<p>Employ a "Mosaic Effect" approach ensuring no single failure compromises overall security. Create overlapping security controls that work together.</p>
+					</div>
+					
+					<div class="principle-card">
+						<h3>Enable and Empower People</h3>
+						<p>Establish training, protocols and continuous improvement programs. People are both your greatest vulnerability and your strongest defense when properly equipped.</p>
+					</div>
+					
+					<div class="principle-card">
+						<h3>Continuous Adaptation</h3>
+						<p>Maintain vigilance and evolve defenses as threats and environments change. Security is never "done" - it requires ongoing attention and adjustment.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container text-center">
+				<p class="conclusion">Our methodology ensures strategic risk mitigation through intelligence-driven and practical OPSEC measures that address the full spectrum of security challenges.</p>
+				<div class="cta-buttons">
+					<a href="/services" class="btn primary">Our Services</a>
+					<a href="mailto:hello@hermetrix.nz" class="btn secondary">Contact Us</a>
+				</div>
+			</div>
+		</section>
+	</main>
+	<Footer />
+
+	<style>
+		.principle-card {
+			padding: var(--space-xl);
+			border: 1px solid var(--border-color);
+			background-color: var(--background-alt);
+			margin-bottom: var(--space-lg);
+		}
+
+		.principle-card h3 {
+			color: var(--text-primary);
+			margin-bottom: var(--space-md);
+		}
+
+		.conclusion {
+			font-size: 1.25rem;
+			max-width: 800px;
+			margin: 0 auto var(--space-xl);
+		}
+
+		.cta-buttons {
+			display: flex;
+			gap: var(--space-md);
+			justify-content: center;
+		}
+
+		@media (max-width: 768px) {
+			.cta-buttons {
+				flex-direction: column;
+				align-items: center;
+			}
+		}
+	</style>
+</body>
+</html>

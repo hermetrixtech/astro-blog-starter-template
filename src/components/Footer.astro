@@ -1,25 +1,137 @@
 ---
+import { COMPANY_NAME } from '../consts';
 const currentYear = new Date().getFullYear();
 ---
 
 <footer>
-  <div class="footer-container">
-    <p>&copy; {currentYear} Hermetrix Technologies APAC Limited. All rights reserved.</p>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-info">
+        <div class="footer-logo">HERMETRIX</div>
+        <p class="footer-tagline">Strategic Operational Security Consulting</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-nav">
+          <a href="/">Home</a>
+          <a href="/services">Services</a>
+          <a href="/compliance">Compliance</a>
+          <a href="/products">Products</a>
+          <a href="/about">About</a>
+        </div>
+        <div class="footer-contact">
+          <a href="mailto:hello@hermetrix.nz">hello@hermetrix.nz</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <p>&copy; {currentYear} {COMPANY_NAME}. All rights reserved.</p>
+    </div>
   </div>
 </footer>
 
 <style>
   footer {
-    background: var(--bg-primary);
+    background-color: var(--background);
     color: var(--text-secondary);
-    padding: 2rem 0;
-    text-align: center;
-    border-top: 1px solid rgba(0, 212, 255, 0.3);
-    box-shadow: 0 -2px 20px rgba(0, 212, 255, 0.1);
+    border-top: 1px solid var(--border-color);
+    padding: var(--space-2xl) 0 var(--space-xl);
   }
 
-  .footer-container p {
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-xl);
+  }
+
+  .footer-info {
+    max-width: 300px;
+  }
+
+  .footer-logo {
+    font-family: var(--font-family-mono);
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-sm);
+    color: var(--text-primary);
+  }
+
+  .footer-tagline {
+    font-size: 0.875rem;
+    color: var(--text-muted);
     margin: 0;
-    font-size: 0.9rem;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: var(--space-2xl);
+  }
+
+  .footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .footer-links a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    border-bottom: none;
+    transition: color 0.2s ease;
+  }
+
+  .footer-links a:hover {
+    color: var(--text-primary);
+    opacity: 1;
+  }
+
+  .footer-legal {
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--border-color-light);
+    text-align: center;
+  }
+
+  .footer-legal p {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      gap: var(--space-xl);
+    }
+
+    .footer-info {
+      max-width: 100%;
+      text-align: center;
+    }
+
+    .footer-links {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .footer-links {
+      flex-direction: column;
+      gap: var(--space-lg);
+      align-items: center;
+      text-align: center;
+    }
+
+    .footer-nav, .footer-contact {
+      align-items: center;
+    }
   }
 </style>
