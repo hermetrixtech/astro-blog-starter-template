@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "blackboxapp.blackbox",
+        "blackboxapp.blackboxagent",
+        "ms-vscode.live-server",
+        "ritwickdey.liveserver"
+    ]
+}

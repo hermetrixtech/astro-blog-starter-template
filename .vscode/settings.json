@@ -1,0 +1,33 @@
+{
+    "blackbox.ai.enableBrowserTools": true,
+    "blackbox.ai.browser.enabled": true,
+    "blackbox.ai.browser.autoApprove": true,
+    "blackbox.ai.tools.browser.enabled": true,
+        "blackbox.browser.enabled": true,
+    "blackbox.browser.autoApprove": true,
+    "blackbox.enableBrowserAccess": true,
+    "blackbox.ai.enableWebSearch": true,
+    
+    // Browser-specific settings
+    "browser-preview.verbose": true,
+    "browser-preview.startUrl": "about:blank",
+    "browser-preview.ignoreHttpsErrors": true,
+    // Your existing settings
+    "debug.showSubSessionsInToolBar": true,
+    "chat.tools.terminal.autoReplyToPrompts": true,
+    "testing.coverageToolbarEnabled": true,
+    "chat.agent.thinking.collapsedTools": "all",
+    "npm.enableRunFromFolder": true,
+    "npm.packageManager": "npm",
+    "workbench.externalBrowser": "firefox",
+    "workbench.editor.enablePreviewFromQuickOpen": true,
+    "workbench.editor.enablePreviewFromCodeNavigation": true,
+    "workbench.editor.defaultBinaryEditor": "default",
+    "workbench.editor.autoLockGroups": {
+        "mainThreadWebview-simpleBrowser.view": true
+    },
+    "workbench.editor.closeOnFileDelete": true,
+    "debug.javascript.defaultRuntimeExecutable": {
+        "pwa-node": "node"
+    }
+}
