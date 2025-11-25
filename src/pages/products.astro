@@ -9,125 +9,106 @@ import { SITE_TITLE } from '../consts';
 
 <Header />
 <main>
-    <!-- Full-screen blue gradient hero -->
+    <!-- Enhanced full-screen hero with proper animations -->
     <section class="hero">
+        <div class="hero-background">
+            <div class="floating-orb orb-1"></div>
+            <div class="floating-orb orb-2"></div>
+            <div class="floating-orb orb-3"></div>
+            <div class="floating-orb orb-4"></div>
+            <div class="grid-overlay"></div>
+        </div>
         <div class="container">
-            <h1>FIPS 140-3 Level 3 Certified Encryption</h1>
-            <span class="tagline">The highest assurance hardware-encrypted drive available</span>
-            <p>When "good enough" security isn't good enough for your data protection needs.</p>
-            <div class="cta-buttons">
+            <h1 data-aos="fade-up">FIPS 140-3 Level 3 Certified Encryption</h1>
+            <span class="tagline" data-aos="fade-up" data-aos-delay="100">The highest assurance hardware-encrypted drive available</span>
+            <p data-aos="fade-up" data-aos-delay="200">When "good enough" security isn't good enough for your data protection needs.</p>
+            <div class="cta-buttons" data-aos="fade-up" data-aos-delay="300">
                 <a href="/consultation" class="btn primary">Get Your Free Security Assessment</a>
                 <a href="/services" class="btn secondary">Our Services</a>
             </div>
         </div>
-        <div class="hero-background"></div>
+        <div class="scroll-indicator">
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+        </div>
     </section>
 
-    <!-- Main content with white background -->
+    <!-- Main content with elegant transitions -->
     <section class="main-content">
         <div class="container">
-            <div class="section">
+            <!-- Product showcase section -->
+            <div class="section product-showcase" data-aos="fade-up">
                 <h2>Our Exclusive Recommendation</h2>
-                <div class="grid grid-2">
-                    <div>
-                        <p>After extensive evaluation of the certified security market, we recommend one product that stands above the rest for maximum physical data protection.</p>
-                        
-                        <div class="card product-highlight">
-                            <h3 class="product-name">iStorage datAshur PRO+C</h3>
-                            <p class="product-subtitle">FIPS 140-3 Level 3 Certified • The Highest Commercial Assurance Available</p>
-                            
-                            <div class="benefits-grid">
-                                <div class="benefit">
-                                    <strong>FIPS 140-3 Level 3 Certified</strong>
-                                    <span>Beyond military-grade to tamper-proof physical security</span>
-                                </div>
-                                <div class="benefit">
-                                    <strong>Brute-Force Proof Protection</strong>
-                                    <span>Permanently locks after 20 failed PIN attempts</span>
-                                </div>
-                                <div class="benefit">
-                                    <strong>Zero Software Dependencies</strong>
-                                    <span>Works instantly on any system without drivers</span>
-                                </div>
-                                <div class="benefit">
-                                    <strong>Built-in Keypad & AES 256-bit</strong>
-                                    <span>All data encrypted on the device before leaving</span>
-                                </div>
-                                <div class="benefit">
-                                    <strong>Time-Based Auto-Lock</strong>
-                                    <span>Configurable inactivity locking</span>
-                                </div>
-                                <div class="benefit">
-                                    <strong>Independent Secure Operation</strong>
-                                    <span>The host computer is completely untrusted</span>
-                                </div>
+                <p class="section-intro">After extensive evaluation of the certified security market, we recommend one product that stands above the rest for maximum physical data protection.</p>
+                
+                <div class="product-feature">
+                    <div class="product-header">
+                        <h3 class="product-name">iStorage datAshur PRO+C</h3>
+                        <div class="product-badge">FIPS 140-3 Level 3 Certified</div>
+                    </div>
+                    <p class="product-description">The highest commercial assurance available for hardware-encrypted storage</p>
+                    
+                    <div class="specs-grid">
+                        <div class="spec-item" data-aos="fade-right" data-aos-delay="100">
+                            <div class="spec-icon">🔒</div>
+                            <div class="spec-content">
+                                <strong>Tamper-Proof Security</strong>
+                                <span>Active intrusion detection with cryptographic erasure</span>
+                            </div>
+                        </div>
+                        <div class="spec-item" data-aos="fade-right" data-aos-delay="150">
+                            <div class="spec-icon">🛡️</div>
+                            <div class="spec-content">
+                                <strong>Brute-Force Protection</strong>
+                                <span>Permanently locks after 20 failed PIN attempts</span>
+                            </div>
+                        </div>
+                        <div class="spec-item" data-aos="fade-right" data-aos-delay="200">
+                            <div class="spec-icon">⚡</div>
+                            <div class="spec-content">
+                                <strong>Zero Dependencies</strong>
+                                <span>Works instantly on any system without drivers</span>
+                            </div>
+                        </div>
+                        <div class="spec-item" data-aos="fade-right" data-aos-delay="250">
+                            <div class="spec-icon">🔑</div>
+                            <div class="spec-content">
+                                <strong>Built-in Keypad</strong>
+                                <span>AES 256-bit encryption on the device</span>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="card">
-                        <h3>Our Hardware Specification Service</h3>
-                        <p><strong>We help clients identify and procure the right certified security hardware for their specific needs.</strong></p>
-                        
-                        <div class="feature">
-                            <h4>How We Help</h4>
-                            <ul>
-                                <li>We specify the correct models for your use case</li>
-                                <li>Configure security policies and deployment plans</li>
-                                <li>Manage procurement through authorized channels</li>
-                                <li>Ensure proper implementation and training</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="feature">
-                            <h4>Why This Approach</h4>
-                            <p>You get properly configured, genuine hardware with full manufacturer support, combined with our security expertise.</p>
-                        </div>
+                </div>
+            </div>
+
+            <!-- Service approach -->
+            <div class="section service-approach" data-aos="fade-up">
+                <div class="approach-grid">
+                    <div class="approach-card" data-aos="flip-left" data-aos-delay="100">
+                        <div class="approach-number">01</div>
+                        <h4>Assess & Specify</h4>
+                        <p>We perform an OPSEC Health Check to determine the right certified hardware for your needs.</p>
+                    </div>
+                    <div class="approach-card" data-aos="flip-left" data-aos-delay="200">
+                        <div class="approach-number">02</div>
+                        <h4>Source & Configure</h4>
+                        <p>We procure through authorized channels and pre-configure devices with your security policies.</p>
+                    </div>
+                    <div class="approach-card" data-aos="flip-left" data-aos-delay="300">
+                        <div class="approach-number">03</div>
+                        <h4>Deploy & Train</h4>
+                        <p>We ensure your team understands how to properly use the devices in your security practices.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="section">
-                <h2>Why FIPS 140-3 Level 3 Certification Matters</h2>
-                <div class="grid grid-3">
-                    <div class="card">
-                        <h3>Tamper-Proof Physical Security</h3>
-                        <p>Level 3 certification requires active tamper detection and response. Any physical intrusion attempt triggers immediate cryptographic erasure.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Beyond Software Encryption</h3>
-                        <p>Software solutions like BitLocker rely on the host computer's security. Hardware encryption operates independently in a trusted environment.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Independently Verified</h3>
-                        <p>FIPS certification means the encryption module has been rigorously tested and validated by government-accredited laboratories.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section">
-                <h2>Our Hardware Implementation Process</h2>
-                <div class="grid grid-3">
-                    <div class="feature">
-                        <h3>Assess & Specify</h3>
-                        <p>We perform an OPSEC Health Check to determine if certified hardware is the right solution for your specific data protection needs.</p>
-                    </div>
-                    <div class="feature">
-                        <h3>Source & Configure</h3>
-                        <p>We procure through authorized channels and pre-configure devices with your security policies before deployment.</p>
-                    </div>
-                    <div class="feature">
-                        <h3>Deploy & Train</h3>
-                        <p>We ensure your team understands how to properly use the devices, integrating hardware into your security practices.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section text-center">
+            <!-- Final CTA -->
+            <div class="section final-cta" data-aos="zoom-in">
                 <h2>Stop Compromising on Data Security</h2>
                 <p>When your data demands the highest level of protection, settle for nothing less than certified assurance.</p>
                 <div class="cta-buttons">
-                    <a href="/consultation" class="btn primary">Get Your Free Threat Assessment</a>
+                    <a href="/consultation" class="btn primary large">Get Your Free Threat Assessment</a>
                     <a href="mailto:contact@hermetrix.nz?subject=datAshur PRO+C Inquiry" class="btn secondary">Ask About Certified Hardware</a>
                 </div>
             </div>
@@ -137,7 +118,7 @@ import { SITE_TITLE } from '../consts';
 <Footer />
 
 <style>
-    /* Full-screen blue gradient hero */
+    /* Enhanced Hero Section */
     .hero {
         position: relative;
         height: 100vh;
@@ -156,157 +137,361 @@ import { SITE_TITLE } from '../consts';
         left: 0;
         right: 0;
         bottom: 0;
-        background: 
-            radial-gradient(circle at 20% 80%, rgba(99, 179, 237, 0.15) 0%, transparent 50%),
-            radial-gradient(circle at 80% 20%, rgba(144, 205, 244, 0.1) 0%, transparent 50%);
-        animation: pulse 8s ease-in-out infinite;
         z-index: 0;
+    }
+
+    .floating-orb {
+        position: absolute;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(99, 179, 237, 0.3) 0%, transparent 70%);
+        filter: blur(40px);
+        animation: float 6s ease-in-out infinite;
+    }
+
+    .orb-1 {
+        width: 300px;
+        height: 300px;
+        top: 10%;
+        left: 10%;
+        animation-delay: 0s;
+    }
+
+    .orb-2 {
+        width: 200px;
+        height: 200px;
+        top: 60%;
+        right: 15%;
+        animation-delay: 2s;
+    }
+
+    .orb-3 {
+        width: 250px;
+        height: 250px;
+        bottom: 20%;
+        left: 20%;
+        animation-delay: 4s;
+    }
+
+    .orb-4 {
+        width: 180px;
+        height: 180px;
+        top: 30%;
+        right: 25%;
+        animation-delay: 1s;
+    }
+
+    .grid-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: 
+            linear-gradient(rgba(99, 179, 237, 0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(99, 179, 237, 0.1) 1px, transparent 1px);
+        background-size: 50px 50px;
+        animation: gridMove 20s linear infinite;
     }
 
     .hero > .container {
         position: relative;
-        z-index: 1;
+        z-index: 2;
     }
 
     .hero h1 {
         max-width: 800px;
         margin: 0 auto var(--space-md) auto;
-        font-size: 3rem;
-        font-weight: 900;
+        font-size: 3.5rem;
+        font-weight: 800;
+        background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
     }
 
     .tagline {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
         margin-bottom: var(--space-lg);
-        color: #e2e8f0;
-        font-weight: 500;
+        color: #cbd5e0;
+        font-weight: 400;
         max-width: 600px;
         margin-left: auto;
         margin-right: auto;
     }
 
     .hero p {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         margin-bottom: var(--space-xl);
-        color: #cbd5e0;
+        color: #a0aec0;
         max-width: 500px;
         margin-left: auto;
         margin-right: auto;
     }
 
-    /* Main content section */
+    /* Scroll Indicator */
+    .scroll-indicator {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+    }
+
+    .chevron {
+        width: 20px;
+        height: 5px;
+        background: rgba(255, 255, 255, 0.5);
+        margin: 3px 0;
+        border-radius: 2px;
+        animation: scrollBounce 2s infinite;
+    }
+
+    .chevron:nth-child(2) { animation-delay: 0.2s; }
+    .chevron:nth-child(3) { animation-delay: 0.4s; }
+
+    /* Main Content */
     .main-content {
         background: white;
         position: relative;
     }
 
-    .main-content .section {
-        padding: var(--space-3xl) 0;
+    .section {
+        padding: var(--space-4xl) 0;
     }
 
-    .main-content .section:first-child {
-        padding-top: var(--space-4xl);
+    .section-intro {
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto var(--space-3xl) auto;
+        color: #4a5568;
+        font-size: 1.1rem;
+        line-height: 1.6;
     }
 
-    .main-content .section:last-child {
-        padding-bottom: var(--space-4xl);
+    /* Product Feature */
+    .product-feature {
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-radius: 20px;
+        padding: var(--space-3xl);
+        border: 1px solid #e2e8f0;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     }
 
-    /* Product highlight card */
-    .product-highlight {
-        background: linear-gradient(135deg, #f8fafc 0%, #f0f4f8 100%);
-        border-left: 4px solid #3182ce;
-        margin-top: var(--space-lg);
+    .product-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: var(--space-md);
+        flex-wrap: wrap;
+        gap: var(--space-md);
     }
 
     .product-name {
         color: #1a365d;
-        font-size: 1.5rem;
+        font-size: 2rem;
         font-weight: 700;
-        margin-bottom: var(--space-sm);
+        margin: 0;
     }
 
-    .product-subtitle {
-        color: #2d3748;
-        font-size: 1.1rem;
-        margin-bottom: var(--space-lg);
+    .product-badge {
+        background: linear-gradient(135deg, #3182ce 0%, #2b6cb0 100%);
+        color: white;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 0.9rem;
         font-weight: 600;
     }
 
-    .benefits-grid {
+    .product-description {
+        color: #2d3748;
+        font-size: 1.2rem;
+        margin-bottom: var(--space-2xl);
+        font-weight: 500;
+    }
+
+    .specs-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: var(--space-lg);
+    }
+
+    .spec-item {
         display: flex;
-        flex-direction: column;
+        align-items: flex-start;
         gap: var(--space-md);
+        padding: var(--space-lg);
+        background: white;
+        border-radius: 12px;
+        border: 1px solid #e2e8f0;
+        transition: all 0.3s ease;
     }
 
-    .benefit {
+    .spec-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        border-color: #3182ce;
+    }
+
+    .spec-icon {
+        font-size: 1.5rem;
+        flex-shrink: 0;
+    }
+
+    .spec-content {
         display: flex;
         flex-direction: column;
-        gap: var(--space-xs);
+        gap: 4px;
     }
 
-    .benefit strong {
+    .spec-content strong {
         color: #1a365d;
         font-weight: 700;
         font-size: 1rem;
     }
 
-    .benefit span {
+    .spec-content span {
         color: #4a5568;
         font-size: 0.9rem;
         line-height: 1.4;
     }
 
-    /* Consistent styling with consultation page */
-    .feature {
-        padding: var(--space-xl);
-        border: 1px solid var(--border-color);
-        background-color: var(--background-alt);
-        margin-bottom: var(--space-lg);
+    /* Service Approach */
+    .service-approach {
+        background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
     }
 
-    .feature h3, .feature h4 {
-        color: var(--text-primary);
+    .approach-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: var(--space-2xl);
     }
 
-    .card {
-        margin-bottom: var(--space-lg);
+    .approach-card {
+        background: white;
+        padding: var(--space-2xl);
+        border-radius: 16px;
+        text-align: center;
+        border: 1px solid #e2e8f0;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+
+    .approach-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .approach-number {
+        font-size: 3rem;
+        font-weight: 800;
+        color: #e2e8f0;
+        margin-bottom: var(--space-md);
+        line-height: 1;
+    }
+
+    .approach-card h4 {
+        color: #1a365d;
+        font-size: 1.3rem;
+        margin-bottom: var(--space-md);
+        font-weight: 600;
+    }
+
+    .approach-card p {
+        color: #4a5568;
+        line-height: 1.6;
+    }
+
+    /* Final CTA */
+    .final-cta {
+        text-align: center;
+        background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+        color: white;
+        border-radius: 20px;
+        margin: var(--space-4xl) 0;
+    }
+
+    .final-cta h2 {
+        color: white;
+        margin-bottom: var(--space-md);
+    }
+
+    .final-cta p {
+        color: #e2e8f0;
+        margin-bottom: var(--space-2xl);
+        font-size: 1.1rem;
+    }
+
+    /* Buttons */
+    .btn {
+        transition: all 0.3s ease;
+        border: none;
+        font-weight: 600;
+    }
+
+    .btn.primary {
+        background: linear-gradient(135deg, #90cdf4 0%, #63b3ed 100%);
+        color: #1a365d;
+    }
+
+    .btn.primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(99, 179, 237, 0.3);
+    }
+
+    .btn.secondary {
+        background: transparent;
+        color: #90cdf4;
+        border: 2px solid #90cdf4;
+    }
+
+    .btn.secondary:hover {
+        background: rgba(144, 205, 244, 0.1);
+        transform: translateY(-2px);
+    }
+
+    .btn.large {
+        padding: 1rem 2.5rem;
+        font-size: 1.1rem;
     }
 
     .cta-buttons {
         display: flex;
         gap: var(--space-md);
         justify-content: center;
+        flex-wrap: wrap;
     }
 
-    /* Subtle animations */
-    @keyframes pulse {
+    /* Animations */
+    @keyframes float {
         0%, 100% {
-            opacity: 1;
+            transform: translateY(0px) scale(1);
         }
         50% {
-            opacity: 0.7;
+            transform: translateY(-20px) scale(1.05);
         }
     }
 
-    /* Hover effects matching consultation page */
-    .card {
-        transition: all 0.2s ease;
+    @keyframes gridMove {
+        0% {
+            transform: translate(0, 0);
+        }
+        100% {
+            transform: translate(50px, 50px);
+        }
     }
 
-    .card:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    @keyframes scrollBounce {
+        0%, 100% {
+            transform: scaleX(1);
+            opacity: 0.5;
+        }
+        50% {
+            transform: scaleX(1.2);
+            opacity: 1;
+        }
     }
 
-    .btn {
-        transition: all 0.2s ease;
-    }
-
-    .btn:hover {
-        transform: translateY(-1px);
-    }
-
+    /* Responsive */
     @media (max-width: 768px) {
         .hero h1 {
             font-size: 2.5rem;
@@ -316,19 +501,32 @@ import { SITE_TITLE } from '../consts';
             font-size: 1.2rem;
         }
 
+        .product-header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .specs-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .approach-grid {
+            grid-template-columns: 1fr;
+        }
+
         .cta-buttons {
             flex-direction: column;
             align-items: center;
         }
 
-        .benefits-grid {
-            gap: var(--space-sm);
+        .product-feature {
+            padding: var(--space-2xl);
         }
     }
 
     @media (max-width: 480px) {
         .hero {
-            height: 80vh;
+            height: 90vh;
         }
         
         .hero h1 {
@@ -336,7 +534,20 @@ import { SITE_TITLE } from '../consts';
         }
 
         .product-name {
-            font-size: 1.3rem;
+            font-size: 1.5rem;
         }
     }
 </style>
+
+<!-- Add AOS library for scroll animations -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+    });
+</script>
