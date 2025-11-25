@@ -13,87 +13,74 @@ import { SITE_TITLE } from '../consts';
 <body>
 	<Header />
 	<main>
-		<!-- HERO: Immediate value proposition -->
 		<section class="hero">
 			<div class="container">
 				<h1>Get Your Security Sorted in 30 Minutes</h1>
-				<p class="tagline">Free consultation. No fluff. Just a clear path to better security.</p>
-				<a href="#booking" class="btn primary">Book Your Free Session</a>
+				<span class="tagline">Free consultation. No fluff. Just a clear path to better security.</span>
+				<p>
+					Stop guessing about your security posture. Get expert guidance on your most critical risks and a prioritized action plan to fix them.
+				</p>
+				<div class="cta-buttons">
+					<a href="#booking" class="btn primary">Book Your Free Session</a>
+					<a href="/services" class="btn secondary">View Our Services</a>
+				</div>
 			</div>
 		</section>
 
-		<!-- WHAT YOU GET SECTION -->
 		<section class="section">
 			<div class="container">
-				<div class="value-proposition">
-					<h2>Here's What You'll Get in Our Call</h2>
-					<p class="subtitle">This isn't a sales pitch. It's a working session to solve your immediate security concerns.</p>
-					
-					<div class="benefits-grid">
-						<div class="benefit-card">
-							<h3>Security Risk Assessment</h3>
-							<p>We'll identify your 3 biggest security vulnerabilities that could lead to a data breach.</p>
-						</div>
-						
-						<div class="benefit-card">
-							<h3>Clear Priority Action Plan</h3>
-							<p>You'll leave with a prioritized list of what to fix first, second, and third.</p>
-						</div>
-						
-						<div class="benefit-card">
-							<h3>Expert Recommendations</h3>
-							<p>Specific advice on tools, processes, and fixes that actually work.</p>
-						</div>
-						
-						<div class="benefit-card">
-							<h3>No-BS Budget Guidance</h3>
-							<p>We'll tell you what's worth spending money on and what you can do for free.</p>
-						</div>
+				<h2>What You'll Get in Our Consultation</h2>
+				<div class="grid grid-3">
+					<div class="card">
+						<h3>Security Risk Assessment</h3>
+						<p>We'll identify your 3 biggest security vulnerabilities that could lead to a data breach.</p>
+					</div>
+					<div class="card">
+						<h3>Clear Priority Action Plan</h3>
+						<p>You'll leave with a prioritized list of what to fix first, second, and third.</p>
+					</div>
+					<div class="card">
+						<h3>Expert Recommendations</h3>
+						<p>Specific advice on tools, processes, and fixes that actually work.</p>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- BOOKING SECTION -->
-		<section id="booking" class="section booking-section">
+		<section id="booking" class="section">
 			<div class="container">
-				<div class="booking-container">
-					<div class="booking-info">
-						<h2>Book Your Free Security Consultation</h2>
+				<h2>Book Your Free Security Consultation</h2>
+				<div class="grid grid-2">
+					<div>
 						<p><strong>30 minutes • No cost • No obligation</strong></p>
-						
-						<div class="booking-details">
-							<h3>What We'll Cover:</h3>
+						<div class="feature">
+							<h3>What We'll Cover</h3>
 							<ul>
 								<li>Your current security concerns and pain points</li>
 								<li>Immediate risks to your business data</li>
 								<li>Quick wins you can implement this week</li>
 								<li>Whether our OPSEC Health Check makes sense for you</li>
 							</ul>
-							
-							<div class="booking-note">
-								<strong>Perfect for:</strong> Business owners, IT managers, compliance officers, and anyone responsible for company data security.
-							</div>
+						</div>
+						<div class="feature">
+							<h3>Perfect For</h3>
+							<p>Business owners, IT managers, compliance officers, and anyone responsible for company data security.</p>
 						</div>
 					</div>
-					
-					<div class="booking-form">
+					<div class="card">
 						<form action="https://formspree.io/f/your-form-id" method="POST">
 							<div class="form-group">
-								<label for="name">Your Name *</label>
+								<label for="name">Your Name</label>
 								<input type="text" id="name" name="name" required>
 							</div>
-							
 							<div class="form-group">
-								<label for="email">Work Email *</label>
+								<label for="email">Work Email</label>
 								<input type="email" id="email" name="email" required>
 							</div>
-							
 							<div class="form-group">
 								<label for="company">Company</label>
 								<input type="text" id="company" name="company">
 							</div>
-							
 							<div class="form-group">
 								<label for="role">Your Role</label>
 								<select id="role" name="role">
@@ -105,9 +92,8 @@ import { SITE_TITLE } from '../consts';
 									<option value="other">Other</option>
 								</select>
 							</div>
-							
 							<div class="form-group">
-								<label for="urgency">How urgent is your security need? *</label>
+								<label for="urgency">How urgent is your security need?</label>
 								<select id="urgency" name="urgency" required>
 									<option value="">Select urgency level</option>
 									<option value="critical">Critical - Need help immediately</option>
@@ -116,14 +102,11 @@ import { SITE_TITLE } from '../consts';
 									<option value="exploring">Exploring - Just researching options</option>
 								</select>
 							</div>
-							
 							<div class="form-group">
-								<label for="message">What's your biggest security concern right now? *</label>
+								<label for="message">What's your biggest security concern right now?</label>
 								<textarea id="message" name="message" rows="3" required placeholder="e.g., We're worried about data breaches from lost devices, compliance requirements, employee security awareness..."></textarea>
 							</div>
-							
 							<button type="submit" class="btn primary full-width">Book My Free Consultation</button>
-							
 							<div class="form-note">
 								<small>We'll email you within 24 hours to schedule your session. No spam, ever.</small>
 							</div>
@@ -133,22 +116,19 @@ import { SITE_TITLE } from '../consts';
 			</div>
 		</section>
 
-		<!-- TRUST SECTION -->
-		<section class="section trust-section">
-			<div class="container">
+		<section class="section">
+			<div class="container text-center">
 				<h2>No Risk, No Commitment</h2>
-				<div class="trust-grid">
-					<div class="trust-item">
+				<div class="grid grid-3">
+					<div class="feature">
 						<h3>No Sales Pitch</h3>
 						<p>This is a genuine consultation. We'll give you real advice, whether you work with us or not.</p>
 					</div>
-					
-					<div class="trust-item">
+					<div class="feature">
 						<h3>100% Free</h3>
 						<p>No hidden costs, no obligations. Just 30 minutes of expert security advice.</p>
 					</div>
-					
-					<div class="trust-item">
+					<div class="feature">
 						<h3>Actionable Advice</h3>
 						<p>You'll leave with concrete steps you can take immediately to improve your security.</p>
 					</div>
@@ -156,9 +136,8 @@ import { SITE_TITLE } from '../consts';
 			</div>
 		</section>
 
-		<!-- URGENT CTA -->
-		<section class="section cta-section">
-			<div class="container">
+		<section class="section">
+			<div class="container text-center">
 				<h2>Stop Putting Security On Hold</h2>
 				<p>Every day you delay is another day your data is at risk. Get expert guidance now.</p>
 				<div class="cta-buttons">
@@ -171,167 +150,37 @@ import { SITE_TITLE } from '../consts';
 	<Footer />
 
 	<style>
-		/* Hero Section - Better Contrast */
 		.hero {
-			padding: 4rem 0;
-			text-align: center;
-			background: linear-gradient(135deg, #0a0f14 0%, #14213d 100%);
-			color: white;
+			padding: var(--space-3xl) 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			min-height: calc(100vh - var(--header-height));
 		}
 
 		.hero h1 {
-			font-size: 3rem;
-			margin-bottom: 1rem;
-			font-weight: 900;
-			color: #ffffff;
-			text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+			max-width: 900px;
 		}
 
-		.tagline {
-			font-size: 1.4rem;
-			margin-bottom: 2.5rem;
-			color: #e2e8f0;
-			font-weight: 500;
-			max-width: 600px;
-			margin-left: auto;
-			margin-right: auto;
+		.feature {
+			padding: var(--space-xl);
+			border: 1px solid var(--border-color);
+			background-color: var(--background-alt);
+			margin-bottom: var(--space-lg);
 		}
 
-		/* Value Proposition Section */
-		.value-proposition {
-			text-align: center;
-			padding: 4rem 0;
-		}
-
-		.value-proposition h2 {
-			color: #0f1419;
-			margin-bottom: 1rem;
-			font-weight: 700;
-			font-size: 2.5rem;
-		}
-
-		.subtitle {
-			font-size: 1.2rem;
-			color: #2d3748;
-			margin-bottom: 3rem;
-			font-weight: 500;
-			max-width: 600px;
-			margin-left: auto;
-			margin-right: auto;
-		}
-
-		.benefits-grid {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-			gap: 2rem;
-			margin-top: 2rem;
-		}
-
-		.benefit-card {
-			background: white;
-			padding: 2rem;
-			border-radius: 0.75rem;
-			border: 1px solid #e2e8f0;
-			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-			text-align: left;
-		}
-
-		.benefit-card h3 {
-			color: #1a365d;
-			margin-bottom: 1rem;
-			font-weight: 600;
-			font-size: 1.2rem;
-		}
-
-		.benefit-card p {
-			color: #4a5568;
-			line-height: 1.6;
-		}
-
-		/* Booking Section */
-		.booking-section {
-			background: #f8fafc;
-			padding: 4rem 0;
-		}
-
-		.booking-container {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			gap: 4rem;
-			align-items: start;
-			max-width: 1200px;
-			margin: 0 auto;
-		}
-
-		.booking-info h2 {
-			color: #0f1419;
-			margin-bottom: 1rem;
-			font-weight: 700;
-		}
-
-		.booking-info > p {
-			font-size: 1.1rem;
-			color: #2d3748;
-			margin-bottom: 2rem;
-			font-weight: 500;
-		}
-
-		.booking-details h3 {
-			color: #1a365d;
-			margin-bottom: 1rem;
-			font-weight: 600;
-		}
-
-		.booking-details ul {
-			list-style: none;
-			padding: 0;
-			margin-bottom: 2rem;
-		}
-
-		.booking-details li {
-			margin-bottom: 0.5rem;
-			padding-left: 1.5rem;
-			position: relative;
-			color: #4a5568;
-		}
-
-		.booking-details li:before {
-			content: "✓";
-			color: #38a169;
-			font-weight: bold;
-			position: absolute;
-			left: 0;
-		}
-
-		.booking-note {
-			background: #f0f4f8;
-			padding: 1.5rem;
-			border-radius: 0.5rem;
-			border-left: 4px solid #3182ce;
-			color: #2d3748;
-		}
-
-		.booking-note strong {
-			color: #1a365d;
-		}
-
-		/* Booking Form */
-		.booking-form {
-			background: white;
-			padding: 2.5rem;
-			border-radius: 1rem;
-			border: 1px solid #e2e8f0;
-			box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+		.feature h3 {
+			color: var(--text-primary);
 		}
 
 		.form-group {
-			margin-bottom: 1.5rem;
+			margin-bottom: var(--space-lg);
 		}
 
 		.form-group label {
 			display: block;
-			margin-bottom: 0.5rem;
-			color: #2d3748;
+			margin-bottom: var(--space-sm);
+			color: var(--text-primary);
 			font-weight: 600;
 		}
 
@@ -339,24 +188,26 @@ import { SITE_TITLE } from '../consts';
 		.form-group select,
 		.form-group textarea {
 			width: 100%;
-			padding: 0.75rem;
-			border: 1px solid #cbd5e0;
-			border-radius: 0.5rem;
+			padding: var(--space-md);
+			border: 1px solid var(--border-color);
+			border-radius: var(--border-radius);
 			font-size: 1rem;
 			transition: border-color 0.2s;
+			background: var(--background);
+			color: var(--text-primary);
 		}
 
 		.form-group input:focus,
 		.form-group select:focus,
 		.form-group textarea:focus {
 			outline: none;
-			border-color: #3182ce;
-			box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.1);
+			border-color: var(--primary);
+			box-shadow: 0 0 0 3px rgba(99, 179, 237, 0.1);
 		}
 
 		.form-group textarea {
 			resize: vertical;
-			min-height: 80px;
+			min-height: 100px;
 		}
 
 		.full-width {
@@ -364,130 +215,22 @@ import { SITE_TITLE } from '../consts';
 		}
 
 		.form-note {
-			margin-top: 1rem;
+			margin-top: var(--space-md);
 			text-align: center;
-			color: #718096;
-		}
-
-		/* Trust Section */
-		.trust-section {
-			padding: 4rem 0;
-			text-align: center;
-		}
-
-		.trust-section h2 {
-			color: #0f1419;
-			margin-bottom: 3rem;
-			font-weight: 700;
-		}
-
-		.trust-grid {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-			gap: 2rem;
-			max-width: 900px;
-			margin: 0 auto;
-		}
-
-		.trust-item h3 {
-			color: #1a365d;
-			margin-bottom: 1rem;
-			font-weight: 600;
-		}
-
-		.trust-item p {
-			color: #4a5568;
-			line-height: 1.6;
-		}
-
-		/* CTA Section */
-		.cta-section {
-			background: linear-gradient(135deg, #14213d 0%, #1a202c 100%);
-			color: white;
-			text-align: center;
-			padding: 4rem 0;
-		}
-
-		.cta-section h2 {
-			margin-bottom: 1rem;
-			color: #ffffff;
-			font-weight: 700;
-		}
-
-		.cta-section p {
-			margin-bottom: 2rem;
-			color: #e2e8f0;
-			font-weight: 500;
-			font-size: 1.1rem;
-		}
-
-		/* Buttons */
-		.btn {
-			display: inline-block;
-			padding: 0.75rem 2rem;
-			text-decoration: none;
-			border-radius: 0.5rem;
-			font-weight: 700;
-			transition: all 0.2s;
-			border: 2px solid transparent;
-		}
-
-		.btn.primary {
-			background: #90cdf4;
-			color: #1a365d;
-			font-weight: 700;
-		}
-
-		.btn.primary:hover {
-			background: #63b3ed;
-			transform: translateY(-2px);
-		}
-
-		.btn.secondary {
-			background: transparent;
-			color: #90cdf4;
-			border-color: #90cdf4;
-			font-weight: 600;
-		}
-
-		.btn.secondary:hover {
-			background: rgba(144, 205, 244, 0.1);
+			color: var(--text-muted);
 		}
 
 		.cta-buttons {
 			display: flex;
-			gap: 1rem;
+			gap: var(--space-md);
 			justify-content: center;
-			flex-wrap: wrap;
 		}
 
-		/* Container */
-		.container {
-			max-width: 1200px;
-			margin: 0 auto;
-			padding: 0 2rem;
-		}
-
-		.section {
-			padding: 0;
-		}
-
-		/* Responsive */
 		@media (max-width: 768px) {
-			.hero h1 { font-size: 2.5rem; }
-			.tagline { font-size: 1.2rem; }
-			.booking-container { grid-template-columns: 1fr; gap: 2rem; }
-			.cta-buttons { flex-direction: column; align-items: center; }
-			.btn { width: 100%; max-width: 300px; }
-			.benefits-grid { grid-template-columns: 1fr; }
-			.trust-grid { grid-template-columns: 1fr; }
-		}
-
-		@media (max-width: 480px) {
-			.hero { padding: 3rem 1rem; }
-			.hero h1 { font-size: 2rem; }
-			.booking-form { padding: 1.5rem; }
-			.container { padding: 0 1rem; }
+			.cta-buttons {
+				flex-direction: column;
+				align-items: center;
+			}
 		}
 	</style>
 </body>
