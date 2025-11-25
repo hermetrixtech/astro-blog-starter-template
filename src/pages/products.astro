@@ -18,13 +18,15 @@ import { SITE_TITLE } from '../consts';
             <div class="floating-orb orb-4"></div>
             <div class="grid-overlay"></div>
         </div>
-        <div class="container">
-            <h1 data-aos="fade-up">FIPS 140-3 Level 3 Certified Encryption</h1>
-            <span class="tagline" data-aos="fade-up" data-aos-delay="100">The highest assurance hardware-encrypted drive available</span>
-            <p data-aos="fade-up" data-aos-delay="200">When "good enough" security isn't good enough for your data protection needs.</p>
-            <div class="cta-buttons" data-aos="fade-up" data-aos-delay="300">
-                <a href="/consultation" class="btn primary">Get Your Free Security Assessment</a>
-                <a href="/services" class="btn secondary">Our Services</a>
+        <div class="hero-content">
+            <div class="container">
+                <h1 data-aos="fade-up">FIPS 140-3 Level 3 Certified Encryption</h1>
+                <span class="tagline" data-aos="fade-up" data-aos-delay="100">The highest assurance hardware-encrypted drive available</span>
+                <p data-aos="fade-up" data-aos-delay="200">When "good enough" security isn't good enough for your data protection needs.</p>
+                <div class="cta-buttons" data-aos="fade-up" data-aos-delay="300">
+                    <a href="/consultation" class="btn primary">Get Your Free Security Assessment</a>
+                    <a href="/services" class="btn secondary">Our Services</a>
+                </div>
             </div>
         </div>
         <div class="scroll-indicator">
@@ -118,6 +120,17 @@ import { SITE_TITLE } from '../consts';
 <Footer />
 
 <style>
+    /* Base styles first */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    .section {
+        padding: 4rem 0;
+    }
+
     /* Enhanced Hero Section */
     .hero {
         position: relative;
@@ -125,7 +138,6 @@ import { SITE_TITLE } from '../consts';
         display: flex;
         flex-direction: column;
         justify-content: center;
-        text-align: center;
         color: white;
         overflow: hidden;
         background: linear-gradient(135deg, #0a0f14 0%, #14213d 50%, #1a365d 100%);
@@ -137,7 +149,13 @@ import { SITE_TITLE } from '../consts';
         left: 0;
         right: 0;
         bottom: 0;
-        z-index: 0;
+        z-index: 1; /* Background behind content */
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 3; /* Content above background */
+        text-align: center;
     }
 
     .floating-orb {
@@ -146,6 +164,7 @@ import { SITE_TITLE } from '../consts';
         background: radial-gradient(circle, rgba(99, 179, 237, 0.3) 0%, transparent 70%);
         filter: blur(40px);
         animation: float 6s ease-in-out infinite;
+        z-index: 1;
     }
 
     .orb-1 {
@@ -191,16 +210,12 @@ import { SITE_TITLE } from '../consts';
             linear-gradient(90deg, rgba(99, 179, 237, 0.1) 1px, transparent 1px);
         background-size: 50px 50px;
         animation: gridMove 20s linear infinite;
-    }
-
-    .hero > .container {
-        position: relative;
-        z-index: 2;
+        z-index: 1;
     }
 
     .hero h1 {
         max-width: 800px;
-        margin: 0 auto var(--space-md) auto;
+        margin: 0 auto 1rem auto;
         font-size: 3.5rem;
         font-weight: 800;
         background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
@@ -211,7 +226,7 @@ import { SITE_TITLE } from '../consts';
 
     .tagline {
         font-size: 1.5rem;
-        margin-bottom: var(--space-lg);
+        margin-bottom: 1.5rem;
         color: #cbd5e0;
         font-weight: 400;
         max-width: 600px;
@@ -221,7 +236,7 @@ import { SITE_TITLE } from '../consts';
 
     .hero p {
         font-size: 1.2rem;
-        margin-bottom: var(--space-xl);
+        margin-bottom: 2.5rem;
         color: #a0aec0;
         max-width: 500px;
         margin-left: auto;
@@ -234,7 +249,7 @@ import { SITE_TITLE } from '../consts';
         bottom: 30px;
         left: 50%;
         transform: translateX(-50%);
-        z-index: 2;
+        z-index: 3; /* Above background */
     }
 
     .chevron {
@@ -253,16 +268,13 @@ import { SITE_TITLE } from '../consts';
     .main-content {
         background: white;
         position: relative;
-    }
-
-    .section {
-        padding: var(--space-4xl) 0;
+        z-index: 2; /* Above hero background */
     }
 
     .section-intro {
         text-align: center;
         max-width: 600px;
-        margin: 0 auto var(--space-3xl) auto;
+        margin: 0 auto 3rem auto;
         color: #4a5568;
         font-size: 1.1rem;
         line-height: 1.6;
@@ -272,7 +284,7 @@ import { SITE_TITLE } from '../consts';
     .product-feature {
         background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
         border-radius: 20px;
-        padding: var(--space-3xl);
+        padding: 3rem;
         border: 1px solid #e2e8f0;
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     }
@@ -281,9 +293,9 @@ import { SITE_TITLE } from '../consts';
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: var(--space-md);
+        margin-bottom: 1rem;
         flex-wrap: wrap;
-        gap: var(--space-md);
+        gap: 1rem;
     }
 
     .product-name {
@@ -305,21 +317,21 @@ import { SITE_TITLE } from '../consts';
     .product-description {
         color: #2d3748;
         font-size: 1.2rem;
-        margin-bottom: var(--space-2xl);
+        margin-bottom: 2rem;
         font-weight: 500;
     }
 
     .specs-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: var(--space-lg);
+        gap: 1.5rem;
     }
 
     .spec-item {
         display: flex;
         align-items: flex-start;
-        gap: var(--space-md);
-        padding: var(--space-lg);
+        gap: 1rem;
+        padding: 1.5rem;
         background: white;
         border-radius: 12px;
         border: 1px solid #e2e8f0;
@@ -363,12 +375,12 @@ import { SITE_TITLE } from '../consts';
     .approach-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: var(--space-2xl);
+        gap: 2rem;
     }
 
     .approach-card {
         background: white;
-        padding: var(--space-2xl);
+        padding: 2rem;
         border-radius: 16px;
         text-align: center;
         border: 1px solid #e2e8f0;
@@ -385,14 +397,14 @@ import { SITE_TITLE } from '../consts';
         font-size: 3rem;
         font-weight: 800;
         color: #e2e8f0;
-        margin-bottom: var(--space-md);
+        margin-bottom: 1rem;
         line-height: 1;
     }
 
     .approach-card h4 {
         color: #1a365d;
         font-size: 1.3rem;
-        margin-bottom: var(--space-md);
+        margin-bottom: 1rem;
         font-weight: 600;
     }
 
@@ -407,17 +419,18 @@ import { SITE_TITLE } from '../consts';
         background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
         color: white;
         border-radius: 20px;
-        margin: var(--space-4xl) 0;
+        margin: 4rem 0;
+        padding: 4rem 2rem;
     }
 
     .final-cta h2 {
         color: white;
-        margin-bottom: var(--space-md);
+        margin-bottom: 1rem;
     }
 
     .final-cta p {
         color: #e2e8f0;
-        margin-bottom: var(--space-2xl);
+        margin-bottom: 2rem;
         font-size: 1.1rem;
     }
 
@@ -426,6 +439,11 @@ import { SITE_TITLE } from '../consts';
         transition: all 0.3s ease;
         border: none;
         font-weight: 600;
+        padding: 0.75rem 2rem;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        display: inline-block;
+        cursor: pointer;
     }
 
     .btn.primary {
@@ -456,7 +474,7 @@ import { SITE_TITLE } from '../consts';
 
     .cta-buttons {
         display: flex;
-        gap: var(--space-md);
+        gap: 1rem;
         justify-content: center;
         flex-wrap: wrap;
     }
@@ -520,7 +538,11 @@ import { SITE_TITLE } from '../consts';
         }
 
         .product-feature {
-            padding: var(--space-2xl);
+            padding: 2rem;
+        }
+        
+        .container {
+            padding: 0 1rem;
         }
     }
 
@@ -535,6 +557,10 @@ import { SITE_TITLE } from '../consts';
 
         .product-name {
             font-size: 1.5rem;
+        }
+        
+        .section {
+            padding: 3rem 0;
         }
     }
 </style>
