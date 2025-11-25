@@ -2,50 +2,50 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { SITE_TITLE, COMPANY_NAME } from '../consts';
+import { SITE_TITLE } from '../consts';
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<BaseHead title={`About Us - ${SITE_TITLE}`} description="Hermetrix Technologies is a New Zealand-based cybersecurity company specializing in secure communications and compliance guidance for the Asia-Pacific region." />
+	<BaseHead title={`About Us - ${SITE_TITLE}`} description="Hermetrix Tech APAC Ltd: NZ-based OPSEC consulting and certified security hardware. Expert practitioners focused on real-world security, not corporate vendors." />
 </head>
 <body>
 	<Header />
 	<main>
 		<section class="hero">
 			<div class="container">
-				<h1>About Hermetrix Technologies</h1>
-				<span class="tagline">Building Trust Through Security Expertise</span>
+				<h1>Expert Practitioners, Not Corporate Vendors</h1>
+				<span class="tagline">Actual OPSEC understanding versus checkbox security</span>
+				<p>
+					We're security practitioners who understand the real-world threats businesses face. While others sell solutions, we deliver security through deep operational understanding and certified hardware that actually works.
+				</p>
+				<div class="cta-buttons">
+					<a href="/consultation" class="btn primary">Get Security Assessment</a>
+					<a href="/services" class="btn secondary">Our Services</a>
+				</div>
 			</div>
 		</section>
 
 		<section class="section">
 			<div class="container">
-				<h2>Our Mission</h2>
-				<p>Hermetrix Technologies provides strategic operational security consulting for businesses that understand protection goes beyond IT. We help security-conscious leaders identify and address the human, process, and strategic vulnerabilities that traditional cybersecurity misses.</p>
-			</div>
-		</section>
-
-		<section class="section">
-			<div class="container">
-				<h2>Our Focus</h2>
-				<p>Founded in New Zealand, Hermetrix Technologies recognizes the unique security challenges faced by organizations in the APAC region. We specialize in understanding both international security standards and local compliance frameworks to provide relevant, effective security guidance.</p>
-				
-				<p>Our approach is built on three core principles:</p>
-				
-				<div class="grid grid-3">
+				<h2>Why We're Different</h2>
+				<div class="grid grid-2">
 					<div class="card">
-						<h3>Security-First Mindset</h3>
-						<p>Every solution we recommend or implement is evaluated against its security merits and certification status first.</p>
+						<h3>Deep Technical Capability</h3>
+						<p>We don't just talk about security - we implement it. From secure configurations to certified hardware, we understand the technical details that matter.</p>
 					</div>
 					<div class="card">
-						<h3>Practical Guidance</h3>
-						<p>We focus on helping organizations understand and work toward security goals through achievable steps and appropriate solutions.</p>
+						<h3>No Corporate Bloat</h3>
+						<p>As a specialized NZ-owned business, we deliver direct access to experts without layers of account managers or sales teams.</p>
 					</div>
 					<div class="card">
-						<h3>Continuous Learning</h3>
-						<p>The security landscape evolves constantly. We maintain our expertise to provide current, relevant advice.</p>
+						<h3>OPSEC-First Mindset</h3>
+						<p>We understand concepts like the mosaic effect and digital exhaust that most security vendors overlook in their checklist approach.</p>
+					</div>
+					<div class="card">
+						<h3>Certified Hardware Focus</h3>
+						<p>We specialize in FIPS-certified security hardware because certified assurance matters. No compromises on security fundamentals.</p>
 					</div>
 				</div>
 			</div>
@@ -53,34 +53,67 @@ import { SITE_TITLE, COMPANY_NAME } from '../consts';
 
 		<section class="section">
 			<div class="container">
-				<h2>Our Approach to Security</h2>
-				<p>At Hermetrix Technologies, we believe effective security requires understanding both the technical requirements and the operational context. We help organizations:</p>
-				<ul>
-					<li>Understand complex security frameworks like NZISM and PSR</li>
-					<li>Identify appropriate certified security products</li>
-					<li>Implement solutions that balance security and usability</li>
-					<li>Develop sustainable security practices</li>
-				</ul>
+				<h2>Our Approach</h2>
+				<div class="grid grid-3">
+					<div class="feature">
+						<h3>Stop Planning, Start Doing</h3>
+						<p>We focus on immediate implementation over lengthy consulting engagements. Your security improves from day one.</p>
+					</div>
+					<div class="feature">
+						<h3>Small Size, Big Advantage</h3>
+						<p>Our size means we're agile, focused, and directly accountable. No bureaucracy, no finger-pointing, just results.</p>
+					</div>
+					<div class="feature">
+						<h3>NZ Market Understanding</h3>
+						<p>We understand the unique security challenges facing NZ businesses and the realities of our market size and requirements.</p>
+					</div>
+				</div>
 			</div>
 		</section>
 
 		<section class="section">
 			<div class="container">
-				<div class="disclaimer">
-					<h3>Our Commitment to Transparency</h3>
-					<p><strong>Hermetrix Technologies is a registered New Zealand company providing security consulting and implementation services.</strong> We are not a government agency and cannot provide official security clearances or compliance certifications.</p>
-					<p>We work with commercially available, certified security products and provide guidance to help organizations navigate security requirements. Official certifications and formal compliance status must be obtained through appropriate government channels.</p>
+				<div class="grid grid-2">
+					<div>
+						<h2>Our Focus</h2>
+						<div class="feature">
+							<h3>Operational Security Consulting</h3>
+							<p>Identifying and mitigating the human, process, and strategic vulnerabilities that traditional IT security misses.</p>
+						</div>
+						<div class="feature">
+							<h3>Certified Hardware Solutions</h3>
+							<p>Specializing in the highest-grade certified security hardware for enterprise and government use cases.</p>
+						</div>
+						<div class="feature">
+							<h3>B2B & Government</h3>
+							<p>Working with organizations that understand security is a fundamental requirement, not an optional extra.</p>
+						</div>
+					</div>
+					<div class="card">
+						<h3>Direct Practitioner Access</h3>
+						<p><strong>When you work with us, you work directly with the security expert.</strong> No account managers, no sales teams, no layers between you and the technical expertise you need.</p>
+						
+						<div class="feature" style="margin-top: var(--space-lg);">
+							<h4>Current Focus</h4>
+							<ul>
+								<li>Building our initial client base with exceptional service</li>
+								<li>NZ-owned and operated expertise</li>
+								<li>FIPS 140-3 Level 3 certified hardware specialization</li>
+								<li>Practical, implementable security guidance</li>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
 
 		<section class="section">
 			<div class="container text-center">
-				<h2>Ready to Enhance Your Security?</h2>
-				<p>Contact us to discuss how we can help your organization achieve its security objectives.</p>
+				<h2>Ready to Work With Security Practitioners?</h2>
+				<p>Stop dealing with vendors who don't understand your security challenges. Work with experts who speak your language and deliver real protection.</p>
 				<div class="cta-buttons">
-					<a href="mailto:hello@hermetrix.nz" class="btn primary">Get in Touch</a>
-					<a href="/services" class="btn secondary">Our Services</a>
+					<a href="/consultation" class="btn primary">Start with Free Consultation</a>
+					<a href="/products" class="btn secondary">View Certified Hardware</a>
 				</div>
 			</div>
 		</section>
@@ -88,29 +121,37 @@ import { SITE_TITLE, COMPANY_NAME } from '../consts';
 	<Footer />
 
 	<style>
-		.disclaimer {
-			border-left: 1px solid var(--white);
-			padding: var(--space-lg) var(--space-xl);
-			margin: var(--space-xl) 0;
+		.hero {
+			padding: var(--space-3xl) 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			min-height: calc(100vh - var(--header-height));
 		}
 
-		.disclaimer h3 {
+		.hero h1 {
+			max-width: 900px;
+		}
+
+		.feature {
+			padding: var(--space-xl);
+			border: 1px solid var(--border-color);
+			background-color: var(--background-alt);
+			margin-bottom: var(--space-lg);
+		}
+
+		.feature h3 {
 			color: var(--text-primary);
 		}
 
-		.disclaimer p {
-			margin-bottom: var(--space-md);
-		}
-
-		.disclaimer p:last-child {
-			margin-bottom: 0;
+		.card {
+			margin-bottom: var(--space-lg);
 		}
 
 		.cta-buttons {
 			display: flex;
 			gap: var(--space-md);
 			justify-content: center;
-			margin-top: var(--space-xl);
 		}
 
 		@media (max-width: 768px) {
