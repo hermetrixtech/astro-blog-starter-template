@@ -11,7 +11,6 @@ import { SITE_TITLE } from '../consts';
 <main>
     <!-- Full-screen blue gradient hero -->
     <section class="hero">
-        <div class="hero-background"></div>
         <div class="container">
             <h1>FIPS 140-3 Level 3 Certified Encryption</h1>
             <span class="tagline">The highest assurance hardware-encrypted drive available</span>
@@ -21,10 +20,11 @@ import { SITE_TITLE } from '../consts';
                 <a href="/services" class="btn secondary">Our Services</a>
             </div>
         </div>
+        <div class="hero-background"></div>
     </section>
 
-    <!-- White background content section -->
-    <section class="content-section">
+    <!-- Main content with white background -->
+    <section class="main-content">
         <div class="container">
             <div class="section">
                 <h2>Our Exclusive Recommendation</h2>
@@ -32,37 +32,39 @@ import { SITE_TITLE } from '../consts';
                     <div>
                         <p>After extensive evaluation of the certified security market, we recommend one product that stands above the rest for maximum physical data protection.</p>
                         
-                        <div class="card product-card">
+                        <div class="card product-highlight">
                             <h3 class="product-name">iStorage datAshur PRO+C</h3>
-                            <p class="product-certification"><strong>FIPS 140-3 Level 3 Certified • The Highest Commercial Assurance Available</strong></p>
-                            <div class="key-benefits">
-                                <div class="benefit-item">
+                            <p class="product-subtitle">FIPS 140-3 Level 3 Certified • The Highest Commercial Assurance Available</p>
+                            
+                            <div class="benefits-grid">
+                                <div class="benefit">
                                     <strong>FIPS 140-3 Level 3 Certified</strong>
                                     <span>Beyond military-grade to tamper-proof physical security</span>
                                 </div>
-                                <div class="benefit-item">
+                                <div class="benefit">
                                     <strong>Brute-Force Proof Protection</strong>
-                                    <span>Permanently locks after 20 failed PIN attempts with cryptographic erasure</span>
+                                    <span>Permanently locks after 20 failed PIN attempts</span>
                                 </div>
-                                <div class="benefit-item">
+                                <div class="benefit">
                                     <strong>Zero Software Dependencies</strong>
-                                    <span>Works instantly on any system without admin rights or drivers</span>
+                                    <span>Works instantly on any system without drivers</span>
                                 </div>
-                                <div class="benefit-item">
-                                    <strong>Built-in Keypad & AES 256-bit Encryption</strong>
+                                <div class="benefit">
+                                    <strong>Built-in Keypad & AES 256-bit</strong>
                                     <span>All data encrypted on the device before leaving</span>
                                 </div>
-                                <div class="benefit-item">
+                                <div class="benefit">
                                     <strong>Time-Based Auto-Lock</strong>
-                                    <span>Configurable inactivity locking for operational security</span>
+                                    <span>Configurable inactivity locking</span>
                                 </div>
-                                <div class="benefit-item">
+                                <div class="benefit">
                                     <strong>Independent Secure Operation</strong>
                                     <span>The host computer is completely untrusted</span>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    
                     <div class="card">
                         <h3>Our Hardware Specification Service</h3>
                         <p><strong>We help clients identify and procure the right certified security hardware for their specific needs.</strong></p>
@@ -142,10 +144,10 @@ import { SITE_TITLE } from '../consts';
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
         text-align: center;
         color: white;
         overflow: hidden;
+        background: linear-gradient(135deg, #0a0f14 0%, #14213d 50%, #1a365d 100%);
     }
 
     .hero-background {
@@ -154,30 +156,23 @@ import { SITE_TITLE } from '../consts';
         left: 0;
         right: 0;
         bottom: 0;
-        background: linear-gradient(135deg, #0a0f14 0%, #14213d 50%, #1a365d 100%);
-        z-index: -1;
+        background: 
+            radial-gradient(circle at 20% 80%, rgba(99, 179, 237, 0.15) 0%, transparent 50%),
+            radial-gradient(circle at 80% 20%, rgba(144, 205, 244, 0.1) 0%, transparent 50%);
+        animation: pulse 8s ease-in-out infinite;
+        z-index: 0;
     }
 
-    .hero-background::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: 
-            radial-gradient(circle at 20% 80%, rgba(99, 179, 237, 0.1) 0%, transparent 50%),
-            radial-gradient(circle at 80% 20%, rgba(144, 205, 244, 0.08) 0%, transparent 50%),
-            radial-gradient(circle at 40% 40%, rgba(66, 153, 225, 0.05) 0%, transparent 50%);
-        animation: float 6s ease-in-out infinite;
+    .hero > .container {
+        position: relative;
+        z-index: 1;
     }
 
     .hero h1 {
         max-width: 800px;
-        margin-bottom: var(--space-md);
+        margin: 0 auto var(--space-md) auto;
         font-size: 3rem;
         font-weight: 900;
-        text-shadow: 0 2px 4px rgba(0,0,0,0.3);
     }
 
     .tagline {
@@ -186,6 +181,8 @@ import { SITE_TITLE } from '../consts';
         color: #e2e8f0;
         font-weight: 500;
         max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .hero p {
@@ -193,29 +190,30 @@ import { SITE_TITLE } from '../consts';
         margin-bottom: var(--space-xl);
         color: #cbd5e0;
         max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    /* White content section */
-    .content-section {
+    /* Main content section */
+    .main-content {
         background: white;
         position: relative;
-        z-index: 1;
     }
 
-    .content-section .section {
+    .main-content .section {
         padding: var(--space-3xl) 0;
     }
 
-    .content-section .section:first-child {
+    .main-content .section:first-child {
         padding-top: var(--space-4xl);
     }
 
-    .content-section .section:last-child {
+    .main-content .section:last-child {
         padding-bottom: var(--space-4xl);
     }
 
-    /* Product card styling */
-    .product-card {
+    /* Product highlight card */
+    .product-highlight {
         background: linear-gradient(135deg, #f8fafc 0%, #f0f4f8 100%);
         border-left: 4px solid #3182ce;
         margin-top: var(--space-lg);
@@ -228,39 +226,38 @@ import { SITE_TITLE } from '../consts';
         margin-bottom: var(--space-sm);
     }
 
-    .product-certification {
+    .product-subtitle {
         color: #2d3748;
         font-size: 1.1rem;
         margin-bottom: var(--space-lg);
-        padding-bottom: var(--space-md);
-        border-bottom: 1px solid #e2e8f0;
+        font-weight: 600;
     }
 
-    .key-benefits {
+    .benefits-grid {
         display: flex;
         flex-direction: column;
         gap: var(--space-md);
     }
 
-    .benefit-item {
+    .benefit {
         display: flex;
         flex-direction: column;
         gap: var(--space-xs);
     }
 
-    .benefit-item strong {
+    .benefit strong {
         color: #1a365d;
         font-weight: 700;
         font-size: 1rem;
     }
 
-    .benefit-item span {
+    .benefit span {
         color: #4a5568;
         font-size: 0.9rem;
         line-height: 1.4;
     }
 
-    /* Consistent with consultation page styling */
+    /* Consistent styling with consultation page */
     .feature {
         padding: var(--space-xl);
         border: 1px solid var(--border-color);
@@ -268,7 +265,7 @@ import { SITE_TITLE } from '../consts';
         margin-bottom: var(--space-lg);
     }
 
-    .feature h3 {
+    .feature h3, .feature h4 {
         color: var(--text-primary);
     }
 
@@ -282,32 +279,23 @@ import { SITE_TITLE } from '../consts';
         justify-content: center;
     }
 
-    /* Subtle background animations */
-    @keyframes float {
-        0%, 100% {
-            transform: translateY(0px) scale(1);
-        }
-        50% {
-            transform: translateY(-10px) scale(1.02);
-        }
-    }
-
+    /* Subtle animations */
     @keyframes pulse {
         0%, 100% {
             opacity: 1;
         }
         50% {
-            opacity: 0.8;
+            opacity: 0.7;
         }
     }
 
-    /* Hover effects */
+    /* Hover effects matching consultation page */
     .card {
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        transition: all 0.2s ease;
     }
 
     .card:hover {
-        transform: translateY(-1px);
+        transform: translateY(-2px);
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
@@ -333,12 +321,16 @@ import { SITE_TITLE } from '../consts';
             align-items: center;
         }
 
-        .key-benefits {
+        .benefits-grid {
             gap: var(--space-sm);
         }
     }
 
     @media (max-width: 480px) {
+        .hero {
+            height: 80vh;
+        }
+        
         .hero h1 {
             font-size: 2rem;
         }
