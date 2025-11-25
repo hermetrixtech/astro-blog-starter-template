@@ -118,11 +118,11 @@ import { SITE_TITLE } from '../consts';
 	<Footer />
 
 	<style>
-		/* Hero Section */
+		/* Hero Section - Better Contrast */
 		.hero {
 			padding: 4rem 0;
 			text-align: center;
-			background: linear-gradient(135deg, #0f1419 0%, #1a365d 100%);
+			background: linear-gradient(135deg, #0a0f14 0%, #14213d 100%);
 			color: white;
 		}
 
@@ -130,12 +130,15 @@ import { SITE_TITLE } from '../consts';
 			font-size: 3rem;
 			margin-bottom: 1rem;
 			font-weight: 900;
+			color: #ffffff;
+			text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 		}
 
 		.tagline {
 			font-size: 1.4rem;
 			margin-bottom: 2.5rem;
-			opacity: 0.9;
+			color: #e2e8f0;
+			font-weight: 500;
 			max-width: 600px;
 			margin-left: auto;
 			margin-right: auto;
@@ -153,28 +156,36 @@ import { SITE_TITLE } from '../consts';
 		}
 
 		.core-offer h2 {
-			color: #1a365d;
+			color: #0f1419;
 			margin-bottom: 0.5rem;
+			font-weight: 700;
 		}
 
 		.price {
 			font-size: 1.5rem;
-			font-weight: bold;
-			color: #2d3748;
+			font-weight: 800;
+			color: #1a365d;
 			margin-bottom: 1.5rem;
+		}
+
+		.core-offer p {
+			color: #2d3748;
+			line-height: 1.6;
 		}
 
 		.what-you-get {
 			text-align: left;
-			background: #f7fafc;
+			background: #f0f4f8;
 			padding: 2rem;
 			border-radius: 0.5rem;
 			margin: 2rem 0;
+			border: 1px solid #cbd5e0;
 		}
 
 		.what-you-get h3 {
-			color: #2d3748;
+			color: #1a365d;
 			margin-bottom: 1rem;
+			font-weight: 600;
 		}
 
 		.what-you-get ul {
@@ -186,6 +197,7 @@ import { SITE_TITLE } from '../consts';
 			margin-bottom: 0.75rem;
 			padding-left: 1.5rem;
 			position: relative;
+			color: #2d3748;
 		}
 
 		.what-you-get li:before {
@@ -215,16 +227,19 @@ import { SITE_TITLE } from '../consts';
 		.services-grid h2 {
 			text-align: center;
 			margin-bottom: 1rem;
-			color: #1a365d;
+			color: #0f1419;
+			font-weight: 700;
 		}
 
 		.services-grid > .container > p {
 			text-align: center;
 			margin-bottom: 3rem;
-			color: #4a5568;
+			color: #2d3748;
+			font-weight: 500;
 			max-width: 600px;
 			margin-left: auto;
 			margin-right: auto;
+			line-height: 1.6;
 		}
 
 		.service-cards {
@@ -239,12 +254,13 @@ import { SITE_TITLE } from '../consts';
 			padding: 2rem;
 			border-radius: 0.75rem;
 			border: 1px solid #e2e8f0;
-			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 		}
 
 		.service-card h3 {
 			color: #1a365d;
 			margin-bottom: 0.5rem;
+			font-weight: 600;
 		}
 
 		.service-meta {
@@ -252,6 +268,10 @@ import { SITE_TITLE } from '../consts';
 			font-size: 0.9rem;
 			margin-bottom: 1rem;
 			font-style: italic;
+		}
+
+		.service-card p {
+			color: #4a5568;
 		}
 
 		.service-card ul {
@@ -264,6 +284,7 @@ import { SITE_TITLE } from '../consts';
 			margin-bottom: 0.5rem;
 			padding-left: 1rem;
 			position: relative;
+			color: #4a5568;
 		}
 
 		.service-card li:before {
@@ -280,7 +301,7 @@ import { SITE_TITLE } from '../consts';
 
 		/* CTA Section */
 		.cta-section {
-			background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+			background: linear-gradient(135deg, #14213d 0%, #1a202c 100%);
 			color: white;
 			text-align: center;
 			padding: 4rem 0;
@@ -288,11 +309,14 @@ import { SITE_TITLE } from '../consts';
 
 		.cta-section h2 {
 			margin-bottom: 1rem;
+			color: #ffffff;
+			font-weight: 700;
 		}
 
 		.cta-section p {
 			margin-bottom: 2rem;
-			opacity: 0.9;
+			color: #e2e8f0;
+			font-weight: 500;
 			font-size: 1.1rem;
 		}
 
@@ -310,6 +334,7 @@ import { SITE_TITLE } from '../consts';
 		.btn.primary {
 			background: #90cdf4;
 			color: #1a365d;
+			font-weight: 700;
 		}
 
 		.btn.primary:hover {
@@ -321,6 +346,7 @@ import { SITE_TITLE } from '../consts';
 			background: transparent;
 			color: #90cdf4;
 			border-color: #90cdf4;
+			font-weight: 600;
 		}
 
 		.btn.secondary:hover {
