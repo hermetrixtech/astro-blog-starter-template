@@ -5,11 +5,19 @@ import Footer from '../components/Footer.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
-<BaseHead title={`FIPS 140-3 Level 3 Encrypted Drives | ${SITE_TITLE}`} description="Eliminate data breach risk from lost devices. The iStorage datAshur PRO+C delivers FIPS 140-3 Level 3 certified hardware encryption for NZ businesses." />
+<BaseHead 
+  title={`FIPS 140-3 Level 3 Encrypted Drives | ${SITE_TITLE}`} 
+  description="Eliminate data breach risk from lost devices. The iStorage datAshur PRO+C delivers FIPS 140-3 Level 3 certified hardware encryption for NZ businesses." 
+/>
+
+<!-- Load AOS Styles in head -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
 <Header />
+
 <main>
-    <!-- Enhanced full-screen hero with proper animations -->
+
+    <!-- HERO SECTION -->
     <section class="hero">
         <div class="hero-background">
             <div class="floating-orb orb-1"></div>
@@ -18,17 +26,20 @@ import { SITE_TITLE } from '../consts';
             <div class="floating-orb orb-4"></div>
             <div class="grid-overlay"></div>
         </div>
+
         <div class="hero-content">
             <div class="container">
                 <h1 data-aos="fade-up">FIPS 140-3 Level 3 Certified Encryption</h1>
                 <span class="tagline" data-aos="fade-up" data-aos-delay="100">The highest assurance hardware-encrypted drive available</span>
                 <p data-aos="fade-up" data-aos-delay="200">When "good enough" security isn't good enough for your data protection needs.</p>
+
                 <div class="cta-buttons" data-aos="fade-up" data-aos-delay="300">
                     <a href="/consultation" class="btn primary">Get Your Free Security Assessment</a>
                     <a href="/services" class="btn secondary">Our Services</a>
                 </div>
             </div>
         </div>
+
         <div class="scroll-indicator">
             <div class="chevron"></div>
             <div class="chevron"></div>
@@ -36,21 +47,28 @@ import { SITE_TITLE } from '../consts';
         </div>
     </section>
 
-    <!-- Main content with elegant transitions -->
+    <!-- MAIN CONTENT -->
     <section class="main-content">
         <div class="container">
-            <!-- Product showcase section -->
+
+            <!-- PRODUCT SHOWCASE -->
             <div class="section product-showcase" data-aos="fade-up">
                 <h2>Our Exclusive Recommendation</h2>
-                <p class="section-intro">After extensive evaluation of the certified security market, we recommend one product that stands above the rest for maximum physical data protection.</p>
-                
+                <p class="section-intro">
+                    After extensive evaluation of the certified security market, we recommend one product
+                    that stands above the rest for maximum physical data protection.
+                </p>
+
                 <div class="product-feature">
                     <div class="product-header">
                         <h3 class="product-name">iStorage datAshur PRO+C</h3>
                         <div class="product-badge">FIPS 140-3 Level 3 Certified</div>
                     </div>
-                    <p class="product-description">The highest commercial assurance available for hardware-encrypted storage</p>
-                    
+
+                    <p class="product-description">
+                        The highest commercial assurance available for hardware-encrypted storage
+                    </p>
+
                     <div class="specs-grid">
                         <div class="spec-item" data-aos="fade-right" data-aos-delay="100">
                             <div class="spec-icon">🔒</div>
@@ -59,6 +77,7 @@ import { SITE_TITLE } from '../consts';
                                 <span>Active intrusion detection with cryptographic erasure</span>
                             </div>
                         </div>
+
                         <div class="spec-item" data-aos="fade-right" data-aos-delay="150">
                             <div class="spec-icon">🛡️</div>
                             <div class="spec-content">
@@ -66,6 +85,7 @@ import { SITE_TITLE } from '../consts';
                                 <span>Permanently locks after 20 failed PIN attempts</span>
                             </div>
                         </div>
+
                         <div class="spec-item" data-aos="fade-right" data-aos-delay="200">
                             <div class="spec-icon">⚡</div>
                             <div class="spec-content">
@@ -73,6 +93,7 @@ import { SITE_TITLE } from '../consts';
                                 <span>Works instantly on any system without drivers</span>
                             </div>
                         </div>
+
                         <div class="spec-item" data-aos="fade-right" data-aos-delay="250">
                             <div class="spec-icon">🔑</div>
                             <div class="spec-content">
@@ -84,496 +105,347 @@ import { SITE_TITLE } from '../consts';
                 </div>
             </div>
 
-            <!-- Service approach -->
+            <!-- SERVICE APPROACH -->
             <div class="section service-approach" data-aos="fade-up">
                 <div class="approach-grid">
+
                     <div class="approach-card" data-aos="flip-left" data-aos-delay="100">
                         <div class="approach-number">01</div>
                         <h4>Assess & Specify</h4>
                         <p>We perform an OPSEC Health Check to determine the right certified hardware for your needs.</p>
                     </div>
+
                     <div class="approach-card" data-aos="flip-left" data-aos-delay="200">
                         <div class="approach-number">02</div>
                         <h4>Source & Configure</h4>
                         <p>We procure through authorized channels and pre-configure devices with your security policies.</p>
                     </div>
+
                     <div class="approach-card" data-aos="flip-left" data-aos-delay="300">
                         <div class="approach-number">03</div>
                         <h4>Deploy & Train</h4>
                         <p>We ensure your team understands how to properly use the devices in your security practices.</p>
                     </div>
+
                 </div>
             </div>
 
-            <!-- Final CTA -->
+            <!-- FINAL CTA -->
             <div class="section final-cta" data-aos="zoom-in">
                 <h2>Stop Compromising on Data Security</h2>
                 <p>When your data demands the highest level of protection, settle for nothing less than certified assurance.</p>
+
                 <div class="cta-buttons">
                     <a href="/consultation" class="btn primary large">Get Your Free Threat Assessment</a>
-                    <a href="mailto:contact@hermetrix.nz?subject=datAshur PRO+C Inquiry" class="btn secondary">Ask About Certified Hardware</a>
+                    <a href="mailto:contact@hermetrix.nz?subject=datAshur PRO+C Inquiry" class="btn secondary">
+                        Ask About Certified Hardware
+                    </a>
                 </div>
             </div>
+
         </div>
     </section>
+
 </main>
+
 <Footer />
 
-<style>
-    /* Base styles first */
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 2rem;
-    }
+<!-- AOS Script must run on client -->
+<script is:client src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    .section {
-        padding: 4rem 0;
-    }
-
-    /* Enhanced Hero Section */
-    .hero {
-        position: relative;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        color: white;
-        overflow: hidden;
-        background: linear-gradient(135deg, #0a0f14 0%, #14213d 50%, #1a365d 100%);
-    }
-
-    .hero-background {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 1; /* Background behind content */
-    }
-
-    .hero-content {
-        position: relative;
-        z-index: 3; /* Content above background */
-        text-align: center;
-    }
-
-    .floating-orb {
-        position: absolute;
-        border-radius: 50%;
-        background: radial-gradient(circle, rgba(99, 179, 237, 0.3) 0%, transparent 70%);
-        filter: blur(40px);
-        animation: float 6s ease-in-out infinite;
-        z-index: 1;
-    }
-
-    .orb-1 {
-        width: 300px;
-        height: 300px;
-        top: 10%;
-        left: 10%;
-        animation-delay: 0s;
-    }
-
-    .orb-2 {
-        width: 200px;
-        height: 200px;
-        top: 60%;
-        right: 15%;
-        animation-delay: 2s;
-    }
-
-    .orb-3 {
-        width: 250px;
-        height: 250px;
-        bottom: 20%;
-        left: 20%;
-        animation-delay: 4s;
-    }
-
-    .orb-4 {
-        width: 180px;
-        height: 180px;
-        top: 30%;
-        right: 25%;
-        animation-delay: 1s;
-    }
-
-    .grid-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-image: 
-            linear-gradient(rgba(99, 179, 237, 0.1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(99, 179, 237, 0.1) 1px, transparent 1px);
-        background-size: 50px 50px;
-        animation: gridMove 20s linear infinite;
-        z-index: 1;
-    }
-
-    .hero h1 {
-        max-width: 800px;
-        margin: 0 auto 1rem auto;
-        font-size: 3.5rem;
-        font-weight: 800;
-        background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
-
-    .tagline {
-        font-size: 1.5rem;
-        margin-bottom: 1.5rem;
-        color: #cbd5e0;
-        font-weight: 400;
-        max-width: 600px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .hero p {
-        font-size: 1.2rem;
-        margin-bottom: 2.5rem;
-        color: #a0aec0;
-        max-width: 500px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    /* Scroll Indicator */
-    .scroll-indicator {
-        position: absolute;
-        bottom: 30px;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 3; /* Above background */
-    }
-
-    .chevron {
-        width: 20px;
-        height: 5px;
-        background: rgba(255, 255, 255, 0.5);
-        margin: 3px 0;
-        border-radius: 2px;
-        animation: scrollBounce 2s infinite;
-    }
-
-    .chevron:nth-child(2) { animation-delay: 0.2s; }
-    .chevron:nth-child(3) { animation-delay: 0.4s; }
-
-    /* Main Content */
-    .main-content {
-        background: white;
-        position: relative;
-        z-index: 2; /* Above hero background */
-    }
-
-    .section-intro {
-        text-align: center;
-        max-width: 600px;
-        margin: 0 auto 3rem auto;
-        color: #4a5568;
-        font-size: 1.1rem;
-        line-height: 1.6;
-    }
-
-    /* Product Feature */
-    .product-feature {
-        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
-        border-radius: 20px;
-        padding: 3rem;
-        border: 1px solid #e2e8f0;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    }
-
-    .product-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 1rem;
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
-
-    .product-name {
-        color: #1a365d;
-        font-size: 2rem;
-        font-weight: 700;
-        margin: 0;
-    }
-
-    .product-badge {
-        background: linear-gradient(135deg, #3182ce 0%, #2b6cb0 100%);
-        color: white;
-        padding: 8px 16px;
-        border-radius: 20px;
-        font-size: 0.9rem;
-        font-weight: 600;
-    }
-
-    .product-description {
-        color: #2d3748;
-        font-size: 1.2rem;
-        margin-bottom: 2rem;
-        font-weight: 500;
-    }
-
-    .specs-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 1.5rem;
-    }
-
-    .spec-item {
-        display: flex;
-        align-items: flex-start;
-        gap: 1rem;
-        padding: 1.5rem;
-        background: white;
-        border-radius: 12px;
-        border: 1px solid #e2e8f0;
-        transition: all 0.3s ease;
-    }
-
-    .spec-item:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        border-color: #3182ce;
-    }
-
-    .spec-icon {
-        font-size: 1.5rem;
-        flex-shrink: 0;
-    }
-
-    .spec-content {
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-    }
-
-    .spec-content strong {
-        color: #1a365d;
-        font-weight: 700;
-        font-size: 1rem;
-    }
-
-    .spec-content span {
-        color: #4a5568;
-        font-size: 0.9rem;
-        line-height: 1.4;
-    }
-
-    /* Service Approach */
-    .service-approach {
-        background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
-    }
-
-    .approach-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-    }
-
-    .approach-card {
-        background: white;
-        padding: 2rem;
-        border-radius: 16px;
-        text-align: center;
-        border: 1px solid #e2e8f0;
-        transition: all 0.3s ease;
-        position: relative;
-    }
-
-    .approach-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-    }
-
-    .approach-number {
-        font-size: 3rem;
-        font-weight: 800;
-        color: #e2e8f0;
-        margin-bottom: 1rem;
-        line-height: 1;
-    }
-
-    .approach-card h4 {
-        color: #1a365d;
-        font-size: 1.3rem;
-        margin-bottom: 1rem;
-        font-weight: 600;
-    }
-
-    .approach-card p {
-        color: #4a5568;
-        line-height: 1.6;
-    }
-
-    /* Final CTA */
-    .final-cta {
-        text-align: center;
-        background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
-        color: white;
-        border-radius: 20px;
-        margin: 4rem 0;
-        padding: 4rem 2rem;
-    }
-
-    .final-cta h2 {
-        color: white;
-        margin-bottom: 1rem;
-    }
-
-    .final-cta p {
-        color: #e2e8f0;
-        margin-bottom: 2rem;
-        font-size: 1.1rem;
-    }
-
-    /* Buttons */
-    .btn {
-        transition: all 0.3s ease;
-        border: none;
-        font-weight: 600;
-        padding: 0.75rem 2rem;
-        border-radius: 0.5rem;
-        text-decoration: none;
-        display: inline-block;
-        cursor: pointer;
-    }
-
-    .btn.primary {
-        background: linear-gradient(135deg, #90cdf4 0%, #63b3ed 100%);
-        color: #1a365d;
-    }
-
-    .btn.primary:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 10px 25px rgba(99, 179, 237, 0.3);
-    }
-
-    .btn.secondary {
-        background: transparent;
-        color: #90cdf4;
-        border: 2px solid #90cdf4;
-    }
-
-    .btn.secondary:hover {
-        background: rgba(144, 205, 244, 0.1);
-        transform: translateY(-2px);
-    }
-
-    .btn.large {
-        padding: 1rem 2.5rem;
-        font-size: 1.1rem;
-    }
-
-    .cta-buttons {
-        display: flex;
-        gap: 1rem;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    /* Animations */
-    @keyframes float {
-        0%, 100% {
-            transform: translateY(0px) scale(1);
-        }
-        50% {
-            transform: translateY(-20px) scale(1.05);
-        }
-    }
-
-    @keyframes gridMove {
-        0% {
-            transform: translate(0, 0);
-        }
-        100% {
-            transform: translate(50px, 50px);
-        }
-    }
-
-    @keyframes scrollBounce {
-        0%, 100% {
-            transform: scaleX(1);
-            opacity: 0.5;
-        }
-        50% {
-            transform: scaleX(1.2);
-            opacity: 1;
-        }
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-        .hero h1 {
-            font-size: 2.5rem;
-        }
-
-        .tagline {
-            font-size: 1.2rem;
-        }
-
-        .product-header {
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        .specs-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .approach-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .cta-buttons {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .product-feature {
-            padding: 2rem;
-        }
-        
-        .container {
-            padding: 0 1rem;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .hero {
-            height: 90vh;
-        }
-        
-        .hero h1 {
-            font-size: 2rem;
-        }
-
-        .product-name {
-            font-size: 1.5rem;
-        }
-        
-        .section {
-            padding: 3rem 0;
-        }
-    }
-</style>
-
-<!-- Add AOS library for scroll animations -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        AOS.init({
-            duration: 800,
-            once: true,
-            offset: 100
-        });
-    });
+<script is:client>
+AOS.init({
+    duration: 800,
+    once: true,
+    offset: 100
+});
 </script>
+
+<style>
+
+/* ---------------------- */
+/* GENERAL LAYOUT RULES   */
+/* ---------------------- */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section {
+    padding: 4rem 0;
+}
+
+/* ---------------------- */
+/* HERO                   */
+/* ---------------------- */
+
+.hero {
+    position: relative;
+    z-index: 1; /* IMPORTANT FIX */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    overflow: hidden;
+    background: linear-gradient(135deg, #0a0f14 0%, #14213d 50%, #1a365d 100%);
+}
+
+.hero-background {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+}
+
+/* Floating orbs & grid */
+.floating-orb {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(99, 179, 237, 0.3) 0%, transparent 70%);
+    filter: blur(40px);
+    animation: float 6s ease-in-out infinite;
+    z-index: 1;
+}
+
+.orb-1 { width: 300px; height: 300px; top: 10%; left: 10%; animation-delay: 0s; }
+.orb-2 { width: 200px; height: 200px; top: 60%; right: 15%; animation-delay: 2s; }
+.orb-3 { width: 250px; height: 250px; bottom: 20%; left: 20%; animation-delay: 4s; }
+.orb-4 { width: 180px; height: 180px; top: 30%; right: 25%; animation-delay: 1s; }
+
+.grid-overlay {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(99, 179, 237, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(99, 179, 237, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: gridMove 20s linear infinite;
+    z-index: 1;
+}
+
+.hero h1 {
+    max-width: 800px;
+    margin: 0 auto 1rem;
+    font-size: 3.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+
+.chevron {
+    width: 20px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 3px 0;
+    border-radius: 2px;
+    animation: scrollBounce 2s infinite;
+}
+
+.chevron:nth-child(2) { animation-delay: 0.2s; }
+.chevron:nth-child(3) { animation-delay: 0.4s; }
+
+/* ---------------------- */
+/* MAIN CONTENT           */
+/* ---------------------- */
+
+.main-content {
+    background: white;
+    position: relative;
+    z-index: 2; /* sits ABOVE hero now */
+}
+
+.section-intro {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    color: #4a5568;
+    font-size: 1.1rem;
+}
+
+/* Product Feature */
+.product-feature {
+    background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+    border-radius: 20px;
+    padding: 3rem;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.product-name {
+    color: #1a365d;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.product-badge {
+    background: linear-gradient(135deg, #3182ce 0%, #2b6cb0 100%);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.product-description {
+    color: #2d3748;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Specs */
+.specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.spec-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+.spec-item:hover {
+    transform: translateY(-5px);
+    border-color: #3182ce;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.spec-icon { font-size: 1.5rem; }
+
+/* Service Approach */
+.service-approach {
+    background: #f7fafc;
+    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+}
+
+.approach-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.approach-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+.approach-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.approach-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #e2e8f0;
+}
+
+/* Final CTA */
+.final-cta {
+    text-align: center;
+    background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+    color: white;
+    border-radius: 20px;
+    margin: 4rem 0;
+    padding: 4rem 2rem;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn.primary {
+    background: linear-gradient(135deg, #90cdf4 0%, #63b3ed 100%);
+    color: #1a365d;
+}
+
+.btn.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(99, 179, 237, 0.3);
+}
+
+.btn.secondary {
+    border: 2px solid #90cdf4;
+    color: #90cdf4;
+}
+
+.btn.secondary:hover {
+    background: rgba(144,205,244,0.1);
+    transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes float {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-20px) scale(1.05); }
+}
+
+@keyframes gridMove {
+    0% { transform: translate(0,0); }
+    100% { transform: translate(50px,50px); }
+}
+
+@keyframes scrollBounce {
+    0%, 100% { transform: scaleX(1); opacity: 0.5; }
+    50% { transform: scaleX(1.2); opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+    .tagline { font-size: 1.2rem; }
+    .product-header { flex-direction: column; align-items: flex-start; }
+    .specs-grid { grid-template-columns: 1fr; }
+    .approach-grid { grid-template-columns: 1fr; }
+    .cta-buttons { flex-direction: column; }
+}
+
+@media (max-width: 480px) {
+    .hero { height: 90vh; }
+    .hero h1 { font-size: 2rem; }
+    .product-name { font-size: 1.5rem; }
+    .section { padding: 3rem 0; }
+}
+
+</style>
