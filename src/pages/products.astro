@@ -51,6 +51,21 @@ import { SITE_TITLE } from '../consts';
     <section class="main-content">
         <div class="container">
 
+            <!-- SERVICE DISCLAIMER -->
+            <div class="section service-disclaimer" data-aos="fade-up">
+                <div class="disclaimer-card">
+                    <h3>Important: Our Role as Security Consultants</h3>
+                    <p><strong>We do not sell hardware directly.</strong> As OPSEC consultants, we:</p>
+                    <ul>
+                        <li>Evaluate your specific security requirements</li>
+                        <li>Recommend certified hardware solutions that meet your needs</li>
+                        <li>Help source through authorized distribution channels</li>
+                        <li>Provide implementation guidance and security configuration</li>
+                    </ul>
+                    <p class="disclaimer-note">You get expert guidance plus genuine, properly configured hardware.</p>
+                </div>
+            </div>
+
             <!-- PRODUCT SHOWCASE -->
             <div class="section product-showcase" data-aos="fade-up">
                 <h2>Our Exclusive Recommendation</h2>
@@ -69,9 +84,38 @@ import { SITE_TITLE } from '../consts';
                         The highest commercial assurance available for hardware-encrypted storage
                     </p>
 
+                    <div class="technical-specs">
+                        <div class="spec-category">
+                            <h4>Security Certification</h4>
+                            <ul>
+                                <li><strong>FIPS 140-3 Level 3</strong> - Highest commercial certification</li>
+                                <li><strong>Hardware Encryption</strong> - AES 256-bit XTS mode</li>
+                                <li><strong>Tamper-Proof Design</strong> - Active intrusion detection</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="spec-category">
+                            <h4>Physical Protection</h4>
+                            <ul>
+                                <li><strong>Brute-Force Protection</strong> - Locks after 20 failed PIN attempts</li>
+                                <li><strong>Cryptographic Erasure</strong> - Data destroyed on intrusion detection</li>
+                                <li><strong>Time-Based Auto-Lock</strong> - Configurable inactivity timeout</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="spec-category">
+                            <h4>Operational Features</h4>
+                            <ul>
+                                <li><strong>Built-in Keypad</strong> - On-device PIN entry</li>
+                                <li><strong>Zero Software Dependencies</strong> - Works on any system</li>
+                                <li><strong>Cross-Platform</strong> - Windows, macOS, Linux compatible</li>
+                            </ul>
+                        </div>
+                    </div>
+
                     <div class="specs-grid">
                         <div class="spec-item" data-aos="fade-right" data-aos-delay="100">
-                            <div class="spec-icon">🔒</div>
+                            <div class="spec-icon security-icon"></div>
                             <div class="spec-content">
                                 <strong>Tamper-Proof Security</strong>
                                 <span>Active intrusion detection with cryptographic erasure</span>
@@ -79,7 +123,7 @@ import { SITE_TITLE } from '../consts';
                         </div>
 
                         <div class="spec-item" data-aos="fade-right" data-aos-delay="150">
-                            <div class="spec-icon">🛡️</div>
+                            <div class="spec-icon brute-force-icon"></div>
                             <div class="spec-content">
                                 <strong>Brute-Force Protection</strong>
                                 <span>Permanently locks after 20 failed PIN attempts</span>
@@ -87,7 +131,7 @@ import { SITE_TITLE } from '../consts';
                         </div>
 
                         <div class="spec-item" data-aos="fade-right" data-aos-delay="200">
-                            <div class="spec-icon">⚡</div>
+                            <div class="spec-icon compatibility-icon"></div>
                             <div class="spec-content">
                                 <strong>Zero Dependencies</strong>
                                 <span>Works instantly on any system without drivers</span>
@@ -95,7 +139,7 @@ import { SITE_TITLE } from '../consts';
                         </div>
 
                         <div class="spec-item" data-aos="fade-right" data-aos-delay="250">
-                            <div class="spec-icon">🔑</div>
+                            <div class="spec-icon encryption-icon"></div>
                             <div class="spec-content">
                                 <strong>Built-in Keypad</strong>
                                 <span>AES 256-bit encryption on the device</span>
@@ -107,38 +151,39 @@ import { SITE_TITLE } from '../consts';
 
             <!-- SERVICE APPROACH -->
             <div class="section service-approach" data-aos="fade-up">
+                <h2>How We Help You Implement Certified Security</h2>
+                <p class="section-intro">As security consultants, we guide you through the entire process of selecting and implementing the right certified hardware.</p>
+                
                 <div class="approach-grid">
-
                     <div class="approach-card" data-aos="flip-left" data-aos-delay="100">
                         <div class="approach-number">01</div>
                         <h4>Assess & Specify</h4>
-                        <p>We perform an OPSEC Health Check to determine the right certified hardware for your needs.</p>
+                        <p>We perform an OPSEC Health Check to determine the right certified hardware for your specific security requirements.</p>
                     </div>
 
                     <div class="approach-card" data-aos="flip-left" data-aos-delay="200">
                         <div class="approach-number">02</div>
                         <h4>Source & Configure</h4>
-                        <p>We procure through authorized channels and pre-configure devices with your security policies.</p>
+                        <p>We help procure through authorized channels and pre-configure devices with your security policies.</p>
                     </div>
 
                     <div class="approach-card" data-aos="flip-left" data-aos-delay="300">
                         <div class="approach-number">03</div>
                         <h4>Deploy & Train</h4>
-                        <p>We ensure your team understands how to properly use the devices in your security practices.</p>
+                        <p>We ensure your team understands how to properly use the devices within your security practices.</p>
                     </div>
-
                 </div>
             </div>
 
             <!-- FINAL CTA -->
             <div class="section final-cta" data-aos="zoom-in">
-                <h2>Stop Compromising on Data Security</h2>
-                <p>When your data demands the highest level of protection, settle for nothing less than certified assurance.</p>
+                <h2>Get Expert Guidance on Certified Security</h2>
+                <p>Stop guessing about hardware security. Get our expert recommendation and implementation guidance.</p>
 
                 <div class="cta-buttons">
                     <a href="/consultation" class="btn primary large">Get Your Free Threat Assessment</a>
-                    <a href="mailto:contact@hermetrix.nz?subject=datAshur PRO+C Inquiry" class="btn secondary">
-                        Ask About Certified Hardware
+                    <a href="mailto:contact@hermetrix.nz?subject=Certified Hardware Consultation" class="btn secondary">
+                        Discuss Hardware Options
                     </a>
                 </div>
             </div>
@@ -178,12 +223,57 @@ AOS.init({
 }
 
 /* ---------------------- */
+/* SERVICE DISCLAIMER     */
+/* ---------------------- */
+
+.service-disclaimer {
+    padding-top: 2rem;
+}
+
+.disclaimer-card {
+    background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+    border: 1px solid #ffd351;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.disclaimer-card h3 {
+    color: #856404;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.disclaimer-card p {
+    color: #856404;
+    margin-bottom: 1rem;
+}
+
+.disclaimer-card ul {
+    text-align: left;
+    color: #856404;
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.disclaimer-card li {
+    margin-bottom: 0.5rem;
+}
+
+.disclaimer-note {
+    font-style: italic;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(133, 100, 4, 0.3);
+}
+
+/* ---------------------- */
 /* HERO                   */
 /* ---------------------- */
 
 .hero {
     position: relative;
-    z-index: 1; /* IMPORTANT FIX */
+    z-index: 1;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -269,7 +359,7 @@ AOS.init({
 .main-content {
     background: white;
     position: relative;
-    z-index: 2; /* sits ABOVE hero now */
+    z-index: 2;
 }
 
 .section-intro {
@@ -295,12 +385,14 @@ AOS.init({
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
+    margin-bottom: 1rem;
 }
 
 .product-name {
     color: #1a365d;
     font-size: 2rem;
     margin: 0;
+    font-weight: 700;
 }
 
 .product-badge {
@@ -309,15 +401,109 @@ AOS.init({
     padding: 8px 16px;
     border-radius: 20px;
     font-size: 0.9rem;
+    font-weight: 600;
 }
 
 .product-description {
     color: #2d3748;
     font-size: 1.2rem;
     margin-bottom: 2rem;
+    font-weight: 500;
 }
 
-/* Specs */
+/* Technical Specs */
+.technical-specs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.spec-category h4 {
+    color: #1a365d;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.spec-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.spec-category li {
+    margin-bottom: 0.75rem;
+    color: #4a5568;
+    line-height: 1.4;
+}
+
+.spec-category strong {
+    color: #2d3748;
+    font-weight: 600;
+}
+
+/* Spec Icons (replacing emojis) */
+.spec-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.security-icon {
+    background: linear-gradient(135deg, #e53e3e 0%, #c53030 100%);
+}
+.security-icon::after {
+    content: "🔒";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
+}
+
+.brute-force-icon {
+    background: linear-gradient(135deg, #ed8936 0%, #dd6b20 100%);
+}
+.brute-force-icon::after {
+    content: "🛡️";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
+}
+
+.compatibility-icon {
+    background: linear-gradient(135deg, #38a169 0%, #2f855a 100%);
+}
+.compatibility-icon::after {
+    content: "⚡";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
+}
+
+.encryption-icon {
+    background: linear-gradient(135deg, #805ad5 0%, #6b46c1 100%);
+}
+.encryption-icon::after {
+    content: "🔑";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
+}
+
+/* Specs Grid */
 .specs-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -332,6 +518,7 @@ AOS.init({
     border-radius: 12px;
     border: 1px solid #e2e8f0;
     transition: all 0.3s ease;
+    align-items: flex-start;
 }
 
 .spec-item:hover {
@@ -340,7 +527,23 @@ AOS.init({
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
-.spec-icon { font-size: 1.5rem; }
+.spec-content {
+    flex: 1;
+}
+
+.spec-content strong {
+    color: #1a365d;
+    font-weight: 700;
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.spec-content span {
+    color: #4a5568;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
 
 /* Service Approach */
 .service-approach {
@@ -372,6 +575,20 @@ AOS.init({
     font-size: 3rem;
     font-weight: 800;
     color: #e2e8f0;
+    margin-bottom: 1rem;
+    line-height: 1;
+}
+
+.approach-card h4 {
+    color: #1a365d;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.approach-card p {
+    color: #4a5568;
+    line-height: 1.6;
 }
 
 /* Final CTA */
@@ -384,6 +601,17 @@ AOS.init({
     padding: 4rem 2rem;
 }
 
+.final-cta h2 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.final-cta p {
+    color: #e2e8f0;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
 /* Buttons */
 .btn {
     display: inline-block;
@@ -393,6 +621,7 @@ AOS.init({
     text-decoration: none;
     cursor: pointer;
     transition: 0.3s;
+    border: none;
 }
 
 .btn.primary {
@@ -408,11 +637,24 @@ AOS.init({
 .btn.secondary {
     border: 2px solid #90cdf4;
     color: #90cdf4;
+    background: transparent;
 }
 
 .btn.secondary:hover {
     background: rgba(144,205,244,0.1);
     transform: translateY(-2px);
+}
+
+.btn.large {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 /* Animations */
@@ -436,9 +678,10 @@ AOS.init({
     .hero h1 { font-size: 2.5rem; }
     .tagline { font-size: 1.2rem; }
     .product-header { flex-direction: column; align-items: flex-start; }
-    .specs-grid { grid-template-columns: 1fr; }
+    .specs-grid, .technical-specs { grid-template-columns: 1fr; }
     .approach-grid { grid-template-columns: 1fr; }
     .cta-buttons { flex-direction: column; }
+    .technical-specs { padding: 1.5rem; }
 }
 
 @media (max-width: 480px) {
@@ -446,6 +689,7 @@ AOS.init({
     .hero h1 { font-size: 2rem; }
     .product-name { font-size: 1.5rem; }
     .section { padding: 3rem 0; }
+    .product-feature { padding: 2rem; }
 }
 
 </style>
