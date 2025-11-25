@@ -5,80 +5,90 @@ import Footer from '../components/Footer.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
-<BaseHead title={`Product Solutions - ${SITE_TITLE}`} description="We specialize in certified secure hardware and communication solutions for enterprise and government requirements." />
+<BaseHead title={`Government-Grade Encrypted Drives | ${SITE_TITLE}`} description="Eliminate the risk of a data breach from lost or stolen devices. FIPS 140-2 certified encrypted USB drives for NZ businesses." />
 
 <Header />
 <main>
+	<!-- HERO: Lead with the PAIN -->
 	<section class="hero">
 		<div class="container">
-			<h1>Product Solutions</h1>
-			<p class="tagline">Certified Security Hardware & Communications for OPSEC</p>
+			<h1>Your Data Shouldn't Be This Vulnerable</h1>
+			<p class="tagline">A lost laptop or USB drive shouldn't mean a million-dollar data breach. Secure your physical data with government-certified hardware.</p>
+			<a href="/consultation" class="btn primary">Get a Free Security Assessment</a>
 		</div>
 	</section>
 
 	<section class="products-content">
 		<div class="container">
-			<div class="intro">
-				<p>We specialize in identifying and providing certified security products that meet stringent government and enterprise OPSEC requirements. Our focus is on solutions that address not only technical but also operational security risks including human and process vulnerabilities.</p>
-			</div>
 
-			<div class="product-categories">
-				<section class="category">
-					<h2>Encrypted Storage Solutions</h2>
-					<p>Hardware-encrypted storage devices that protect data at rest with certified encryption standards.</p>
-					<ul>
-						<li>FIPS 140-2 validated encryption</li>
-						<li>Hardware-based AES-256 bit encryption</li>
-						<li>PIN-authenticated access controls</li>
-						<li>Cross-platform compatibility</li>
-					</ul>
-					<div class="status-note">
-						<strong>Product Evaluation Phase:</strong> We are currently evaluating certified encrypted USB and storage solutions aligned with OPSEC principles.
+			<!-- THE SINGLE, FOCUSED SOLUTION -->
+			<section class="core-offering">
+				<h2>Our Core Focus: FIPS-Certified Encrypted Drives</h2>
+				<p>While others sell a confusing array of gadgets, we specialize in the one thing that prevents the most common physical data disaster: <strong>hardware-encrypted storage.</strong> No complexity. Just certified security.</p>
+
+				<div class="product-showcase">
+					<div class="product-card">
+						<h3>iStorage datAshur</h3>
+						<p class="product-subtitle">PIN-Accessed, Military-Grade Encryption</p>
+						<ul>
+							<li><strong>FIPS 140-2 Level 3 Certified</strong> - The global benchmark for security modules.</li>
+							<li><strong>Brute-Force Proof:</strong> Locks permanently after 10 failed PIN attempts.</li>
+							<li><strong>No Software, No Drivers:</strong> Works on any system instantly. No admin rights needed.</li>
+							<li><strong>Independent Operation:</strong> The encryption happens on the drive itself. The host PC is untrusted.</li>
+						</ul>
+						<!-- You will add an image here later -->
+						<div class="product-image-placeholder">[Image: iStorage datAshur]</div>
 					</div>
-				</section>
 
-				<section class="category">
-					<h2>Secure Communication Devices</h2>
-					<p>Certified encrypted communication platforms designed for enterprise and specialized OPSEC environments.</p>
-					<ul>
-						<li>End-to-end encrypted messaging</li>
-						<li>Secure voice and video communication</li>
-						<li>Commercial-grade encryption solutions</li>
-						<li>Compliance with data protection and OPSEC standards</li>
-					</ul>
-					<div class="status-note">
-						<strong>Market Research:</strong> Researching certified communication solutions that meet our security and OPSEC requirements.
+					<div class="product-card">
+						<h3>DataLocker DL4</h3>
+						<p class="product-subtitle">Enterprise-Managed Encrypted Storage</p>
+						<ul>
+							<li><strong>FIPS 140-2 Level 2 Certified</strong> - Trusted by governments and Fortune 500s.</li>
+							<li><strong>Central Management:</strong> Remotely enforce policies, reset PINs, and audit usage.</li>
+							<li><strong>On-Screen PIN Entry:</strong> Protects against keyloggers on untrusted computers.</li>
+							<li><strong>IT Deployment Ready:</strong> Scale security across your entire organization.</li>
+						</ul>
+						<div class="product-image-placeholder">[Image: DataLocker DL4]</div>
 					</div>
-				</section>
-
-				<section class="category">
-					<h2>Access Control & Authentication</h2>
-					<p>Multi-factor authentication and secure access solutions designed to address operational security risks in sensitive environments.</p>
-					<ul>
-						<li>Hardware security tokens</li>
-						<li>Multi-factor authentication devices</li>
-						<li>Biometric authentication solutions</li>
-						<li>Physical access control systems</li>
-					</ul>
-					<div class="status-note">
-						<strong>Vendor Selection:</strong> Assessing authentication solutions for enterprise-level OPSEC compliance and deployment.
-					</div>
-				</section>
-			</div>
-
-			<section class="partner-cta">
-				<h2>For Product Manufacturers & Distributors</h2>
-				<p>Are you a manufacturer of certified security products? We seek partnership opportunities with companies offering solutions that enhance operational security:</p>
-				<ul>
-					<li>FIPS 140-2 certified encryption products for data protection</li>
-					<li>NLNCSA DEP-V & NATO Restricted certified solutions</li>
-					<li>NZISM-aligned security hardware for comprehensive compliance</li>
-					<li>Enterprise-grade secure communication devices</li>
-					<li>OPSEC-focused tools that address human and process vulnerabilities</li>
-				</ul>
-				<p>We are building our product portfolio to support strategic operational security and welcome discussions with qualified manufacturers and distributors.</p>
-				<a href="mailto:hello@hermetrix.nz?subject=OPSEC Product Partnership Inquiry" class="btn primary">Discuss Partnership</a>
+				</div>
 			</section>
+
+			<!-- THE PROCESS: How We Deliver This -->
+			<section class="our-process">
+				<h2>We Don't Just Sell Hardware. We Deliver Security.</h2>
+				<div class="process-steps">
+					<div class="step">
+						<h3>1. Assess & Recommend</h3>
+						<p>We perform a <strong>OPSEC Health Check</strong> to understand your data flow and pinpoint exactly where encrypted drives are needed.</p>
+					</div>
+					<div class="step">
+						<h3>2. Configure & Deploy</h3>
+						<p>We don't just drop-ship boxes. We configure the devices with your required PIN policies and provide a secure deployment plan.</p>
+					</div>
+					<div class="step">
+						<h3>3. Train & Support</h3>
+						<p>We ensure your team knows how to use the devices effectively, turning a piece of hardware into an integrated security practice.</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- THE URGENT CTA -->
+			<section class="client-cta">
+				<h2>Stop Gambling With Your Company's Data</h2>
+				<p>Every day you wait is a day your data is vulnerable to a simple mistake. Let's secure it.</p>
+				<div class="cta-buttons">
+					<a href="/consultation" class="btn primary">Get Your Free Threat Assessment</a>
+					<a href="mailto:contact@hermetrix.nz" class="btn secondary">Ask a Technical Question</a>
+				</div>
+			</section>
+
+			<!-- PARTNERSHIP SECTION - DEMOTED & MINIMAL -->
+			<section class="partner-note">
+				<h3>For Certified Product Manufacturers</h3>
+				<p>We selectively partner with leading manufacturers of FIPS-certified security hardware. If your product aligns with our focused portfolio, <a href="mailto:contact@hermetrix.nz">contact us</a>.</p>
+			</section>
+
 		</div>
 	</section>
 
@@ -109,32 +119,27 @@ main {
 	width: 100vw;
 	margin-left: calc(50% - 50vw);
 }
-.hero::before {
-	content: "";
-	position: absolute;
-	top: 0; left: 0; right: 0; bottom: 0;
-	background: url('data:image/svg+xml;utf8,<svg width="100%25" height="100%25" xmlns="http://www.w3.org/2000/svg"><circle fill="%2363b3ed" fill-opacity="0.05" cx="10%25" cy="20%25" r="80"/><circle fill="%2363b3ed" fill-opacity="0.03" cx="80%25" cy="70%25" r="120"/><circle fill="%2390cdf4" fill-opacity="0.04" cx="50%25" cy="50%25" r="100"/></svg>');
-	z-index: 0;
-}
 .hero > .container {
 	position: relative;
 	z-index: 1;
 	padding: 0 2rem;
 }
 .hero h1 {
-	font-size: 4rem;
+	font-size: 3.2rem;
 	margin-bottom: 1.5rem;
-	font-family: 'Montserrat', 'Segoe UI', 'Arial Black', Arial, sans-serif;
 	font-weight: 900;
 	color: #ffffff;
-	text-shadow: 0 4px 20px rgba(0,0,0,0.3), 0 2px 0 #1a365d;
+	text-shadow: 0 4px 20px rgba(0,0,0,0.3);
 	letter-spacing: 0.02em;
 }
 .tagline {
-	font-size: 1.8rem;
+	font-size: 1.5rem;
 	font-weight: 400;
-	margin-bottom: 1.5rem;
+	margin-bottom: 2.5rem;
 	color: #90cdf4;
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /* Products Content */
@@ -142,186 +147,195 @@ main {
 	padding: 5rem 1rem;
 	background: #f8fafc;
 }
-.intro {
-	text-align: center;
-	max-width: 900px;
-	margin: 0 auto 3rem;
-	font-size: 1.15rem;
-	line-height: 1.7;
-}
-.product-categories {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-	gap: 2rem;
+.container {
 	max-width: 1200px;
-	margin: 0 auto 4rem;
-}
-.category {
-	background: linear-gradient(135deg, #ffffff 0%, #f0f4f8 100%);
-	padding: 2.5rem 2rem;
-	border-radius: 0.75rem;
-	border: 1px solid #e2e8f0;
-	box-shadow: 0 8px 32px rgba(26,54,93,0.12), 0 1.5px 4px rgba(26,54,93,0.07);
-	transition: box-shadow 0.2s, transform 0.2s;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-}
-.category:hover {
-	box-shadow: 0 12px 36px rgba(26,54,93,0.16);
-	transform: translateY(-2px) scale(1.01);
-}
-.category h2 {
-	color: #0f1419;
-	margin-bottom: 1.5rem;
-	font-size: 1.6rem;
-	font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
-	font-weight: 600;
-	letter-spacing: 0.02em;
-}
-.category ul {
-	margin: 1rem 0;
-	padding-left: 1.5rem;
-}
-.category li {
-	margin-bottom: 0.5rem;
-	line-height: 1.6;
-}
-.status-note {
-	background: #f0f4f8;
-	border: 1px solid #cbd5e0;
-	border-left: 4px solid #3182ce;
-	padding: 1rem;
-	border-radius: 0.5rem;
-	margin-top: 1.5rem;
-	font-size: 0.95rem;
-	color: #2d3748;
+	margin: 0 auto;
 }
 
-/* Partner CTA */
-.partner-cta {
-	background: #0f1419;
-	color: white;
-	padding: 3rem 3rem;
-	border-radius: 0.75rem;
-	max-width: 900px;
-	margin: 0 auto;
+/* Core Offering */
+.core-offering {
+	margin-bottom: 5rem;
 	text-align: center;
-	box-shadow: 0 8px 32px rgba(26,54,93,0.12), 0 1.5px 4px rgba(26,54,93,0.07);
+}
+.core-offering h2 {
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
+	color: #0f1419;
+}
+.core-offering > p {
+	font-size: 1.2rem;
+	max-width: 800px;
+	margin: 0 auto 3rem;
+	color: #4a5568;
+}
+
+.product-showcase {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+	gap: 2.5rem;
+	margin-top: 3rem;
+}
+.product-card {
+	background: white;
+	padding: 2.5rem;
+	border-radius: 0.75rem;
 	border: 1px solid #e2e8f0;
-	transition: all 0.3s ease;
+	box-shadow: 0 8px 32px rgba(26,54,93,0.12);
+	text-align: left;
+}
+.product-card h3 {
+	color: #1a365d;
+	margin-bottom: 0.5rem;
+	font-size: 1.5rem;
+}
+.product-subtitle {
+	color: #718096;
+	font-style: italic;
+	margin-bottom: 1.5rem;
+}
+.product-card ul {
+	margin: 1.5rem 0;
+	padding-left: 0;
+	list-style: none;
+}
+.product-card li {
+	margin-bottom: 1rem;
+	padding-left: 1.5rem;
 	position: relative;
 }
-.partner-cta:hover {
-	transform: translateY(-5px);
-	box-shadow: 0 16px 48px rgba(26,54,93,0.18), 0 4px 12px rgba(26,54,93,0.15);
+.product-card li:before {
+	content: "✓";
+	color: #38a169;
+	font-weight: bold;
+	position: absolute;
+	left: 0;
 }
-.partner-cta h2 {
-	margin-bottom: 1.5rem;
-	color: #90cdf4;
+.product-image-placeholder {
+	background: #edf2f7;
+	border: 2px dashed #cbd5e0;
+	border-radius: 0.5rem;
+	padding: 3rem 1rem;
+	text-align: center;
+	color: #718096;
+	margin-top: 1.5rem;
+}
+
+/* Process Section */
+.our-process {
+	margin-bottom: 5rem;
+	text-align: center;
+}
+.our-process h2 {
 	font-size: 2.2rem;
-	font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
-	font-weight: 700;
-	letter-spacing: 0.04em;
+	margin-bottom: 3rem;
+	color: #0f1419;
 }
-.partner-cta ul {
-	text-align: left;
-	max-width: 600px;
-	margin: 1.5rem auto;
+.process-steps {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 2rem;
 }
-.partner-cta li {
+.step {
+	background: white;
+	padding: 2rem;
+	border-radius: 0.5rem;
+	border-top: 4px solid #3182ce;
+	box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+.step h3 {
+	color: #1a365d;
+	margin-bottom: 1rem;
+}
+
+/* Client CTA */
+.client-cta {
+	background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+	color: white;
+	padding: 4rem 2rem;
+	border-radius: 1rem;
+	text-align: center;
+	margin-bottom: 3rem;
+}
+.client-cta h2 {
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
+}
+.client-cta p {
+	font-size: 1.2rem;
+	margin-bottom: 2rem;
+	opacity: 0.9;
+}
+.cta-buttons {
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+/* Partner Note - Demoted */
+.partner-note {
+	text-align: center;
+	padding: 2rem;
+	background: #edf2f7;
+	border-radius: 0.5rem;
+	border-left: 4px solid #90cdf4;
+}
+.partner-note h3 {
+	color: #4a5568;
 	margin-bottom: 0.5rem;
-	line-height: 1.6;
 }
-.btn, .btn.primary {
+.partner-note p {
+	color: #718096;
+	margin: 0;
+}
+
+/* Buttons */
+.btn {
   display: inline-block;
-  padding: 0.75rem 2rem;
-  margin-top: 1rem;
+  padding: 0.9rem 2.2rem;
   text-decoration: none;
   border-radius: 0.75rem;
   font-weight: 700;
   transition: all 0.2s;
-  background-color: #90cdf4;
-  color: #1a365d;
-  box-shadow: 0 2px 8px rgba(26,54,93,0.07);
   font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
   letter-spacing: 0.02em;
+  text-align: center;
+  border: 2px solid transparent;
+  font-size: 1.1rem;
 }
-.btn:hover, .btn.primary:hover {
-  background-color: #63b3ed;
+.btn.primary {
+  background-color: #90cdf4;
   color: #1a365d;
+  box-shadow: 0 4px 14px rgba(144, 205, 244, 0.4);
 }
-.btn:active {
-  transform: scale(0.98);
+.btn.primary:hover {
+  background-color: #63b3ed;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(144, 205, 244, 0.6);
 }
-	.container {
-		max-width: 1600px;
-		margin: 0 auto;
-		text-align: center;
-	}
+.btn.secondary {
+  background-color: transparent;
+  color: #90cdf4;
+  border: 2px solid #90cdf4;
+}
+.btn.secondary:hover {
+  background-color: rgba(144, 205, 244, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  .hero {
-    padding: 4rem 1.5rem;
-  }
-  .hero h1 {
-    font-size: 3rem;
-  }
-  .tagline {
-    font-size: 1.5rem;
-  }
-  .products-content {
-    padding: 3rem 1rem;
-  }
-  .category {
-    padding: 2rem 1.5rem;
-  }
-  .partner-cta {
-    padding: 3rem 2rem;
-  }
-  .partner-cta h2 {
-    font-size: 2rem;
-  }
+  .hero h1 { font-size: 2.5rem; }
+  .tagline { font-size: 1.3rem; }
+  .product-showcase { grid-template-columns: 1fr; }
+  .cta-buttons { flex-direction: column; }
+  .btn { width: 100%; }
 }
 
 @media (max-width: 480px) {
-  .hero {
-    padding: 3rem 1rem;
-  }
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-  .tagline {
-    font-size: 1.3rem;
-  }
-  .intro {
-    font-size: 1rem;
-  }
-  .category h2 {
-    font-size: 1.4rem;
-  }
-  .category {
-    padding: 1.5rem 1rem;
-  }
-  .partner-cta {
-    padding: 2rem 1rem;
-  }
-  .partner-cta h2 {
-    font-size: 1.8rem;
-  }
-  .btn {
-    padding: 0.6rem 1.5rem;
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 900px) {
-  .product-categories {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    max-width: 98vw;
-  }
-  .category {
-    max-width: 100%;
-  }
+  .hero { padding: 3rem 1rem; }
+  .hero h1 { font-size: 2rem; }
+  .product-card { padding: 1.5rem; }
+  .core-offering h2 { font-size: 2rem; }
 }
 </style>
