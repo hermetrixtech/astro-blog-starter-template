@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="128" height="128" role="img" aria-labelledby="bTitle bDesc">
+  <title id="bTitle">Business briefcase</title>
+  <desc id="bDesc">Icon of a briefcase representing business protection</desc>
+  <rect x="2" y="7" width="20" height="12" rx="2" fill="#1e40af"/>
+  <rect x="7" y="3" width="10" height="4" rx="1" fill="#1e40af"/>
+  <rect x="3" y="9" width="18" height="8" rx="1" fill="#ffffff" opacity="0.04"/>
+  <rect x="8" y="5" width="8" height="2" rx="0.5" fill="#ffffff" opacity="0.06"/>
+</svg>

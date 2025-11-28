@@ -1,167 +1,167 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import EntryModal from '../components/EntryModal.astro';
-import { SITE_TITLE, SITE_DESCRIPTION, CONTACT_EMAIL, SECURITY_EMAIL } from '../consts';
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-	<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-</head>
-<body>
-	<Header />
-	<!-- Entry modal (first-visit chooser) -->
-	<EntryModal client:load />
-	<main>
-		<section class="hero">
-			<div class="container">
-				<h1>Strategic Operational Security Consulting</h1>
-				<span class="tagline">For Businesses That Take Protection Seriously</span>
-				<p>
-					We provide strategic OPSEC analysis and implementation for businesses who understand that security is more than just technology. We help identify and fix the human, process, and strategic vulnerabilities that traditional IT security misses.
-				</p>
-				<div class="cta-buttons">
-					<a href="/services" class="btn primary">Schedule OPSEC Assessment</a>
-					<a href="/about" class="btn secondary">Our Approach</a>
-				</div>
-			</div>
-		</section>
+	<head>
+		<BaseHead title={`Complete Digital Protection — Hermetrix`} description="Choose Business or Personal protection paths — simple, clear, and private." />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+	</head>
 
-		<section class="section">
-			<div class="container">
-				<h2>Our OPSEC Consulting Framework</h2>
-				<div class="grid grid-3">
-					<div class="card">
-						<h3>Operational Security Analysis</h3>
-						<p>Understanding what you're truly protecting beyond data—identifying who would target you and why, finding overlooked vulnerabilities in people, processes, and technology.</p>
-						<a href="/services#analysis">Learn more</a>
-					</div>
-					<div class="card">
-						<h3>Layered Security Solutions</h3>
-						<p>Immediate risk mitigation (0-30 days), strategic security roadmap (90 days - 12 months), ongoing security operations, and seamless integration.</p>
-						<a href="/services#solutions">Learn more</a>
-					</div>
-					<div class="card">
-						<h3>Implementation & Enablement</h3>
-						<p>Hands-on deployment support, security protocol development, employee training and awareness programs, and continuous improvement initiatives.</p>
-						<a href="/services#implementation">Learn more</a>
+	<body>
+		<main class="gateway" role="main">
+			<header class="header">
+				<h1>Complete Digital Protection for What Matters Most</h1>
+				<p class="sub">Hermetrix creates hermetic seals around your digital life - whether you're running a business or protecting personal memories</p>
+			</header>
+
+			<section class="choices" aria-label="Choose your path">
+				<div class="choice business" role="button" tabindex="0" data-target="/business" aria-labelledby="business-title">
+					<div class="choice-inner">
+						<img src="/images/business.svg" alt="Business icon" class="choice-icon" />
+						<h2 id="business-title">Business Protection</h2>
+						<p class="analogy">Like a sealed safe for your business records.</p>
+						<p class="explain">Help for organisations: stable, professional protection that keeps customers and data safe.</p>
+						<ul class="benefits">
+							<li>Stop hackers from stealing customer data</li>
+							<li>Protect company secrets from competitors</li>
+							<li>Meet legal requirements for data security</li>
+							<li>Build trust with your customers</li>
+							<li>Keep your business running safely</li>
+						</ul>
+						<button class="btn btn-business" data-target="/business" aria-label="Protect my business">Protect My Business</button>
 					</div>
 				</div>
-			</div>
-		</section>
 
-		<section class="section">
-			<div class="container">
-				<h2>Why Hermetrix Technologies</h2>
-				<div class="grid grid-2">
-					<div class="feature">
-						<h3>Security-First Approach</h3>
-						<p>Every solution is evaluated against certified security standards and framework requirements.</p>
-					</div>
-					<div class="feature">
-						<h3>APAC Regional Focus</h3>
-						<p>Deep understanding of New Zealand and Asia-Pacific security requirements and regulations.</p>
-					</div>
-					<div class="feature">
-						<h3>Enterprise Expertise</h3>
-						<p>Solutions designed for business and government environments with complex security needs.</p>
-					</div>
-					<div class="feature">
-						<h3>Practical Guidance</h3>
-						<p>Helping organizations understand and work toward security compliance through appropriate solutions.</p>
+				<div class="choice personal" role="button" tabindex="0" data-target="/personal" aria-labelledby="personal-title">
+					<div class="choice-inner">
+						<img src="/images/privacy.svg" alt="Privacy icon" class="choice-icon" />
+						<h2 id="personal-title">Personal Privacy</h2>
+						<p class="analogy">Like a private diary locked in a safe.</p>
+						<p class="explain">Tools and help to keep your photos, messages and identity private — easy, clear steps.</p>
+						<ul class="benefits">
+							<li>Keep private photos and messages truly private</li>
+							<li>Stop companies from tracking everything you do</li>
+							<li>Protect your identity from thieves</li>
+							<li>Feel safe using technology again</li>
+							<li>Take back control of your digital life</li>
+						</ul>
+						<button class="btn btn-personal" data-target="/personal" aria-label="Protect my personal life">Protect My Personal Life</button>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
 
-		<section class="section">
-			<div class="container text-center">
-				<h2>Ready for Strategic OPSEC Assessment?</h2>
-				<p>Security-conscious leaders trust us to identify and address the vulnerabilities that matter most to their business.</p>
-				<div class="contact-methods mb-3">
-					<div class="contact-method">
-						<strong>Schedule Assessment</strong>
-						<a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+			<section class="tech" aria-labelledby="tech-title">
+				<h3 id="tech-title">Technical specifications (easy language)</h3>
+				<p class="tech-intro">Expand to learn about simple, real tools we recommend.</p>
+				<details>
+					<summary>See Our Security Products</summary>
+					<div class="spec">
+						<img src="/images/graphene.svg" alt="GrapheneOS logo" class="spec-img" />
+						<h4>Google Pixel 7a with GrapheneOS</h4>
+						<p><strong>What it does:</strong> Phone that respects your privacy</p>
+						<p><strong>Key benefit:</strong> No Google tracking, no hidden data collection</p>
+						<p><em>Simple:</em> Like having a private phone that only you control.</p>
 					</div>
-					<div class="contact-method">
-						<strong>Security Consultations</strong>
-						<a href={`mailto:${SECURITY_EMAIL}`}>{SECURITY_EMAIL}</a>
+
+					<div class="spec">
+						<h4>DataLocker DL4 Encrypted Drive</h4>
+						<p><strong>What it does:</strong> Secure digital lockbox for your files</p>
+						<p><strong>Key benefit:</strong> Military-grade encryption that experts can't break easily</p>
+						<p><em>Simple:</em> A digital safe for your important documents and photos.</p>
 					</div>
-				</div>
-				<div class="cta-buttons">
-					<a href="/services" class="btn primary">View Our Services</a>
-					<a href="/about" class="btn secondary">Learn Our Approach</a>
-				</div>
-			</div>
-		</section>
-	</main>
-	<Footer />
 
-	<style>
-		.hero {
-			padding: var(--space-3xl) 0;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			min-height: calc(100vh - var(--header-height));
-		}
+					<div class="spec">
+						<h4>iStorage Encrypted USB Drives</h4>
+						<p><strong>What it does:</strong> Government-approved secure storage</p>
+						<p><strong>Key benefit:</strong> Certified protection for sensitive information</p>
+						<p><em>Simple:</em> Bank-vault security for your digital files.</p>
+					</div>
+				</details>
+			</section>
+		</main>
 
-		.hero h1 {
-			max-width: 900px;
-		}
+		<script>
+			(function(){
+				const KEY = 'hermetrix_experience_choice';
+				// If user already chose, redirect immediately
+				try{
+					const prev = localStorage.getItem(KEY);
+					if(prev === 'business' && !location.pathname.startsWith('/business')) return location.replace('/business');
+					if(prev === 'personal' && !location.pathname.startsWith('/personal')) return location.replace('/personal');
+				}catch(e){}
 
-		.feature {
-			padding: var(--space-xl);
-			border: 1px solid var(--border-color);
-			background-color: var(--background-alt);
-			margin-bottom: var(--space-lg);
-		}
+				function chooseAndGo(choice, href){
+					try{ localStorage.setItem(KEY, choice); }catch(e){}
+					// small delay for UX (button press) then navigate
+					setTimeout(()=> location.href = href, 120);
+				}
 
-		.feature h3 {
-			color: var(--text-primary);
-		}
+				document.addEventListener('DOMContentLoaded', ()=>{
+					// Click handlers for buttons
+					document.querySelectorAll('[data-target]').forEach(el=>{
+						el.addEventListener('click', (e)=>{
+							const target = el.getAttribute('data-target');
+							if(!target) return;
+							const choice = target.startsWith('/business') || target === '/business' ? 'business' : 'personal';
+							chooseAndGo(choice, target);
+						});
+						// allow keyboard activation on choice cards
+						el.addEventListener('keydown', (e)=>{ if(e.key === 'Enter' || e.key === ' ') el.click(); });
+					});
+				});
+			})();
+		</script>
 
-		.contact-methods {
-			display: flex;
-			justify-content: center;
-			gap: var(--space-2xl);
-			margin: var(--space-xl) 0;
-		}
+		<style>
+			:root{--bg:#ffffff;--text:#111827;--muted:#475569;--blue:#1e40af;--green:#10b981;--dark:#0b1220}
+			html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial;background:var(--bg);color:var(--text);font-size:18px}
+			.gateway{max-width:980px;margin:0 auto;padding:24px}
+			.header{text-align:center;padding:18px 8px}
+			.header h1{font-size:28px;margin:0 0 8px;line-height:1.15}
+			.header .sub{color:var(--muted);font-size:18px;margin:0}
 
-		.contact-method {
-			text-align: center;
-		}
+			.choices{display:grid;grid-template-columns:1fr;gap:18px;margin-top:20px}
+			.choice{border-radius:12px;padding:18px;border:1px solid #e6eef6;outline:2px solid transparent;min-height:260px;display:flex;align-items:center}
+			.choice:focus{outline-color:#c7ddff}
+			.choice-inner{display:flex;flex-direction:column;gap:12px;flex:1}
+			.choice-icon{width:72px;height:auto;flex:0 0 72px}
+			.choice h2{margin:0;font-size:22px}
+			.analogy{margin:0;color:var(--muted);font-size:18px;font-style:italic}
+			.choice .explain{color:var(--muted);margin:0}
+			.benefits{margin:0;padding-left:18px;color:var(--muted);list-style:disc}
+			.benefits li{margin:8px 0}
 
-		.contact-method strong {
-			display: block;
-			margin-bottom: var(--space-sm);
-			color: var(--text-primary);
-			font-family: var(--font-family-mono);
-			font-size: 0.875rem;
-			letter-spacing: 0.05em;
-			text-transform: uppercase;
-		}
+			/* Visual differentiation */
+			.choice.business{background:linear-gradient(180deg,rgba(30,64,175,0.06),rgba(16,185,129,0.03));border-color:rgba(30,64,175,0.12)}
+			.choice.business h2{color:var(--blue)}
+			.choice.personal{background:#0b1220;color:#fff;border-color:rgba(255,255,255,0.06)}
+			.choice.personal .analogy{color:rgba(255,255,255,0.9)}
+			.choice.personal .explain,.choice.personal .benefits{color:rgba(255,255,255,0.85)}
 
-		.cta-buttons {
-			display: flex;
-			gap: var(--space-md);
-			justify-content: center;
-		}
+			.btn{display:inline-block;padding:14px 20px;border-radius:12px;border:0;font-weight:700;font-size:18px;cursor:pointer}
+			.btn-business{background:linear-gradient(90deg,var(--blue),var(--green));color:#fff}
+			.btn-personal{background:#0f1720;color:#fff}
 
-		@media (max-width: 768px) {
-			.contact-methods {
-				flex-direction: column;
-				gap: var(--space-lg);
+			.tech{margin-top:22px;padding:12px;border-radius:10px;background:#f1f5f9;border:1px solid #e2e8f0}
+			.tech h3{margin:0 0 8px}
+			details summary{font-weight:700;cursor:pointer;padding:8px 0}
+			.spec{padding:8px 0;border-top:1px dashed rgba(0,0,0,0.04);display:flex;gap:12px;align-items:center}
+			.spec-img{width:96px;height:auto;border-radius:8px;background:#fff;padding:6px;flex:0 0 96px}
+			.spec h4{margin:0 0 4px}
+			.spec p{margin:4px 0;color:var(--muted)}
+
+			@media(min-width:900px){
+				.choices{grid-template-columns:1fr 1fr}
+				.gateway{padding:40px}
+				.header h1{font-size:32px}
 			}
 
-			.cta-buttons {
-				flex-direction: column;
-				align-items: center;
+			@media(max-width:480px){
+				html,body{font-size:18px}
+				.btn{width:100%}
 			}
-		}
-	</style>
-</body>
+		</style>
+	</body>
 </html>
