@@ -1,0 +1,72 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseHead title={`Privacy Services — Hermetrix`} description="Services for individuals: digital detox, OpSec planning, device hardening, and privacy audits." />
+
+<main class="privacy-services">
+  <nav class="mini-nav" aria-label="privacy navigation">
+    <ul>
+      <li><a href="/" class="back">Back to Hermetrix</a></li>
+      <li><a href="/individuals">Privacy</a></li>
+      <li><a href="/individuals/products">Products</a></li>
+      <li><a href="/individuals/services" aria-current="page">Services</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="wrap">
+      <h1>Services for people who value privacy</h1>
+      <p class="lead">Low drama, high-impact operational security tailored to individuals.</p>
+    </div>
+  </section>
+
+  <section class="services-list">
+    <div class="wrap">
+      <article>
+        <h2>Digital Detox</h2>
+        <p>We remove personal data footprints, reduce exposure in public records, and provide step-by-step instructions you can follow.</p>
+        <a class="cta" href="mailto:hello@hermetrix.nz?subject=Digital+Detox">Request Detox</a>
+      </article>
+
+      <article>
+        <h2>OpSec for Individuals</h2>
+        <p>Personal threat-modeling sessions to build a pragmatic, sustainable security posture.</p>
+        <a class="cta" href="mailto:hello@hermetrix.nz?subject=OpSec+Session">Book OpSec</a>
+      </article>
+
+      <article>
+        <h2>Device Hardening</h2>
+        <p>Stepwise hardening for phones, laptops, and routers — actionable steps and hand-holding where needed.</p>
+        <a class="cta" href="mailto:hello@hermetrix.nz?subject=Device+Hardening">Harden My Device</a>
+      </article>
+
+      <article>
+        <h2>Privacy Audits</h2>
+        <p>We run a short audit that shows where you are exposed and give you a prioritized remediation plan.</p>
+        <a class="cta" href="mailto:hello@hermetrix.nz?subject=Privacy+Audit">Get an Audit</a>
+      </article>
+
+    </div>
+  </section>
+
+  <footer>
+    <Footer />
+  </footer>
+</main>
+
+<style>
+.privacy-services{--bg:#07090c;--panel:#0d1318;--muted:#9aa6b2;--accent:#66b3ff;--cta:#4fb0ff}
+*{box-sizing:border-box}
+.privacy-services{margin:0;background:var(--bg);color:#e6eef6;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial;min-height:100vh}
+.mini-nav{padding:1rem}
+.mini-nav ul{display:flex;gap:1rem;margin:0;padding:0;list-style:none}
+.wrap{max-width:1000px;margin:0 auto;padding:2rem}
+.hero{padding:2rem 0}
+.hero .lead{color:var(--accent)}
+.services-list article{background:var(--panel);padding:1rem;border-radius:.5rem;border:1px solid rgba(255,255,255,0.03);margin-bottom:1rem}
+.services-list h2{margin-top:0}
+.cta{display:inline-block;margin-top:.75rem;padding:.6rem .9rem;background:var(--cta);color:#032033;border-radius:.4rem;text-decoration:none;font-weight:700}
+@media(max-width:640px){.wrap{padding:1rem}.hero h1{font-size:1.4rem}}
+</style>
