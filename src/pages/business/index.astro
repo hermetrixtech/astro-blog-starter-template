@@ -1,0 +1,50 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseHead title={`Hermetrix — Business`} description="Enterprise operational security and authorized reselling for secure storage." />
+
+<body class="business-mode">
+  <Header />
+  <main class="business-hero">
+    <div class="container">
+      <h1>Enterprise Operational Security</h1>
+      <p class="lead">Stability. Compliance. Resilient systems. We build hermetic operational security for enterprises.</p>
+      <div class="actions">
+        <a class="btn primary" href="/services">Book an OPSEC Assessment</a>
+        <a class="btn ghost" href="mailto:hello@hermetrix.nz?subject=Enterprise+Inquiry">Partner With Us</a>
+      </div>
+    </div>
+  </main>
+
+  <section class="features">
+    <div class="container">
+      <h2>Authorized Partnerships & Solutions</h2>
+      <ul>
+        <li>Authorized iStorage reseller for certified hardware storage</li>
+        <li>Operational security consulting for enterprise and government clients</li>
+        <li>Custom hardening, incident readiness, and secure supply-chain advice</li>
+      </ul>
+    </div>
+  </section>
+
+  <Footer />
+
+  <style>
+  :root{--primary:#1e40af;--secondary:#ffffff;--accent:#10b981;--text:#374151}
+  body.business-mode{background:#fbfdff;color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial}
+  .business-hero{padding:4rem 1rem;background:linear-gradient(180deg,rgba(30,64,175,0.06),transparent);text-align:center}
+  .container{max-width:1200px;margin:0 auto;padding:2rem}
+  h1{font-size:2.4rem;margin-bottom:.5rem}
+  .lead{color:var(--primary);margin-bottom:1rem}
+  .actions{display:flex;gap:1rem;justify-content:center}
+  .btn{padding:.75rem 1.25rem;border-radius:10px;text-decoration:none;font-weight:700}
+  .btn.primary{background:var(--primary);color:var(--secondary)}
+  .btn.ghost{background:transparent;border:2px solid var(--primary);color:var(--primary)}
+  .features{padding:2.5rem 1rem}
+  .features ul{max-width:900px;margin:0 auto;color:#4b5563}
+  @media(max-width:640px){h1{font-size:1.5rem}.container{padding:1rem}}
+  </style>
+</body>

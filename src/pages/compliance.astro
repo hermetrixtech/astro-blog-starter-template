@@ -2,6 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import BusinessStyles from '../components/BusinessStyles.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
@@ -10,7 +11,8 @@ import { SITE_TITLE } from '../consts';
 <head>
 	<BaseHead title={`Security Compliance - ${SITE_TITLE}`} description="Understanding New Zealand security frameworks including NZISM and Protective Security Requirements for organizational security planning." />
 </head>
-<body>
+<body class="business-mode">
+	<BusinessStyles />
 	<Header />
 	<main>
 		<section class="hero">

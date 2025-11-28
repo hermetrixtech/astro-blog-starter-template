@@ -1,0 +1,132 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import BusinessStyles from '../../components/BusinessStyles.astro';
+import { SITE_TITLE } from '../../consts';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <BaseHead title={`Get Your Security Sorted | ${SITE_TITLE}`} description="Stop worrying about data breaches. Get a clear security assessment and actionable plan. Book your OPSEC Health Check today." />
+</head>
+<body class="business-mode">
+  <BusinessStyles />
+  <Header />
+  <main>
+    <!-- HERO: Immediate problem & solution -->
+    <section class="hero">
+      <div class="container">
+        <h1>Stop The Security Guesswork</h1>
+        <p class="tagline">You know you need better security. We give you a clear plan to make it happen.</p>
+        <a href="/business/consultation" class="btn primary">Get Your Free Security Assessment</a>
+      </div>
+    </section>
+
+    <!-- THE CORE OFFER: Your entry-point service -->
+    <section class="section">
+      <div class="container">
+        <div class="core-offer">
+          <h2>Start Here: The OPSEC Health Check</h2>
+          <p class="price">Fixed Price: NZ$2,500</p>
+          <p><strong>One day. One clear action plan.</strong> We identify your critical security gaps and give you a prioritized roadmap.</p>
+          
+          <div class="what-you-get">
+            <h3>What You Get:</h3>
+            <ul>
+              <li><strong>On-site security audit</strong> - We physically walk through your data handling</li>
+              <li><strong>3-Page Action Plan</strong> - Clear, prioritized recommendations</li>
+              <li><strong>Hardware demo</strong> - See certified encryption in action</li>
+              <li><strong>30-day implementation support</strong> - We help you get started</li>
+            </ul>
+          </div>
+          
+          <div class="cta-centered">
+            <a href="mailto:contact@hermetrix.nz?subject=OPSEC%20Health%20Check%20Booking" class="btn primary">Book Your Health Check</a>
+            <small>Next available slot: Next Week</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOLLOW-ON SERVICES: What happens after the health check -->
+    <section class="section services-grid">
+      <div class="container">
+        <h2>After Your Assessment: Choose Your Path</h2>
+        <p>Based on your Health Check results, we'll recommend one of these clear next steps:</p>
+        
+        <div class="service-cards">
+          <div class="service-card">
+            <h3>Quick Win Implementation</h3>
+            <p class="service-meta">1-2 weeks • Fixed price</p>
+            <p><strong>For:</strong> Clients who need immediate critical fixes</p>
+            <ul>
+              <li>Deploy encrypted drives to high-risk staff</li>
+              <li>Implement basic security protocols</li>
+              <li>Train key personnel on secure practices</li>
+              <li>Document new procedures</li>
+            </ul>
+            <div class="service-cta">
+              <a href="mailto:contact@hermetrix.nz?subject=Quick%20Win%20Implementation" class="btn ghost">Get Quote</a>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <h3>Full Security Overhaul</h3>
+            <p class="service-meta">30-90 days • Project-based</p>
+            <p><strong>For:</strong> Organizations needing complete security transformation</p>
+            <ul>
+              <li>Compliance framework implementation</li>
+              <li>Enterprise-wide hardware deployment</li>
+              <li>Staff training & security culture development</li>
+              <li>Ongoing monitoring and optimization</li>
+            </ul>
+            <div class="service-cta">
+              <a href="mailto:contact@hermetrix.nz?subject=Security%20Overhaul%20Consultation" class="btn ghost">Discuss Scope</a>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <h3>Ongoing Security Partnership</h3>
+            <p class="service-meta">Monthly retainer</p>
+            <p><strong>For:</strong> Businesses wanting continuous security oversight</p>
+            <ul>
+              <li>Regular security reviews</li>
+              <li>Threat intelligence updates</li>
+              <li>Staff onboarding security training</li>
+              <li>Vendor security assessment</li>
+            </ul>
+            <div class="service-cta">
+              <a href="mailto:contact@hermetrix.nz?subject=Ongoing%20Partnership" class="btn ghost">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- URGENT CTA -->
+    <section class="section cta-section">
+      <div class="container">
+        <h2>Your Data Is Vulnerable Right Now</h2>
+        <p>Every day without proper security is a gamble with your business's future.</p>
+        <div class="cta-buttons">
+          <a href="/business/consultation" class="btn primary">Get Your Free Security Assessment</a>
+          <a href="mailto:contact@hermetrix.nz?subject=Urgent%20Security%20Question" class="btn ghost">Ask an Urgent Question</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+
+  <style>
+  /* Page-specific tweaks only; shared styles live in BusinessStyles */
+  .hero{padding:4rem 0;text-align:center;background:linear-gradient(135deg,rgba(30,64,175,0.06),transparent);color:var(--text)}
+  .tagline{font-size:1.25rem;color:var(--primary);margin-bottom:1rem}
+  .services-grid{padding:3rem 0;background:transparent}
+  .service-meta{color:#6b7280;font-style:italic}
+  .cta-centered small{display:block;margin-top:.5rem;color:#6b7280}
+  @media(max-width:768px){.hero h1{font-size:1.9rem}}
+  </style>
+</body>
+</html>

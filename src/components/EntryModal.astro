@@ -1,0 +1,78 @@
+---
+---
+<div id="hermetrix-entry-modal" class="entry-modal" aria-hidden="true" role="dialog" aria-labelledby="entry-title">
+  <div class="modal-panel" role="document">
+    <h2 id="entry-title">Welcome to Hermetrix</h2>
+    <p class="modal-body">Named after the hermetic seal - complete protection from external threats. We provide operational security solutions that create digital hermetic seals around your business or personal data.</p>
+    <div class="modal-actions">
+      <button id="choose-business" class="btn business">Business Solutions</button>
+      <button id="choose-personal" class="btn personal">Personal Privacy</button>
+    </div>
+  </div>
+</div>
+
+<style>
+.entry-modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(2,6,23,0.6);backdrop-filter:blur(4px);z-index:2000;opacity:0;pointer-events:none;transition:opacity .22s ease}
+.entry-modal.__visible{opacity:1;pointer-events:auto}
+.modal-panel{background:var(--modal-bg,#fff);color:var(--modal-text,#14213d);max-width:760px;width:calc(100% - 2rem);border-radius:12px;padding:2rem;box-shadow:0 10px 40px rgba(2,6,23,0.45);text-align:center}
+.modal-panel h2{margin:0 0 .5rem;font-size:1.6rem}
+.modal-body{color:var(--modal-subtext,#334155);margin-bottom:1.25rem}
+.modal-actions{display:flex;gap:0.75rem;justify-content:center}
+.btn{padding:.6rem 1rem;border-radius:10px;border:0;cursor:pointer;font-weight:700}
+.btn.business{background:#1e40af;color:#fff}
+.btn.personal{background:#0f1720;color:#fff}
+@media(max-width:640px){.modal-panel{padding:1rem;border-radius:8px}.modal-panel h2{font-size:1.25rem}}
+</style>
+
+<script type="module">
+// Client behavior: show modal only on first visit and handle choice
+const KEY = 'hermetrix_experience_choice';
+function showModal(){
+  const el = document.getElementById('hermetrix-entry-modal');
+  if(!el) return;
+  el.classList.add('__visible');
+  el.setAttribute('aria-hidden','false');
+}
+function hideModal(){
+  const el = document.getElementById('hermetrix-entry-modal');
+  if(!el) return;
+  el.classList.remove('__visible');
+  el.setAttribute('aria-hidden','true');
+}
+function choose(choice){
+  try{localStorage.setItem(KEY, choice);}catch(e){}
+  // small delay to allow a smooth transition
+  hideModal();
+  setTimeout(()=>{
+    if(choice === 'business') location.href = '/business';
+    else if(choice === 'personal') location.href = '/personal';
+    else location.reload();
+  }, 220);
+}
+
+// Bind buttons
+if(typeof window !== 'undefined'){
+  document.addEventListener('DOMContentLoaded', ()=>{
+    const prev = (()=>{try{return localStorage.getItem(KEY)}catch(e){return null}})();
+    if(prev){
+      // auto-redirect if a choice exists
+      if(prev === 'business' && !location.pathname.startsWith('/business')) location.replace('/business');
+      if(prev === 'personal' && !location.pathname.startsWith('/personal') && !location.pathname.startsWith('/individuals')) location.replace('/personal');
+      return;
+    }
+    // Only show modal on the root path - if user lands on a deep link, don't force them
+    if(location.pathname !== '/' && location.pathname !== '') return;
+    showModal();
+
+    const b = document.getElementById('choose-business');
+    const p = document.getElementById('choose-personal');
+    if(b) b.addEventListener('click', ()=> choose('business'));
+    if(p) p.addEventListener('click', ()=> choose('personal'));
+
+    // allow escape to close (but don't set choice)
+    document.addEventListener('keydown', (e)=>{
+      if(e.key === 'Escape') hideModal();
+    });
+  });
+}
+</script>

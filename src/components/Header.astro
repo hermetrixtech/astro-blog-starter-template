@@ -6,9 +6,11 @@ import { SITE_TITLE } from '../consts';
   <div class="container">
     <nav>
       <a href="/" class="logo">HERMETRIX</a>
+      <span id="partner-badge" class="partner-badge" aria-hidden="true">Authorized iStorage Reseller</span>
       <div class="nav-links">
         <a href="/">Home</a>
         <a href="/services">Services</a>
+        <a href="/business">Business</a>
         <a href="/compliance">Compliance</a>
         <a href="/individuals">Privacy</a>
         <a href="/products">Products</a>
@@ -112,6 +114,18 @@ import { SITE_TITLE } from '../consts';
     bottom: 0;
   }
 
+  .partner-badge{
+    display:none;
+    margin-left: .75rem;
+    background: linear-gradient(90deg,#1e40af,#10b981);
+    color: #fff;
+    padding: .25rem .5rem;
+    border-radius: 999px;
+    font-size: .72rem;
+    font-weight:700;
+    letter-spacing: .03em;
+  }
+
   @media (max-width: 768px) {
     .nav-links {
       display: none;
@@ -165,5 +179,12 @@ import { SITE_TITLE } from '../consts';
         document.body.classList.toggle('menu-open');
       });
     }
+    // Show partner badge when on business section
+    try{
+      const badge = document.getElementById('partner-badge');
+      if(badge && location && location.pathname && location.pathname.startsWith('/business')){
+        badge.style.display = 'inline-block';
+      }
+    }catch(e){}
   });
 </script>

@@ -1,0 +1,93 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import BusinessStyles from '../../components/BusinessStyles.astro';
+import { SITE_TITLE } from '../../consts';
+---
+
+<BaseHead 
+  title={`FIPS 140-3 Level 3 Certified Encryption Recommendation | ${SITE_TITLE}`}
+  description="Our independent security recommendation: the iStorage datAshur PRO+C, a FIPS 140-3 Level 3 certified hardware-encrypted flash drive."
+/>
+
+<body class="business-mode">
+  <BusinessStyles />
+  <Header />
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="container">
+          <h1>Independent Recommendation for High-Assurance Data Protection</h1>
+
+          <p class="tagline">When your organisation requires more than standard encryption, certified hardware security becomes essential.</p>
+
+          <p>
+            We analyse and evaluate certified security products and recommend solutions that meet stringent protection requirements.
+          </p>
+
+          <div class="cta-buttons">
+            <a href="/business/consultation" class="btn primary">Request a Security Consultation</a>
+            <a href="/business/about" class="btn ghost">How We Evaluate Products</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <section class="main-content">
+      <div class="container">
+
+        <!-- PRODUCT RECOMMENDATION -->
+        <div class="section product-showcase">
+          <h2>Our Recommended Certified Hardware-Encrypted Drive</h2>
+          <p class="section-intro">
+            After reviewing currently available certified hardware-encrypted storage devices,
+            we recommend the <strong>iStorage datAshur PRO+C</strong> for organisations requiring
+            certified, tamper-resistant, portable data security.
+          </p>
+
+          <div class="product-feature">
+            <div class="product-header">
+              <h3 class="product-name">iStorage datAshur PRO+C</h3>
+              <div class="product-badge">FIPS 140-3 Level 3 Certified</div>
+            </div>
+
+            <p class="product-description">
+              The datAshur PRO+C is one of the first portable storage devices to achieve
+              FIPS 140-3 Level 3 validation — the highest assurance level currently available
+              for commercial removable media.
+            </p>
+
+            <div class="specs-grid">
+              <!-- specs omitted for brevity in business copy; preserved on original products page -->
+            </div>
+          </div>
+        </div>
+
+        <!-- FINAL CTA -->
+        <div class="section final-cta">
+          <h2>Determine Whether You Need Certified Hardware</h2>
+          <p>Not every organisation requires FIPS 140-3 validated hardware. We can help you assess whether your operational risk profile justifies a certified device of this class.</p>
+          <div class="cta-buttons">
+            <a href="/business/consultation" class="btn primary large">Book a Security Assessment</a>
+            <a href="mailto:contact@hermetrix.nz?subject=Hardware%20Security%20Inquiry" class="btn ghost">Contact Us for Guidance</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+
+  <style>
+    .hero{padding:3.5rem 0;text-align:center;background:linear-gradient(180deg,rgba(30,64,175,0.04),transparent)}
+    .tagline{color:var(--primary);margin-bottom:1rem}
+    .product-badge{display:inline-block;background:linear-gradient(90deg,var(--primary),var(--accent));color:#fff;padding:.25rem .5rem;border-radius:999px;font-weight:700}
+    .section-intro{max-width:900px;margin:0 auto;color:#475569}
+    @media(max-width:768px){.hero h1{font-size:1.6rem}}
+  </style>
+</body>

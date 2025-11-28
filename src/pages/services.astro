@@ -2,6 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import BusinessStyles from '../components/BusinessStyles.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
@@ -10,7 +11,8 @@ import { SITE_TITLE } from '../consts';
 <head>
 	<BaseHead title={`Get Your Security Sorted | ${SITE_TITLE}`} description="Stop worrying about data breaches. Get a clear security assessment and actionable plan. Book your OPSEC Health Check today." />
 </head>
-<body>
+<body class="business-mode">
+	<BusinessStyles />
 	<Header />
 	<main>
 		<!-- HERO: Immediate problem & solution -->
