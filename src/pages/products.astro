@@ -2,224 +2,215 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import BusinessStyles from '../components/BusinessStyles.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
-<BaseHead 
-  title={`FIPS 140-3 Level 3 Certified Encryption Recommendation | ${SITE_TITLE}`}
-  description="Our independent security recommendation: the iStorage datAshur PRO+C, a FIPS 140-3 Level 3 certified hardware-encrypted flash drive."
-/>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<BaseHead 
+		title={`Certified Security Hardware | ${SITE_TITLE}`}
+		description="FIPS 140-3 Level 3 certified hardware-encrypted storage devices and security products for enterprise and government use."
+	/>
+</head>
+<body>
+	<Header />
+	<main>
+		<section class="hero">
+			<div class="container">
+				<h1>Certified Security Hardware</h1>
+				<p class="tagline">Independent recommendations for high-assurance data protection</p>
+			</div>
+		</section>
 
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+		<section class="section">
+			<div class="container">
+				<p>We analyze and evaluate certified security products and recommend solutions that meet stringent protection requirements. We do not sell devices — our recommendations are based purely on independent technical evaluation.</p>
+			</div>
+		</section>
 
-<body class="business-mode">
-  <BusinessStyles />
-  <Header />
+		<section class="section">
+			<div class="container">
+				<h2>Recommended Hardware</h2>
+				
+				<div class="card product-card">
+					<div class="product-header">
+						<h3>iStorage datAshur PRO+C</h3>
+						<span class="badge">FIPS 140-3 Level 3 Certified</span>
+					</div>
+					<p class="product-intro">The datAshur PRO+C is one of the first portable storage devices to achieve FIPS 140-3 Level 3 validation — the highest assurance level currently available for commercial removable media.</p>
+					
+					<div class="specs">
+						<div class="spec-item">
+							<strong>Independent Certification</strong>
+							<p>Validated to FIPS 140-3 Level 3, including hardened tamper-resistant construction, role-based authentication, and secure key storage.</p>
+						</div>
+						
+						<div class="spec-item">
+							<strong>Encryption Architecture</strong>
+							<p>Full-disk AES-XTS 256-bit hardware encryption performed entirely on the device, ensuring encryption keys never touch a host system.</p>
+						</div>
+						
+						<div class="spec-item">
+							<strong>Tamper-Resistant Electronics</strong>
+							<p>Internal components are encapsulated in a protective resin barrier designed to reveal and resist probing, drilling, voltage manipulation, or physical intrusion.</p>
+						</div>
+						
+						<div class="spec-item">
+							<strong>On-Device PIN Entry</strong>
+							<p>Access is controlled through an integrated keypad, preventing keylogging and ensuring authentication occurs before the device connects to any computer.</p>
+						</div>
+						
+						<div class="spec-item">
+							<strong>Brute-Force Protection</strong>
+							<p>After a defined number of incorrect PIN attempts, the device cryptographically erases its keys and permanently prevents further access.</p>
+						</div>
+						
+						<div class="spec-item">
+							<strong>System Compatibility</strong>
+							<p>OS-agnostic operation. Works with Windows, macOS, Linux, thin clients, virtualised systems, and embedded devices without drivers or software.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-<main>
+		<section class="section">
+			<div class="container">
+				<div class="notice">
+					<h3>Important Notice</h3>
+					<p>We are not an authorised reseller or distributor of the datAshur PRO+C or any other encrypted storage device. Our recommendation is based purely on independent technical evaluation and suitability for high-assurance data protection requirements.</p>
+				</div>
+			</div>
+		</section>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-background">
-      <div class="floating-orb orb-1"></div>
-      <div class="floating-orb orb-2"></div>
-      <div class="floating-orb orb-3"></div>
-      <div class="floating-orb orb-4"></div>
-      <div class="grid-overlay"></div>
-    </div>
+		<section class="section">
+			<div class="container text-center">
+				<h2>Determine Your Security Requirements</h2>
+				<p>Not every organisation requires FIPS 140-3 validated hardware. We can help you assess whether your operational risk profile, compliance regime, and threat exposure justify a certified device of this class.</p>
+				<div class="cta-buttons">
+					<a href="/services" class="btn primary">View Our Services</a>
+					<a href="mailto:hello@hermetrix.nz" class="btn secondary">Contact Us</a>
+				</div>
+			</div>
+		</section>
+	</main>
+	<Footer />
 
-    <div class="hero-content">
-      <div class="container">
-        <h1 data-aos="fade-up">Independent Recommendation for High-Assurance Data Protection</h1>
+	<style>
+		.hero {
+			padding: var(--space-3xl) 0 var(--space-2xl);
+		}
 
-        <p class="tagline" data-aos="fade-up" data-aos-delay="100">
-          When your organisation requires more than standard encryption, certified hardware security becomes essential.
-        </p>
+		.tagline {
+			font-size: 1.25rem;
+			color: var(--text-secondary);
+			margin-top: var(--space-md);
+		}
 
-        <p data-aos="fade-up" data-aos-delay="200">
-          We do not sell encrypted storage devices. Instead, we analyse and evaluate
-          certified security products and recommend solutions that meet stringent
-          protection requirements. One device stands out for portable, tamper-resistant,
-          independently validated protection.
-        </p>
+		.product-card {
+			margin-top: var(--space-2xl);
+		}
 
-        <div class="cta-buttons" data-aos="fade-up" data-aos-delay="300">
-          <a href="/consultation" class="btn primary">Request a Security Consultation</a>
-          <a href="/about-us" class="btn secondary">How We Evaluate Products</a>
-        </div>
-      </div>
-    </div>
+		.product-header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: var(--space-lg);
+			flex-wrap: wrap;
+			gap: var(--space-md);
+		}
 
-    <div class="scroll-indicator">
-      <div class="chevron"></div>
-      <div class="chevron"></div>
-      <div class="chevron"></div>
-    </div>
-  </section>
+		.product-header h3 {
+			margin: 0;
+			color: var(--text-primary);
+		}
 
-  <!-- MAIN CONTENT -->
-  <section class="main-content">
-    <div class="container">
+		.badge {
+			display: inline-block;
+			padding: var(--space-sm) var(--space-md);
+			background: rgba(88, 166, 255, 0.1);
+			border: 1px solid var(--accent);
+			border-radius: var(--border-radius);
+			font-size: 0.875rem;
+			font-weight: 600;
+			color: var(--accent);
+		}
 
-      <!-- PRODUCT RECOMMENDATION -->
-      <div class="section product-showcase" data-aos="fade-up">
-        <h2>Our Recommended Certified Hardware-Encrypted Drive</h2>
-        <p class="section-intro">
-          After reviewing currently available certified hardware-encrypted storage devices,
-          we recommend the <strong>iStorage datAshur PRO+C</strong> for organisations requiring
-          certified, tamper-resistant, portable data security.
-        </p>
+		.product-intro {
+			font-size: 1.125rem;
+			margin-bottom: var(--space-xl);
+		}
 
-        <div class="product-feature">
-          <div class="product-header">
-            <h3 class="product-name">iStorage datAshur PRO+C</h3>
-            <div class="product-badge">FIPS 140-3 Level 3 Certified</div>
-          </div>
+		.specs {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			gap: var(--space-lg);
+		}
 
-          <p class="product-description">
-            The datAshur PRO+C is one of the first portable storage devices to achieve
-            FIPS 140-3 Level 3 validation — the highest assurance level currently available
-            for commercial removable media. This level of certification requires hardened,
-            tamper-resistant hardware, secure key management, strict anti-tamper controls,
-            and protection against physical compromise.
-          </p>
+		.spec-item {
+			padding: var(--space-lg);
+			background: var(--background);
+			border: 1px solid var(--border-color);
+			border-radius: var(--border-radius);
+		}
 
-          <div class="specs-grid">
+		.spec-item strong {
+			display: block;
+			color: var(--accent);
+			margin-bottom: var(--space-sm);
+			font-size: 1rem;
+		}
 
-            <div class="spec-item" data-aos="fade-right" data-aos-delay="100">
-              <div class="spec-content">
-                <strong>Independent Certification</strong>
-                <span>
-                  Validated to FIPS 140-3 Level 3, including hardened tamper-resistant construction,
-                  role-based authentication, and secure key storage.
-                </span>
-              </div>
-            </div>
+		.spec-item p {
+			margin: 0;
+			font-size: 0.9375rem;
+			line-height: 1.6;
+		}
 
-            <div class="spec-item" data-aos="fade-right" data-aos-delay="150">
-              <div class="spec-content">
-                <strong>Encryption Architecture</strong>
-                <span>
-                  Full-disk AES-XTS 256-bit hardware encryption performed entirely on the device,
-                  ensuring encryption keys never touch a host system.
-                </span>
-              </div>
-            </div>
+		.notice {
+			padding: var(--space-xl);
+			background: var(--background-alt);
+			border-left: 3px solid var(--accent);
+			border-radius: var(--border-radius);
+		}
 
-            <div class="spec-item" data-aos="fade-right" data-aos-delay="200">
-              <div class="spec-content">
-                <strong>Tamper-Resistant Electronics</strong>
-                <span>
-                  Internal components are encapsulated in a protective resin barrier designed to
-                  reveal and resist probing, drilling, voltage manipulation, or physical intrusion.
-                </span>
-              </div>
-            </div>
+		.notice h3 {
+			color: var(--accent);
+			margin-top: 0;
+		}
 
-            <div class="spec-item" data-aos="fade-right" data-aos-delay="250">
-              <div class="spec-content">
-                <strong>On-Device PIN Entry</strong>
-                <span>
-                  Access is controlled through an integrated keypad, preventing keylogging and
-                  ensuring authentication occurs before the device connects to any computer.
-                </span>
-              </div>
-            </div>
+		.notice p {
+			margin-bottom: 0;
+		}
 
-            <div class="spec-item" data-aos="fade-right" data-aos-delay="300">
-              <div class="spec-content">
-                <strong>Brute-Force Attack Countermeasures</strong>
-                <span>
-                  After a defined number of incorrect PIN attempts, the device cryptographically
-                  erases its keys and permanently prevents further access, protecting data even if
-                  the device is stolen.
-                </span>
-              </div>
-            </div>
+		.cta-buttons {
+			display: flex;
+			gap: var(--space-md);
+			justify-content: center;
+			margin-top: var(--space-xl);
+		}
 
-            <div class="spec-item" data-aos="fade-right" data-aos-delay="350">
-              <div class="spec-content">
-                <strong>Auto-Lock, Unattended Lock, and Reset</strong>
-                <span>
-                  Automatically locks on removal or after a defined idle period, with an optional
-                  full device reset that securely destroys all keys and credentials.
-                </span>
-              </div>
-            </div>
+		@media (max-width: 768px) {
+			.product-header {
+				flex-direction: column;
+				align-items: flex-start;
+			}
 
-            <div class="spec-item" data-aos="fade-right" data-aos-delay="400">
-              <div class="spec-content">
-                <strong>Rugged Construction</strong>
-                <span>
-                  Aluminium alloy casing with IP68 dust and water resistance, crush protection,
-                  and resistance to environmental stress.
-                </span>
-              </div>
-            </div>
+			.specs {
+				grid-template-columns: 1fr;
+			}
 
-            <div class="spec-item" data-aos="fade-right" data-aos-delay="450">
-              <div class="spec-content">
-                <strong>System Compatibility</strong>
-                <span>
-                  OS-agnostic operation. Works with Windows, macOS, Linux, thin clients,
-                  virtualised systems, and embedded devices without drivers or software.
-                </span>
-              </div>
-            </div>
+			.cta-buttons {
+				flex-direction: column;
+				align-items: stretch;
+			}
 
-            <div class="spec-item" data-aos="fade-right" data-aos-delay="500">
-              <div class="spec-content">
-                <strong>Performance</strong>
-                <span>
-                  USB 3.2 Gen 1 interface with typical real-world read speeds of approximately
-                  300 MB/s and write speeds around 200+ MB/s depending on capacity.
-                </span>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <!-- NOT A SALES OFFER -->
-      <div class="section" data-aos="fade-up">
-        <h4>Important Notice</h4>
-        <p>
-          We are not an authorised reseller or distributor of the datAshur PRO+C or any other
-          encrypted storage device. Our recommendation is based purely on independent technical
-          evaluation and suitability for high-assurance data protection requirements.
-        </p>
-      </div>
-
-      <!-- FINAL CTA -->
-      <div class="section final-cta" data-aos="zoom-in">
-        <h2>Determine Whether You Need Certified Hardware</h2>
-        <p>
-          Not every organisation requires FIPS 140-3 validated hardware. We can help you assess
-          whether your operational risk profile, compliance regime, and threat exposure justify
-          a certified device of this class.
-        </p>
-        <div class="cta-buttons">
-          <a href="/consultation" class="btn primary large">Book a Security Assessment</a>
-          <a href="mailto:contact@hermetrix.nz?subject=Hardware%20Security%20Inquiry" class="btn secondary">
-            Contact Us for Guidance
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-</main>
-
-<Footer />
-
-<script is:client src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script is:client>
-  AOS.init({
-    duration: 800,
-    once: true,
-    offset: 100
-  });
-</script>
+			.btn {
+				width: 100%;
+				text-align: center;
+			}
+		}
+	</style>
+</body>
+</html>

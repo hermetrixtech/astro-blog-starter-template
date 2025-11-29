@@ -1,21 +1,24 @@
 /* 
- * Matrix.org inspired minimalist black and white design system
- * A clean, professional cybersecurity aesthetic
+ * Matrix.org inspired minimalist design system
+ * Clean, professional cybersecurity aesthetic with subtle patterns
  */
 
 :root {
-  /* Color System - Pure Black & White with Grayscale */
-  --black: #000000;
+  /* Color System - Dark theme with subtle accents */
+  --black: #0d1117;
+  --darker: #010409;
   --white: #ffffff;
-  --gray-100: #f5f5f5;
-  --gray-200: #e5e5e5;
-  --gray-300: #d4d4d4;
-  --gray-400: #a3a3a3;
-  --gray-500: #737373;
-  --gray-600: #525252;
-  --gray-700: #404040;
-  --gray-800: #262626;
-  --gray-900: #171717;
+  --gray-100: #f6f8fa;
+  --gray-200: #e1e4e8;
+  --gray-300: #d1d5da;
+  --gray-400: #959da5;
+  --gray-500: #6a737d;
+  --gray-600: #586069;
+  --gray-700: #444d56;
+  --gray-800: #2f363d;
+  --gray-900: #24292e;
+  --accent: #58a6ff;
+  --accent-muted: #388bfd;
   
   /* Functional Colors */
   --background: var(--black);
@@ -25,7 +28,7 @@
   --text-muted: var(--gray-500);
   --border-color: var(--gray-800);
   --border-color-light: var(--gray-700);
-  --highlight: var(--white);
+  --highlight: var(--accent);
   
   /* Typography */
   --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -43,7 +46,7 @@
   /* Layout */
   --container-width: 1200px;
   --header-height: 4rem;
-  --border-radius: 0;
+  --border-radius: 6px;
 }
 
 /* Import modern fonts */
@@ -74,21 +77,44 @@ body {
   letter-spacing: 0.01em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+
+/* Subtle background pattern */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+body > * {
+  position: relative;
+  z-index: 1;
 }
 
 /* Typography */
 a {
-  color: var(--text-primary);
+  color: var(--accent);
   text-decoration: none;
   font-weight: 500;
-  transition: opacity 0.2s ease;
-  border-bottom: 1px solid var(--gray-700);
+  transition: color 0.2s ease;
+  border-bottom: 1px solid transparent;
   padding-bottom: 1px;
 }
 
 a:hover {
-  opacity: 0.8;
-  border-bottom-color: var(--white);
+  color: var(--accent-muted);
+  border-bottom-color: var(--accent-muted);
 }
 
 /* Layout Components */
@@ -207,6 +233,13 @@ ul li::before {
   padding: var(--space-xl);
   margin-bottom: var(--space-xl);
   background-color: var(--background-alt);
+  border-radius: var(--border-radius);
+  transition: border-color 0.3s ease, transform 0.2s ease;
+}
+
+.card:hover {
+  border-color: var(--border-color-light);
+  transform: translateY(-2px);
 }
 
 .btn {
@@ -215,39 +248,42 @@ ul li::before {
   margin-top: var(--space-md);
   background: var(--background);
   color: var(--text-primary);
-  border: 1px solid var(--white);
+  border: 1px solid var(--accent);
+  border-radius: var(--border-radius);
   font-family: var(--font-family-mono);
   font-weight: 500;
   font-size: 0.875rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
   cursor: pointer;
 }
 
 .btn:hover {
-  background: var(--white);
+  background: var(--accent);
   color: var(--black);
+  border-color: var(--accent);
 }
 
 .btn.primary {
-  background: var(--white);
+  background: var(--accent);
   color: var(--black);
-  border: 1px solid var(--white);
+  border: 1px solid var(--accent);
 }
 
 .btn.primary:hover {
-  background: var(--gray-200);
+  background: var(--accent-muted);
+  border-color: var(--accent-muted);
 }
 
 .btn.secondary {
   background: transparent;
-  color: var(--white);
-  border: 1px solid var(--white);
+  color: var(--accent);
+  border: 1px solid var(--accent);
 }
 
 .btn.secondary:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(88, 166, 255, 0.1);
 }
 
 /* Grid System */

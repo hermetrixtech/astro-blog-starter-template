@@ -2,40 +2,37 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import BusinessStyles from '../components/BusinessStyles.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<BaseHead title={`About Us - ${SITE_TITLE}`} description="Hermetrix Tech APAC Ltd: NZ-based OPSEC consulting and certified security hardware. Expert practitioners focused on real-world security, not corporate vendors." />
+	<BaseHead title={`About Us — ${SITE_TITLE}`} description="Hermetrix: NZ-based OPSEC consulting and certified security hardware specialists. Expert practitioners focused on real-world security." />
 </head>
-<body class="business-mode">
-	<BusinessStyles />
+<body>
 	<Header />
 	<main>
 		<section class="hero">
 			<div class="container">
-				<h1>Expert Practitioners, Not Corporate Vendors</h1>
-				<span class="tagline">Actual OPSEC understanding versus checkbox security</span>
-				<p>
-					We're security practitioners who understand the real-world threats businesses face. While others sell solutions, we deliver security through deep operational understanding and certified hardware that actually works.
-				</p>
-				<div class="cta-buttons">
-					<a href="/consultation" class="btn primary">Get Security Assessment</a>
-					<a href="/services" class="btn secondary">Our Services</a>
-				</div>
+				<h1>About Hermetrix</h1>
+				<p class="tagline">Expert security practitioners, not corporate vendors</p>
 			</div>
 		</section>
 
 		<section class="section">
 			<div class="container">
-				<h2>Why We're Different</h2>
+				<p>We're security practitioners who understand the real-world threats businesses face. While others sell solutions, we deliver security through deep operational understanding and certified hardware that actually works.</p>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container">
+				<h2>What Makes Us Different</h2>
 				<div class="grid grid-2">
 					<div class="card">
 						<h3>Deep Technical Capability</h3>
-						<p>We don't just talk about security - we implement it. From secure configurations to certified hardware, we understand the technical details that matter.</p>
+						<p>We don't just talk about security — we implement it. From secure configurations to certified hardware, we understand the technical details that matter.</p>
 					</div>
 					<div class="card">
 						<h3>No Corporate Bloat</h3>
@@ -43,7 +40,7 @@ import { SITE_TITLE } from '../consts';
 					</div>
 					<div class="card">
 						<h3>OPSEC-First Mindset</h3>
-						<p>We understand concepts like the mosaic effect and digital exhaust that most security vendors overlook in their checklist approach.</p>
+						<p>We understand operational security concepts that most security vendors overlook in their checklist approach.</p>
 					</div>
 					<div class="card">
 						<h3>Certified Hardware Focus</h3>
@@ -57,17 +54,17 @@ import { SITE_TITLE } from '../consts';
 			<div class="container">
 				<h2>Our Approach</h2>
 				<div class="grid grid-3">
-					<div class="feature">
-						<h3>Stop Planning, Start Doing</h3>
+					<div class="feature-card">
+						<h3>Action Over Analysis</h3>
 						<p>We focus on immediate implementation over lengthy consulting engagements. Your security improves from day one.</p>
 					</div>
-					<div class="feature">
-						<h3>Small Size, Big Advantage</h3>
-						<p>Our size means we're agile, focused, and directly accountable. No bureaucracy, no finger-pointing, just results.</p>
+					<div class="feature-card">
+						<h3>Direct Expertise</h3>
+						<p>When you work with us, you work directly with security experts. No account managers, no sales layers.</p>
 					</div>
-					<div class="feature">
-						<h3>NZ Market Understanding</h3>
-						<p>We understand the unique security challenges facing NZ businesses and the realities of our market size and requirements.</p>
+					<div class="feature-card">
+						<h3>NZ Market Focus</h3>
+						<p>We understand the unique security challenges facing New Zealand businesses and the realities of our market.</p>
 					</div>
 				</div>
 			</div>
@@ -75,34 +72,16 @@ import { SITE_TITLE } from '../consts';
 
 		<section class="section">
 			<div class="container">
-				<div class="grid grid-2">
-					<div>
-						<h2>Our Focus</h2>
-						<div class="feature">
+				<div class="focus-areas">
+					<h2>Our Specialization</h2>
+					<div class="grid grid-2">
+						<div class="focus-item">
 							<h3>Operational Security Consulting</h3>
 							<p>Identifying and mitigating the human, process, and strategic vulnerabilities that traditional IT security misses.</p>
 						</div>
-						<div class="feature">
+						<div class="focus-item">
 							<h3>Certified Hardware Solutions</h3>
 							<p>Specializing in the highest-grade certified security hardware for enterprise and government use cases.</p>
-						</div>
-						<div class="feature">
-							<h3>B2B & Government</h3>
-							<p>Working with organizations that understand security is a fundamental requirement, not an optional extra.</p>
-						</div>
-					</div>
-					<div class="card">
-						<h3>Direct Practitioner Access</h3>
-						<p><strong>When you work with us, you work directly with the security expert.</strong> No account managers, no sales teams, no layers between you and the technical expertise you need.</p>
-						
-						<div class="feature" style="margin-top: var(--space-lg);">
-							<h4>Current Focus</h4>
-							<ul>
-								<li>Building our initial client base with exceptional service</li>
-								<li>NZ-owned and operated expertise</li>
-								<li>FIPS 140-3 Level 3 certified hardware specialization</li>
-								<li>Practical, implementable security guidance</li>
-							</ul>
 						</div>
 					</div>
 				</div>
@@ -111,11 +90,11 @@ import { SITE_TITLE } from '../consts';
 
 		<section class="section">
 			<div class="container text-center">
-				<h2>Ready to Work With Security Practitioners?</h2>
+				<h2>Work With Security Practitioners</h2>
 				<p>Stop dealing with vendors who don't understand your security challenges. Work with experts who speak your language and deliver real protection.</p>
 				<div class="cta-buttons">
-					<a href="/consultation" class="btn primary">Start with Free Consultation</a>
-					<a href="/products" class="btn secondary">View Certified Hardware</a>
+					<a href="/services" class="btn primary">Our Services</a>
+					<a href="mailto:hello@hermetrix.nz" class="btn secondary">Contact Us</a>
 				</div>
 			</div>
 		</section>
@@ -124,42 +103,76 @@ import { SITE_TITLE } from '../consts';
 
 	<style>
 		.hero {
-			padding: var(--space-3xl) 0;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			min-height: calc(100vh - var(--header-height));
+			padding: var(--space-3xl) 0 var(--space-2xl);
 		}
 
-		.hero h1 {
-			max-width: 900px;
+		.tagline {
+			font-size: 1.25rem;
+			color: var(--text-secondary);
+			margin-top: var(--space-md);
 		}
 
-		.feature {
-			padding: var(--space-xl);
+		.feature-card {
+			padding: var(--space-lg);
 			border: 1px solid var(--border-color);
-			background-color: var(--background-alt);
-			margin-bottom: var(--space-lg);
+			border-radius: var(--border-radius);
+			background: var(--background-alt);
 		}
 
-		.feature h3 {
-			color: var(--text-primary);
+		.feature-card h3 {
+			color: var(--accent);
+			margin-bottom: var(--space-md);
 		}
 
-		.card {
-			margin-bottom: var(--space-lg);
+		.feature-card p {
+			margin: 0;
+		}
+
+		.focus-areas {
+			padding: var(--space-xl);
+			background: var(--background-alt);
+			border-radius: var(--border-radius);
+			border: 1px solid var(--border-color);
+		}
+
+		.focus-areas h2 {
+			margin-top: 0;
+			text-align: center;
+		}
+
+		.focus-item {
+			padding: var(--space-lg);
+		}
+
+		.focus-item h3 {
+			color: var(--accent);
+			margin-bottom: var(--space-md);
+		}
+
+		.focus-item p {
+			margin: 0;
 		}
 
 		.cta-buttons {
 			display: flex;
 			gap: var(--space-md);
 			justify-content: center;
+			margin-top: var(--space-xl);
 		}
 
 		@media (max-width: 768px) {
+			.grid-2 {
+				grid-template-columns: 1fr;
+			}
+
 			.cta-buttons {
 				flex-direction: column;
-				align-items: center;
+				align-items: stretch;
+			}
+
+			.btn {
+				width: 100%;
+				text-align: center;
 			}
 		}
 	</style>

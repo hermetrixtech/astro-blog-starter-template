@@ -2,23 +2,21 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import BusinessStyles from '../components/BusinessStyles.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<BaseHead title={`Security Compliance - ${SITE_TITLE}`} description="Understanding New Zealand security frameworks including NZISM and Protective Security Requirements for organizational security planning." />
+	<BaseHead title={`Security Compliance — ${SITE_TITLE}`} description="Understanding New Zealand security frameworks including NZISM and Protective Security Requirements for organizational security planning." />
 </head>
-<body class="business-mode">
-	<BusinessStyles />
+<body>
 	<Header />
 	<main>
 		<section class="hero">
 			<div class="container">
-				<h1>OPSEC Framework Guidance</h1>
-				<span class="tagline">Strategic Security Analysis Within New Zealand's Compliance Landscape</span>
+				<h1>Compliance Framework Guidance</h1>
+				<p class="tagline">Strategic security analysis within New Zealand's compliance landscape</p>
 			</div>
 		</section>
 
@@ -30,25 +28,22 @@ import { SITE_TITLE } from '../consts';
 
 		<section class="section">
 			<div class="container">
-				<h2>Understanding Key Security Frameworks</h2>
+				<h2>Key Security Frameworks</h2>
 				
 				<div class="grid grid-3">
 					<div class="card">
 						<h3>NZISM</h3>
 						<p>The government's comprehensive manual for protecting official information. It outlines security controls, risk management approaches, and technical requirements for government agencies and their partners.</p>
-						<p><strong>Our Approach:</strong> We help interpret NZISM requirements and identify commercial solutions that align with its security objectives.</p>
 					</div>
 					
 					<div class="card">
 						<h3>Protective Security Requirements</h3>
 						<p>An all-of-government framework covering personnel, physical, and information security measures for protecting sensitive government information.</p>
-						<p><strong>Our Approach:</strong> We provide guidance on PSR alignment and recommend security practices that support compliance objectives.</p>
 					</div>
 					
 					<div class="card">
 						<h3>International Standards</h3>
-						<p>Various international standards and certifications recognized within New Zealand security frameworks, including FIPS 140-2, Common Criteria, and other validation programs.</p>
-						<p><strong>Our Approach:</strong> We help identify products with relevant certifications that may support your security and compliance goals.</p>
+						<p>Various international standards and certifications recognized within New Zealand security frameworks, including FIPS 140-3, Common Criteria, and other validation programs.</p>
 					</div>
 				</div>
 			</div>
@@ -56,17 +51,17 @@ import { SITE_TITLE } from '../consts';
 
 		<section class="section">
 			<div class="container">
-				<h2>How We Can Assist</h2>
+				<h2>How We Assist</h2>
 				<div class="grid grid-3">
-					<div class="feature">
+					<div class="feature-card">
 						<h3>Framework Education</h3>
 						<p>Helping your team understand NZISM, PSR, and other relevant security requirements and how they apply to your organization.</p>
 					</div>
-					<div class="feature">
+					<div class="feature-card">
 						<h3>Solution Identification</h3>
 						<p>Recommending commercially available security products and solutions that align with framework requirements.</p>
 					</div>
-					<div class="feature">
+					<div class="feature-card">
 						<h3>Implementation Support</h3>
 						<p>Assisting with the deployment and configuration of security solutions in your environment.</p>
 					</div>
@@ -78,7 +73,7 @@ import { SITE_TITLE } from '../consts';
 			<div class="container">
 				<div class="disclaimer">
 					<h3>Important Information</h3>
-					<p><strong>Hermetrix Technologies provides advisory services and implementation support for security solutions.</strong> We are not a government agency and cannot provide official compliance certifications or security clearances.</p>
+					<p><strong>Hermetrix provides advisory services and implementation support for security solutions.</strong> We are not a government agency and cannot provide official compliance certifications or security clearances.</p>
 					<p>Formal compliance status, security accreditations, and government approvals must be obtained through the appropriate official channels. We support your journey toward compliance through education and appropriate solution implementation.</p>
 				</div>
 			</div>
@@ -89,8 +84,8 @@ import { SITE_TITLE } from '../consts';
 				<h2>Ready for Strategic OPSEC Assessment?</h2>
 				<p>Contact us to discuss how intelligence-driven OPSEC analysis can enhance your compliance and security posture.</p>
 				<div class="cta-buttons">
-					<a href="mailto:hello@hermetrix.nz" class="btn primary">Schedule OPSEC Assessment</a>
-					<a href="mailto:security@hermetrix.nz" class="btn secondary">Framework Consultation</a>
+					<a href="/services" class="btn primary">Our Services</a>
+					<a href="mailto:hello@hermetrix.nz" class="btn secondary">Contact Us</a>
 				</div>
 			</div>
 		</section>
@@ -98,25 +93,42 @@ import { SITE_TITLE } from '../consts';
 	<Footer />
 
 	<style>
-		.feature {
-			padding: var(--space-xl);
-			border: 1px solid var(--border-color);
-			background-color: var(--background-alt);
-			margin-bottom: var(--space-lg);
+		.hero {
+			padding: var(--space-3xl) 0 var(--space-2xl);
 		}
 
-		.feature h3 {
-			color: var(--text-primary);
+		.tagline {
+			font-size: 1.25rem;
+			color: var(--text-secondary);
+			margin-top: var(--space-md);
+		}
+
+		.feature-card {
+			padding: var(--space-lg);
+			border: 1px solid var(--border-color);
+			border-radius: var(--border-radius);
+			background: var(--background-alt);
+		}
+
+		.feature-card h3 {
+			color: var(--accent);
+			margin-bottom: var(--space-md);
+		}
+
+		.feature-card p {
+			margin: 0;
 		}
 
 		.disclaimer {
-			border-left: 1px solid var(--white);
-			padding: var(--space-lg) var(--space-xl);
-			margin: var(--space-xl) 0;
+			padding: var(--space-xl);
+			background: var(--background-alt);
+			border-left: 3px solid var(--accent);
+			border-radius: var(--border-radius);
 		}
 
 		.disclaimer h3 {
-			color: var(--text-primary);
+			color: var(--accent);
+			margin-top: 0;
 		}
 
 		.disclaimer p {
@@ -137,7 +149,12 @@ import { SITE_TITLE } from '../consts';
 		@media (max-width: 768px) {
 			.cta-buttons {
 				flex-direction: column;
-				align-items: center;
+				align-items: stretch;
+			}
+
+			.btn {
+				width: 100%;
+				text-align: center;
 			}
 		}
 	</style>

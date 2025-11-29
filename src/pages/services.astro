@@ -2,117 +2,116 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import BusinessStyles from '../components/BusinessStyles.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<BaseHead title={`Get Your Security Sorted | ${SITE_TITLE}`} description="Stop worrying about data breaches. Get a clear security assessment and actionable plan. Book your OPSEC Health Check today." />
+	<BaseHead title={`Our Services | ${SITE_TITLE}`} description="Professional security consulting, OPSEC assessments, and implementation support for organizations requiring high-assurance data protection." />
 </head>
-<body class="business-mode">
-	<BusinessStyles />
+<body>
 	<Header />
 	<main>
-		<!-- HERO: Immediate problem & solution -->
 		<section class="hero">
 			<div class="container">
-				<h1>Stop The Security Guesswork</h1>
-				<p class="tagline">You know you need better security. We give you a clear plan to make it happen.</p>
-				<a href="/consultation" class="btn primary">Get Your Free Security Assessment</a>
+				<h1>Security Services</h1>
+				<p class="tagline">Expert OPSEC consulting and implementation support</p>
 			</div>
 		</section>
 
-		<!-- THE CORE OFFER: Your entry-point service -->
 		<section class="section">
 			<div class="container">
-				<div class="core-offer">
-					<h2>Start Here: The OPSEC Health Check</h2>
-					<p class="price">Fixed Price: NZ$2,500</p>
-					<p><strong>One day. One clear action plan.</strong> We identify your critical security gaps and give you a prioritized roadmap.</p>
-					
-					<div class="what-you-get">
-						<h3>What You Get:</h3>
-						<ul>
-							<li><strong>On-site security audit</strong> - We physically walk through your data handling</li>
-							<li><strong>3-Page Action Plan</strong> - Clear, prioritized recommendations</li>
-							<li><strong>Hardware demo</strong> - See certified encryption in action</li>
-							<li><strong>30-day implementation support</strong> - We help you get started</li>
-						</ul>
-					</div>
-					
-					<div class="cta-centered">
-						<a href="mailto:contact@hermetrix.nz?subject=OPSEC Health Check Booking" class="btn primary">Book Your Health Check</a>
-						<small>Next available slot: Next Week</small>
-					</div>
-				</div>
+				<p>We provide strategic security consulting focused on operational security (OPSEC) principles, helping organizations identify vulnerabilities and implement effective protection measures.</p>
 			</div>
 		</section>
 
-		<!-- FOLLOW-ON SERVICES: What happens after the health check -->
-		<section class="section services-grid">
+		<section class="section">
 			<div class="container">
-				<h2>After Your Assessment: Choose Your Path</h2>
-				<p>Based on your Health Check results, we'll recommend one of these clear next steps:</p>
-				
-				<div class="service-cards">
-					<div class="service-card">
-						<h3>Quick Win Implementation</h3>
-						<p class="service-meta">1-2 weeks • Fixed price</p>
-						<p><strong>For:</strong> Clients who need immediate critical fixes</p>
+				<h2>Our Core Services</h2>
+				<div class="grid grid-2">
+					<div class="card">
+						<h3>OPSEC Health Check</h3>
+						<p class="price">Fixed Price: NZ$2,500</p>
+						<p><strong>One day. One clear action plan.</strong> We identify your critical security gaps and give you a prioritized roadmap.</p>
 						<ul>
-							<li>Deploy encrypted drives to high-risk staff</li>
-							<li>Implement basic security protocols</li>
-							<li>Train key personnel on secure practices</li>
-							<li>Document new procedures</li>
+							<li>On-site security audit</li>
+							<li>3-page action plan with prioritized recommendations</li>
+							<li>Hardware demonstration</li>
+							<li>30-day implementation support</li>
 						</ul>
-						<div class="service-cta">
-							<a href="mailto:contact@hermetrix.nz?subject=Quick Win Implementation" class="btn secondary">Get Quote</a>
-						</div>
+						<a href="mailto:hello@hermetrix.nz?subject=OPSEC Health Check Booking" class="btn primary">Book Assessment</a>
 					</div>
 
-					<div class="service-card">
-						<h3>Full Security Overhaul</h3>
-						<p class="service-meta">30-90 days • Project-based</p>
-						<p><strong>For:</strong> Organizations needing complete security transformation</p>
+					<div class="card">
+						<h3>Security Implementation</h3>
+						<p class="price">Project-based pricing</p>
+						<p>Complete security transformation for organizations needing comprehensive protection.</p>
 						<ul>
 							<li>Compliance framework implementation</li>
 							<li>Enterprise-wide hardware deployment</li>
-							<li>Staff training & security culture development</li>
+							<li>Staff training and security culture development</li>
 							<li>Ongoing monitoring and optimization</li>
 						</ul>
-						<div class="service-cta">
-							<a href="mailto:contact@hermetrix.nz?subject=Security Overhaul Consultation" class="btn secondary">Discuss Scope</a>
-						</div>
+						<a href="mailto:hello@hermetrix.nz?subject=Security Implementation" class="btn primary">Get Quote</a>
 					</div>
 
-					<div class="service-card">
-						<h3>Ongoing Security Partnership</h3>
-						<p class="service-meta">Monthly retainer</p>
-						<p><strong>For:</strong> Businesses wanting continuous security oversight</p>
+					<div class="card">
+						<h3>Strategic Consultation</h3>
+						<p class="price">30-minute session - Free</p>
+						<p>Get expert guidance on your security concerns with no obligation.</p>
+						<ul>
+							<li>Current security risk assessment</li>
+							<li>Immediate vulnerabilities identification</li>
+							<li>Quick wins you can implement this week</li>
+							<li>Guidance on next steps</li>
+						</ul>
+						<a href="mailto:hello@hermetrix.nz?subject=Free Consultation" class="btn secondary">Book Consultation</a>
+					</div>
+
+					<div class="card">
+						<h3>Ongoing Partnership</h3>
+						<p class="price">Monthly retainer</p>
+						<p>Continuous security oversight for businesses wanting regular expert guidance.</p>
 						<ul>
 							<li>Regular security reviews</li>
 							<li>Threat intelligence updates</li>
 							<li>Staff onboarding security training</li>
 							<li>Vendor security assessment</li>
 						</ul>
-						<div class="service-cta">
-							<a href="mailto:contact@hermetrix.nz?subject=Ongoing Partnership" class="btn secondary">Learn More</a>
-						</div>
+						<a href="mailto:hello@hermetrix.nz?subject=Ongoing Partnership" class="btn secondary">Learn More</a>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- URGENT CTA -->
-		<section class="section cta-section">
+		<section class="section">
 			<div class="container">
-				<h2>Your Data Is Vulnerable Right Now</h2>
-				<p>Every day without proper security is a gamble with your business's future.</p>
+				<h2>Our Approach</h2>
+				<div class="grid grid-3">
+					<div class="feature-card">
+						<h3>Intelligence-Driven</h3>
+						<p>We apply intelligence community OPSEC principles to identify and mitigate the vulnerabilities traditional IT security misses.</p>
+					</div>
+					<div class="feature-card">
+						<h3>Implementation Focused</h3>
+						<p>We prioritize action over endless planning. Your security improves from day one.</p>
+					</div>
+					<div class="feature-card">
+						<h3>Independent Analysis</h3>
+						<p>Our recommendations are based purely on technical merit and suitability for your specific requirements.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container text-center">
+				<h2>Ready to Improve Your Security?</h2>
+				<p>Every day without proper security is a risk to your organization's future.</p>
 				<div class="cta-buttons">
-					<a href="/consultation" class="btn primary">Get Your Free Security Assessment</a>
-					<a href="mailto:contact@hermetrix.nz?subject=Urgent Security Question" class="btn secondary">Ask an Urgent Question</a>
+					<a href="mailto:hello@hermetrix.nz?subject=Free Security Assessment" class="btn primary">Get Free Assessment</a>
+					<a href="/about" class="btn secondary">About Us</a>
 				</div>
 			</div>
 		</section>
@@ -120,262 +119,73 @@ import { SITE_TITLE } from '../consts';
 	<Footer />
 
 	<style>
-		/* Hero Section - Better Contrast */
 		.hero {
-			padding: 4rem 0;
-			text-align: center;
-			background: linear-gradient(135deg, #0a0f14 0%, #14213d 100%);
-			color: white;
-		}
-
-		.hero h1 {
-			font-size: 3rem;
-			margin-bottom: 1rem;
-			font-weight: 900;
-			color: #ffffff;
-			text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+			padding: var(--space-3xl) 0 var(--space-2xl);
 		}
 
 		.tagline {
-			font-size: 1.4rem;
-			margin-bottom: 2.5rem;
-			color: #e2e8f0;
-			font-weight: 500;
-			max-width: 600px;
-			margin-left: auto;
-			margin-right: auto;
-		}
-
-		/* Core Offer */
-		.core-offer {
-			background: white;
-			padding: 3rem;
-			border-radius: 1rem;
-			border: 2px solid #e2e8f0;
-			text-align: center;
-			margin: 2rem auto;
-			max-width: 800px;
-		}
-
-		.core-offer h2 {
-			color: #0f1419;
-			margin-bottom: 0.5rem;
-			font-weight: 700;
+			font-size: 1.25rem;
+			color: var(--text-secondary);
+			margin-top: var(--space-md);
 		}
 
 		.price {
-			font-size: 1.5rem;
-			font-weight: 800;
-			color: #1a365d;
-			margin-bottom: 1.5rem;
-		}
-
-		.core-offer p {
-			color: #2d3748;
-			line-height: 1.6;
-		}
-
-		.what-you-get {
-			text-align: left;
-			background: #f0f4f8;
-			padding: 2rem;
-			border-radius: 0.5rem;
-			margin: 2rem 0;
-			border: 1px solid #cbd5e0;
-		}
-
-		.what-you-get h3 {
-			color: #1a365d;
-			margin-bottom: 1rem;
-			font-weight: 600;
-		}
-
-		.what-you-get ul {
-			list-style: none;
-			padding: 0;
-		}
-
-		.what-you-get li {
-			margin-bottom: 0.75rem;
-			padding-left: 1.5rem;
-			position: relative;
-			color: #2d3748;
-		}
-
-		.what-you-get li:before {
-			content: "✓";
-			color: #38a169;
-			font-weight: bold;
-			position: absolute;
-			left: 0;
-		}
-
-		.cta-centered {
-			margin-top: 2rem;
-		}
-
-		.cta-centered small {
-			display: block;
-			margin-top: 0.5rem;
-			color: #718096;
-		}
-
-		/* Services Grid */
-		.services-grid {
-			background: #f8fafc;
-			padding: 4rem 0;
-		}
-
-		.services-grid h2 {
-			text-align: center;
-			margin-bottom: 1rem;
-			color: #0f1419;
+			font-size: 1.25rem;
 			font-weight: 700;
+			color: var(--accent);
+			margin: var(--space-md) 0;
 		}
 
-		.services-grid > .container > p {
-			text-align: center;
-			margin-bottom: 3rem;
-			color: #2d3748;
-			font-weight: 500;
-			max-width: 600px;
-			margin-left: auto;
-			margin-right: auto;
-			line-height: 1.6;
+		.card ul {
+			margin: var(--space-lg) 0;
+			color: var(--text-secondary);
 		}
 
-		.service-cards {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-			gap: 2rem;
-			margin-top: 2rem;
+		.card li {
+			margin-bottom: var(--space-sm);
 		}
 
-		.service-card {
-			background: white;
-			padding: 2rem;
-			border-radius: 0.75rem;
-			border: 1px solid #e2e8f0;
-			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+		.card .btn {
+			margin-top: var(--space-md);
 		}
 
-		.service-card h3 {
-			color: #1a365d;
-			margin-bottom: 0.5rem;
-			font-weight: 600;
+		.feature-card {
+			padding: var(--space-lg);
+			border: 1px solid var(--border-color);
+			border-radius: var(--border-radius);
+			background: var(--background-alt);
 		}
 
-		.service-meta {
-			color: #718096;
-			font-size: 0.9rem;
-			margin-bottom: 1rem;
-			font-style: italic;
+		.feature-card h3 {
+			color: var(--accent);
+			margin-bottom: var(--space-md);
 		}
 
-		.service-card p {
-			color: #4a5568;
-		}
-
-		.service-card ul {
-			list-style: none;
-			padding: 0;
-			margin: 1.5rem 0;
-		}
-
-		.service-card li {
-			margin-bottom: 0.5rem;
-			padding-left: 1rem;
-			position: relative;
-			color: #4a5568;
-		}
-
-		.service-card li:before {
-			content: "•";
-			color: #3182ce;
-			position: absolute;
-			left: 0;
-		}
-
-		.service-cta {
-			margin-top: 1.5rem;
-			text-align: center;
-		}
-
-		/* CTA Section */
-		.cta-section {
-			background: linear-gradient(135deg, #14213d 0%, #1a202c 100%);
-			color: white;
-			text-align: center;
-			padding: 4rem 0;
-		}
-
-		.cta-section h2 {
-			margin-bottom: 1rem;
-			color: #ffffff;
-			font-weight: 700;
-		}
-
-		.cta-section p {
-			margin-bottom: 2rem;
-			color: #e2e8f0;
-			font-weight: 500;
-			font-size: 1.1rem;
-		}
-
-		/* Buttons */
-		.btn {
-			display: inline-block;
-			padding: 0.75rem 2rem;
-			text-decoration: none;
-			border-radius: 0.5rem;
-			font-weight: 700;
-			transition: all 0.2s;
-			border: 2px solid transparent;
-		}
-
-		.btn.primary {
-			background: #90cdf4;
-			color: #1a365d;
-			font-weight: 700;
-		}
-
-		.btn.primary:hover {
-			background: #63b3ed;
-			transform: translateY(-2px);
-		}
-
-		.btn.secondary {
-			background: transparent;
-			color: #90cdf4;
-			border-color: #90cdf4;
-			font-weight: 600;
-		}
-
-		.btn.secondary:hover {
-			background: rgba(144, 205, 244, 0.1);
+		.feature-card p {
+			margin: 0;
 		}
 
 		.cta-buttons {
 			display: flex;
-			gap: 1rem;
+			gap: var(--space-md);
 			justify-content: center;
-			flex-wrap: wrap;
+			margin-top: var(--space-xl);
 		}
 
-		/* Responsive */
 		@media (max-width: 768px) {
-			.hero h1 { font-size: 2.5rem; }
-			.tagline { font-size: 1.2rem; }
-			.core-offer { padding: 2rem 1.5rem; }
-			.service-cards { grid-template-columns: 1fr; }
-			.cta-buttons { flex-direction: column; align-items: center; }
-			.btn { width: 100%; max-width: 300px; }
-		}
+			.grid-2 {
+				grid-template-columns: 1fr;
+			}
 
-		@media (max-width: 480px) {
-			.hero { padding: 3rem 1rem; }
-			.hero h1 { font-size: 2rem; }
-			.core-offer { padding: 1.5rem 1rem; }
+			.cta-buttons {
+				flex-direction: column;
+				align-items: stretch;
+			}
+
+			.btn {
+				width: 100%;
+				text-align: center;
+			}
 		}
 	</style>
 </body>
