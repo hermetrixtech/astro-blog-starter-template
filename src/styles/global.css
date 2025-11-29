@@ -108,7 +108,6 @@ body {
   letter-spacing: 0.01em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  position: relative;
 }
 
 /* Flowing gradient orbs overlay */
@@ -124,12 +123,7 @@ body::before {
     radial-gradient(circle at 80% 80%, rgba(88, 166, 255, 0.12) 0%, transparent 30%),
     radial-gradient(circle at 50% 50%, rgba(88, 166, 255, 0.08) 0%, transparent 50%);
   pointer-events: none;
-  z-index: 0;
-}
-
-body > * {
-  position: relative;
-  z-index: 1;
+  z-index: -1;
 }
 
 /* Typography */
@@ -149,7 +143,7 @@ a:hover {
 
 /* Layout Components */
 header, footer {
-  background-color: var(--background);
+  background-color: transparent;
   padding: var(--space-lg) var(--space-xl);
   border-bottom: 1px solid var(--border-color);
 }
@@ -161,19 +155,22 @@ header {
   height: var(--header-height);
   display: flex;
   align-items: center;
+  backdrop-filter: blur(10px);
+  background-color: rgba(13, 17, 23, 0.8);
 }
 
 footer {
   border-top: 1px solid var(--border-color);
   border-bottom: none;
   padding: var(--space-xl) var(--space-lg);
+  background-color: transparent;
 }
 
 main {
   flex: 1;
   display: flex;
   flex-direction: column;
-  background-color: var(--background);
+  background-color: transparent;
 }
 
 .container {
