@@ -341,7 +341,7 @@ section {
   padding: var(--space-xl);
   margin-bottom: var(--space-xl);
   background-color: var(--background);
-  border-radius: 0;
+  border-radius: 8px;
   transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   box-shadow: 
     6px 6px 0 rgba(232, 232, 232, 0.08),
@@ -388,7 +388,7 @@ section {
   background: var(--off-white);
   color: var(--black);
   border: 3px solid var(--off-white);
-  border-radius: 0;
+  border-radius: 6px;
   font-family: var(--font-family-mono);
   font-weight: 700;
   font-size: 0.875rem;
