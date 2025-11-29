@@ -11,8 +11,9 @@ import { SITE_TITLE } from '../consts';
 	<BaseHead title={`Our Services | ${SITE_TITLE}`} description="Professional security consulting, OPSEC assessments, and implementation support for organizations requiring high-assurance data protection." />
 </head>
 <body>
+	<a href="#main-content" class="skip-to-main">Skip to main content</a>
 	<Header />
-	<main>
+	<main id="main-content">
 		<section class="hero">
 			<div class="container">
 				<h1>Security Services</h1>
@@ -127,13 +128,23 @@ import { SITE_TITLE } from '../consts';
 			font-size: 1.25rem;
 			color: var(--text-secondary);
 			margin-top: var(--space-md);
+			font-family: var(--font-family-mono);
+			text-transform: uppercase;
+			letter-spacing: 0.15em;
 		}
 
 		.price {
-			font-size: 1.25rem;
-			font-weight: 700;
-			color: var(--accent);
+			font-size: 1.5rem;
+			font-weight: 900;
+			color: var(--accent-primary);
 			margin: var(--space-md) 0;
+			font-family: var(--font-family-mono);
+			text-shadow: 0 0 10px rgba(255, 0, 255, 0.3);
+		}
+
+		.card {
+			background-color: rgba(0, 0, 0, 0.5);
+			backdrop-filter: blur(5px);
 		}
 
 		.card ul {
@@ -146,28 +157,67 @@ import { SITE_TITLE } from '../consts';
 		}
 
 		.card .btn {
-			margin-top: var(--space-md);
+			margin-top: var(--space-lg);
+			width: 100%;
 		}
 
 		.feature-card {
-			padding: var(--space-lg);
-			border: 1px solid var(--border-color);
-			border-radius: var(--border-radius);
-			background: var(--background-alt);
+			padding: var(--space-xl);
+			border: 2px solid var(--white);
+			border-radius: 0;
+			background: rgba(0, 0, 0, 0.4);
+			backdrop-filter: blur(3px);
+			box-shadow: 5px 5px 0 rgba(255, 255, 255, 0.1);
+			transition: all 0.3s ease;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.feature-card::before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 0;
+			height: 0;
+			border-radius: 50%;
+			background: radial-gradient(circle, var(--electric-blue) 0%, transparent 70%);
+			opacity: 0;
+			transform: translate(-50%, -50%);
+			transition: all 0.5s ease;
+			z-index: 0;
+		}
+
+		.feature-card:hover {
+			border-color: var(--accent-tertiary);
+			transform: translate(-2px, -2px);
+			box-shadow: 7px 7px 0 rgba(0, 102, 255, 0.3);
+		}
+
+		.feature-card:hover::before {
+			width: 200%;
+			height: 200%;
+			opacity: 0.05;
 		}
 
 		.feature-card h3 {
-			color: var(--accent);
+			color: var(--accent-secondary);
 			margin-bottom: var(--space-md);
+			font-weight: 900;
+			position: relative;
+			z-index: 1;
 		}
 
 		.feature-card p {
 			margin: 0;
+			color: var(--text-secondary);
+			position: relative;
+			z-index: 1;
 		}
 
 		.cta-buttons {
 			display: flex;
-			gap: var(--space-md);
+			gap: var(--space-lg);
 			justify-content: center;
 			margin-top: var(--space-xl);
 		}
@@ -180,11 +230,6 @@ import { SITE_TITLE } from '../consts';
 			.cta-buttons {
 				flex-direction: column;
 				align-items: stretch;
-			}
-
-			.btn {
-				width: 100%;
-				text-align: center;
 			}
 		}
 	</style>

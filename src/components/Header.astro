@@ -22,17 +22,7 @@ import { SITE_TITLE } from '../consts';
 </header>
 
 <style>
-  header {
-    background-color: var(--background);
-    border-bottom: 1px solid var(--border-color);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    height: var(--header-height);
-    display: flex;
-    align-items: center;
-  }
-
+  /* Header styling is handled by global.css */
   .container {
     width: 100%;
     max-width: var(--container-width);
@@ -77,7 +67,7 @@ import { SITE_TITLE } from '../consts';
   }
 
   .nav-links a:hover {
-    color: var(--accent);
+    color: var(--accent-primary);
     opacity: 1;
   }
 
@@ -161,6 +151,24 @@ import { SITE_TITLE } from '../consts';
         mobileMenuToggle.classList.toggle('active');
         navLinks.classList.toggle('active');
         document.body.classList.toggle('menu-open');
+        
+        // Prevent body scroll when menu is open
+        if (navLinks.classList.contains('active')) {
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = '';
+        }
+      });
+      
+      // Close menu when clicking nav links
+      const links = navLinks.querySelectorAll('a');
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenuToggle.classList.remove('active');
+          navLinks.classList.remove('active');
+          document.body.classList.remove('menu-open');
+          document.body.style.overflow = '';
+        });
       });
     }
   });

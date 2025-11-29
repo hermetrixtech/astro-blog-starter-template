@@ -1,36 +1,42 @@
 /* 
- * Matrix.org inspired minimalist design system
- * Clean, professional cybersecurity aesthetic with subtle patterns
+ * HERMETRIX DESIGN SYSTEM
+ * Merging Charles Burns' stark precision with Robert Beatty's organic psychedelia
+ * 85% monochrome / 15% strategic color accents
  */
 
 :root {
-  /* Color System - Bold black and white with stark contrast */
+  /* Color System - Burns Foundation + Beatty Accents */
   --black: #000000;
   --white: #ffffff;
-  --gray-100: #f5f5f5;
+  --gray-100: #f8f8f8;
   --gray-200: #e0e0e0;
-  --gray-300: #b0b0b0;
+  --gray-300: #b8b8b8;
   --gray-400: #808080;
   --gray-500: #505050;
-  --gray-600: #303030;
-  --gray-700: #1a1a1a;
-  --gray-800: #0d0d0d;
-  --accent: #00ff00;
-  --accent-muted: #00cc00;
+  --gray-600: #282828;
+  --gray-700: #151515;
+  
+  /* Beatty Psychedelic Accents */
+  --magenta: #ff00ff;
+  --cyan: #00ffff;
+  --electric-blue: #0066ff;
+  --acid-green: #00ff66;
   
   /* Functional Colors */
   --background: var(--black);
-  --background-alt: var(--gray-800);
+  --background-alt: var(--gray-700);
   --text-primary: var(--white);
   --text-secondary: var(--gray-200);
   --text-muted: var(--gray-400);
   --border-color: var(--white);
-  --border-color-light: var(--gray-300);
-  --highlight: var(--accent);
+  --accent-primary: var(--magenta);
+  --accent-secondary: var(--cyan);
+  --accent-tertiary: var(--electric-blue);
   
   /* Typography */
-  --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  --font-family-mono: 'JetBrains Mono', 'SF Mono', 'Roboto Mono', Menlo, Monaco, Consolas, 'Courier New', monospace;
+  --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-mono: 'JetBrains Mono', 'Courier New', monospace;
+  --font-family-display: 'Inter', sans-serif;
   
   /* Spacing System */
   --space-xs: 0.25rem;
@@ -44,12 +50,19 @@
   /* Layout */
   --container-width: 1200px;
   --header-height: 4rem;
-  --border-radius: 6px;
 }
 
-/* Import modern fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+/* Import modern fonts - optimized for performance */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+/* Font fallback for better performance */
+@font-face {
+  font-family: 'Inter-fallback';
+  size-adjust: 107%;
+  ascent-override: 90%;
+  src: local('Arial');
+}
 
 /* Base Styles */
 html {
@@ -61,32 +74,42 @@ html {
   box-sizing: inherit;
 }
 
+/* Burns precision meets Beatty psychedelia */
 body {
   margin: 0;
   background-color: var(--background);
+  /* Burns-style geometric grid */
   background-image: 
     repeating-linear-gradient(
       0deg,
       transparent,
       transparent 99px,
-      rgba(255, 255, 255, 0.08) 99px,
-      rgba(255, 255, 255, 0.08) 100px
+      rgba(255, 255, 255, 0.12) 99px,
+      rgba(255, 255, 255, 0.12) 100px
     ),
     repeating-linear-gradient(
       90deg,
       transparent,
       transparent 99px,
-      rgba(255, 255, 255, 0.08) 99px,
-      rgba(255, 255, 255, 0.08) 100px
+      rgba(255, 255, 255, 0.12) 99px,
+      rgba(255, 255, 255, 0.12) 100px
+    ),
+    /* Beatty-style organic diagonal flows */
+    repeating-linear-gradient(
+      135deg,
+      transparent,
+      transparent 198px,
+      rgba(255, 0, 255, 0.05) 198px,
+      rgba(255, 0, 255, 0.05) 200px
     ),
     repeating-linear-gradient(
       45deg,
       transparent,
-      transparent 199px,
-      rgba(0, 255, 0, 0.03) 199px,
-      rgba(0, 255, 0, 0.03) 200px
+      transparent 198px,
+      rgba(0, 255, 255, 0.05) 198px,
+      rgba(0, 255, 255, 0.05) 200px
     );
-  background-size: 100px 100px, 100px 100px, 200px 200px;
+  background-size: 100px 100px, 100px 100px, 200px 200px, 200px 200px;
   background-attachment: fixed;
   color: var(--text-primary);
   font-family: var(--font-family-primary);
@@ -101,7 +124,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Matrix-style scan lines and vignette */
+/* Beatty-style organic blob overlay with psychedelic glow */
 body::before {
   content: '';
   position: fixed;
@@ -110,39 +133,175 @@ body::before {
   width: 100%;
   height: 100%;
   background: 
-    repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 1px,
-      rgba(0, 255, 0, 0.02) 1px,
-      rgba(0, 255, 0, 0.02) 2px
-    ),
-    radial-gradient(ellipse at center, transparent 0%, rgba(0, 0, 0, 0.4) 100%);
+    radial-gradient(ellipse at 15% 25%, rgba(255, 0, 255, 0.15) 0%, transparent 40%),
+    radial-gradient(ellipse at 85% 75%, rgba(0, 255, 255, 0.12) 0%, transparent 40%),
+    radial-gradient(ellipse at 50% 10%, rgba(0, 102, 255, 0.1) 0%, transparent 30%),
+    /* Burns-style film noir vignette */
+    radial-gradient(ellipse at center, transparent 30%, rgba(0, 0, 0, 0.6) 100%);
   pointer-events: none;
   z-index: -1;
+  animation: organic-pulse 20s ease-in-out infinite;
 }
 
-/* Typography */
+@keyframes organic-pulse {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
+/* Subtle scan lines for uncanny tech feeling */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(255, 255, 255, 0.015) 2px,
+    rgba(255, 255, 255, 0.015) 4px
+  );
+  pointer-events: none;
+  z-index: 1000;
+  mix-blend-mode: overlay;
+}
+
+/* Typography - Burns precision */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-display);
+  font-weight: 900;
+  line-height: 1.1;
+  margin: 0 0 var(--space-lg) 0;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  /* Subtle Beatty distortion on hover */
+  transition: all 0.3s ease;
+}
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: var(--space-xl);
+  text-shadow: 3px 3px 0 var(--gray-700);
+}
+
+h1:hover {
+  text-shadow: 3px 3px 0 var(--magenta), 6px 6px 0 var(--gray-700);
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-lg);
+  text-shadow: 2px 2px 0 var(--gray-700);
+}
+
+h2:hover {
+  text-shadow: 2px 2px 0 var(--cyan), 4px 4px 0 var(--gray-700);
+}
+
+h3 {
+  font-size: 1.75rem;
+  margin-bottom: var(--space-md);
+}
+
+h4 {
+  font-size: 1.25rem;
+  margin-bottom: var(--space-md);
+}
+
+p {
+  margin: 0 0 var(--space-lg) 0;
+  color: var(--text-secondary);
+}
+
+/* Burns-style precise links with Beatty color bleed */
 a {
   color: var(--white);
   text-decoration: none;
   font-weight: 600;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
   border-bottom: 2px solid var(--white);
   padding-bottom: 2px;
+  position: relative;
+}
+
+a::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--magenta), var(--cyan), var(--electric-blue));
+  transition: width 0.3s ease;
 }
 
 a:hover {
-  color: var(--accent);
-  border-bottom-color: var(--accent);
-  text-shadow: 0 0 8px var(--accent);
+  color: var(--magenta);
+  border-bottom-color: transparent;
+  text-shadow: 0 0 10px var(--magenta), 0 0 20px rgba(255, 0, 255, 0.5);
 }
 
-/* Layout Components */
+a:hover::before {
+  width: 100%;
+}
+
+ul, ol {
+  margin: 0 0 var(--space-lg) 0;
+  padding-left: var(--space-xl);
+  color: var(--text-secondary);
+}
+
+li {
+  margin-bottom: var(--space-sm);
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  position: relative;
+}
+
+ul li::before {
+  content: "▸";
+  position: absolute;
+  left: -1.2rem;
+  color: var(--magenta);
+  font-weight: bold;
+}
+
+/* Layout Components - Burns geometric precision */
 header, footer {
   background-color: transparent;
   padding: var(--space-lg) var(--space-xl);
-  border-bottom: 2px solid var(--white);
+  border-bottom: 3px solid var(--white);
+  position: relative;
+}
+
+/* Beatty-style color bleed on header border */
+header::after, footer::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--magenta), var(--cyan), var(--electric-blue), var(--magenta));
+  transition: width 0.6s ease;
+}
+
+header::after {
+  bottom: -3px;
+}
+
+footer::before {
+  top: -3px;
+}
+
+header:hover::after, footer:hover::before {
+  width: 100%;
 }
 
 header {
@@ -153,12 +312,12 @@ header {
   display: flex;
   align-items: center;
   backdrop-filter: blur(10px);
-  background-color: rgba(0, 0, 0, 0.9);
-  box-shadow: 0 2px 10px rgba(0, 255, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.95);
+  box-shadow: 0 4px 20px rgba(255, 0, 255, 0.1);
 }
 
 footer {
-  border-top: 2px solid var(--white);
+  border-top: 3px solid var(--white);
   border-bottom: none;
   padding: var(--space-xl) var(--space-lg);
   background-color: transparent;
@@ -182,93 +341,91 @@ section {
   padding: var(--space-3xl) 0;
 }
 
-/* Typography Scale */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-family-mono);
-  font-weight: 700;
-  line-height: 1.2;
-  margin: 0 0 var(--space-lg) 0;
-  color: var(--text-primary);
-}
-
-h1 {
-  font-size: 3.5rem;
-  letter-spacing: -0.02em;
-  margin-bottom: var(--space-xl);
-}
-
-h2 {
-  font-size: 2.25rem;
-  letter-spacing: -0.01em;
-  margin-bottom: var(--space-lg);
-}
-
-h3 {
-  font-size: 1.5rem;
-  margin-bottom: var(--space-md);
-}
-
-h4 {
-  font-size: 1.25rem;
-  margin-bottom: var(--space-md);
-}
-
-p {
-  margin: 0 0 var(--space-lg) 0;
-  color: var(--text-secondary);
-}
-
-ul, ol {
-  margin: 0 0 var(--space-lg) 0;
-  padding-left: var(--space-xl);
-  color: var(--text-secondary);
-}
-
-li {
-  margin-bottom: var(--space-sm);
-}
-
-ul {
-  list-style: none;
-}
-
-ul li {
-  position: relative;
-}
-
-ul li::before {
-  content: "—";
-  position: absolute;
-  left: -1.2rem;
-  color: var(--gray-600);
-}
-
-/* UI Components */
+/* UI Components - Geometric precision with organic accents */
 .section {
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 2px solid var(--white);
   padding: var(--space-3xl) 0;
+  position: relative;
 }
 
 .section:last-child {
   border-bottom: none;
 }
 
+/* Beatty-style liquid marble transition on section borders */
+.section::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    var(--magenta) 0%, 
+    var(--cyan) 25%, 
+    var(--electric-blue) 50%, 
+    var(--cyan) 75%, 
+    var(--magenta) 100%);
+  background-size: 200% 100%;
+  transition: width 0.6s ease;
+  animation: liquid-flow 3s linear infinite;
+}
+
+.section:hover::after {
+  width: 100%;
+}
+
+@keyframes liquid-flow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+/* Burns-style geometric cards with Beatty offset shadows */
 .card {
-  border: 2px solid var(--white);
+  border: 3px solid var(--white);
   padding: var(--space-xl);
   margin-bottom: var(--space-xl);
   background-color: var(--background);
   border-radius: 0;
-  transition: all 0.3s ease;
-  box-shadow: 5px 5px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  box-shadow: 
+    6px 6px 0 rgba(255, 255, 255, 0.1),
+    12px 12px 0 rgba(255, 255, 255, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Beatty-style organic blob background on hover */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--magenta) 0%, transparent 70%);
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: all 0.6s ease;
 }
 
 .card:hover {
-  border-color: var(--accent);
-  transform: translate(-2px, -2px);
-  box-shadow: 7px 7px 0 rgba(0, 255, 0, 0.2), 0 0 20px rgba(0, 255, 0, 0.1);
+  border-color: var(--magenta);
+  transform: translate(-3px, -3px);
+  box-shadow: 
+    9px 9px 0 rgba(255, 0, 255, 0.3),
+    18px 18px 0 rgba(255, 0, 255, 0.1),
+    0 0 30px rgba(255, 0, 255, 0.2);
 }
 
+.card:hover::before {
+  width: 150%;
+  height: 150%;
+  opacity: 0.05;
+}
+
+/* Bold geometric buttons with psychedelic bleed effects */
 .btn {
   display: inline-block;
   padding: var(--space-md) var(--space-xl);
@@ -282,20 +439,44 @@ ul li::before {
   font-size: 0.875rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
   cursor: pointer;
-  box-shadow: 4px 4px 0 rgba(255, 255, 255, 0.2);
-  border-bottom: none;
+  box-shadow: 5px 5px 0 rgba(255, 255, 255, 0.2);
+  border-bottom: 3px solid var(--white);
   padding-bottom: var(--space-md);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Beatty-style liquid color bleed effect */
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--magenta), var(--cyan), var(--electric-blue));
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease;
+  z-index: -1;
 }
 
 .btn:hover {
-  background: var(--accent);
   color: var(--black);
-  border-color: var(--accent);
-  transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0 rgba(0, 255, 0, 0.3), 0 0 20px rgba(0, 255, 0, 0.4);
+  border-color: var(--magenta);
+  transform: translate(-3px, -3px);
+  box-shadow: 
+    8px 8px 0 rgba(255, 0, 255, 0.4), 
+    0 0 30px rgba(255, 0, 255, 0.6),
+    inset 0 0 20px rgba(255, 0, 255, 0.2);
   text-shadow: none;
+}
+
+.btn:hover::before {
+  width: 300%;
+  height: 300%;
 }
 
 .btn.primary {
@@ -305,8 +486,10 @@ ul li::before {
 }
 
 .btn.primary:hover {
-  background: var(--accent);
-  border-color: var(--accent);
+  border-color: var(--cyan);
+  box-shadow: 
+    8px 8px 0 rgba(0, 255, 255, 0.4), 
+    0 0 30px rgba(0, 255, 255, 0.6);
 }
 
 .btn.secondary {
@@ -316,9 +499,8 @@ ul li::before {
 }
 
 .btn.secondary:hover {
-  background: var(--black);
-  color: var(--accent);
-  border-color: var(--accent);
+  color: var(--magenta);
+  border-color: var(--magenta);
 }
 
 /* Grid System */
@@ -340,13 +522,14 @@ ul li::before {
   grid-template-columns: repeat(4, 1fr);
 }
 
-/* Hero Section */
+/* Hero Section with dramatic shadows */
 .hero {
   padding: var(--space-3xl) 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   min-height: calc(100vh - var(--header-height));
+  position: relative;
 }
 
 .hero h1 {
@@ -365,6 +548,8 @@ ul li::before {
   color: var(--gray-400);
   margin-bottom: var(--space-xl);
   display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
 }
 
 /* Utilities */
@@ -398,11 +583,11 @@ ul li::before {
   }
   
   h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
   
   h2 {
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
   
   .grid-4 {
@@ -416,11 +601,11 @@ ul li::before {
   }
   
   h1 {
-    font-size: 2.5rem;
+    font-size: 2.75rem;
   }
   
   h2 {
-    font-size: 1.75rem;
+    font-size: 2rem;
   }
   
   .grid-3, .grid-4 {
@@ -431,15 +616,21 @@ ul li::before {
     min-height: auto;
     padding: var(--space-2xl) 0;
   }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+    margin-bottom: var(--space-md);
+  }
 }
 
 @media (max-width: 480px) {
   h1 {
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
   
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
   }
   
   .grid-2 {
@@ -449,11 +640,40 @@ ul li::before {
   section {
     padding: var(--space-2xl) 0;
   }
-  
-  .btn {
-    display: block;
-    width: 100%;
-    text-align: center;
-    margin-bottom: var(--space-md);
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
+}
+
+/* Focus styles for keyboard navigation */
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible {
+  outline: 3px solid var(--accent-primary);
+  outline-offset: 3px;
+}
+
+/* Skip to main content link for accessibility */
+.skip-to-main {
+  position: absolute;
+  left: -9999px;
+  z-index: 999;
+  padding: var(--space-md) var(--space-lg);
+  background: var(--white);
+  color: var(--black);
+  text-decoration: none;
+  border: 3px solid var(--black);
+}
+
+.skip-to-main:focus {
+  left: var(--space-md);
+  top: var(--space-md);
 }
