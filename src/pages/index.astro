@@ -15,18 +15,21 @@ import Footer from '../components/Footer.astro';
 		<a href="#main-content" class="skip-to-main">Skip to main content</a>
 		<Header />
 		<main id="main-content">
-			<section class="hero">
-				<div class="container">
-					<h1>Complete Digital Protection</h1>
-					<p class="tagline">Expert security consulting and certified hardware solutions for businesses and individuals.</p>
-					<div class="cta-buttons">
-						<a href="/services" class="btn primary">Our Services</a>
-						<a href="/products" class="btn secondary">View Products</a>
+		<section class="hero">
+			<div class="container">
+				<div class="hero-content">
+					<img src="/images/logo.png" alt="Hermetrix Logo" class="hero-logo" />
+					<div class="hero-text">
+						<h1>Complete Digital Protection</h1>
+						<p class="tagline">Expert security consulting and certified hardware solutions for businesses and individuals.</p>
+						<div class="cta-buttons">
+							<a href="/services" class="btn primary">Our Services</a>
+							<a href="/products" class="btn secondary">View Products</a>
+						</div>
 					</div>
 				</div>
-			</section>
-
-			<section class="section">
+			</div>
+		</section>			<section class="section">
 				<div class="container">
 					<h2>What We Offer</h2>
 					<div class="grid grid-3">
@@ -68,6 +71,23 @@ import Footer from '../components/Footer.astro';
 				display: flex;
 				align-items: center;
 				position: relative;
+			}
+
+			.hero-content {
+				display: flex;
+				align-items: center;
+				gap: var(--space-2xl);
+				width: 100%;
+			}
+
+			.hero-logo {
+				width: 200px;
+				height: auto;
+				flex-shrink: 0;
+			}
+
+			.hero-text {
+				flex: 1;
 			}
 
 			.hero h1 {
@@ -123,6 +143,16 @@ import Footer from '../components/Footer.astro';
 			}
 
 			@media (max-width: 768px) {
+				.hero-content {
+					flex-direction: column;
+					align-items: flex-start;
+					gap: var(--space-xl);
+				}
+
+				.hero-logo {
+					width: 120px;
+				}
+
 				.hero h1 {
 					font-size: 2.75rem;
 				}

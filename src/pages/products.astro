@@ -80,7 +80,10 @@ import { SITE_TITLE } from '../consts';
 			<div class="container">
 				<div class="card product-card">
 					<div class="product-header">
-						<h3>Google Pixel 7a with GrapheneOS</h3>
+						<div class="product-title-group">
+							<img src="/images/graphenelogo.png" alt="GrapheneOS Logo" class="product-logo" />
+							<h3>Google Pixel 7a with GrapheneOS</h3>
+						</div>
 						<span class="badge">Hardened Mobile Security</span>
 					</div>
 					<p class="product-intro">The Google Pixel 7a running GrapheneOS provides a privacy-focused, security-hardened mobile platform. GrapheneOS is a non-profit open-source project focused on privacy and security research and development.</p>
@@ -160,6 +163,17 @@ import { SITE_TITLE } from '../consts';
 			margin-bottom: var(--space-lg);
 			flex-wrap: wrap;
 			gap: var(--space-md);
+		}
+
+		.product-title-group {
+			display: flex;
+			align-items: center;
+			gap: var(--space-md);
+		}
+
+		.product-logo {
+			height: 48px;
+			width: auto;
 		}
 
 		.product-header h3 {
@@ -314,6 +328,15 @@ import { SITE_TITLE } from '../consts';
 			.product-header {
 				flex-direction: column;
 				align-items: flex-start;
+			}
+
+			.product-title-group {
+				flex-direction: column;
+				align-items: flex-start;
+			}
+
+			.product-logo {
+				height: 36px;
 			}
 
 			.specs {

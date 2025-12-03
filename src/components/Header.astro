@@ -5,7 +5,10 @@ import { SITE_TITLE } from '../consts';
 <header>
   <div class="container">
     <nav>
-      <a href="/" class="logo">HERMETRIX</a>
+      <a href="/" class="logo">
+        <img src="/images/logo.png" alt="Hermetrix Logo" />
+        HERMETRIX
+      </a>
       <div class="nav-links">
         <a href="/">Home</a>
         <a href="/products">Products</a>
@@ -46,6 +49,14 @@ import { SITE_TITLE } from '../consts';
     text-decoration: none;
     border-bottom: none;
     padding-bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+  }
+
+  .logo img {
+    height: 32px;
+    width: auto;
   }
 
   .nav-links {
