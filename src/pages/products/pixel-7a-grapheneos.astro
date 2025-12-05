@@ -140,81 +140,6 @@ import { SITE_TITLE } from '../../consts';
 							<p class="contact-note">Contact us at <a href="mailto:hello@hermetrix.nz">hello@hermetrix.nz</a> for payment options and delivery arrangements.</p>
 						</div>
 					</div>
-					
-					<details class="technical-details">
-						<summary class="details-summary">
-							<span class="summary-title">Technical Details</span>
-							<span class="toggle-hint"></span>
-						</summary>
-						<div class="details-content">
-							<div class="specs-grid">
-								<div class="spec-item">
-							<strong>Security-First Operating System</strong>
-							<p>GrapheneOS is a privacy and security-focused mobile OS with full Android app compatibility. Developed as a non-profit open-source project, it undergoes continuous security research and includes substantial hardening beyond standard Android.</p>
-						</div>
-						
-						<div class="spec-item">
-							<strong>Hardware Security Features</strong>
-							<p>Pixel 7a includes Google's Titan M2 dedicated security chip, verified boot chain with rollback protection, hardware-backed key storage, and secure element for cryptographic operations. The device supports full disk encryption with hardware acceleration.</p>
-						</div>
-						
-						<div class="spec-item">
-							<strong>Hardened System Architecture</strong>
-							<p>Enhanced exploit mitigations including hardened memory allocator, hardened C library, compiler exploit mitigations, and extensive attack surface reduction. MAC randomization prevents network-level tracking and reduces fingerprinting vectors.</p>
-						</div>
-						
-						<div class="spec-item">
-							<strong>Privacy Protections</strong>
-							<p>No Google Play Services by default, eliminating privileged system-level tracking. Network permission toggle per-app, storage scopes limiting filesystem access, contact scopes for granular permission control, and sensors permission preventing background sensor access.</p>
-						</div>
-						
-						<div class="spec-item">
-							<strong>App Compatibility</strong>
-							<p>Run standard Android apps in a hardened sandboxed environment. Optional sandboxed Google Play Services provides app compatibility without system integration or privileged access. Apps function normally without sacrificing privacy or security.</p>
-						</div>
-						
-						<div class="spec-item">
-							<strong>Pre-Configured & Ready</strong>
-							<p>Devices are supplied with GrapheneOS professionally installed, pre-loaded with essential privacy applications (SimpleX, Tuta Mail, Aurora, F-Droid, NetGuard, Tor, IronFox, Signal), configured for optimal security settings, and ready for immediate deployment. Includes verified boot with user-controlled keys and OTA update support.</p>
-						</div>
-
-						<div class="spec-item">
-							<strong>Hardware Specifications</strong>
-							<p>Google Tensor G2 processor with Titan M2 security coprocessor. 8GB LPDDR5 RAM, 128GB storage. 6.1" OLED display (1080x2400, 90Hz). Dual rear cameras (64MP + 13MP ultrawide), 13MP front camera. IP67 dust and water resistance.</p>
-						</div>
-
-						<div class="spec-item">
-							<strong>Verified Boot</strong>
-							<p>Complete verified boot chain from hardware root of trust through operating system. User-controlled verified boot keys allow detection of unauthorized system modifications. Rollback protection prevents downgrade attacks to vulnerable firmware versions.</p>
-						</div>
-
-						<div class="spec-item">
-							<strong>Network Privacy</strong>
-							<p>Per-connection MAC randomization, no persistent hardware identifiers broadcast to networks. DNS over HTTPS by default. Optional always-on VPN enforcement and kill switch to prevent data leakage outside tunnel.</p>
-						</div>
-
-						<div class="spec-item">
-							<strong>Permission Model</strong>
-							<p>Extended Android permission system with additional controls. Network permission toggle per-app, sensors permission to block background access, storage scopes limiting filesystem access, and contact/storage scopes for granular data access control.</p>
-						</div>
-
-						<div class="spec-item">
-							<strong>Open Source Transparency</strong>
-							<p>Fully open-source operating system with transparent development process. Independent security audits, reproducible builds for verification, and active security research community. No hidden proprietary components or telemetry.</p>
-						</div>
-
-						<div class="spec-item">
-							<strong>Update Support</strong>
-							<p>Regular security updates delivered via over-the-air (OTA) updates. GrapheneOS provides extended support beyond standard Android EOL. Seamless A/B updates minimize downtime and provide rollback capability.</p>
-						</div>
-
-						<div class="spec-item">
-							<strong>Device Availability</strong>
-							<p>Google Pixel 7a currently in stock for immediate shipment. Custom orders available for Pixel 7a through Pixel 10 XL Pro models (1-3 business days processing). All devices professionally configured with GrapheneOS and privacy application suite.</p>
-						</div>
-					</div>
-						</div>
-					</details>
 
 					<h2>Perfect For</h2>
 					<div class="use-cases">
@@ -599,70 +524,6 @@ import { SITE_TITLE } from '../../consts';
 			border-bottom-color: var(--text-primary);
 		}
 
-		.technical-details {
-			margin: var(--space-3xl) 0;
-			padding: var(--space-xl);
-			background: rgba(0, 0, 0, 0.3);
-			border: 2px solid rgba(255, 255, 255, 0.1);
-			border-radius: 8px;
-		}
-
-		.technical-details summary {
-			cursor: pointer;
-			list-style: none;
-			display: flex !important;
-			align-items: center;
-			justify-content: center;
-			gap: var(--space-md);
-			transition: all 0.3s ease;
-			padding: var(--space-md);
-			user-select: none;
-			-webkit-tap-highlight-color: transparent;
-		}
-
-		.technical-details summary:hover {
-			color: var(--accent-secondary);
-		}
-
-		.technical-details summary::-webkit-details-marker,
-		.technical-details summary::marker {
-			display: none;
-		}
-
-		.summary-title {
-			color: var(--accent-secondary);
-			font-size: 1.875rem;
-			font-weight: 900;
-			text-transform: uppercase;
-			letter-spacing: 0.05em;
-			font-family: var(--font-family-display);
-		}
-
-		.toggle-hint {
-			font-size: 0.875rem;
-			color: var(--gray-400);
-			font-family: var(--font-family-mono);
-			text-transform: uppercase;
-			letter-spacing: 0.05em;
-		}
-		
-		.toggle-hint::before {
-			content: "(Click to expand)";
-		}
-
-		.technical-details[open] .toggle-hint::before {
-			content: "(Click to collapse)";
-		}
-
-		.technical-details summary::-webkit-details-marker,
-		.technical-details summary::marker {
-			display: none;
-		}
-
-		.details-content {
-			padding-top: var(--space-lg);
-		}
-
 		.card h2 {
 			color: var(--accent-secondary);
 			font-size: 1.875rem;
@@ -670,46 +531,6 @@ import { SITE_TITLE } from '../../consts';
 			margin-bottom: var(--space-xl);
 			text-transform: uppercase;
 			letter-spacing: 0.05em;
-		}
-
-		.specs-grid {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-			gap: var(--space-lg);
-			margin-bottom: var(--space-2xl);
-		}
-
-		.spec-item {
-			padding: var(--space-lg);
-			background: rgba(0, 0, 0, 0.4);
-			backdrop-filter: blur(3px);
-			border: 2px solid var(--white);
-			border-radius: 6px;
-			box-shadow: 4px 4px 0 rgba(255, 255, 255, 0.1);
-			transition: all 0.3s ease;
-		}
-
-		.spec-item:hover {
-			border-color: var(--accent-secondary);
-			transform: translate(-2px, -2px);
-			box-shadow: 6px 6px 0 rgba(0, 255, 255, 0.3);
-		}
-
-		.spec-item strong {
-			display: block;
-			color: var(--accent-secondary);
-			margin-bottom: var(--space-sm);
-			font-size: 1rem;
-			font-weight: 700;
-			text-transform: uppercase;
-			letter-spacing: 0.05em;
-		}
-
-		.spec-item p {
-			margin: 0;
-			font-size: 0.9375rem;
-			line-height: 1.6;
-			color: var(--text-secondary);
 		}
 
 		.use-cases {
@@ -845,8 +666,7 @@ import { SITE_TITLE } from '../../consts';
 			}
 
 			.configuration-options,
-			.pricing-section,
-			.technical-details {
+			.pricing-section {
 				padding: var(--space-lg);
 			}
 
@@ -873,41 +693,5 @@ import { SITE_TITLE } from '../../consts';
 			}
 		}
 	</style>
-	
-	<script is:inline>
-		// Force details element to work
-		(function() {
-			function initDetails() {
-				const details = document.querySelector('.technical-details');
-				const summary = details?.querySelector('summary');
-				
-				if (details && summary) {
-					console.log('Details element found, adding click handler');
-					summary.style.cursor = 'pointer';
-					
-					summary.addEventListener('click', function(e) {
-						e.preventDefault();
-						e.stopPropagation();
-						const isOpen = details.hasAttribute('open');
-						console.log('Clicked, current state:', isOpen);
-						
-						if (isOpen) {
-							details.removeAttribute('open');
-						} else {
-							details.setAttribute('open', '');
-						}
-					});
-				} else {
-					console.log('Details element not found');
-				}
-			}
-			
-			if (document.readyState === 'loading') {
-				document.addEventListener('DOMContentLoaded', initDetails);
-			} else {
-				initDetails();
-			}
-		})();
-	</script>
 </body>
 </html>
