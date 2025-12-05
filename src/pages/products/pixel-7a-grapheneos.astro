@@ -874,20 +874,40 @@ import { SITE_TITLE } from '../../consts';
 		}
 	</style>
 	
-	<script>
-		// Ensure details element works properly
-		document.addEventListener('DOMContentLoaded', () => {
-			const details = document.querySelector('.technical-details');
-			const summary = details?.querySelector('.details-summary');
-			
-			if (details && summary) {
-				// Remove any potential event blocking
-				summary.addEventListener('click', (e) => {
-					e.preventDefault();
-					details.open = !details.open;
-				});
+	<script is:inline>
+		// Force details element to work
+		(function() {
+			function initDetails() {
+				const details = document.querySelector('.technical-details');
+				const summary = details?.querySelector('summary');
+				
+				if (details && summary) {
+					console.log('Details element found, adding click handler');
+					summary.style.cursor = 'pointer';
+					
+					summary.addEventListener('click', function(e) {
+						e.preventDefault();
+						e.stopPropagation();
+						const isOpen = details.hasAttribute('open');
+						console.log('Clicked, current state:', isOpen);
+						
+						if (isOpen) {
+							details.removeAttribute('open');
+						} else {
+							details.setAttribute('open', '');
+						}
+					});
+				} else {
+					console.log('Details element not found');
+				}
 			}
-		});
+			
+			if (document.readyState === 'loading') {
+				document.addEventListener('DOMContentLoaded', initDetails);
+			} else {
+				initDetails();
+			}
+		})();
 	</script>
 </body>
 </html>
