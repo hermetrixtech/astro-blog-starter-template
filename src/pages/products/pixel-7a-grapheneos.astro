@@ -1,0 +1,304 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE } from '../../consts';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<BaseHead 
+		title={`Google Pixel 7a with GrapheneOS | ${SITE_TITLE}`}
+		description="Privacy-focused, security-hardened mobile platform with GrapheneOS pre-installed on Google Pixel 7a hardware. Hardware security features and open-source transparency."
+	/>
+</head>
+<body>
+	<a href="#main-content" class="skip-to-main">Skip to main content</a>
+	<Header />
+	<main id="main-content">
+		<section class="hero">
+			<div class="container">
+				<div class="hero-title-group">
+					<img src="/images/graphenelogo.png" alt="GrapheneOS Logo" class="hero-logo" />
+					<h1>Google Pixel 7a with GrapheneOS</h1>
+				</div>
+				<p class="tagline">Hardened Mobile Security Platform</p>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container">
+				<div class="card">
+					<div class="product-header">
+						<span class="badge">Privacy-Focused Operating System</span>
+					</div>
+					<p class="product-intro">The Google Pixel 7a running GrapheneOS provides a privacy-focused, security-hardened mobile platform that doesn't compromise on usability. GrapheneOS is a non-profit open-source project focused on privacy and security research, offering enhanced exploit mitigations, privacy protections, and full Android app compatibility.</p>
+					
+					<h2>Technical Specifications</h2>
+					
+					<div class="specs-grid">
+						<div class="spec-item">
+							<strong>Security-First Operating System</strong>
+							<p>GrapheneOS is a privacy and security-focused mobile OS with full Android app compatibility. Developed as a non-profit open-source project, it undergoes continuous security research and includes substantial hardening beyond standard Android.</p>
+						</div>
+						
+						<div class="spec-item">
+							<strong>Hardware Security Features</strong>
+							<p>Pixel 7a includes Google's Titan M2 dedicated security chip, verified boot chain with rollback protection, hardware-backed key storage, and secure element for cryptographic operations. The device supports full disk encryption with hardware acceleration.</p>
+						</div>
+						
+						<div class="spec-item">
+							<strong>Hardened System Architecture</strong>
+							<p>Enhanced exploit mitigations including hardened memory allocator, hardened C library, compiler exploit mitigations, and extensive attack surface reduction. MAC randomization prevents network-level tracking and reduces fingerprinting vectors.</p>
+						</div>
+						
+						<div class="spec-item">
+							<strong>Privacy Protections</strong>
+							<p>No Google Play Services by default, eliminating privileged system-level tracking. Network permission toggle per-app, storage scopes limiting filesystem access, contact scopes for granular permission control, and sensors permission preventing background sensor access.</p>
+						</div>
+						
+						<div class="spec-item">
+							<strong>App Compatibility</strong>
+							<p>Run standard Android apps in a hardened sandboxed environment. Optional sandboxed Google Play Services provides app compatibility without system integration or privileged access. Apps function normally without sacrificing privacy or security.</p>
+						</div>
+						
+						<div class="spec-item">
+							<strong>Pre-Configured & Ready</strong>
+							<p>Devices are supplied with GrapheneOS professionally installed, configured for optimal security and privacy settings, and ready for immediate deployment. Includes verified boot with user-controlled keys and over-the-air update support.</p>
+						</div>
+
+						<div class="spec-item">
+							<strong>Hardware Specifications</strong>
+							<p>Google Tensor G2 processor with Titan M2 security coprocessor. 8GB LPDDR5 RAM, 128GB storage. 6.1" OLED display (1080x2400, 90Hz). Dual rear cameras (64MP + 13MP ultrawide), 13MP front camera. IP67 dust and water resistance.</p>
+						</div>
+
+						<div class="spec-item">
+							<strong>Verified Boot</strong>
+							<p>Complete verified boot chain from hardware root of trust through operating system. User-controlled verified boot keys allow detection of unauthorized system modifications. Rollback protection prevents downgrade attacks to vulnerable firmware versions.</p>
+						</div>
+
+						<div class="spec-item">
+							<strong>Network Privacy</strong>
+							<p>Per-connection MAC randomization, no persistent hardware identifiers broadcast to networks. DNS over HTTPS by default. Optional always-on VPN enforcement and kill switch to prevent data leakage outside tunnel.</p>
+						</div>
+
+						<div class="spec-item">
+							<strong>Permission Model</strong>
+							<p>Extended Android permission system with additional controls. Network permission toggle per-app, sensors permission to block background access, storage scopes limiting filesystem access, and contact/storage scopes for granular data access control.</p>
+						</div>
+
+						<div class="spec-item">
+							<strong>Open Source Transparency</strong>
+							<p>Fully open-source operating system with transparent development process. Independent security audits, reproducible builds for verification, and active security research community. No hidden proprietary components or telemetry.</p>
+						</div>
+
+						<div class="spec-item">
+							<strong>Update Support</strong>
+							<p>Regular security updates delivered via over-the-air (OTA) updates. GrapheneOS provides extended support beyond standard Android EOL. Seamless A/B updates minimize downtime and provide rollback capability.</p>
+						</div>
+					</div>
+
+					<h2>Use Cases</h2>
+					<div class="use-cases">
+						<div class="use-case-item">
+							<h4>Privacy-Conscious Professionals</h4>
+							<p>Journalists, lawyers, activists, and researchers requiring confidential communications, secure document handling, and protection from network surveillance.</p>
+						</div>
+						<div class="use-case-item">
+							<h4>Enterprise Security</h4>
+							<p>Organizations requiring mobile devices with hardened security posture, verifiable integrity, and reduced attack surface for accessing sensitive corporate resources.</p>
+						</div>
+						<div class="use-case-item">
+							<h4>Threat-Aware Individuals</h4>
+							<p>Users facing elevated threat models requiring protection from sophisticated adversaries, exploitation attempts, and persistent surveillance capabilities.</p>
+						</div>
+						<div class="use-case-item">
+							<h4>Security Research</h4>
+							<p>Security professionals and researchers requiring a transparent, auditable mobile platform for secure communications and development of privacy-preserving applications.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="back-to-products">
+					<a href="/products" class="btn secondary">← Back to Products</a>
+					<a href="mailto:hello@hermetrix.nz" class="btn primary">Order This Product</a>
+				</div>
+			</div>
+		</section>
+	</main>
+	<Footer />
+
+	<style>
+		.hero {
+			padding: var(--space-3xl) 0 var(--space-2xl);
+		}
+
+		.hero-title-group {
+			display: flex;
+			align-items: center;
+			gap: var(--space-lg);
+			flex-wrap: wrap;
+		}
+
+		.hero-logo {
+			height: 80px;
+			width: auto;
+		}
+
+		.tagline {
+			font-size: 1.25rem;
+			color: var(--text-secondary);
+			margin-top: var(--space-md);
+			font-family: var(--font-family-mono);
+			text-transform: uppercase;
+			letter-spacing: 0.15em;
+		}
+
+		.card {
+			background-color: rgba(0, 0, 0, 0.6);
+			backdrop-filter: blur(5px);
+		}
+
+		.product-header {
+			margin-bottom: var(--space-lg);
+		}
+
+		.badge {
+			display: inline-block;
+			padding: var(--space-sm) var(--space-md);
+			background: rgba(0, 255, 255, 0.1);
+			border: 2px solid var(--accent-secondary);
+			border-radius: 6px;
+			font-size: 0.75rem;
+			font-weight: 700;
+			color: var(--accent-secondary);
+			font-family: var(--font-family-mono);
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+			box-shadow: 3px 3px 0 rgba(0, 255, 255, 0.2);
+		}
+
+		.product-intro {
+			font-size: 1.125rem;
+			margin-bottom: var(--space-xl);
+			color: var(--text-secondary);
+			line-height: 1.8;
+		}
+
+		.card h2 {
+			color: var(--accent-secondary);
+			font-size: 1.875rem;
+			margin-top: var(--space-2xl);
+			margin-bottom: var(--space-xl);
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+		}
+
+		.specs-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			gap: var(--space-lg);
+			margin-bottom: var(--space-2xl);
+		}
+
+		.spec-item {
+			padding: var(--space-lg);
+			background: rgba(0, 0, 0, 0.4);
+			backdrop-filter: blur(3px);
+			border: 2px solid var(--white);
+			border-radius: 6px;
+			box-shadow: 4px 4px 0 rgba(255, 255, 255, 0.1);
+			transition: all 0.3s ease;
+		}
+
+		.spec-item:hover {
+			border-color: var(--accent-secondary);
+			transform: translate(-2px, -2px);
+			box-shadow: 6px 6px 0 rgba(0, 255, 255, 0.3);
+		}
+
+		.spec-item strong {
+			display: block;
+			color: var(--accent-secondary);
+			margin-bottom: var(--space-sm);
+			font-size: 1rem;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+		}
+
+		.spec-item p {
+			margin: 0;
+			font-size: 0.9375rem;
+			line-height: 1.6;
+			color: var(--text-secondary);
+		}
+
+		.use-cases {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+			gap: var(--space-lg);
+			margin-top: var(--space-xl);
+		}
+
+		.use-case-item {
+			padding: var(--space-lg);
+			background: rgba(0, 204, 204, 0.05);
+			border: 2px solid var(--accent-secondary);
+			border-radius: 6px;
+			transition: all 0.3s ease;
+		}
+
+		.use-case-item:hover {
+			background: rgba(0, 204, 204, 0.1);
+			transform: translateY(-2px);
+		}
+
+		.use-case-item h4 {
+			color: var(--accent-secondary);
+			margin: 0 0 var(--space-sm) 0;
+			font-size: 1.125rem;
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+		}
+
+		.use-case-item p {
+			margin: 0;
+			font-size: 0.9375rem;
+			color: var(--text-secondary);
+			line-height: 1.6;
+		}
+
+		.back-to-products {
+			margin-top: var(--space-2xl);
+			display: flex;
+			gap: var(--space-lg);
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+
+		@media (max-width: 768px) {
+			.hero {
+				padding: var(--space-2xl) 0 var(--space-xl);
+			}
+
+			.hero-logo {
+				height: 48px;
+			}
+
+			.specs-grid {
+				grid-template-columns: 1fr;
+			}
+
+			.use-cases {
+				grid-template-columns: 1fr;
+			}
+
+			.back-to-products {
+				flex-direction: column;
+			}
+		}
+	</style>
+</body>
+</html>

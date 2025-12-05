@@ -26,7 +26,7 @@ import { SITE_TITLE } from '../consts';
 
 		<section class="section">
 			<div class="container">
-				<p>We provide enterprise-grade security hardware that meets stringent protection requirements. All products are carefully evaluated and selected for their certification standards, build quality, and operational security features.</p>
+				<p class="intro-text">We provide enterprise-grade security hardware that meets stringent protection requirements. All products are carefully evaluated and selected for their certification standards, build quality, and operational security features.</p>
 			</div>
 		</section>
 
@@ -34,91 +34,87 @@ import { SITE_TITLE } from '../consts';
 			<div class="container">
 				<h2>Available Hardware</h2>
 				
-				<div class="card product-card">
-					<div class="product-header">
-						<h3>iStorage datAshur PRO+C</h3>
-						<span class="badge">FIPS 140-3 Level 3 Certified</span>
-					</div>
-					<p class="product-intro">The datAshur PRO+C is one of the first portable storage devices to achieve FIPS 140-3 Level 3 validation — the highest assurance level currently available for commercial removable media. Available for purchase through Hermetrix.</p>
-					
-					<div class="specs">
-						<div class="spec-item">
-							<strong>Independent Certification</strong>
-							<p>Validated to FIPS 140-3 Level 3, including hardened tamper-resistant construction, role-based authentication, and secure key storage.</p>
+				<div class="products-grid">
+					<a href="/products/datashur-pro-plus-c" class="product-card-link">
+						<div class="card product-card">
+							<div class="product-image-placeholder">
+								{/* Product image will go here */}
+								<div class="image-placeholder-content">
+									<span>Product Image</span>
+								</div>
+							</div>
+							<div class="product-content">
+								<div class="product-header">
+									<h3>iStorage datAshur PRO+C</h3>
+									<span class="badge badge-magenta">FIPS 140-3 Level 3</span>
+								</div>
+								<p class="product-description">Hardware-encrypted portable storage with military-grade security. FIPS 140-3 Level 3 certified with tamper-resistant construction and on-device PIN authentication.</p>
+								<div class="product-footer">
+									<span class="view-details">View Details →</span>
+								</div>
+							</div>
 						</div>
-						
-						<div class="spec-item">
-							<strong>Encryption Architecture</strong>
-							<p>Full-disk AES-XTS 256-bit hardware encryption performed entirely on the device, ensuring encryption keys never touch a host system.</p>
-						</div>
-						
-						<div class="spec-item">
-							<strong>Tamper-Resistant Electronics</strong>
-							<p>Internal components are encapsulated in a protective resin barrier designed to reveal and resist probing, drilling, voltage manipulation, or physical intrusion.</p>
-						</div>
-						
-						<div class="spec-item">
-							<strong>On-Device PIN Entry</strong>
-							<p>Access is controlled through an integrated keypad, preventing keylogging and ensuring authentication occurs before the device connects to any computer.</p>
-						</div>
-						
-						<div class="spec-item">
-							<strong>Brute-Force Protection</strong>
-							<p>After a defined number of incorrect PIN attempts, the device cryptographically erases its keys and permanently prevents further access.</p>
-						</div>
-						
-						<div class="spec-item">
-							<strong>System Compatibility</strong>
-							<p>OS-agnostic operation. Works with Windows, macOS, Linux, thin clients, virtualised systems, and embedded devices without drivers or software.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+					</a>
 
-		<section class="section">
-			<div class="container">
-				<div class="card product-card">
-					<div class="product-header">
-						<div class="product-title-group">
-							<img src="/images/graphenelogo.png" alt="GrapheneOS Logo" class="product-logo" />
-							<h3>Google Pixel 7a with GrapheneOS</h3>
+					<a href="/products/pixel-7a-grapheneos" class="product-card-link">
+						<div class="card product-card">
+							<div class="product-image-placeholder">
+								<div class="image-placeholder-content">
+									<img src="/images/graphenelogo.png" alt="GrapheneOS Logo" class="placeholder-logo" />
+								</div>
+							</div>
+							<div class="product-content">
+								<div class="product-header">
+									<h3>Google Pixel 7a with GrapheneOS</h3>
+									<span class="badge badge-cyan">Hardened Mobile Security</span>
+								</div>
+								<p class="product-description">Privacy-focused security-hardened mobile platform. Open-source OS with enhanced exploit mitigations, privacy protections, and full Android app compatibility.</p>
+								<div class="product-footer">
+									<span class="view-details">View Details →</span>
+								</div>
+							</div>
 						</div>
-						<span class="badge">Hardened Mobile Security</span>
-					</div>
-					<p class="product-intro">The Google Pixel 7a running GrapheneOS provides a privacy-focused, security-hardened mobile platform. GrapheneOS is a non-profit open-source project focused on privacy and security research and development.</p>
-					
-					<div class="specs">
-						<div class="spec-item">
-							<strong>Security-First Operating System</strong>
-							<p>GrapheneOS is a privacy and security-focused mobile OS with Android app compatibility, developed as a non-profit open-source project.</p>
+					</a>
+
+					<a href="/products/tails-os-usb" class="product-card-link">
+						<div class="card product-card">
+							<div class="product-image-placeholder">
+								<div class="image-placeholder-content">
+									<span>Product Image</span>
+								</div>
+							</div>
+							<div class="product-content">
+								<div class="product-header">
+									<h3>Tails OS USB Thumbdrive</h3>
+									<span class="badge badge-blue">Live Operating System</span>
+								</div>
+								<p class="product-description">Portable privacy-focused operating system on bootable USB. Leaves no trace, routes all traffic through Tor, and provides encryption by default for anonymous computing.</p>
+								<div class="product-footer">
+									<span class="view-details">View Details →</span>
+								</div>
+							</div>
 						</div>
-						
-						<div class="spec-item">
-							<strong>Hardware Security Features</strong>
-							<p>Pixel 7a includes Google's Titan M2 security chip, verified boot, and hardware-backed keystorage for strong cryptographic protections.</p>
+					</a>
+
+					<a href="/products/refurbished-shredders" class="product-card-link">
+						<div class="card product-card">
+							<div class="product-image-placeholder">
+								<div class="image-placeholder-content">
+									<span>Product Image</span>
+								</div>
+							</div>
+							<div class="product-content">
+								<div class="product-header">
+									<h3>Refurbished Shredders</h3>
+									<span class="badge badge-green">NSA-Approved Security</span>
+								</div>
+								<p class="product-description">High-security paper shredders for document destruction. Professionally refurbished cross-cut and micro-cut models meeting NSA/CSS EPL standards for classified materials.</p>
+								<div class="product-footer">
+									<span class="view-details">View Details →</span>
+								</div>
+							</div>
 						</div>
-						
-						<div class="spec-item">
-							<strong>Hardened System Architecture</strong>
-							<p>Enhanced exploit mitigations, MAC randomization, hardened memory allocator, and extensive attack surface reduction.</p>
-						</div>
-						
-						<div class="spec-item">
-							<strong>Privacy Protections</strong>
-							<p>No Google Play Services by default, network permission toggle, storage scopes, contact scopes, and sensors permission controls.</p>
-						</div>
-						
-						<div class="spec-item">
-							<strong>App Compatibility</strong>
-							<p>Run standard Android apps in a sandboxed environment. Optional sandboxed Google Play Services for app compatibility without system integration.</p>
-						</div>
-						
-						<div class="spec-item">
-							<strong>Pre-Configured & Ready</strong>
-							<p>Devices are supplied with GrapheneOS professionally installed, configured for optimal security, and ready for immediate deployment.</p>
-						</div>
-					</div>
+					</a>
 				</div>
 			</div>
 		</section>
@@ -126,7 +122,7 @@ import { SITE_TITLE } from '../consts';
 		<section class="section">
 			<div class="container text-center">
 				<h2>Purchase & Consultation</h2>
-				<p>Contact us to purchase the iStorage datAshur PRO+C or Google Pixel 7a with GrapheneOS. We also provide consultation services to help you determine which security hardware best fits your operational requirements, compliance regime, and threat model.</p>
+				<p>Contact us to purchase security hardware or discuss your specific requirements. We provide consultation services to help you determine which products best fit your operational requirements, compliance regime, and threat model.</p>
 				<div class="cta-buttons">
 					<a href="mailto:hello@hermetrix.nz" class="btn primary">Order Products</a>
 					<a href="/services" class="btn secondary">View Services</a>
@@ -150,171 +146,192 @@ import { SITE_TITLE } from '../consts';
 			letter-spacing: 0.15em;
 		}
 
-		.product-card {
+		.intro-text {
+			font-size: 1.125rem;
+			max-width: 900px;
+			margin: 0 auto;
+			text-align: center;
+			line-height: 1.8;
+		}
+
+		.products-grid {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: var(--space-2xl);
 			margin-top: var(--space-2xl);
+		}
+
+		.product-card-link {
+			text-decoration: none;
+			border: none;
+			padding: 0;
+			display: block;
+			transition: transform 0.3s ease;
+		}
+
+		.product-card-link:hover {
+			transform: translateY(-4px);
+		}
+
+		.product-card-link::before {
+			display: none;
+		}
+
+		.product-card {
+			margin: 0;
 			background-color: rgba(0, 0, 0, 0.6);
 			backdrop-filter: blur(5px);
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			transition: all 0.3s ease;
+		}
+
+		.product-card:hover {
+			border-color: var(--accent-primary);
+			box-shadow: 
+				9px 9px 0 rgba(204, 0, 204, 0.2),
+				0 0 30px rgba(204, 0, 204, 0.15);
+		}
+
+		.product-image-placeholder {
+			width: 100%;
+			height: 240px;
+			background: linear-gradient(135deg, rgba(40, 40, 40, 0.8) 0%, rgba(21, 21, 21, 0.8) 100%);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-bottom: 2px solid var(--off-white);
+			position: relative;
+			overflow: hidden;
+		}
+
+		.product-image-placeholder::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: repeating-linear-gradient(
+				45deg,
+				transparent,
+				transparent 10px,
+				rgba(255, 255, 255, 0.02) 10px,
+				rgba(255, 255, 255, 0.02) 20px
+			);
+		}
+
+		.image-placeholder-content {
+			position: relative;
+			z-index: 1;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			height: 100%;
+		}
+
+		.image-placeholder-content span {
+			color: var(--gray-400);
+			font-family: var(--font-family-mono);
+			font-size: 0.875rem;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+		}
+
+		.placeholder-logo {
+			height: 80px;
+			width: auto;
+			opacity: 0.9;
+		}
+
+		.product-content {
+			padding: var(--space-lg);
+			display: flex;
+			flex-direction: column;
+			flex: 1;
 		}
 
 		.product-header {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			margin-bottom: var(--space-lg);
-			flex-wrap: wrap;
-			gap: var(--space-md);
-		}
-
-		.product-title-group {
-			display: flex;
-			align-items: center;
-			gap: var(--space-md);
-		}
-
-		.product-logo {
-			height: 48px;
-			width: auto;
+			margin-bottom: var(--space-md);
 		}
 
 		.product-header h3 {
-			margin: 0;
+			margin: 0 0 var(--space-sm) 0;
 			color: var(--text-primary);
 			font-weight: 900;
+			font-size: 1.375rem;
 		}
 
 		.badge {
 			display: inline-block;
-			padding: var(--space-sm) var(--space-md);
-			background: rgba(255, 0, 255, 0.1);
-			border: 2px solid var(--accent-primary);
+			padding: var(--space-xs) var(--space-sm);
+			border: 2px solid;
 			border-radius: 6px;
-			font-size: 0.75rem;
+			font-size: 0.6875rem;
 			font-weight: 700;
-			color: var(--accent-primary);
 			font-family: var(--font-family-mono);
 			text-transform: uppercase;
 			letter-spacing: 0.1em;
+			box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
+		}
+
+		.badge-magenta {
+			background: rgba(255, 0, 255, 0.1);
+			border-color: var(--accent-primary);
+			color: var(--accent-primary);
 			box-shadow: 3px 3px 0 rgba(255, 0, 255, 0.2);
-			transition: all 0.3s ease;
 		}
 
-		.badge:hover {
-			transform: translate(-2px, -2px);
-			box-shadow: 5px 5px 0 rgba(255, 0, 255, 0.3);
-		}
-
-		/* Second product badge - cyan variant */
-		.product-card:nth-of-type(2) .badge {
+		.badge-cyan {
 			background: rgba(0, 255, 255, 0.1);
 			border-color: var(--accent-secondary);
 			color: var(--accent-secondary);
 			box-shadow: 3px 3px 0 rgba(0, 255, 255, 0.2);
 		}
 
-		.product-card:nth-of-type(2) .badge:hover {
-			box-shadow: 5px 5px 0 rgba(0, 255, 255, 0.3);
-		}
-
-		/* Second product specs - cyan accents */
-		.product-card:nth-of-type(2) .spec-item::before {
-			background: radial-gradient(circle, var(--electric-blue) 0%, transparent 70%);
-		}
-
-		.product-card:nth-of-type(2) .spec-item:hover {
+		.badge-blue {
+			background: rgba(0, 82, 204, 0.1);
 			border-color: var(--accent-tertiary);
-			box-shadow: 6px 6px 0 rgba(0, 102, 255, 0.3);
+			color: var(--accent-tertiary);
+			box-shadow: 3px 3px 0 rgba(0, 82, 204, 0.2);
 		}
 
-		.product-card:nth-of-type(2) .spec-item strong {
-			color: var(--accent-secondary);
+		.badge-green {
+			background: rgba(0, 204, 82, 0.1);
+			border-color: var(--acid-green);
+			color: var(--acid-green);
+			box-shadow: 3px 3px 0 rgba(0, 204, 82, 0.2);
 		}
 
-		.product-intro {
-			font-size: 1.125rem;
-			margin-bottom: var(--space-xl);
-			color: var(--text-secondary);
-		}
-
-		.specs {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-			gap: var(--space-lg);
-		}
-
-		.spec-item {
-			padding: var(--space-lg);
-			background: rgba(0, 0, 0, 0.4);
-			backdrop-filter: blur(3px);
-			border: 2px solid var(--white);
-			border-radius: 6px;
-			box-shadow: 4px 4px 0 rgba(255, 255, 255, 0.1);
-			transition: all 0.3s ease;
-			position: relative;
-			overflow: hidden;
-		}
-
-		.spec-item::before {
-			content: '';
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			width: 0;
-			height: 0;
-			border-radius: 50%;
-			background: radial-gradient(circle, var(--cyan) 0%, transparent 70%);
-			opacity: 0;
-			transform: translate(-50%, -50%);
-			transition: all 0.5s ease;
-			z-index: -1;
-		}
-
-		.spec-item:hover {
-			border-color: var(--accent-secondary);
-			transform: translate(-2px, -2px);
-			box-shadow: 6px 6px 0 rgba(0, 255, 255, 0.3);
-		}
-
-		.spec-item:hover::before {
-			width: 200%;
-			height: 200%;
-			opacity: 0.05;
-		}
-
-		.spec-item strong {
-			display: block;
-			color: var(--accent-primary);
-			margin-bottom: var(--space-sm);
-			font-size: 1rem;
-			font-weight: 700;
-			text-transform: uppercase;
-			letter-spacing: 0.05em;
-		}
-
-		.spec-item p {
-			margin: 0;
+		.product-description {
 			font-size: 0.9375rem;
 			line-height: 1.6;
 			color: var(--text-secondary);
+			margin-bottom: var(--space-md);
+			flex: 1;
 		}
 
-		.notice {
-			padding: var(--space-xl);
-			background: rgba(0, 0, 0, 0.5);
-			backdrop-filter: blur(5px);
-			border-left: 4px solid var(--accent-primary);
-			border-radius: 6px;
-			box-shadow: 0 0 20px rgba(255, 0, 255, 0.1);
+		.product-footer {
+			margin-top: auto;
+			padding-top: var(--space-md);
+			border-top: 2px solid rgba(255, 255, 255, 0.1);
 		}
 
-		.notice h3 {
+		.view-details {
 			color: var(--accent-primary);
-			margin-top: 0;
-			font-weight: 900;
+			font-family: var(--font-family-mono);
+			font-size: 0.875rem;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+			transition: all 0.3s ease;
 		}
 
-		.notice p {
-			margin-bottom: 0;
-			color: var(--text-secondary);
+		.product-card-link:hover .view-details {
+			color: var(--accent-secondary);
+			text-shadow: 0 0 8px rgba(0, 255, 255, 0.4);
 		}
 
 		.cta-buttons {
@@ -322,6 +339,12 @@ import { SITE_TITLE } from '../consts';
 			gap: var(--space-lg);
 			justify-content: center;
 			margin-top: var(--space-xl);
+		}
+
+		@media (max-width: 1024px) {
+			.products-grid {
+				gap: var(--space-xl);
+			}
 		}
 
 		@media (max-width: 768px) {
@@ -333,43 +356,21 @@ import { SITE_TITLE } from '../consts';
 				font-size: 1rem;
 			}
 
-			.product-card {
-				padding: var(--space-lg);
-				margin-top: var(--space-xl);
-			}
-
-			.product-header {
-				flex-direction: column;
-				align-items: flex-start;
-				gap: var(--space-md);
-			}
-
-			.product-title-group {
-				flex-direction: row;
-				align-items: center;
-				gap: var(--space-md);
-			}
-
-			.product-logo {
-				height: 36px;
-			}
-
-			.product-intro {
+			.intro-text {
 				font-size: 1rem;
 			}
 
-			.specs {
+			.products-grid {
 				grid-template-columns: 1fr;
-				gap: var(--space-md);
+				gap: var(--space-xl);
 			}
 
-			.spec-item {
-				padding: var(--space-md);
+			.product-image-placeholder {
+				height: 200px;
 			}
 
-			.spec-item:hover {
-				transform: translate(-1px, -1px);
-				box-shadow: 4px 4px 0 rgba(0, 255, 255, 0.3);
+			.product-header h3 {
+				font-size: 1.25rem;
 			}
 
 			.cta-buttons {
@@ -385,31 +386,26 @@ import { SITE_TITLE } from '../consts';
 
 			.product-card {
 				padding: var(--space-md);
-				border-width: 2px;
+			}
+
+			.product-content {
+				padding: var(--space-md);
+			}
+
+			.product-image-placeholder {
+				height: 180px;
 			}
 
 			.product-header h3 {
-				font-size: 1.25rem;
-			}
-
-			.product-logo {
-				height: 28px;
+				font-size: 1.125rem;
 			}
 
 			.badge {
-				font-size: 0.6875rem;
-				padding: var(--space-xs) var(--space-sm);
+				font-size: 0.625rem;
+				padding: var(--space-xs) var(--space-xs);
 			}
 
-			.spec-item {
-				padding: var(--space-sm);
-			}
-
-			.spec-item strong {
-				font-size: 0.875rem;
-			}
-
-			.spec-item p {
+			.product-description {
 				font-size: 0.875rem;
 			}
 		}

@@ -1,0 +1,329 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE } from '../../consts';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<BaseHead 
+		title={`Tails OS USB Thumbdrive | ${SITE_TITLE}`}
+		description="Bootable USB thumbdrive with Tails OS pre-installed. Portable privacy-focused operating system that leaves no trace and routes all traffic through Tor."
+	/>
+</head>
+<body>
+	<a href="#main-content" class="skip-to-main">Skip to main content</a>
+	<Header />
+	<main id="main-content">
+		<section class="hero">
+			<div class="container">
+				<h1>Tails OS USB Thumbdrive</h1>
+				<p class="tagline">Portable Privacy Operating System</p>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container">
+				<div class="card">
+					<div class="product-header">
+						<span class="badge">Live Operating System</span>
+					</div>
+					<p class="product-intro">Tails (The Amnesic Incognito Live System) is a portable operating system that protects your privacy and anonymity. Pre-installed on a high-quality USB thumbdrive, it can be booted on almost any computer without leaving traces of your activity. All internet connections are automatically routed through the Tor network, and the system is designed to use encryption by default.</p>
+					
+					<h2>Technical Specifications</h2>
+					
+					<div class="specs-grid">
+						<div class="spec-item">
+							<strong>Live Operating System</strong>
+							<p>Boots directly from USB without installation or modification to the host computer. Runs entirely from RAM, leaving no trace on the machine. The operating system is read-only, preventing persistent malware infection.</p>
+						</div>
+						
+						<div class="spec-item">
+							<strong>Tor Network Integration</strong>
+							<p>All internet connections automatically routed through Tor network, providing anonymity by obscuring IP address and location. Connection blocking prevents non-Tor network access. No clearnet bypass possible without explicit user action.</p>
+						</div>
+						
+						<div class="spec-item">
+							<strong>Amnesic Architecture</strong>
+							<p>System resets to clean state on shutdown or reboot. RAM contents cryptographically wiped during power-off. No persistent storage of browsing history, temporary files, or activity logs unless explicitly configured with encrypted persistence.</p>
+						</div>
+						
+						<div class="spec-item">
+							<strong>Encryption by Default</strong>
+							<p>LUKS-encrypted persistent storage option available for retaining documents and settings between sessions. Encrypted communications via PGP, OTR, and HTTPS. Full disk encryption for any data you choose to save.</p>
+						</div>
+						
+						<div class="spec-item">
+							<strong>Built-in Privacy Tools</strong>
+							<p>Includes Tor Browser, Thunderbird with Enigmail for encrypted email, KeePassXC password manager, OnionShare for anonymous file sharing, Electrum Bitcoin wallet, and LibreOffice suite for document editing.</p>
+						</div>
+						
+						<div class="spec-item">
+							<strong>Hardware Compatibility</strong>
+							<p>Boots on most x86-64 computers from the past 10 years. Works with BIOS and UEFI firmware. Compatible with Windows PCs, Macs (Intel-based), and Linux machines. No drivers or software installation required on host.</p>
+						</div>
+
+						<div class="spec-item">
+							<strong>Metadata Anonymization</strong>
+							<p>Automatic metadata cleaning tool removes identifying information from documents and images before sharing. Protection against document watermarking, EXIF data leakage, and hidden forensic identifiers.</p>
+						</div>
+
+						<div class="spec-item">
+							<strong>USB Specifications</strong>
+							<p>High-quality USB 3.0 thumbdrive with write-protect switch for read-only operation. Minimum 8GB capacity. Durable metal or reinforced plastic housing. Pre-verified Tails installation with secure boot capabilities.</p>
+						</div>
+
+						<div class="spec-item">
+							<strong>Secure Boot Support</strong>
+							<p>Compatible with UEFI Secure Boot on modern systems. Verified boot chain ensures system integrity. Digital signatures prevent unauthorized modification. Automatic update verification for new Tails releases.</p>
+						</div>
+
+						<div class="spec-item">
+							<strong>Network Anonymity</strong>
+							<p>MAC address randomization prevents hardware fingerprinting. No DNS leaks outside Tor. Protection against common deanonymization attacks. Isolation of different identities through separate Tor circuits.</p>
+						</div>
+
+						<div class="spec-item">
+							<strong>Open Source Foundation</strong>
+							<p>Based on Debian Linux with extensive security hardening. Fully auditable open-source codebase. Regular security updates from Tails development team. Community-reviewed and independently verified security model.</p>
+						</div>
+
+						<div class="spec-item">
+							<strong>Persistent Storage Option</strong>
+							<p>Optional encrypted persistent volume can store: PGP keys, SSH keys, browser bookmarks, email client configuration, additional software, and personal documents. Unlocked only with passphrase at boot time.</p>
+						</div>
+					</div>
+
+					<h2>Use Cases</h2>
+					<div class="use-cases">
+						<div class="use-case-item">
+							<h4>Investigative Journalism</h4>
+							<p>Secure communications with confidential sources, anonymous research, and protection of unpublished materials from seizure or surveillance.</p>
+						</div>
+						<div class="use-case-item">
+							<h4>Human Rights & Activism</h4>
+							<p>Anonymous organizing, protection from state surveillance, secure coordination in hostile environments, and safeguarding of sensitive documentation.</p>
+						</div>
+						<div class="use-case-item">
+							<h4>Travel Security</h4>
+							<p>Using untrusted computers safely, avoiding border device inspection, accessing sensitive accounts from public terminals, and preventing hotel/cafe network surveillance.</p>
+						</div>
+						<div class="use-case-item">
+							<h4>Whistleblowing & Disclosure</h4>
+							<p>Anonymous submission of evidence, protection of source identity, secure document verification, and untraceable communication channels.</p>
+						</div>
+					</div>
+
+					<div class="notice">
+						<h3>Important Usage Notes</h3>
+						<p><strong>Threat Model Awareness:</strong> Tails protects against network surveillance and local forensics but cannot protect against hardware keyloggers, compromised BIOS/firmware, or physical surveillance. Always verify the boot process hasn't been tampered with.</p>
+						<p><strong>Persistent Security:</strong> While Tails leaves no trace by default, enabling persistent storage creates an encrypted volume that must be protected. Use strong passphrases and understand the risks of persistent data.</p>
+						<p><strong>Tor Limitations:</strong> Tor provides anonymity but not magic. Logging into personal accounts, posting identifying information, or downloading malware can deanonymize you despite using Tor.</p>
+					</div>
+				</div>
+
+				<div class="back-to-products">
+					<a href="/products" class="btn secondary">← Back to Products</a>
+					<a href="mailto:hello@hermetrix.nz" class="btn primary">Order This Product</a>
+				</div>
+			</div>
+		</section>
+	</main>
+	<Footer />
+
+	<style>
+		.hero {
+			padding: var(--space-3xl) 0 var(--space-2xl);
+		}
+
+		.tagline {
+			font-size: 1.25rem;
+			color: var(--text-secondary);
+			margin-top: var(--space-md);
+			font-family: var(--font-family-mono);
+			text-transform: uppercase;
+			letter-spacing: 0.15em;
+		}
+
+		.card {
+			background-color: rgba(0, 0, 0, 0.6);
+			backdrop-filter: blur(5px);
+		}
+
+		.product-header {
+			margin-bottom: var(--space-lg);
+		}
+
+		.badge {
+			display: inline-block;
+			padding: var(--space-sm) var(--space-md);
+			background: rgba(0, 82, 204, 0.1);
+			border: 2px solid var(--accent-tertiary);
+			border-radius: 6px;
+			font-size: 0.75rem;
+			font-weight: 700;
+			color: var(--accent-tertiary);
+			font-family: var(--font-family-mono);
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+			box-shadow: 3px 3px 0 rgba(0, 82, 204, 0.2);
+		}
+
+		.product-intro {
+			font-size: 1.125rem;
+			margin-bottom: var(--space-xl);
+			color: var(--text-secondary);
+			line-height: 1.8;
+		}
+
+		.card h2 {
+			color: var(--accent-tertiary);
+			font-size: 1.875rem;
+			margin-top: var(--space-2xl);
+			margin-bottom: var(--space-xl);
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+		}
+
+		.specs-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			gap: var(--space-lg);
+			margin-bottom: var(--space-2xl);
+		}
+
+		.spec-item {
+			padding: var(--space-lg);
+			background: rgba(0, 0, 0, 0.4);
+			backdrop-filter: blur(3px);
+			border: 2px solid var(--white);
+			border-radius: 6px;
+			box-shadow: 4px 4px 0 rgba(255, 255, 255, 0.1);
+			transition: all 0.3s ease;
+		}
+
+		.spec-item:hover {
+			border-color: var(--accent-tertiary);
+			transform: translate(-2px, -2px);
+			box-shadow: 6px 6px 0 rgba(0, 82, 204, 0.3);
+		}
+
+		.spec-item strong {
+			display: block;
+			color: var(--accent-tertiary);
+			margin-bottom: var(--space-sm);
+			font-size: 1rem;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+		}
+
+		.spec-item p {
+			margin: 0;
+			font-size: 0.9375rem;
+			line-height: 1.6;
+			color: var(--text-secondary);
+		}
+
+		.use-cases {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+			gap: var(--space-lg);
+			margin-top: var(--space-xl);
+		}
+
+		.use-case-item {
+			padding: var(--space-lg);
+			background: rgba(0, 82, 204, 0.05);
+			border: 2px solid var(--accent-tertiary);
+			border-radius: 6px;
+			transition: all 0.3s ease;
+		}
+
+		.use-case-item:hover {
+			background: rgba(0, 82, 204, 0.1);
+			transform: translateY(-2px);
+		}
+
+		.use-case-item h4 {
+			color: var(--accent-tertiary);
+			margin: 0 0 var(--space-sm) 0;
+			font-size: 1.125rem;
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+		}
+
+		.use-case-item p {
+			margin: 0;
+			font-size: 0.9375rem;
+			color: var(--text-secondary);
+			line-height: 1.6;
+		}
+
+		.notice {
+			padding: var(--space-xl);
+			background: rgba(0, 0, 0, 0.5);
+			backdrop-filter: blur(5px);
+			border-left: 4px solid var(--accent-tertiary);
+			border-radius: 6px;
+			box-shadow: 0 0 20px rgba(0, 82, 204, 0.1);
+			margin-top: var(--space-2xl);
+		}
+
+		.notice h3 {
+			color: var(--accent-tertiary);
+			margin-top: 0;
+			margin-bottom: var(--space-lg);
+			font-weight: 900;
+			font-size: 1.5rem;
+		}
+
+		.notice p {
+			margin-bottom: var(--space-md);
+			color: var(--text-secondary);
+			line-height: 1.7;
+		}
+
+		.notice p:last-child {
+			margin-bottom: 0;
+		}
+
+		.notice strong {
+			color: var(--accent-tertiary);
+			font-weight: 700;
+		}
+
+		.back-to-products {
+			margin-top: var(--space-2xl);
+			display: flex;
+			gap: var(--space-lg);
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+
+		@media (max-width: 768px) {
+			.hero {
+				padding: var(--space-2xl) 0 var(--space-xl);
+			}
+
+			.specs-grid {
+				grid-template-columns: 1fr;
+			}
+
+			.use-cases {
+				grid-template-columns: 1fr;
+			}
+
+			.back-to-products {
+				flex-direction: column;
+			}
+
+			.notice {
+				padding: var(--space-lg);
+			}
+		}
+	</style>
+</body>
+</html>

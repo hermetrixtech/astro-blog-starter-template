@@ -1,0 +1,270 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE } from '../../consts';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<BaseHead 
+		title={`iStorage datAshur PRO+C | ${SITE_TITLE}`}
+		description="FIPS 140-3 Level 3 certified hardware-encrypted portable storage device with tamper-resistant construction and on-device PIN authentication."
+	/>
+</head>
+<body>
+	<a href="#main-content" class="skip-to-main">Skip to main content</a>
+	<Header />
+	<main id="main-content">
+		<section class="hero">
+			<div class="container">
+				<h1>iStorage datAshur PRO+C</h1>
+				<p class="tagline">FIPS 140-3 Level 3 Certified Hardware Encryption</p>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container">
+				<div class="card">
+					<div class="product-header">
+						<span class="badge">FIPS 140-3 Level 3 Certified</span>
+					</div>
+					<p class="product-intro">The datAshur PRO+C is one of the first portable storage devices to achieve FIPS 140-3 Level 3 validation — the highest assurance level currently available for commercial removable media. This device provides military-grade hardware encryption with comprehensive physical and logical security protections.</p>
+					
+					<h2>Technical Specifications</h2>
+					
+					<div class="specs-grid">
+						<div class="spec-item">
+							<strong>Independent Certification</strong>
+							<p>Validated to FIPS 140-3 Level 3 by accredited cryptographic testing laboratories. Certification covers hardened tamper-resistant construction, role-based authentication mechanisms, and secure cryptographic key storage within a protected module.</p>
+						</div>
+						
+						<div class="spec-item">
+							<strong>Encryption Architecture</strong>
+							<p>Full-disk AES-XTS 256-bit hardware encryption performed entirely on the device using a dedicated cryptographic processor. Encryption keys never touch the host system, preventing software-based key extraction attacks and ensuring platform-independent security.</p>
+						</div>
+						
+						<div class="spec-item">
+							<strong>Tamper-Resistant Electronics</strong>
+							<p>Internal components are encapsulated in a protective resin barrier designed to detect and resist physical intrusion attempts. This hardening reveals probing attempts, resists drilling attacks, protects against voltage manipulation, and provides defense against side-channel analysis.</p>
+						</div>
+						
+						<div class="spec-item">
+							<strong>On-Device PIN Entry</strong>
+							<p>Access control through an integrated physical keypad ensures PIN authentication occurs before USB enumeration. This design prevents keylogging, bypasses software-based authentication attacks, and maintains security even on compromised host systems.</p>
+						</div>
+						
+						<div class="spec-item">
+							<strong>Brute-Force Protection</strong>
+							<p>Configurable failed PIN attempt threshold triggers automatic cryptographic key erasure. After exceeding the limit (typically 10-15 attempts), the device permanently destroys encryption keys, rendering data cryptographically unrecoverable without requiring physical destruction.</p>
+						</div>
+						
+						<div class="spec-item">
+							<strong>System Compatibility</strong>
+							<p>OS-agnostic operation with no driver requirements. Functions seamlessly with Windows, macOS, Linux, thin clients, virtualised environments, embedded systems, and air-gapped networks. The device presents as standard USB mass storage after PIN authentication.</p>
+						</div>
+
+						<div class="spec-item">
+							<strong>Physical Construction</strong>
+							<p>Military-grade aluminum housing with impact-resistant design. Epoxy-potted electronics protect against physical tampering while maintaining durability for field deployment. Dust and water resistant to IP57 standard.</p>
+						</div>
+
+						<div class="spec-item">
+							<strong>Performance</strong>
+							<p>USB 3.2 Gen 1 interface delivering read speeds up to 430 MB/s and write speeds up to 370 MB/s. Hardware encryption occurs in real-time with minimal performance impact. Available in capacities from 8GB to 512GB.</p>
+						</div>
+
+						<div class="spec-item">
+							<strong>Administrative Features</strong>
+							<p>Role-based access with separate Admin and User PINs. Admin mode allows PIN recovery, device reset, and policy enforcement. Read-only mode available for forensic evidence handling and secure data distribution.</p>
+						</div>
+					</div>
+
+					<h2>Use Cases</h2>
+					<div class="use-cases">
+						<div class="use-case-item">
+							<h4>Government & Defense</h4>
+							<p>Meets stringent protection requirements for classified material transport, cross-domain solution integration, and secure data transfer in air-gapped environments.</p>
+						</div>
+						<div class="use-case-item">
+							<h4>Enterprise Data Protection</h4>
+							<p>Compliant solution for regulated industries (healthcare, finance, legal) requiring HIPAA, SOX, GLBA, or PCI-DSS adherence for portable media.</p>
+						</div>
+						<div class="use-case-item">
+							<h4>Forensic & Legal</h4>
+							<p>Chain-of-custody protection for digital evidence, secure case file transport, and tamper-evident storage for sensitive legal materials.</p>
+						</div>
+						<div class="use-case-item">
+							<h4>Backup & Archive</h4>
+							<p>Encrypted offline backups with long-term data protection, secure archival storage, and disaster recovery media that doesn't depend on cloud providers.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="back-to-products">
+					<a href="/products" class="btn secondary">← Back to Products</a>
+					<a href="mailto:hello@hermetrix.nz" class="btn primary">Order This Product</a>
+				</div>
+			</div>
+		</section>
+	</main>
+	<Footer />
+
+	<style>
+		.hero {
+			padding: var(--space-3xl) 0 var(--space-2xl);
+		}
+
+		.tagline {
+			font-size: 1.25rem;
+			color: var(--text-secondary);
+			margin-top: var(--space-md);
+			font-family: var(--font-family-mono);
+			text-transform: uppercase;
+			letter-spacing: 0.15em;
+		}
+
+		.card {
+			background-color: rgba(0, 0, 0, 0.6);
+			backdrop-filter: blur(5px);
+		}
+
+		.product-header {
+			margin-bottom: var(--space-lg);
+		}
+
+		.badge {
+			display: inline-block;
+			padding: var(--space-sm) var(--space-md);
+			background: rgba(255, 0, 255, 0.1);
+			border: 2px solid var(--accent-primary);
+			border-radius: 6px;
+			font-size: 0.75rem;
+			font-weight: 700;
+			color: var(--accent-primary);
+			font-family: var(--font-family-mono);
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+			box-shadow: 3px 3px 0 rgba(255, 0, 255, 0.2);
+		}
+
+		.product-intro {
+			font-size: 1.125rem;
+			margin-bottom: var(--space-xl);
+			color: var(--text-secondary);
+			line-height: 1.8;
+		}
+
+		.card h2 {
+			color: var(--accent-primary);
+			font-size: 1.875rem;
+			margin-top: var(--space-2xl);
+			margin-bottom: var(--space-xl);
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+		}
+
+		.specs-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			gap: var(--space-lg);
+			margin-bottom: var(--space-2xl);
+		}
+
+		.spec-item {
+			padding: var(--space-lg);
+			background: rgba(0, 0, 0, 0.4);
+			backdrop-filter: blur(3px);
+			border: 2px solid var(--white);
+			border-radius: 6px;
+			box-shadow: 4px 4px 0 rgba(255, 255, 255, 0.1);
+			transition: all 0.3s ease;
+		}
+
+		.spec-item:hover {
+			border-color: var(--accent-primary);
+			transform: translate(-2px, -2px);
+			box-shadow: 6px 6px 0 rgba(255, 0, 255, 0.3);
+		}
+
+		.spec-item strong {
+			display: block;
+			color: var(--accent-primary);
+			margin-bottom: var(--space-sm);
+			font-size: 1rem;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+		}
+
+		.spec-item p {
+			margin: 0;
+			font-size: 0.9375rem;
+			line-height: 1.6;
+			color: var(--text-secondary);
+		}
+
+		.use-cases {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+			gap: var(--space-lg);
+			margin-top: var(--space-xl);
+		}
+
+		.use-case-item {
+			padding: var(--space-lg);
+			background: rgba(204, 0, 204, 0.05);
+			border: 2px solid var(--accent-primary);
+			border-radius: 6px;
+			transition: all 0.3s ease;
+		}
+
+		.use-case-item:hover {
+			background: rgba(204, 0, 204, 0.1);
+			transform: translateY(-2px);
+		}
+
+		.use-case-item h4 {
+			color: var(--accent-primary);
+			margin: 0 0 var(--space-sm) 0;
+			font-size: 1.125rem;
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+		}
+
+		.use-case-item p {
+			margin: 0;
+			font-size: 0.9375rem;
+			color: var(--text-secondary);
+			line-height: 1.6;
+		}
+
+		.back-to-products {
+			margin-top: var(--space-2xl);
+			display: flex;
+			gap: var(--space-lg);
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+
+		@media (max-width: 768px) {
+			.hero {
+				padding: var(--space-2xl) 0 var(--space-xl);
+			}
+
+			.specs-grid {
+				grid-template-columns: 1fr;
+			}
+
+			.use-cases {
+				grid-template-columns: 1fr;
+			}
+
+			.back-to-products {
+				flex-direction: column;
+			}
+		}
+	</style>
+</body>
+</html>
