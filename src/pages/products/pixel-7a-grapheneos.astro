@@ -78,31 +78,31 @@ import { SITE_TITLE } from '../../consts';
 						</div>
 					</div>
 
-					<div class="what-you-get">
-						<h2>What You Get</h2>
-						<div class="simple-features">
-							<div class="simple-feature">
-								<h4>🔒 Enhanced Privacy</h4>
+					<div class="key-features">
+						<h2>Key Features</h2>
+						<div class="features-grid">
+							<div class="feature-item">
+								<strong>Enhanced Privacy</strong>
 								<p>No tracking, no data collection. Your activity stays private.</p>
 							</div>
-							<div class="simple-feature">
-								<h4>📱 All Your Apps</h4>
+							<div class="feature-item">
+								<strong>Full App Compatibility</strong>
 								<p>Run regular Android apps. Everything works normally.</p>
 							</div>
-							<div class="simple-feature">
-								<h4>🛡️ Better Security</h4>
+							<div class="feature-item">
+								<strong>Hardened Security</strong>
 								<p>Built-in protections keep your phone safe from threats.</p>
 							</div>
-							<div class="simple-feature">
-								<h4>✅ Easy to Use</h4>
+							<div class="feature-item">
+								<strong>Easy to Use</strong>
 								<p>Looks and feels like Android. No learning curve.</p>
 							</div>
-							<div class="simple-feature">
-								<h4>🔄 Regular Updates</h4>
+							<div class="feature-item">
+								<strong>Regular Updates</strong>
 								<p>Automatic security updates keep you protected.</p>
 							</div>
-							<div class="simple-feature">
-								<h4>🌐 Open Source</h4>
+							<div class="feature-item">
+								<strong>Open Source</strong>
 								<p>Transparent code. No hidden surprises.</p>
 							</div>
 						</div>
@@ -126,18 +126,18 @@ import { SITE_TITLE } from '../../consts';
 						</div>
 
 						<div class="delivery-options">
-							<h3>Delivery & Pickup Options</h3>
+							<h3>Delivery & Pickup</h3>
 							<div class="delivery-grid">
 								<div class="delivery-option">
-									<h4>📦 Shipping</h4>
-									<p>Available nationwide. Secure courier delivery to your door.</p>
+									<strong>Nationwide Shipping</strong>
+									<p>Secure courier delivery to your door.</p>
 								</div>
 								<div class="delivery-option">
-									<h4>🚶 Same-Day Pickup</h4>
-									<p>Collect from our Auckland CBD location on the same day.</p>
+									<strong>Same-Day Pickup</strong>
+									<p>Auckland CBD location.</p>
 								</div>
 							</div>
-							<p class="contact-note"><strong>Contact us</strong> at <a href="mailto:hello@hermetrix.nz">hello@hermetrix.nz</a> for payment options and to arrange shipping or pickup.</p>
+							<p class="contact-note">Contact us at <a href="mailto:hello@hermetrix.nz">hello@hermetrix.nz</a> for payment options and delivery arrangements.</p>
 						</div>
 					</div>
 					
@@ -146,8 +146,8 @@ import { SITE_TITLE } from '../../consts';
 							<span class="summary-title">Technical Details</span>
 							<span class="toggle-hint">(Click to expand)</span>
 						</summary>
-					
-					<div class="specs-grid">
+						<div class="details-content">
+							<div class="specs-grid">
 						<div class="spec-item">
 							<strong>Security-First Operating System</strong>
 							<p>GrapheneOS is a privacy and security-focused mobile OS with full Android app compatibility. Developed as a non-profit open-source project, it undergoes continuous security research and includes substantial hardening beyond standard Android.</p>
@@ -213,6 +213,7 @@ import { SITE_TITLE } from '../../consts';
 							<p>Google Pixel 7a currently in stock for immediate shipment. Custom orders available for Pixel 7a through Pixel 10 XL Pro models (1-3 business days processing). All devices professionally configured with GrapheneOS and privacy application suite.</p>
 						</div>
 					</div>
+						</div>
 					</details>
 
 					<h2>Perfect For</h2>
@@ -402,44 +403,52 @@ import { SITE_TITLE } from '../../consts';
 			color: var(--text-primary);
 		}
 
-		.what-you-get {
-			margin: var(--space-3xl) 0 var(--space-2xl) 0;
+		.key-features {
+			margin: var(--space-2xl) 0;
 		}
 
-		.what-you-get h2 {
-			text-align: center;
-			margin-bottom: var(--space-2xl);
+		.key-features h2 {
+			color: var(--accent-secondary);
+			margin-bottom: var(--space-xl);
 		}
 
-		.simple-features {
+		.features-grid {
 			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 			gap: var(--space-lg);
 		}
 
-		.simple-feature {
+		.feature-item {
 			padding: var(--space-lg);
 			background: rgba(0, 0, 0, 0.4);
-			border: 2px solid rgba(255, 255, 255, 0.2);
+			backdrop-filter: blur(3px);
+			border: 2px solid var(--white);
 			border-radius: 6px;
+			box-shadow: 4px 4px 0 rgba(255, 255, 255, 0.1);
 			transition: all 0.3s ease;
 		}
 
-		.simple-feature:hover {
+		.feature-item:hover {
 			border-color: var(--accent-secondary);
-			transform: translateY(-2px);
+			transform: translate(-2px, -2px);
+			box-shadow: 6px 6px 0 rgba(0, 255, 255, 0.3);
 		}
 
-		.simple-feature h4 {
-			margin: 0 0 var(--space-sm) 0;
-			color: var(--text-primary);
-			font-size: 1.125rem;
+		.feature-item strong {
+			display: block;
+			color: var(--accent-secondary);
+			margin-bottom: var(--space-sm);
+			font-size: 1rem;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
 		}
 
-		.simple-feature p {
+		.feature-item p {
 			margin: 0;
-			color: var(--text-secondary);
+			font-size: 0.9375rem;
 			line-height: 1.6;
+			color: var(--text-secondary);
 		}
 
 		.pricing-section {
@@ -526,62 +535,63 @@ import { SITE_TITLE } from '../../consts';
 		.delivery-options h3 {
 			color: var(--accent-secondary);
 			margin-bottom: var(--space-lg);
-			text-align: center;
-			font-size: 1.5rem;
+			font-size: 1.25rem;
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+			font-weight: 700;
 		}
 
 		.delivery-grid {
 			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-			gap: var(--space-lg);
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			gap: var(--space-md);
 			margin-bottom: var(--space-lg);
 		}
 
 		.delivery-option {
-			padding: var(--space-lg);
+			padding: var(--space-md) var(--space-lg);
 			background: rgba(0, 0, 0, 0.4);
-			border: 2px solid rgba(0, 204, 204, 0.3);
-			border-radius: 6px;
+			border-left: 4px solid var(--accent-secondary);
+			border-radius: 4px;
 			transition: all 0.3s ease;
-			text-align: center;
 		}
 
 		.delivery-option:hover {
-			border-color: var(--accent-secondary);
-			transform: translateY(-2px);
+			background: rgba(0, 204, 204, 0.08);
 		}
 
-		.delivery-option h4 {
-			margin: 0 0 var(--space-sm) 0;
-			color: var(--text-primary);
-			font-size: 1.125rem;
+		.delivery-option strong {
+			display: block;
+			color: var(--accent-secondary);
+			font-weight: 700;
+			margin-bottom: var(--space-xs);
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+			font-size: 0.875rem;
 		}
 
 		.delivery-option p {
 			margin: 0;
 			color: var(--text-secondary);
 			line-height: 1.6;
+			font-size: 0.9375rem;
 		}
 
 		.contact-note {
-			text-align: center;
-			padding: var(--space-lg);
-			background: rgba(0, 204, 204, 0.08);
-			border: 2px solid var(--accent-secondary);
-			border-radius: 6px;
+			padding: var(--space-md);
+			background: rgba(0, 0, 0, 0.4);
+			border-left: 4px solid var(--accent-secondary);
+			border-radius: 4px;
 			color: var(--text-secondary);
-			line-height: 1.7;
+			line-height: 1.6;
 			margin: 0;
-		}
-
-		.contact-note strong {
-			color: var(--accent-secondary);
+			font-size: 0.9375rem;
 		}
 
 		.contact-note a {
 			color: var(--accent-secondary);
-			font-weight: 700;
-			border-bottom: 2px solid var(--accent-secondary);
+			font-weight: 600;
+			border-bottom: 1px solid var(--accent-secondary);
 		}
 
 		.contact-note a:hover {
@@ -645,6 +655,10 @@ import { SITE_TITLE } from '../../consts';
 		.technical-details summary::-webkit-details-marker,
 		.technical-details summary::marker {
 			display: none;
+		}
+
+		.details-content {
+			padding-top: var(--space-lg);
 		}
 
 		.card h2 {
@@ -815,7 +829,7 @@ import { SITE_TITLE } from '../../consts';
 			}
 
 			.options-grid,
-			.simple-features,
+			.features-grid,
 			.specs-grid {
 				grid-template-columns: 1fr;
 			}
