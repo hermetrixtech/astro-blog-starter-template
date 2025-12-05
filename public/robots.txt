@@ -1,0 +1,9 @@
+# Hermetrix Security - Robots.txt
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://hermetrix.nz/sitemap-index.xml
+
+# Crawl-delay (be nice to smaller crawlers)
+Crawl-delay: 1

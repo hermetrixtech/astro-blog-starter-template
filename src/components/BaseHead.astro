@@ -7,11 +7,12 @@ interface Props {
 	title: string;
 	description: string;
 	image?: string;
+	keywords?: string;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
+const { title, description, image = '/blog-placeholder-1.jpg', keywords } = Astro.props;
 ---
 
 <!-- Global Metadata -->
@@ -19,6 +20,17 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link rel="icon" type="image/png" href="/newfavi.png" />
 <meta name="generator" content={Astro.generator} />
+
+<!-- Geo Location -->
+<meta name="geo.region" content="NZ-AUK" />
+<meta name="geo.placename" content="Auckland" />
+<meta name="geo.position" content="-36.8485;174.7633" />
+<meta name="ICBM" content="-36.8485, 174.7633" />
+
+<!-- Business Info -->
+<meta name="author" content="Hermetrix" />
+<meta name="language" content="en-NZ" />
+{keywords && <meta name="keywords" content={keywords} />}
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
@@ -41,3 +53,34 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Organization",
+		"name": "Hermetrix",
+		"url": "https://hermetrix.nz",
+		"logo": "https://hermetrix.nz/images/logo.png",
+		"description": "New Zealand security consulting and certified hardware solutions provider specializing in OPSEC, FIPS-certified encrypted storage, and privacy-focused mobile devices.",
+		"address": {
+			"@type": "PostalAddress",
+			"addressLocality": "Auckland",
+			"addressRegion": "Auckland",
+			"addressCountry": "NZ"
+		},
+		"contactPoint": {
+			"@type": "ContactPoint",
+			"email": "hello@hermetrix.nz",
+			"contactType": "customer service",
+			"areaServed": "NZ",
+			"availableLanguage": "en"
+		},
+		"sameAs": [],
+		"foundingLocation": "Auckland, New Zealand",
+		"areaServed": {
+			"@type": "Country",
+			"name": "New Zealand"
+		}
+	}
+</script>
