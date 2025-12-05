@@ -607,10 +607,16 @@ import { SITE_TITLE } from '../../consts';
 			transition: all 0.3s ease;
 			padding: var(--space-md);
 			user-select: none;
+			-webkit-tap-highlight-color: transparent;
 		}
 
 		.technical-details summary:hover {
 			color: var(--accent-secondary);
+		}
+
+		.technical-details summary::-webkit-details-marker,
+		.technical-details summary::marker {
+			display: none;
 		}
 
 		.summary-title {
@@ -620,6 +626,7 @@ import { SITE_TITLE } from '../../consts';
 			text-transform: uppercase;
 			letter-spacing: 0.05em;
 			font-family: var(--font-family-display);
+			pointer-events: none;
 		}
 
 		.toggle-hint {
@@ -628,13 +635,15 @@ import { SITE_TITLE } from '../../consts';
 			font-family: var(--font-family-mono);
 			text-transform: uppercase;
 			letter-spacing: 0.05em;
+			pointer-events: none;
 		}
 
 		.technical-details[open] .toggle-hint::before {
 			content: "(Click to collapse)";
 		}
 
-		.technical-details summary::-webkit-details-marker {
+		.technical-details summary::-webkit-details-marker,
+		.technical-details summary::marker {
 			display: none;
 		}
 
