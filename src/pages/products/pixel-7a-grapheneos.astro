@@ -35,6 +35,12 @@ import { SITE_TITLE } from '../../consts';
 					</div>
 					<p class="product-intro">The Google Pixel 7a running GrapheneOS provides a privacy-focused, security-hardened mobile platform that doesn't compromise on usability. GrapheneOS is a non-profit open-source project focused on privacy and security research, offering enhanced exploit mitigations, privacy protections, and full Android app compatibility.</p>
 					
+					<div class="highlight-box">
+						<h3>Pre-Installed Privacy Applications</h3>
+						<p>Each device comes pre-configured with essential privacy and security applications: <strong>SimpleX Chat</strong> for private messaging, <strong>Tuta Mail</strong> for encrypted email, <strong>Aurora Store</strong> and <strong>F-Droid</strong> for app distribution, <strong>NetGuard</strong> for firewall protection, <strong>Tor Browser</strong>, <strong>IronFox</strong> browser, and <strong>Signal</strong> for secure communications.</p>
+						<p><strong>Free Customization Service:</strong> We provide complimentary customization recommendations and implementation with each phone purchase, tailored to your specific privacy and security requirements.</p>
+					</div>
+					
 					<h2>Technical Specifications</h2>
 					
 					<div class="specs-grid">
@@ -65,7 +71,7 @@ import { SITE_TITLE } from '../../consts';
 						
 						<div class="spec-item">
 							<strong>Pre-Configured & Ready</strong>
-							<p>Devices are supplied with GrapheneOS professionally installed, configured for optimal security and privacy settings, and ready for immediate deployment. Includes verified boot with user-controlled keys and over-the-air update support.</p>
+							<p>Devices are supplied with GrapheneOS professionally installed, pre-loaded with essential privacy applications (SimpleX, Tuta Mail, Aurora, F-Droid, NetGuard, Tor, IronFox, Signal), configured for optimal security settings, and ready for immediate deployment. Includes verified boot with user-controlled keys and OTA update support.</p>
 						</div>
 
 						<div class="spec-item">
@@ -97,6 +103,11 @@ import { SITE_TITLE } from '../../consts';
 							<strong>Update Support</strong>
 							<p>Regular security updates delivered via over-the-air (OTA) updates. GrapheneOS provides extended support beyond standard Android EOL. Seamless A/B updates minimize downtime and provide rollback capability.</p>
 						</div>
+
+						<div class="spec-item">
+							<strong>Device Availability</strong>
+							<p>Google Pixel 7a currently in stock for immediate shipment. Custom orders available for Pixel 7a through Pixel 10 XL Pro models (1-3 business days processing). All devices professionally configured with GrapheneOS and privacy application suite.</p>
+						</div>
 					</div>
 
 					<h2>Use Cases</h2>
@@ -117,6 +128,13 @@ import { SITE_TITLE } from '../../consts';
 							<h4>Security Research</h4>
 							<p>Security professionals and researchers requiring a transparent, auditable mobile platform for secure communications and development of privacy-preserving applications.</p>
 						</div>
+					</div>
+
+					<div class="availability-notice">
+						<h3>Device Options & Availability</h3>
+						<p><strong>In Stock:</strong> Google Pixel 7a available for immediate purchase and shipment.</p>
+						<p><strong>Custom Orders:</strong> We can configure any Google Pixel device from the 7a through the Pixel 10 XL Pro with GrapheneOS upon request. Custom device orders are processed and shipped within 1-3 business days.</p>
+						<p><strong>Free Customization:</strong> Every phone includes complimentary customization consultation where we assess your security requirements and implement tailored configurations, additional privacy applications, and security policies specific to your threat model.</p>
 					</div>
 				</div>
 
@@ -270,6 +288,72 @@ import { SITE_TITLE } from '../../consts';
 			line-height: 1.6;
 		}
 
+		.highlight-box {
+			padding: var(--space-xl);
+			background: rgba(0, 204, 204, 0.08);
+			border: 2px solid var(--accent-secondary);
+			border-radius: 6px;
+			margin: var(--space-2xl) 0;
+			box-shadow: 0 0 20px rgba(0, 204, 204, 0.1);
+		}
+
+		.highlight-box h3 {
+			color: var(--accent-secondary);
+			margin-top: 0;
+			margin-bottom: var(--space-md);
+			font-weight: 900;
+			font-size: 1.5rem;
+		}
+
+		.highlight-box p {
+			margin-bottom: var(--space-md);
+			color: var(--text-secondary);
+			line-height: 1.7;
+			font-size: 1rem;
+		}
+
+		.highlight-box p:last-child {
+			margin-bottom: 0;
+		}
+
+		.highlight-box strong {
+			color: var(--accent-secondary);
+			font-weight: 700;
+		}
+
+		.availability-notice {
+			padding: var(--space-xl);
+			background: rgba(0, 0, 0, 0.5);
+			backdrop-filter: blur(5px);
+			border-left: 4px solid var(--accent-secondary);
+			border-radius: 6px;
+			box-shadow: 0 0 20px rgba(0, 204, 204, 0.1);
+			margin-top: var(--space-2xl);
+		}
+
+		.availability-notice h3 {
+			color: var(--accent-secondary);
+			margin-top: 0;
+			margin-bottom: var(--space-lg);
+			font-weight: 900;
+			font-size: 1.5rem;
+		}
+
+		.availability-notice p {
+			margin-bottom: var(--space-md);
+			color: var(--text-secondary);
+			line-height: 1.7;
+		}
+
+		.availability-notice p:last-child {
+			margin-bottom: 0;
+		}
+
+		.availability-notice strong {
+			color: var(--accent-secondary);
+			font-weight: 700;
+		}
+
 		.back-to-products {
 			margin-top: var(--space-2xl);
 			display: flex;
@@ -297,6 +381,11 @@ import { SITE_TITLE } from '../../consts';
 
 			.back-to-products {
 				flex-direction: column;
+			}
+
+			.highlight-box,
+			.availability-notice {
+				padding: var(--space-lg);
 			}
 		}
 	</style>
