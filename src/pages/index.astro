@@ -145,10 +145,16 @@ import Footer from '../components/Footer.astro';
 			}
 
 			@media (max-width: 768px) {
+				.hero {
+					min-height: auto;
+					padding: var(--space-2xl) 0;
+				}
+
 				.hero-content {
 					flex-direction: column;
-					align-items: flex-start;
+					align-items: center;
 					gap: var(--space-xl);
+					text-align: center;
 				}
 
 				.hero-logo {
@@ -157,16 +163,35 @@ import Footer from '../components/Footer.astro';
 				}
 
 				.hero h1 {
-					font-size: 2.75rem;
+					font-size: 2.5rem;
 				}
 				
 				.tagline {
-					font-size: 1.125rem;
+					font-size: 1rem;
 				}
 
 				.cta-buttons {
 					flex-direction: column;
 					align-items: stretch;
+					width: 100%;
+				}
+			}
+
+			@media (max-width: 480px) {
+				.hero {
+					padding: var(--space-xl) 0;
+				}
+
+				.hero h1 {
+					font-size: 2rem;
+				}
+
+				.tagline {
+					font-size: 0.875rem;
+				}
+
+				.hero-logo {
+					max-width: 150px;
 				}
 			}
 		</style>

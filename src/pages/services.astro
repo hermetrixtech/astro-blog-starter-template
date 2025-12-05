@@ -223,13 +223,66 @@ import { SITE_TITLE } from '../consts';
 		}
 
 		@media (max-width: 768px) {
+			.hero {
+				padding: var(--space-2xl) 0 var(--space-xl);
+			}
+
+			.tagline {
+				font-size: 1rem;
+			}
+
+			.price {
+				font-size: 1.25rem;
+			}
+
 			.grid-2 {
 				grid-template-columns: 1fr;
+				gap: var(--space-lg);
+			}
+
+			.grid-3 {
+				grid-template-columns: 1fr;
+				gap: var(--space-lg);
+			}
+
+			.card {
+				padding: var(--space-lg);
+			}
+
+			.feature-card {
+				padding: var(--space-lg);
+			}
+
+			.feature-card:hover {
+				transform: translate(-1px, -1px);
+				box-shadow: 4px 4px 0 rgba(0, 102, 255, 0.3);
 			}
 
 			.cta-buttons {
 				flex-direction: column;
 				align-items: stretch;
+			}
+		}
+
+		@media (max-width: 480px) {
+			.hero {
+				padding: var(--space-xl) 0 var(--space-lg);
+			}
+
+			.price {
+				font-size: 1.125rem;
+			}
+
+			.card {
+				padding: var(--space-md);
+			}
+
+			.feature-card {
+				padding: var(--space-md);
+			}
+
+			.card ul, .card li {
+				font-size: 0.875rem;
 			}
 		}
 	</style>

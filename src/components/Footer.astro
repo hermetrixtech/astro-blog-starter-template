@@ -115,9 +115,13 @@ const currentYear = new Date().getFullYear();
   }
 
   @media (max-width: 768px) {
+    footer {
+      padding: var(--space-xl) 0 var(--space-md);
+    }
+
     .footer-content {
       flex-direction: column;
-      gap: var(--space-xl);
+      gap: var(--space-lg);
     }
 
     .footer-info {
@@ -125,22 +129,50 @@ const currentYear = new Date().getFullYear();
       text-align: center;
     }
 
+    .company-badge-link img {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     .footer-links {
       width: 100%;
-      justify-content: space-between;
+      justify-content: space-around;
+      gap: var(--space-xl);
+    }
+
+    .footer-nav, .footer-contact {
+      align-items: center;
+      text-align: center;
     }
   }
 
   @media (max-width: 480px) {
+    footer {
+      padding: var(--space-lg) 0 var(--space-sm);
+    }
+
+    .footer-content {
+      gap: var(--space-md);
+    }
+
     .footer-links {
       flex-direction: column;
-      gap: var(--space-lg);
+      gap: var(--space-md);
       align-items: center;
       text-align: center;
     }
 
     .footer-nav, .footer-contact {
       align-items: center;
+      gap: var(--space-xs);
+    }
+
+    .footer-links a {
+      font-size: 0.8125rem;
+    }
+
+    .company-badge-link img {
+      max-width: 140px;
     }
   }
 </style>
