@@ -31,10 +31,33 @@ import { SITE_TITLE } from '../consts';
 			</div>
 		</section>
 
+		<section class="free-consultation-highlight">
+			<div class="container">
+				<div class="consultation-card-featured">
+					<div class="featured-badge-wrapper">
+						<span class="featured-badge">Start Here • 100% Free</span>
+					</div>
+					<div class="featured-content">
+						<h2>30-Minute Strategic Consultation</h2>
+						<p class="featured-price">Free • No Obligation</p>
+						<p class="featured-description">Get expert guidance on your security concerns. We'll assess your current risks, identify immediate vulnerabilities, and give you actionable steps you can implement this week.</p>
+						<ul class="featured-benefits">
+							<li>Current security risk assessment</li>
+							<li>Immediate vulnerabilities identification</li>
+							<li>Quick wins you can implement immediately</li>
+							<li>Guidance on next steps</li>
+						</ul>
+						<a href="mailto:hello@hermetrix.nz?subject=Free 30-Minute Security Consultation" class="btn primary large">Book Free Consultation</a>
+						<span class="response-time">Usually respond within 24 hours</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
 		<section class="section">
 			<div class="container">
 				<h2>Our Core Services</h2>
-				<div class="grid grid-2">
+				<div class="grid grid-3">
 					<div class="card">
 						<h3>OPSEC Health Check</h3>
 						<p class="price">Fixed Price: NZ$2,500</p>
@@ -59,19 +82,6 @@ import { SITE_TITLE } from '../consts';
 							<li>Ongoing monitoring and optimization</li>
 						</ul>
 						<a href="mailto:hello@hermetrix.nz?subject=Security Implementation" class="btn primary">Get Quote</a>
-					</div>
-
-					<div class="card">
-						<h3>Strategic Consultation</h3>
-						<p class="price">30-minute session - Free</p>
-						<p>Get expert guidance on your security concerns with no obligation.</p>
-						<ul>
-							<li>Current security risk assessment</li>
-							<li>Immediate vulnerabilities identification</li>
-							<li>Quick wins you can implement this week</li>
-							<li>Guidance on next steps</li>
-						</ul>
-						<a href="mailto:hello@hermetrix.nz?subject=Free Consultation" class="btn secondary">Book Consultation</a>
 					</div>
 
 					<div class="card">
@@ -226,7 +236,172 @@ import { SITE_TITLE } from '../consts';
 			margin-top: var(--space-xl);
 		}
 
+		.free-consultation-highlight {
+			padding: var(--space-3xl) 0;
+			background: radial-gradient(ellipse at center, rgba(204, 0, 204, 0.15) 0%, transparent 70%);
+			position: relative;
+		}
+
+		.consultation-card-featured {
+			max-width: 900px;
+			margin: 0 auto;
+			background: rgba(0, 0, 0, 0.8);
+			backdrop-filter: blur(15px);
+			border: 3px solid var(--accent-primary);
+			border-radius: 16px;
+			padding: var(--space-3xl);
+			box-shadow: 
+				0 0 40px rgba(204, 0, 204, 0.4),
+				0 0 80px rgba(0, 204, 204, 0.2),
+				inset 0 0 40px rgba(204, 0, 204, 0.08);
+			position: relative;
+			text-align: center;
+		}
+
+		.consultation-card-featured::before {
+			content: '';
+			position: absolute;
+			top: -2px;
+			left: -2px;
+			right: -2px;
+			bottom: -2px;
+			background: linear-gradient(45deg, var(--magenta), var(--cyan), var(--magenta));
+			border-radius: 16px;
+			z-index: -1;
+			opacity: 0.5;
+			animation: rotate-border 4s linear infinite;
+		}
+
+		@keyframes rotate-border {
+			0% { filter: hue-rotate(0deg); }
+			100% { filter: hue-rotate(360deg); }
+		}
+
+		.featured-badge-wrapper {
+			margin-bottom: var(--space-lg);
+		}
+
+		.featured-badge {
+			display: inline-block;
+			padding: var(--space-sm) var(--space-lg);
+			background: linear-gradient(135deg, var(--magenta), var(--cyan));
+			border-radius: 25px;
+			font-size: 0.875rem;
+			font-weight: 900;
+			text-transform: uppercase;
+			letter-spacing: 0.15em;
+			color: var(--black);
+			box-shadow: 0 6px 20px rgba(204, 0, 204, 0.5);
+			animation: pulse-badge 2s infinite;
+		}
+
+		@keyframes pulse-badge {
+			0%, 100% { transform: scale(1); box-shadow: 0 6px 20px rgba(204, 0, 204, 0.5); }
+			50% { transform: scale(1.05); box-shadow: 0 8px 30px rgba(204, 0, 204, 0.7); }
+		}
+
+		.featured-content h2 {
+			margin: 0 0 var(--space-sm) 0;
+			font-size: 2.5rem;
+			color: var(--accent-primary);
+			font-weight: 900;
+			text-shadow: 0 0 30px rgba(204, 0, 204, 0.6);
+		}
+
+		.featured-price {
+			font-size: 1.5rem;
+			font-weight: 700;
+			color: var(--accent-secondary);
+			margin: 0 0 var(--space-lg) 0;
+			font-family: var(--font-family-mono);
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+		}
+
+		.featured-description {
+			margin: 0 0 var(--space-xl) 0;
+			color: var(--text-secondary);
+			font-size: 1.125rem;
+			line-height: 1.7;
+			max-width: 700px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.featured-benefits {
+			list-style: none;
+			padding: 0;
+			margin: 0 0 var(--space-2xl) 0;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: var(--space-md);
+			max-width: 600px;
+			margin-left: auto;
+			margin-right: auto;
+			text-align: left;
+		}
+
+		.featured-benefits li {
+			padding-left: 1.75rem;
+			position: relative;
+			color: var(--text-secondary);
+			font-size: 0.9375rem;
+		}
+
+		.featured-benefits li::before {
+			content: "✓";
+			position: absolute;
+			left: 0;
+			color: var(--accent-secondary);
+			font-weight: bold;
+			font-size: 1.25rem;
+		}
+
+		.btn.large {
+			padding: var(--space-lg) var(--space-3xl);
+			font-size: 1.25rem;
+			animation: pulse-btn 2s infinite;
+		}
+
+		@keyframes pulse-btn {
+			0%, 100% { transform: scale(1); }
+			50% { transform: scale(1.05); }
+		}
+
+		.response-time {
+			display: block;
+			margin-top: var(--space-md);
+			font-size: 0.8125rem;
+			color: var(--gray-400);
+			font-family: var(--font-family-mono);
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+		}
+
 		@media (max-width: 768px) {
+			.consultation-card-featured {
+				padding: var(--space-xl);
+			}
+
+			.featured-content h2 {
+				font-size: 1.875rem;
+			}
+
+			.featured-price {
+				font-size: 1.25rem;
+			}
+
+			.featured-benefits {
+				grid-template-columns: 1fr;
+				gap: var(--space-sm);
+			}
+
+			.btn.large {
+				width: 100%;
+				padding: var(--space-md) var(--space-xl);
+				font-size: 1.125rem;
+			}
+
 			.hero {
 				padding: var(--space-2xl) 0 var(--space-xl);
 			}

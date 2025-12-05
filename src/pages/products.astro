@@ -31,6 +31,27 @@ import { SITE_TITLE } from '../consts';
 			</div>
 		</section>
 
+		<section class="free-consultation-banner">
+			<div class="container">
+				<div class="consultation-card">
+					<div class="consultation-content">
+						<span class="consultation-badge">100% Free • No Obligation</span>
+						<h2>Not Sure Which Product Is Right?</h2>
+						<p>Get a free 30-minute consultation. We'll help you understand which security hardware fits your needs, threat model, and budget.</p>
+						<ul class="consultation-benefits">
+							<li>Product recommendations for your use case</li>
+							<li>Certification requirements explained</li>
+							<li>Setup and configuration guidance</li>
+						</ul>
+					</div>
+					<div class="consultation-cta">
+						<a href="mailto:hello@hermetrix.nz?subject=Free Product Consultation" class="btn primary large">Book Free Consultation</a>
+						<span class="cta-subtext">Usually respond within 24 hours</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
 		<section class="section">
 			<div class="container">
 				<h2>Available Hardware</h2>
@@ -370,6 +391,129 @@ import { SITE_TITLE } from '../consts';
 			margin-top: var(--space-xl);
 		}
 
+		.free-consultation-banner {
+			padding: var(--space-2xl) 0;
+			background: linear-gradient(135deg, rgba(204, 0, 204, 0.1) 0%, rgba(0, 204, 204, 0.1) 100%);
+			border-top: 2px solid var(--accent-primary);
+			border-bottom: 2px solid var(--accent-secondary);
+			position: relative;
+			overflow: hidden;
+		}
+
+		.free-consultation-banner::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -100%;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+			animation: shimmer 3s infinite;
+		}
+
+		@keyframes shimmer {
+			0% { left: -100%; }
+			100% { left: 100%; }
+		}
+
+		.consultation-card {
+			background: rgba(0, 0, 0, 0.7);
+			backdrop-filter: blur(10px);
+			border: 3px solid var(--accent-primary);
+			border-radius: 12px;
+			padding: var(--space-2xl);
+			box-shadow: 
+				0 0 30px rgba(204, 0, 204, 0.3),
+				0 0 60px rgba(0, 204, 204, 0.2),
+				inset 0 0 30px rgba(204, 0, 204, 0.05);
+			display: grid;
+			grid-template-columns: 1fr auto;
+			gap: var(--space-2xl);
+			align-items: center;
+			position: relative;
+		}
+
+		.consultation-badge {
+			display: inline-block;
+			padding: var(--space-xs) var(--space-md);
+			background: linear-gradient(135deg, var(--magenta), var(--cyan));
+			border-radius: 20px;
+			font-size: 0.75rem;
+			font-weight: 900;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+			margin-bottom: var(--space-md);
+			color: var(--black);
+			box-shadow: 0 4px 15px rgba(204, 0, 204, 0.4);
+		}
+
+		.consultation-content h2 {
+			margin: 0 0 var(--space-md) 0;
+			font-size: 2.25rem;
+			color: var(--accent-primary);
+			font-weight: 900;
+			text-shadow: 0 0 20px rgba(204, 0, 204, 0.5);
+		}
+
+		.consultation-content p {
+			margin: 0 0 var(--space-lg) 0;
+			color: var(--text-secondary);
+			font-size: 1.125rem;
+			line-height: 1.6;
+		}
+
+		.consultation-benefits {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			display: flex;
+			flex-direction: column;
+			gap: var(--space-sm);
+		}
+
+		.consultation-benefits li {
+			padding-left: 1.5rem;
+			position: relative;
+			color: var(--text-secondary);
+			font-size: 0.9375rem;
+		}
+
+		.consultation-benefits li::before {
+			content: "✓";
+			position: absolute;
+			left: 0;
+			color: var(--accent-secondary);
+			font-weight: bold;
+			font-size: 1.125rem;
+		}
+
+		.consultation-cta {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: var(--space-sm);
+		}
+
+		.btn.large {
+			padding: var(--space-lg) var(--space-2xl);
+			font-size: 1.125rem;
+			white-space: nowrap;
+			animation: pulse 2s infinite;
+		}
+
+		@keyframes pulse {
+			0%, 100% { transform: scale(1); }
+			50% { transform: scale(1.05); }
+		}
+
+		.cta-subtext {
+			font-size: 0.8125rem;
+			color: var(--gray-400);
+			font-family: var(--font-family-mono);
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+		}
+
 		@media (max-width: 1024px) {
 			.products-grid {
 				gap: var(--space-xl);
@@ -377,6 +521,26 @@ import { SITE_TITLE } from '../consts';
 		}
 
 		@media (max-width: 768px) {
+			.consultation-card {
+				grid-template-columns: 1fr;
+				gap: var(--space-xl);
+				padding: var(--space-xl);
+				text-align: center;
+			}
+
+			.consultation-content h2 {
+				font-size: 1.75rem;
+			}
+
+			.consultation-benefits {
+				align-items: flex-start;
+			}
+
+			.btn.large {
+				width: 100%;
+				padding: var(--space-md) var(--space-xl);
+			}
+
 			.hero {
 				padding: var(--space-2xl) 0 var(--space-xl);
 			}
