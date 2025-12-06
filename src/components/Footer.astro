@@ -8,82 +8,121 @@ const currentYear = new Date().getFullYear();
     <div class="footer-content">
       <div class="footer-info">
         <div class="footer-logo">HERMETRIX</div>
-        <p class="footer-tagline">Strategic Operational Security Consulting</p>
-        <a href="https://app.companiesoffice.govt.nz/companies/app/ui/pages/companies/companyBadgeSnippet/9387037?utm_campaign=companiesdirectlinks&utm_medium=webpage&utm_source=thecompany" target="_blank" rel="noopener noreferrer" class="company-badge-link">
-          <img src="https://app.companiesoffice.govt.nz/companies/app/ui/themes/companies/images/CO_Details_dark_optimal_WEB.png" alt="New Zealand Companies Office Badge" style="border-style:none" />
-        </a>
+        <p class="footer-tagline">Security Consulting & Certified Hardware</p>
+        <p class="footer-location">Auckland, New Zealand</p>
       </div>
-      <div class="footer-links">
-        <div class="footer-nav">
-          <a href="/">Home</a>
-          <a href="/products">Products</a>
-          <a href="/services">Services</a>
-          <a href="/about">About</a>
-          <a href="/compliance">Compliance</a>
+      
+      <div class="footer-section">
+        <h4>Services</h4>
+        <div class="footer-links">
+          <a href="/services">OPSEC Consulting</a>
+          <a href="/services">Security Implementation</a>
+          <a href="/products">Certified Hardware</a>
         </div>
-        <div class="footer-contact">
+      </div>
+      
+      <div class="footer-section">
+        <h4>Company</h4>
+        <div class="footer-links">
+          <a href="/about">About Us</a>
+          <a href="/compliance">Compliance</a>
+          <a href="mailto:hello@hermetrix.nz?subject=Free Consultation">Free Consultation</a>
+        </div>
+      </div>
+      
+      <div class="footer-section footer-contact">
+        <h4>Contact</h4>
+        <div class="footer-links">
           <a href="mailto:hello@hermetrix.nz">hello@hermetrix.nz</a>
+          <span class="contact-info">Auckland CBD</span>
+          <span class="contact-info">NZ-wide service</span>
         </div>
       </div>
     </div>
-    <div class="footer-legal">
-      <p>&copy; {currentYear} {COMPANY_NAME}. All rights reserved.</p>
+    
+    <div class="footer-bottom">
+      <div class="footer-legal">
+        <p>&copy; {currentYear} {COMPANY_NAME}. All rights reserved.</p>
+        <a href="https://app.companiesoffice.govt.nz/companies/app/ui/pages/companies/9387037" target="_blank" rel="noopener noreferrer" class="companies-office-link">
+          NZ Company 9387037
+        </a>
+      </div>
+      <div class="footer-badge">
+        <a href="https://app.companiesoffice.govt.nz/companies/app/ui/pages/companies/companyBadgeSnippet/9387037" target="_blank" rel="noopener noreferrer">
+          <img src="https://app.companiesoffice.govt.nz/companies/app/ui/themes/companies/images/CO_Details_dark_optimal_WEB.png" alt="NZ Companies Office" />
+        </a>
+      </div>
     </div>
   </div>
 </footer>
 
 <style>
   footer {
-    background-color: var(--background);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, var(--black) 100%);
     color: var(--text-secondary);
-    border-top: 1px solid var(--border-color);
-    padding: var(--space-2xl) 0 var(--space-xl);
+    border-top: 2px solid var(--accent-primary);
+    padding: var(--space-3xl) 0 var(--space-xl);
+    margin-top: var(--space-3xl);
+  }
+
+  .container {
+    width: 100%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--space-lg);
   }
 
   .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: var(--space-xl);
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: var(--space-2xl);
+    margin-bottom: var(--space-2xl);
+    padding-bottom: var(--space-2xl);
+    border-bottom: 1px solid var(--gray-700);
   }
 
   .footer-info {
-    max-width: 300px;
-  }
-
-  .footer-logo {
-    font-family: var(--font-family-mono);
-    font-weight: 700;
-    font-size: 1rem;
-    letter-spacing: 0.05em;
-    margin-bottom: var(--space-sm);
-    color: var(--text-primary);
-  }
-
-  .footer-tagline {
-    font-size: 0.875rem;
-    color: var(--text-muted);
-    margin: 0 0 var(--space-sm) 0;
-  }
-
-  .company-badge-link img {
-    max-width: 160px;
-    display: block;
-    margin-top: var(--space-sm);
-  }
-
-  .footer-links {
-    display: flex;
-    gap: var(--space-2xl);
-  }
-
-  .footer-nav {
     display: flex;
     flex-direction: column;
     gap: var(--space-sm);
   }
 
-  .footer-contact {
+  .footer-logo {
+    font-family: var(--font-family-mono);
+    font-weight: 900;
+    font-size: 1.25rem;
+    letter-spacing: 0.1em;
+    color: var(--text-primary);
+    margin-bottom: var(--space-xs);
+  }
+
+  .footer-tagline {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .footer-location {
+    font-size: 0.8125rem;
+    color: var(--accent-secondary);
+    margin: 0;
+    font-family: var(--font-family-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .footer-section h4 {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--accent-primary);
+    margin: 0 0 var(--space-md) 0;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-family: var(--font-family-mono);
+  }
+
+  .footer-links {
     display: flex;
     flex-direction: column;
     gap: var(--space-sm);
@@ -94,85 +133,154 @@ const currentYear = new Date().getFullYear();
     color: var(--text-secondary);
     text-decoration: none;
     border-bottom: none;
-    transition: color 0.2s ease;
+    transition: all 0.2s ease;
+    display: inline-block;
   }
 
   .footer-links a:hover {
-    color: var(--accent-primary);
-    opacity: 1;
+    color: var(--accent-secondary);
+    transform: translateX(4px);
+  }
+
+  .contact-info {
+    font-size: 0.8125rem;
+    color: var(--gray-400);
+    font-family: var(--font-family-mono);
+  }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-lg);
   }
 
   .footer-legal {
-    padding-top: var(--space-lg);
-    border-top: 1px solid var(--gray-700);
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
   }
 
   .footer-legal p {
     font-size: 0.75rem;
     color: var(--text-muted);
     margin: 0;
+    font-family: var(--font-family-mono);
   }
 
+  .companies-office-link {
+    font-size: 0.6875rem;
+    color: var(--gray-400);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all 0.2s ease;
+    font-family: var(--font-family-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .companies-office-link:hover {
+    color: var(--accent-secondary);
+    border-bottom-color: var(--accent-secondary);
+  }
+
+  .footer-badge img {
+    max-width: 140px;
+    height: auto;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+  }
+
+  .footer-badge a:hover img {
+    opacity: 1;
+  }
+
+  /* Tablet */
+  @media (max-width: 1024px) {
+    .footer-content {
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-xl);
+    }
+
+    .footer-info {
+      grid-column: 1 / -1;
+    }
+  }
+
+  /* Mobile */
   @media (max-width: 768px) {
+    footer {
+      padding: var(--space-2xl) 0 var(--space-lg);
+    }
+
+    .container {
+      padding: 0 var(--space-md);
+    }
+
+    .footer-content {
+      grid-template-columns: 1fr;
+      gap: var(--space-xl);
+      margin-bottom: var(--space-xl);
+      padding-bottom: var(--space-xl);
+    }
+
+    .footer-info {
+      text-align: center;
+      grid-column: 1;
+    }
+
+    .footer-section {
+      text-align: center;
+    }
+
+    .footer-section h4 {
+      margin-bottom: var(--space-sm);
+    }
+
+    .footer-links {
+      align-items: center;
+      gap: var(--space-xs);
+    }
+
+    .footer-links a:hover {
+      transform: none;
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+      gap: var(--space-md);
+      text-align: center;
+    }
+
+    .footer-legal {
+      align-items: center;
+    }
+
+    .footer-badge img {
+      max-width: 120px;
+    }
+  }
+
+  /* Small mobile */
+  @media (max-width: 480px) {
     footer {
       padding: var(--space-xl) 0 var(--space-md);
     }
 
     .footer-content {
-      flex-direction: column;
       gap: var(--space-lg);
     }
 
-    .footer-info {
-      max-width: 100%;
-      text-align: center;
-    }
-
-    .company-badge-link img {
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .footer-links {
-      width: 100%;
-      justify-content: space-around;
-      gap: var(--space-xl);
-    }
-
-    .footer-nav, .footer-contact {
-      align-items: center;
-      text-align: center;
-    }
-  }
-
-  @media (max-width: 480px) {
-    footer {
-      padding: var(--space-lg) 0 var(--space-sm);
-    }
-
-    .footer-content {
-      gap: var(--space-md);
-    }
-
-    .footer-links {
-      flex-direction: column;
-      gap: var(--space-md);
-      align-items: center;
-      text-align: center;
-    }
-
-    .footer-nav, .footer-contact {
-      align-items: center;
-      gap: var(--space-xs);
+    .footer-section h4 {
+      font-size: 0.8125rem;
     }
 
     .footer-links a {
       font-size: 0.8125rem;
     }
 
-    .company-badge-link img {
-      max-width: 140px;
+    .footer-badge img {
+      max-width: 100px;
     }
   }
 </style>
