@@ -159,11 +159,14 @@ import { SITE_TITLE } from '../consts';
 		.card {
 			background-color: rgba(0, 0, 0, 0.5);
 			backdrop-filter: blur(5px);
+			display: flex;
+			flex-direction: column;
 		}
 
 		.card ul {
 			margin: var(--space-lg) 0;
 			color: var(--text-secondary);
+			flex: 1;
 		}
 
 		.card li {
@@ -171,7 +174,7 @@ import { SITE_TITLE } from '../consts';
 		}
 
 		.card .btn {
-			margin-top: var(--space-lg);
+			margin-top: auto;
 			width: 100%;
 		}
 
