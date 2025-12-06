@@ -60,9 +60,29 @@ import { SITE_TITLE } from '../consts';
 					<a href="/products/datashur-pro-plus-c" class="product-card-link">
 						<div class="card product-card">
 							<div class="product-image-placeholder">
-								{/* Product image will go here */}
 								<div class="image-placeholder-content">
-									<span>Product Image</span>
+									<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" class="product-icon">
+										<!-- USB Drive Body -->
+										<rect x="35" y="40" width="50" height="50" rx="4" fill="none" stroke="var(--accent-primary)" stroke-width="3"/>
+										<rect x="38" y="43" width="44" height="44" rx="2" fill="rgba(204, 0, 204, 0.1)"/>
+										
+										<!-- Lock Symbol -->
+										<circle cx="60" cy="65" r="8" fill="none" stroke="var(--accent-primary)" stroke-width="2.5"/>
+										<rect x="57" y="65" width="6" height="10" rx="1" fill="var(--accent-primary)"/>
+										
+										<!-- USB Connector -->
+										<rect x="48" y="28" width="24" height="14" rx="2" fill="none" stroke="var(--accent-primary)" stroke-width="2.5"/>
+										<rect x="51" y="31" width="6" height="8" fill="var(--accent-primary)" opacity="0.6"/>
+										<rect x="63" y="31" width="6" height="8" fill="var(--accent-primary)" opacity="0.6"/>
+										
+										<!-- Security Indicators -->
+										<circle cx="45" cy="52" r="2" fill="var(--magenta)" opacity="0.8">
+											<animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+										</circle>
+										<circle cx="75" cy="52" r="2" fill="var(--magenta)" opacity="0.8">
+											<animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+										</circle>
+									</svg>
 								</div>
 							</div>
 							<div class="product-content">
@@ -106,7 +126,25 @@ import { SITE_TITLE } from '../consts';
 						<div class="card product-card">
 							<div class="product-image-placeholder">
 								<div class="image-placeholder-content">
-									<span>Product Image</span>
+									<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" class="product-icon">
+										<!-- USB Thumb Drive -->
+										<rect x="40" y="35" width="40" height="55" rx="5" fill="none" stroke="var(--accent-tertiary)" stroke-width="3"/>
+										<rect x="43" y="38" width="34" height="49" rx="3" fill="rgba(0, 82, 204, 0.1)"/>
+										
+										<!-- USB Connector -->
+										<rect x="50" y="22" width="20" height="15" rx="2" fill="none" stroke="var(--accent-tertiary)" stroke-width="2.5"/>
+										<rect x="53" y="25" width="5" height="9" fill="var(--accent-tertiary)" opacity="0.6"/>
+										<rect x="62" y="25" width="5" height="9" fill="var(--accent-tertiary)" opacity="0.6"/>
+										
+										<!-- Boot Icon -->
+										<path d="M 60 50 L 55 55 L 60 60 L 65 65 L 70 60 L 65 55 Z" fill="none" stroke="var(--accent-tertiary)" stroke-width="2.5" stroke-linejoin="round"/>
+										<circle cx="60" cy="72" r="3" fill="var(--accent-tertiary)"/>
+										
+										<!-- Network/Tor Rings -->
+										<circle cx="60" cy="50" r="15" fill="none" stroke="var(--blue)" stroke-width="1.5" opacity="0.4"/>
+										<circle cx="60" cy="50" r="20" fill="none" stroke="var(--blue)" stroke-width="1.5" opacity="0.3"/>
+										<circle cx="60" cy="50" r="25" fill="none" stroke="var(--blue)" stroke-width="1.5" opacity="0.2"/>
+									</svg>
 								</div>
 							</div>
 							<div class="product-content">
@@ -126,7 +164,41 @@ import { SITE_TITLE } from '../consts';
 						<div class="card product-card">
 							<div class="product-image-placeholder">
 								<div class="image-placeholder-content">
-									<span>Product Image</span>
+									<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" class="product-icon">
+										<!-- Shredder Body -->
+										<rect x="30" y="35" width="60" height="50" rx="4" fill="none" stroke="var(--acid-green)" stroke-width="3"/>
+										<rect x="33" y="38" width="54" height="44" rx="2" fill="rgba(0, 204, 82, 0.05)"/>
+										
+										<!-- Paper Slot -->
+										<rect x="40" y="28" width="40" height="10" rx="2" fill="none" stroke="var(--acid-green)" stroke-width="2.5"/>
+										<line x1="45" y1="30" x2="45" y2="36" stroke="var(--acid-green)" stroke-width="1.5" opacity="0.5"/>
+										<line x1="55" y1="30" x2="55" y2="36" stroke="var(--acid-green)" stroke-width="1.5" opacity="0.5"/>
+										<line x1="65" y1="30" x2="65" y2="36" stroke="var(--acid-green)" stroke-width="1.5" opacity="0.5"/>
+										<line x1="75" y1="30" x2="75" y2="36" stroke="var(--acid-green)" stroke-width="1.5" opacity="0.5"/>
+										
+										<!-- Shredding Blades -->
+										<g stroke="var(--acid-green)" stroke-width="2" opacity="0.7">
+											<path d="M 35 50 L 40 55 L 35 60"/>
+											<path d="M 45 50 L 50 55 L 45 60"/>
+											<path d="M 55 50 L 60 55 L 55 60"/>
+											<path d="M 65 50 L 70 55 L 65 60"/>
+											<path d="M 75 50 L 80 55 L 75 60"/>
+										</g>
+										
+										<!-- Shredded Paper -->
+										<g stroke="var(--acid-green)" stroke-width="1.5" opacity="0.4">
+											<line x1="38" y1="70" x2="38" y2="78"/>
+											<line x1="45" y1="68" x2="45" y2="80"/>
+											<line x1="52" y1="70" x2="52" y2="77"/>
+											<line x1="59" y1="69" x2="59" y2="79"/>
+											<line x1="66" y1="71" x2="66" y2="78"/>
+											<line x1="73" y1="68" x2="73" y2="80"/>
+											<line x1="80" y1="70" x2="80" y2="76"/>
+										</g>
+										
+										<!-- Bin -->
+										<rect x="32" y="80" width="56" height="8" rx="1" fill="rgba(0, 204, 82, 0.1)" stroke="var(--acid-green)" stroke-width="2"/>
+									</svg>
 								</div>
 							</div>
 							<div class="product-content">
@@ -270,6 +342,18 @@ import { SITE_TITLE } from '../consts';
 			height: 80px;
 			width: auto;
 			opacity: 0.9;
+		}
+
+		.product-icon {
+			filter: drop-shadow(0 0 10px currentColor);
+			opacity: 0.9;
+			transition: all 0.3s ease;
+		}
+
+		.product-card-link:hover .product-icon {
+			opacity: 1;
+			transform: scale(1.05);
+			filter: drop-shadow(0 0 20px currentColor);
 		}
 
 		.product-content {
