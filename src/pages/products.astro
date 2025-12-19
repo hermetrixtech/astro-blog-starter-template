@@ -100,9 +100,9 @@ import { SITE_TITLE } from '../consts';
 
 					<a href="/products/pixel-7a-grapheneos" class="product-card-link">
 						<div class="card product-card">
-							<div class="product-image-placeholder">
+							<div class="product-image-placeholder graphene-image-bg">
 								<div class="image-placeholder-content">
-									<img src="/images/graphene-phone.png" alt="Google Pixel 7a with GrapheneOS" class="product-photo" />
+									<img src="/images/graphene-photo.png" alt="Google Pixel 7a with GrapheneOS" class="product-photo" />
 								</div>
 							</div>
 							<div class="product-content">
@@ -345,10 +345,18 @@ import { SITE_TITLE } from '../consts';
 		}
 
 		.product-photo {
-			max-height: 220px;
+			max-height: 240px;
 			width: auto;
 			object-fit: contain;
 			transition: all 0.3s ease;
+		}
+
+		.graphene-image-bg {
+			background: radial-gradient(ellipse at center, rgba(0, 204, 204, 0.04) 0%, transparent 60%);
+		}
+
+		.product-card-link:hover .graphene-image-bg {
+			background: radial-gradient(ellipse at center, rgba(0, 204, 204, 0.08) 0%, transparent 60%);
 		}
 
 		.product-icon {
