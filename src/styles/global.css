@@ -4,6 +4,10 @@
  * 85% monochrome / 15% strategic color accents
  */
 
+/* Import modern fonts - optimized for performance */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+
 :root {
   /* Color System - Burns Foundation + Beatty Accents */
   --black: #000000;
@@ -52,10 +56,6 @@
   --container-width: 1200px;
   --header-height: 4rem;
 }
-
-/* Import modern fonts - optimized for performance */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
 
 /* Font fallback for better performance */
 @font-face {
