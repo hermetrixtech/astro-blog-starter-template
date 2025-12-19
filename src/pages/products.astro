@@ -102,7 +102,7 @@ import { SITE_TITLE } from '../consts';
 						<div class="card product-card">
 							<div class="product-image-placeholder">
 								<div class="image-placeholder-content">
-									<img src="/images/graphenelogo.png" alt="GrapheneOS Logo" class="placeholder-logo" />
+									<img src="/images/graphene-phone.png" alt="Google Pixel 7a with GrapheneOS" class="product-photo" />
 								</div>
 							</div>
 							<div class="product-content">
@@ -342,6 +342,13 @@ import { SITE_TITLE } from '../consts';
 			height: 80px;
 			width: auto;
 			opacity: 0.9;
+		}
+
+		.product-photo {
+			max-height: 220px;
+			width: auto;
+			object-fit: contain;
+			transition: all 0.3s ease;
 		}
 
 		.product-icon {

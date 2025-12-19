@@ -30,10 +30,6 @@ import { SITE_TITLE } from '../../consts';
 
 		<section class="section">
 			<div class="container">
-				<div class="product-image-showcase">
-					<img src="/images/graphene-phone.png" alt="Google Pixel 7a with GrapheneOS" class="product-phone-image" />
-				</div>
-
 				<div class="card">
 					<div class="product-header">
 						<span class="badge">Privacy-Focused Operating System</span>
@@ -200,50 +196,6 @@ import { SITE_TITLE } from '../../consts';
 			font-family: var(--font-family-mono);
 			text-transform: uppercase;
 			letter-spacing: 0.15em;
-		}
-
-		.product-image-showcase {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			margin-bottom: var(--space-3xl);
-			padding: var(--space-3xl) var(--space-xl);
-			background: radial-gradient(circle at center, rgba(0, 204, 204, 0.08) 0%, transparent 70%);
-			border-radius: 16px;
-			position: relative;
-			overflow: hidden;
-		}
-
-		.product-image-showcase::before {
-			content: '';
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			width: 100%;
-			height: 100%;
-			background: radial-gradient(circle, rgba(0, 204, 204, 0.1) 0%, transparent 60%);
-			transform: translate(-50%, -50%);
-			animation: pulse-glow 4s ease-in-out infinite;
-		}
-
-		@keyframes pulse-glow {
-			0%, 100% { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }
-			50% { opacity: 1; transform: translate(-50%, -50%) scale(1.1); }
-		}
-
-		.product-phone-image {
-			max-width: 400px;
-			width: 100%;
-			height: auto;
-			position: relative;
-			z-index: 1;
-			filter: drop-shadow(0 20px 60px rgba(0, 204, 204, 0.4));
-			transition: all 0.5s ease;
-		}
-
-		.product-phone-image:hover {
-			transform: translateY(-10px) scale(1.02);
-			filter: drop-shadow(0 30px 80px rgba(0, 204, 204, 0.6));
 		}
 
 		.card {
@@ -746,11 +698,3 @@ import { SITE_TITLE } from '../../consts';
 			.delivery-grid {
 				grid-template-columns: 1fr;
 			}
-
-			.option-card {
-				padding: var(--space-lg);
-			}
-		}
-	</style>
-</body>
-</html>
