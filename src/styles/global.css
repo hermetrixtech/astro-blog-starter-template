@@ -153,7 +153,8 @@ h1 {
 }
 
 h1:hover {
-  text-shadow: 3px 3px 0 rgba(204, 0, 204, 0.3), 6px 6px 0 var(--gray-700);
+  text-shadow: 3px 3px 0 rgba(153, 51, 204, 0.2), 6px 6px 0 var(--gray-700);
+  will-change: text-shadow;
 }
 
 h2 {
@@ -359,6 +360,7 @@ section {
     12px 12px 0 rgba(232, 232, 232, 0.04);
   position: relative;
   overflow: hidden;
+  contain: layout style paint;
 }
 
 /* Beatty-style organic blob background on hover */
@@ -378,11 +380,9 @@ section {
 
 .card:hover {
   border-color: var(--magenta);
-  transform: translate(-3px, -3px);
-  box-shadow: 
-    9px 9px 0 rgba(204, 0, 204, 0.2),
-    18px 18px 0 rgba(204, 0, 204, 0.08),
-    0 0 30px rgba(204, 0, 204, 0.15);
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 rgba(153, 51, 204, 0.1);
+  will-change: transform, box-shadow;
 }
 
 .card:hover::before {
@@ -473,6 +473,7 @@ section {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: var(--space-lg);
+  contain: layout;
 }
 
 .grid-2 {
@@ -621,11 +622,7 @@ section {
   }
 
   .card:hover {
-    transform: translate(-2px, -2px);
-    box-shadow: 
-      6px 6px 0 rgba(204, 0, 204, 0.2),
-      12px 12px 0 rgba(204, 0, 204, 0.08),
-      0 0 20px rgba(204, 0, 204, 0.15);
+    /* Hover effects disabled on mobile to prevent CLS */
   }
 }
 
