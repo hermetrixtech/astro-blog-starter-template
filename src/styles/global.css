@@ -22,10 +22,10 @@
   --gray-700: #151515;
   
   /* Beatty Psychedelic Accents - Muted */
-  --magenta: #cc00cc;
-  --cyan: #00cccc;
-  --electric-blue: #0052cc;
-  --acid-green: #00cc52;
+  --magenta: #9933cc;
+  --cyan: #339999;
+  --electric-blue: #4477bb;
+  --acid-green: #339966;
   
   /* Functional Colors */
   --background: var(--black);
