@@ -1,0 +1,120 @@
+---
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+interface Props {
+  faqs: FAQItem[];
+}
+
+const { faqs } = Astro.props;
+---
+
+<!-- FAQ Structured Data -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }))
+})} />
+
+<section class="faq-section">
+  <div class="container">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-list">
+      {faqs.map((faq) => (
+        <details class="faq-item">
+          <summary>{faq.question}</summary>
+          <div class="faq-answer">
+            <p>{faq.answer}</p>
+          </div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq-section {
+    padding: var(--space-3xl) 0;
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    margin-top: var(--space-xl);
+  }
+
+  .faq-item {
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid var(--border-color);
+    border-radius: 6px;
+    padding: var(--space-lg);
+    transition: all 0.3s ease;
+  }
+
+  .faq-item:hover {
+    border-color: var(--accent-primary);
+  }
+
+  .faq-item[open] {
+    border-color: var(--accent-secondary);
+  }
+
+  summary {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  summary::after {
+    content: '+';
+    font-size: 1.5rem;
+    color: var(--accent-primary);
+    transition: transform 0.3s;
+  }
+
+  .faq-item[open] summary::after {
+    content: '−';
+    transform: rotate(180deg);
+  }
+
+  .faq-answer {
+    margin-top: var(--space-md);
+    padding-top: var(--space-md);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .faq-answer p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    summary {
+      font-size: 1rem;
+    }
+
+    .faq-item {
+      padding: var(--space-md);
+    }
+  }
+</style>

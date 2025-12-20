@@ -1,0 +1,83 @@
+---
+interface BreadcrumbItem {
+  name: string;
+  url: string;
+}
+
+interface Props {
+  items: BreadcrumbItem[];
+}
+
+const { items } = Astro.props;
+const fullItems = [{ name: 'Home', url: '/' }, ...items];
+---
+
+<!-- Breadcrumb Structured Data -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": fullItems.map((item, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "name": item.name,
+    "item": `https://hermetrix.nz${item.url}`
+  }))
+})} />
+
+<nav aria-label="Breadcrumb" class="breadcrumbs">
+  <ol>
+    {fullItems.map((item, index) => (
+      <li>
+        {index < fullItems.length - 1 ? (
+          <>
+            <a href={item.url}>{item.name}</a>
+            <span class="separator">/</span>
+          </>
+        ) : (
+          <span class="current">{item.name}</span>
+        )}
+      </li>
+    ))}
+  </ol>
+</nav>
+
+<style>
+  .breadcrumbs {
+    padding: var(--space-md) 0;
+    font-size: 0.875rem;
+  }
+
+  .breadcrumbs ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .breadcrumbs li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+
+  .breadcrumbs a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .breadcrumbs a:hover {
+    color: var(--accent-primary);
+  }
+
+  .separator {
+    color: var(--text-muted);
+  }
+
+  .current {
+    color: var(--text-primary);
+    font-weight: 500;
+  }
+</style>

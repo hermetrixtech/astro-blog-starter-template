@@ -20,6 +20,12 @@ const { title, description, image = '/blog-placeholder-1.jpg', keywords } = Astr
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link rel="icon" type="image/png" href="/newfavi.png" />
 <meta name="generator" content={Astro.generator} />
+<meta name="theme-color" content="#000000" />
+
+<!-- Preconnect to external domains for performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="dns-prefetch" href="https://fonts.googleapis.com" />
 
 <!-- Geo Location -->
 <meta name="geo.region" content="NZ-AUK" />
@@ -30,6 +36,10 @@ const { title, description, image = '/blog-placeholder-1.jpg', keywords } = Astr
 <!-- Business Info -->
 <meta name="author" content="Hermetrix" />
 <meta name="language" content="en-NZ" />
+<meta name="NZBN" content="9429052746815" />
+<meta name="rating" content="general" />
+<meta name="distribution" content="global" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 {keywords && <meta name="keywords" content={keywords} />}
 
 <!-- Canonical URL -->
@@ -43,9 +53,14 @@ const { title, description, image = '/blog-placeholder-1.jpg', keywords } = Astr
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
 <meta property="og:url" content={Astro.url} />
+<meta property="og:site_name" content="Hermetrix" />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={new URL(image, Astro.url)} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="en_NZ" />
+<meta property="og:locale:alternate" content="en_AU" />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
@@ -58,29 +73,85 @@ const { title, description, image = '/blog-placeholder-1.jpg', keywords } = Astr
 <script type="application/ld+json">
 	{
 		"@context": "https://schema.org",
-		"@type": "Organization",
+		"@type": "LocalBusiness",
+		"@id": "https://hermetrix.nz/#organization",
 		"name": "Hermetrix",
+		"alternateName": "Hermetrix Security",
 		"url": "https://hermetrix.nz",
-		"logo": "https://hermetrix.nz/images/logo.png",
-		"description": "New Zealand security consulting and certified hardware solutions provider specializing in OPSEC, FIPS-certified encrypted storage, and privacy-focused mobile devices.",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://hermetrix.nz/images/logo.png",
+			"width": 450,
+			"height": 450
+		},
+		"image": "https://hermetrix.nz/images/logo.png",
+		"description": "New Zealand security company making privacy easy and economical for Kiwis. Specializing in GrapheneOS phones, FIPS encrypted storage, and practical security consulting.",
+		"telephone": "+64-PLACEHOLDER",
+		"email": "hello@hermetrix.nz",
 		"address": {
 			"@type": "PostalAddress",
 			"addressLocality": "Auckland",
 			"addressRegion": "Auckland",
 			"addressCountry": "NZ"
 		},
+		"geo": {
+			"@type": "GeoCoordinates",
+			"latitude": "-36.8485",
+			"longitude": "174.7633"
+		},
+		"areaServed": {
+			"@type": "Country",
+			"name": "New Zealand"
+		},
 		"contactPoint": {
 			"@type": "ContactPoint",
 			"email": "hello@hermetrix.nz",
 			"contactType": "customer service",
 			"areaServed": "NZ",
-			"availableLanguage": "en"
+			"availableLanguage": ["en", "en-NZ"]
 		},
-		"sameAs": [],
+		"priceRange": "$$",
+		"openingHoursSpecification": {
+			"@type": "OpeningHoursSpecification",
+			"dayOfWeek": [
+				"Monday",
+				"Tuesday",
+				"Wednesday",
+				"Thursday",
+				"Friday"
+			],
+			"opens": "09:00",
+			"closes": "17:00"
+		},
+		"foundingDate": "2024",
 		"foundingLocation": "Auckland, New Zealand",
-		"areaServed": {
-			"@type": "Country",
-			"name": "New Zealand"
-		}
+		"slogan": "Privacy Made Easy for Kiwis",
+		"knowsAbout": [
+			"Privacy Solutions",
+			"GrapheneOS",
+			"FIPS Encryption",
+			"Security Consulting",
+			"NZ Privacy Act",
+			"NZISM Compliance"
+		],
+		"makesOffer": [
+			{
+				"@type": "Offer",
+				"itemOffered": {
+					"@type": "Service",
+					"name": "Security Consulting",
+					"description": "Expert privacy and security consulting for New Zealand businesses and individuals"
+				}
+			},
+			{
+				"@type": "Offer",
+				"itemOffered": {
+					"@type": "Product",
+					"name": "GrapheneOS Phones",
+					"description": "Privacy-focused mobile devices pre-configured for New Zealand users"
+				}
+			}
+		],
+		"sameAs": []
 	}
 </script>

@@ -2,17 +2,66 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import FAQSection from '../components/FAQSection.astro';
+
+const faqs = [
+	{
+		question: "What makes Hermetrix different from other security companies?",
+		answer: "We specialize in understanding New Zealand's unique privacy landscape. Unlike global providers, we focus on practical, economical solutions that work within NZ's regulatory environment and market constraints. No upselling, no vendor commissions—just honest advice tailored to Kiwi needs."
+	},
+	{
+		question: "Do I need to be tech-savvy to work with you?",
+		answer: "Not at all. We explain everything in plain language and implement solutions that are easy to use. Whether you're a student, small business owner, or enterprise, we make privacy accessible without unnecessary complexity."
+	},
+	{
+		question: "What areas of New Zealand do you serve?",
+		answer: "We serve all of New Zealand remotely, with local presence in Auckland. Our solutions work nationwide, and we understand the unique challenges of being geographically isolated."
+	},
+	{
+		question: "How much do your services cost?",
+		answer: "We offer free 30-minute consultations to assess your needs. Our pricing is transparent and based on your actual requirements—if a $50 solution works, we won't sell you a $5,000 one. Contact us for specific quotes."
+	},
+	{
+		question: "What is GrapheneOS and why would I want it?",
+		answer: "GrapheneOS is a privacy-focused Android operating system. We configure it specifically for New Zealand users with local carrier compatibility and NZ app requirements, giving you maximum privacy without sacrificing functionality."
+	},
+	{
+		question: "Are you compliant with NZ privacy laws?",
+		answer: "Yes, we operate in full compliance with New Zealand's Privacy Act and understand local regulatory requirements including NZISM frameworks. We can help you navigate these requirements too."
+	}
+];
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<BaseHead 
-			title="Hermetrix — Easy, Affordable Privacy for New Zealand | Security Products & Consulting" 
-			description="New Zealand security company making privacy easy and economical for Kiwis. GrapheneOS phones, FIPS encrypted storage, and practical security consulting. Understanding NZ's unique privacy needs."
-			keywords="NZ privacy solutions, affordable security New Zealand, GrapheneOS NZ, encrypted storage Auckland, privacy consultant New Zealand, Kiwi security company"
+			title="Hermetrix — Privacy Made Easy for Kiwis | NZ Security Hardware & Consulting" 
+			description="New Zealand's trusted privacy and security company. GrapheneOS phones, FIPS encrypted storage, and practical security consulting. 30-min free consultation. Auckland-based, serving all NZ. Making privacy accessible and economical for every Kiwi."
+			keywords="NZ privacy solutions, affordable security New Zealand, GrapheneOS NZ, encrypted storage Auckland, privacy consultant New Zealand, Kiwi security company, NZ security hardware, FIPS encryption NZ, privacy made easy"
 		/>
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		
+		<!-- WebSite Structured Data with Search Action -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "WebSite",
+				"name": "Hermetrix",
+				"alternateName": "Hermetrix Security NZ",
+				"url": "https://hermetrix.nz",
+				"description": "Privacy Made Easy for Kiwis - New Zealand security hardware and consulting",
+				"inLanguage": "en-NZ",
+				"potentialAction": {
+					"@type": "SearchAction",
+					"target": {
+						"@type": "EntryPoint",
+						"urlTemplate": "https://hermetrix.nz/search?q={search_term_string}"
+					},
+					"query-input": "required name=search_term_string"
+				}
+			}
+		</script>
 	</head>
 
 	<body>
@@ -77,6 +126,8 @@ import Footer from '../components/Footer.astro';
 					</div>
 				</div>
 			</section>
+
+			<FAQSection faqs={faqs} />
 
 			<section class="section">
 				<div class="container text-center">
