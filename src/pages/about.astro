@@ -149,6 +149,42 @@ import { SITE_TITLE } from '../consts';
 				</div>
 			</div>
 		</section>
+
+		<section class="section">
+			<div class="container">
+				<div class="pgp-section">
+					<h2>Secure Communication</h2>
+					<p class="pgp-intro">For sensitive communications, we strongly recommend using PGP encryption. Standard email does not provide end-to-end encryption.</p>
+					
+					<div class="pgp-details">
+						<div class="pgp-item">
+							<h3>PGP Public Key</h3>
+							<div class="key-actions">
+								<a href="/publickey.Admin@hermetrix.nz-30bc5347e667e80e178eaf1df74ee76b113a21b0.asc" download class="btn secondary">
+									<span class="download-icon">⬇</span> Download Public Key
+								</a>
+							</div>
+						</div>
+
+						<div class="pgp-item">
+							<h3>Key Fingerprint</h3>
+							<code class="fingerprint">30BC 5347 E667 E80E 178E  AF1D F74E E76B 113A 21B0</code>
+							<p class="fingerprint-note">Always verify this fingerprint independently before trusting the key.</p>
+						</div>
+
+						<div class="pgp-item">
+							<h3>Email Address</h3>
+							<p><strong>Admin@hermetrix.nz</strong></p>
+						</div>
+
+						<div class="pgp-verification">
+							<h3>⚠️ Verification Important</h3>
+							<p>You are responsible for independently verifying our PGP key fingerprint through multiple channels before sending sensitive information. We do not support third-party encryption tools.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 	</main>
 	<Footer />
 
@@ -238,6 +274,96 @@ import { SITE_TITLE } from '../consts';
 		.trust-content strong {
 			color: var(--accent-secondary);
 			font-weight: 700;
+		}
+
+		.pgp-section {
+			max-width: 900px;
+			margin: 0 auto;
+		}
+
+		.pgp-section h2 {
+			text-align: center;
+			color: var(--accent-secondary);
+			margin-bottom: var(--space-lg);
+		}
+
+		.pgp-intro {
+			text-align: center;
+			font-size: 1.125rem;
+			color: var(--text-secondary);
+			margin-bottom: var(--space-2xl);
+		}
+
+		.pgp-details {
+			display: flex;
+			flex-direction: column;
+			gap: var(--space-xl);
+		}
+
+		.pgp-item {
+			background: rgba(255, 255, 255, 0.02);
+			border: 1px solid var(--gray-600);
+			border-radius: 8px;
+			padding: var(--space-xl);
+		}
+
+		.pgp-item h3 {
+			font-family: var(--font-family-mono);
+			font-size: 1.125rem;
+			color: var(--accent-secondary);
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+			margin-bottom: var(--space-md);
+		}
+
+		.key-actions {
+			display: flex;
+			gap: var(--space-md);
+			flex-wrap: wrap;
+		}
+
+		.download-icon {
+			font-size: 1.25rem;
+			margin-right: var(--space-xs);
+		}
+
+		.fingerprint {
+			display: block;
+			font-family: var(--font-family-mono);
+			font-size: 1rem;
+			background: rgba(0, 0, 0, 0.6);
+			padding: var(--space-md);
+			border-radius: 6px;
+			color: var(--accent-secondary);
+			word-break: break-all;
+			margin: var(--space-md) 0;
+			border: 1px solid var(--gray-600);
+		}
+
+		.fingerprint-note {
+			font-size: 0.875rem;
+			color: var(--text-muted);
+			font-style: italic;
+			margin: var(--space-sm) 0 0 0;
+		}
+
+		.pgp-verification {
+			background: rgba(255, 153, 0, 0.05);
+			border: 2px solid #ff9900;
+			border-radius: 8px;
+			padding: var(--space-xl);
+		}
+
+		.pgp-verification h3 {
+			color: #ff9900;
+			font-family: var(--font-family-mono);
+			font-size: 1.125rem;
+			margin-bottom: var(--space-md);
+		}
+
+		.pgp-verification p {
+			margin: 0;
+			line-height: 1.6;
 		}
 
 		.feature-card {
@@ -387,6 +513,14 @@ import { SITE_TITLE } from '../consts';
 
 			.trust-content p {
 				font-size: 1rem;
+			}
+
+			.pgp-item {
+				padding: var(--space-lg);
+			}
+
+			.fingerprint {
+				font-size: 0.875rem;
 			}
 		}
 
