@@ -334,7 +334,13 @@ const faqs = [
 		.card a:hover {
 			color: var(--accent-secondary);
 			border-bottom-color: var(--accent-secondary);
-		}			@media (max-width: 768px) {
+		}
+
+		@media (max-width: 768px) {
+				.grid-3 {
+					grid-template-columns: 1fr;
+				}
+
 				.consultation-card {
 					grid-template-columns: 1fr;
 					gap: var(--space-xl);
@@ -386,13 +392,13 @@ const faqs = [
 					align-items: stretch;
 					width: 100%;
 					max-width: 100%;
+					gap: var(--space-md);
 				}
 
 				.cta-buttons .btn {
 					width: 100%;
-					white-space: nowrap;
-					overflow: hidden;
-					text-overflow: ellipsis;
+					padding: var(--space-md) var(--space-lg);
+					text-align: center;
 				}
 			}
 
