@@ -76,7 +76,6 @@
 html {
   font-size: 16px;
   box-sizing: border-box;
-  overflow-x: hidden;
   width: 100%;
 }
 
@@ -99,8 +98,9 @@ body {
   letter-spacing: 0.01em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
   width: 100%;
+  max-width: 100vw;
+  overflow-x: clip;
 }
 
 /* Beatty-style organic blob overlay with psychedelic glow */
