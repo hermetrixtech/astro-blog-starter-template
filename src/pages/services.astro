@@ -130,6 +130,15 @@ import { SITE_TITLE } from '../consts';
 				</div>
 			</div>
 		</section>
+
+		<section class="section">
+			<div class="container text-center">
+				<div class="compliance-link">
+					<p>For information on our compliance with New Zealand privacy and security standards:</p>
+					<a href="/compliance" class="btn secondary">View Compliance Information</a>
+				</div>
+			</div>
+		</section>
 	</main>
 	<Footer />
 
@@ -378,6 +387,17 @@ import { SITE_TITLE } from '../consts';
 			font-family: var(--font-family-mono);
 			text-transform: uppercase;
 			letter-spacing: 0.05em;
+		}
+
+		.compliance-link {
+			max-width: 600px;
+			margin: 0 auto;
+		}
+
+		.compliance-link p {
+			font-size: 1rem;
+			color: var(--text-secondary);
+			margin-bottom: var(--space-lg);
 		}
 
 		@media (max-width: 768px) {
