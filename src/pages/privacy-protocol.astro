@@ -1,0 +1,474 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<BaseHead 
+		title="Privacy Protocol | Hermetrix - We Know Nothing About You. By Design." 
+		description="Hermetrix treats your data as a liability, not an asset. Pseudonymous purchasing, 24-hour data deletion, bearer token warranty system. Full NZ Privacy Act 2020 compliance with minimal data collection."
+		keywords="privacy by design, data minimization, pseudonymous purchase, privacy protocol NZ, warrant canary, bearer token warranty, NZ Privacy Act compliance"
+	/>
+</head>
+<body>
+	<a href="#main-content" class="skip-to-main">Skip to main content</a>
+	<Header />
+	<main id="main-content">
+		<section class="hero">
+			<div class="container">
+				<h1>Privacy Protocol</h1>
+				<p class="tagline">We Know Nothing About You. By Design.</p>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container">
+				<div class="intro-box">
+					<p class="intro-text"><strong>Most companies treat your data as an asset. We treat it as a liability.</strong> Our systems are architected to know the absolute minimum about you, and to forget even that as quickly as possible.</p>
+					<p>Here is how we operate within New Zealand law while protecting your identity.</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container">
+				<div class="protocol-section">
+					<div class="protocol-number">1</div>
+					<div class="protocol-content">
+						<h2>Purchasing: Pseudonyms Welcome</h2>
+						<p><strong>We do not require your legal name to sell you hardware.</strong></p>
+						
+						<div class="protocol-details">
+							<div class="detail-item">
+								<h3>Payment</h3>
+								<p>We accept <strong>Monero (XMR)</strong>, <strong>Cash by Mail</strong>, and <strong>Bank Transfer</strong>.</p>
+							</div>
+							
+							<div class="detail-item">
+								<h3>Shipping</h3>
+								<p>We only need a valid physical address to get the package to you. If you wish to use a pseudonym on the shipping label, please do so.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="protocol-section">
+					<div class="protocol-number">2</div>
+					<div class="protocol-content">
+						<h2>Retention: The "24-Hour Burn"</h2>
+						<p>We operate under a strict <strong>Purpose Fulfillment</strong> policy (NZ Privacy Act 2020).</p>
+						
+						<div class="protocol-details">
+							<div class="detail-item">
+								<p>Once the courier marks your package as <strong>"Delivered"</strong>, the purpose of holding your address data is fulfilled.</p>
+							</div>
+							
+							<div class="detail-item highlight">
+								<p><strong>24 hours after delivery, our system automatically overwrites your shipping details.</strong></p>
+							</div>
+							
+							<div class="detail-item">
+								<p>We do not maintain a historical customer database. We cannot email you marketing, because we deleted your email.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="protocol-section">
+					<div class="protocol-number">3</div>
+					<div class="protocol-content">
+						<h2>Warranty: The "Bearer Token" System</h2>
+						<p>To minimize data retention while fulfilling our Consumer Guarantees Act obligations, we use a bearer token system.</p>
+						
+						<div class="protocol-details">
+							<div class="detail-item">
+								<h3>In the Box</h3>
+								<p>You will find a unique, cryptographic <strong>Bearer Token</strong> card with your purchase.</p>
+							</div>
+							
+							<div class="detail-item">
+								<h3>How It Works</h3>
+								<p>Possession of this Token is your proof of ownership. We retain only the minimum purchase-related information necessary to meet our legal obligations under the CGA—decoupled from your personal identity wherever legally possible.</p>
+							</div>
+							
+							<div class="detail-item warning">
+								<h3>⚠️ Important</h3>
+								<p><strong>Do not lose this Token.</strong> Without it, verifying your warranty claim will be significantly more difficult, as we cannot look you up by name.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="protocol-section">
+					<div class="protocol-number">4</div>
+					<div class="protocol-content">
+						<h2>Transparency & Compliance</h2>
+						
+						<div class="protocol-details">
+							<div class="detail-item">
+								<h3>NZ Law</h3>
+								<p>We comply fully with the <strong>Consumer Guarantees Act (CGA)</strong> and <strong>IRD requirements</strong> for financial record keeping, but these records are decoupled from your personal identity wherever legally possible.</p>
+							</div>
+							
+							<div class="detail-item canary">
+								<h3>🕊️ Warrant Canary</h3>
+								<p><strong>We have not received any gag orders, subpoenas, or warrants from any government agency.</strong></p>
+								<p class="canary-date">Last updated: December 20, 2025</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container">
+				<div class="emphasis-box">
+					<h2>Questions About Our Privacy Protocol?</h2>
+					<p>If you have concerns about how we handle your information, or need clarification on any aspect of our privacy practices, we're happy to discuss.</p>
+					<a href="mailto:hello@hermetrix.nz?subject=Privacy Protocol Question" class="btn primary">Contact Us</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container">
+				<div class="legal-references">
+					<h2>Legal Documentation</h2>
+					<p>For comprehensive details on our practices, please refer to:</p>
+					<div class="reference-grid">
+						<a href="/privacy-policy" class="reference-card">
+							<h3>Privacy Policy</h3>
+							<p>Our formal privacy policy outlining data collection, use, and protection practices under the Privacy Act 2020.</p>
+							<span class="reference-arrow">→</span>
+						</a>
+						<a href="/terms-and-conditions" class="reference-card">
+							<h3>Terms & Conditions</h3>
+							<p>Complete terms of trade including anonymity-focused engagements, warranties, and legal obligations.</p>
+							<span class="reference-arrow">→</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<Footer />
+
+	<style>
+		.hero {
+			padding: var(--space-3xl) 0 var(--space-2xl);
+			text-align: center;
+		}
+
+		.hero h1 {
+			font-size: clamp(2rem, 5vw, 3rem);
+			margin-bottom: var(--space-md);
+		}
+
+		.tagline {
+			font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+			color: var(--accent-secondary);
+			font-weight: 600;
+		}
+
+		.section {
+			padding: var(--space-3xl) 0;
+		}
+
+		.intro-box {
+			background: linear-gradient(135deg, rgba(0, 204, 204, 0.05) 0%, rgba(153, 51, 204, 0.05) 100%);
+			border: 2px solid var(--accent-secondary);
+			border-radius: 12px;
+			padding: var(--space-2xl);
+			margin-bottom: var(--space-3xl);
+		}
+
+		.intro-text {
+			font-size: 1.25rem;
+			line-height: 1.6;
+			margin-bottom: var(--space-lg);
+		}
+
+		.protocol-section {
+			display: grid;
+			grid-template-columns: 80px 1fr;
+			gap: var(--space-xl);
+			margin-bottom: var(--space-3xl);
+			padding-bottom: var(--space-3xl);
+			border-bottom: 1px solid var(--gray-600);
+		}
+
+		.protocol-section:last-child {
+			border-bottom: none;
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+
+		.protocol-number {
+			width: 80px;
+			height: 80px;
+			border-radius: 50%;
+			background: linear-gradient(135deg, var(--accent-secondary) 0%, var(--magenta) 100%);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 2rem;
+			font-weight: 900;
+			font-family: var(--font-family-mono);
+			color: var(--black);
+			flex-shrink: 0;
+			box-shadow: 0 4px 20px rgba(0, 204, 204, 0.3);
+		}
+
+		.protocol-content h2 {
+			font-size: 1.75rem;
+			margin-bottom: var(--space-lg);
+			color: var(--text-primary);
+		}
+
+		.protocol-content > p {
+			font-size: 1.125rem;
+			margin-bottom: var(--space-xl);
+			color: var(--text-secondary);
+		}
+
+		.protocol-details {
+			display: flex;
+			flex-direction: column;
+			gap: var(--space-lg);
+		}
+
+		.detail-item {
+			background: rgba(255, 255, 255, 0.02);
+			border: 1px solid var(--gray-600);
+			border-radius: 8px;
+			padding: var(--space-lg);
+			transition: all 0.2s ease;
+		}
+
+		.detail-item:hover {
+			background: rgba(255, 255, 255, 0.04);
+			border-color: var(--accent-secondary);
+		}
+
+		.detail-item h3 {
+			font-size: 1.125rem;
+			font-weight: 600;
+			margin-bottom: var(--space-sm);
+			color: var(--accent-secondary);
+			font-family: var(--font-family-mono);
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+		}
+
+		.detail-item p {
+			margin: 0;
+			line-height: 1.6;
+		}
+
+		.detail-item.highlight {
+			background: rgba(0, 204, 204, 0.1);
+			border-color: var(--accent-secondary);
+			border-width: 2px;
+		}
+
+		.detail-item.warning {
+			background: rgba(255, 153, 0, 0.05);
+			border-color: #ff9900;
+			border-width: 2px;
+		}
+
+		.detail-item.canary {
+			background: rgba(153, 51, 204, 0.1);
+			border-color: var(--magenta);
+			border-width: 2px;
+		}
+
+		.canary-date {
+			font-size: 0.875rem;
+			color: var(--text-muted);
+			margin-top: var(--space-sm);
+			font-style: italic;
+		}
+
+		.emphasis-box {
+			background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 20, 20, 0.8) 100%);
+			border: 2px solid var(--accent-secondary);
+			border-radius: 12px;
+			padding: var(--space-2xl);
+			text-align: center;
+		}
+
+		.emphasis-box h2 {
+			margin-bottom: var(--space-lg);
+		}
+
+		.emphasis-box p {
+			margin-bottom: var(--space-xl);
+			font-size: 1.125rem;
+		}
+
+		.legal-references {
+			max-width: 900px;
+			margin: 0 auto;
+			text-align: center;
+		}
+
+		.legal-references h2 {
+			font-size: 1.75rem;
+			margin-bottom: var(--space-md);
+			color: var(--text-primary);
+		}
+
+		.legal-references > p {
+			font-size: 1.125rem;
+			color: var(--text-secondary);
+			margin-bottom: var(--space-2xl);
+		}
+
+		.reference-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+			gap: var(--space-xl);
+			margin-top: var(--space-2xl);
+		}
+
+		.reference-card {
+			background: linear-gradient(135deg, rgba(0, 204, 204, 0.05) 0%, rgba(153, 51, 204, 0.05) 100%);
+			border: 2px solid var(--gray-600);
+			border-radius: 12px;
+			padding: var(--space-xl);
+			text-decoration: none;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			text-align: left;
+			transition: all 0.3s ease;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.reference-card::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: linear-gradient(135deg, rgba(0, 204, 204, 0.1) 0%, rgba(153, 51, 204, 0.1) 100%);
+			opacity: 0;
+			transition: opacity 0.3s ease;
+		}
+
+		.reference-card:hover {
+			border-color: var(--accent-secondary);
+			transform: translateY(-4px);
+			box-shadow: 0 8px 30px rgba(0, 204, 204, 0.2);
+		}
+
+		.reference-card:hover::before {
+			opacity: 1;
+		}
+
+		.reference-card h3 {
+			font-size: 1.25rem;
+			font-weight: 700;
+			color: var(--accent-secondary);
+			margin-bottom: var(--space-md);
+			font-family: var(--font-family-mono);
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+			position: relative;
+			z-index: 1;
+		}
+
+		.reference-card p {
+			color: var(--text-secondary);
+			line-height: 1.6;
+			margin-bottom: var(--space-lg);
+			flex-grow: 1;
+			position: relative;
+			z-index: 1;
+		}
+
+		.reference-arrow {
+			font-size: 1.5rem;
+			color: var(--accent-secondary);
+			align-self: flex-end;
+			transition: transform 0.3s ease;
+			position: relative;
+			z-index: 1;
+		}
+
+		.reference-card:hover .reference-arrow {
+			transform: translateX(8px);
+		}
+
+		@media (max-width: 768px) {
+			.protocol-section {
+				grid-template-columns: 60px 1fr;
+				gap: var(--space-lg);
+				margin-bottom: var(--space-2xl);
+				padding-bottom: var(--space-2xl);
+			}
+
+			.protocol-number {
+				width: 60px;
+				height: 60px;
+				font-size: 1.5rem;
+			}
+
+			.protocol-content h2 {
+				font-size: 1.5rem;
+			}
+
+			.intro-box {
+				padding: var(--space-lg);
+			}
+
+			.intro-text {
+				font-size: 1.125rem;
+			}
+
+			.emphasis-box {
+				padding: var(--space-lg);
+			}
+
+			.reference-grid {
+				grid-template-columns: 1fr;
+				gap: var(--space-lg);
+			}
+
+			.reference-card {
+				padding: var(--space-lg);
+			}
+		}
+
+		@media (max-width: 480px) {
+			.protocol-section {
+				grid-template-columns: 1fr;
+				gap: var(--space-md);
+			}
+
+			.protocol-number {
+				width: 50px;
+				height: 50px;
+				font-size: 1.25rem;
+				margin: 0 auto;
+			}
+
+			.protocol-content {
+				text-align: left;
+			}
+
+			.detail-item {
+				padding: var(--space-md);
+			}
+		}
+	</style>
+</body>
+</html>

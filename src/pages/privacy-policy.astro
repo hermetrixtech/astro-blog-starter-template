@@ -1,0 +1,248 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { COMPANY_NAME } from '../consts';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<BaseHead 
+		title="Privacy Policy | Hermetrix Technologies APAC Limited" 
+		description="Privacy Policy for Hermetrix Technologies APAC Limited. Privacy-by-design and data minimisation principles. Effective 1 January 2025."
+		keywords="privacy policy, data minimisation, privacy by design, New Zealand privacy, Privacy Act 2020"
+	/>
+</head>
+<body>
+	<a href="#main-content" class="skip-to-main">Skip to main content</a>
+	<Header />
+	<main id="main-content">
+		<section class="hero">
+			<div class="container">
+				<h1>Privacy Policy</h1>
+				<p class="company-name">{COMPANY_NAME}</p>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container">
+				<div class="legal-meta">
+					<p><strong>Effective Date:</strong> 1 January 2025</p>
+					<p><strong>Jurisdiction:</strong> New Zealand</p>
+				</div>
+
+				<div class="legal-content">
+					<section class="legal-section" id="philosophy">
+						<h2>Our Privacy Philosophy</h2>
+						<p>We operate on <strong>privacy-by-design</strong> and <strong>data minimisation</strong> principles. We intentionally avoid collecting or retaining personal information unless it is strictly necessary. <strong>The most secure data is data we do not hold.</strong></p>
+					</section>
+
+					<section class="legal-section" id="scope">
+						<h2>1. Scope</h2>
+						<p>This Privacy Policy applies to Products, Services, and communications, including pseudonymous and anonymity-focused engagements.</p>
+					</section>
+
+					<section class="legal-section" id="information-collection">
+						<h2>2. Information We Collect</h2>
+						
+						<div class="subsection">
+							<h3>2.1 Information You Provide</h3>
+							<p>We may collect limited information such as contact identifiers, billing references, and technical details relevant to Services. Legal names, government identifiers, and residential addresses are not required unless mandated by law or payment processors.</p>
+						</div>
+
+						<div class="subsection">
+							<h3>2.2 Automatically Generated Information</h3>
+							<p>We avoid tracking, profiling, and advertising identifiers. Minimal server logs may be generated for operational security and abuse prevention and are regularly purged.</p>
+						</div>
+					</section>
+
+					<section class="legal-section" id="anonymity">
+						<h2>3. Anonymity and Pseudonymity</h2>
+						<p>You may engage using pseudonyms and privacy-enhancing tools. We will not attempt to re-identify you unless required by law. Anonymity choices may limit recovery, verification, or support options.</p>
+					</section>
+
+					<section class="legal-section" id="use">
+						<h2>4. Use of Information</h2>
+						<p>Information is used only to provide Products and Services, communicate with you, meet legal obligations, and maintain security. <strong>We do not sell, profile, or advertise using personal information.</strong></p>
+					</section>
+
+					<section class="legal-section" id="disclosure">
+						<h2>5. Disclosure</h2>
+						<p>Information is disclosed only with consent, to essential service providers, or where legally required. Where legally compelled, we disclose the minimum required and may challenge overbroad requests where appropriate.</p>
+					</section>
+
+					<section class="legal-section" id="retention">
+						<h2>6. Data Retention and Minimisation</h2>
+						<p>Information is retained only as long as necessary for contractual or legal purposes and is deleted, anonymised, or cryptographically destroyed where possible.</p>
+					</section>
+
+					<section class="legal-section" id="security">
+						<h2>7. Security Safeguards</h2>
+						<p>We use reasonable technical and organisational safeguards including encryption where requested, access controls, compartmentalisation, and minimal internal access. Absolute security is not guaranteed.</p>
+					</section>
+
+					<section class="legal-section" id="rights">
+						<h2>8. Your Rights</h2>
+						<p>You may request access, correction, or deletion of personal information subject to legal requirements. Requests may be made using your existing communication channel.</p>
+					</section>
+
+					<section class="legal-section" id="cross-border">
+						<h2>9. Cross-Border Data</h2>
+						<p>Where information is processed outside New Zealand, reasonable steps are taken to ensure comparable protections apply.</p>
+					</section>
+
+					<section class="legal-section" id="changes">
+						<h2>10. Policy Changes</h2>
+						<p>Updates apply prospectively. Material changes will be communicated where appropriate.</p>
+					</section>
+
+					<section class="legal-section" id="contact">
+						<h2>11. Contact</h2>
+						<p>We provide minimal contact points to reduce data exposure. Contact details are provided through secure channels or contractual documentation.</p>
+					</section>
+
+					<div class="policy-end">
+						<p>END OF PRIVACY POLICY</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<Footer />
+
+	<style>
+		.hero {
+			padding: var(--space-3xl) 0 var(--space-2xl);
+			text-align: center;
+			border-bottom: 1px solid var(--gray-600);
+		}
+
+		.hero h1 {
+			font-size: clamp(1.75rem, 4vw, 2.5rem);
+			margin-bottom: var(--space-md);
+		}
+
+		.company-name {
+			font-family: var(--font-family-mono);
+			font-size: 1rem;
+			color: var(--accent-secondary);
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+		}
+
+		.section {
+			padding: var(--space-3xl) 0;
+		}
+
+		.legal-meta {
+			background: rgba(255, 255, 255, 0.02);
+			border: 1px solid var(--gray-600);
+			border-radius: 8px;
+			padding: var(--space-lg);
+			margin-bottom: var(--space-3xl);
+			font-family: var(--font-family-mono);
+			font-size: 0.875rem;
+		}
+
+		.legal-meta p {
+			margin: var(--space-xs) 0;
+		}
+
+		.legal-content {
+			max-width: 900px;
+			margin: 0 auto;
+		}
+
+		.legal-section {
+			margin-bottom: var(--space-3xl);
+			padding-bottom: var(--space-2xl);
+			border-bottom: 1px solid var(--gray-700);
+		}
+
+		.legal-section:last-of-type {
+			border-bottom: none;
+		}
+
+		.legal-section h2 {
+			font-size: 1.5rem;
+			color: var(--accent-secondary);
+			margin-bottom: var(--space-lg);
+			font-family: var(--font-family-mono);
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+		}
+
+		.legal-section p {
+			margin-bottom: var(--space-md);
+			line-height: 1.8;
+			color: var(--text-secondary);
+		}
+
+		.legal-section p:last-child {
+			margin-bottom: 0;
+		}
+
+		.subsection {
+			margin-bottom: var(--space-xl);
+		}
+
+		.subsection:last-child {
+			margin-bottom: 0;
+		}
+
+		.subsection h3 {
+			font-size: 1.125rem;
+			font-weight: 600;
+			color: var(--text-primary);
+			margin-bottom: var(--space-md);
+			font-family: var(--font-family-mono);
+		}
+
+		.policy-end {
+			margin-top: var(--space-3xl);
+			padding-top: var(--space-2xl);
+			border-top: 2px solid var(--accent-secondary);
+			text-align: center;
+		}
+
+		.policy-end p {
+			font-family: var(--font-family-mono);
+			font-weight: 700;
+			color: var(--accent-secondary);
+			letter-spacing: 0.1em;
+			font-size: 0.875rem;
+		}
+
+		strong {
+			color: var(--text-primary);
+			font-weight: 600;
+		}
+
+		@media (max-width: 768px) {
+			.legal-content {
+				max-width: 100%;
+			}
+
+			.legal-section h2 {
+				font-size: 1.25rem;
+			}
+
+			.subsection h3 {
+				font-size: 1rem;
+			}
+		}
+
+		@media (max-width: 480px) {
+			.legal-meta {
+				font-size: 0.8125rem;
+			}
+
+			.legal-section {
+				margin-bottom: var(--space-2xl);
+				padding-bottom: var(--space-lg);
+			}
+		}
+	</style>
+</body>
+</html>
